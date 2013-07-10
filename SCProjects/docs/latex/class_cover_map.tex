@@ -1,0 +1,257 @@
+\hypertarget{class_cover_map}{
+\section{CoverMap Class Reference}
+\label{class_cover_map}\index{CoverMap@{CoverMap}}
+}
+
+
+{\ttfamily \#include $<$CoverMap.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_cover_map_ac76348f6ca0eabb8836bea9692065dc9}{$\sim$CoverMap} ()
+\item 
+void \hyperlink{class_cover_map_ae6d2e12a52e2ad902ead0e19bf3c5c6f}{addConstructedBuilding} (Unit $\ast$unit)
+\item 
+void \hyperlink{class_cover_map_ab98feb5027869307d10778b5b5cb41cc}{fillTemp} (UnitType toBuild, TilePosition buildSpot)
+\item 
+void \hyperlink{class_cover_map_aea7ff0bf5b6ea6e2f41cf2d2d5c01b85}{clearTemp} (UnitType toBuild, TilePosition buildSpot)
+\item 
+void \hyperlink{class_cover_map_a18440b76633fafcb66d53f281b6ba29e}{buildingDestroyed} (Unit $\ast$unit)
+\item 
+bool \hyperlink{class_cover_map_a900bc7d4f09fbbe3f594d6be14ff0ed8}{canBuild} (UnitType toBuild, TilePosition buildSpot)
+\item 
+bool \hyperlink{class_cover_map_ac899fce8c1d35baa45c5d277867dd743}{positionFree} (TilePosition pos)
+\item 
+void \hyperlink{class_cover_map_a4e8d06ef538d1e3187066ee1c192453c}{blockPosition} (TilePosition buildSpot)
+\item 
+TilePosition \hyperlink{class_cover_map_a1e655d9c172d0bb84ae6f4daa24cdb95}{findBuildSpot} (UnitType toBuild)
+\item 
+TilePosition \hyperlink{class_cover_map_a850a386ca7671d099d5f18c51fe589be}{findRefineryBuildSpot} (UnitType toBuild, TilePosition start)
+\item 
+TilePosition \hyperlink{class_cover_map_a27f8ac5aa64bd32f643cfdfa26a4b347}{findClosestGasWithoutRefinery} (UnitType toBuild, TilePosition start)
+\item 
+TilePosition \hyperlink{class_cover_map_afa09fc30a8eca398d334603ad94ca17c}{searchRefinerySpot} ()
+\item 
+TilePosition \hyperlink{class_cover_map_ab5676549181f2ec7d5584d833c9aea3a}{findExpansionSite} ()
+\item 
+Unit $\ast$ \hyperlink{class_cover_map_a209b7480d6fbcd7c652352fbfef46157}{findClosestMineral} (TilePosition workerPos)
+\item 
+void \hyperlink{class_cover_map_af0b838bc7bb46e2f310015b00ae7e5b4}{debug} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_cover_map}{CoverMap} $\ast$ \hyperlink{class_cover_map_a31274aefb0aea800df900a6ce3fcb0a2}{getInstance} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \hyperlink{class_cover_map_a0d4d47ca7b4daf26d5eb421abb01a842}{BUILDABLE} = 1
+\item 
+static const int \hyperlink{class_cover_map_a39ca0fa62d0d64888eb11eea0885fa80}{BLOCKED} = 0
+\item 
+static const int \hyperlink{class_cover_map_a0dec904690c6527b04b0af293009e248}{TEMPBLOCKED} = 4
+\item 
+static const int \hyperlink{class_cover_map_a0e9b93904f0aa5af78b197cae5805911}{MINERAL} = 2
+\item 
+static const int \hyperlink{class_cover_map_a5a178427ea42b747890f537e9627beef}{GAS} = 3
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_cover_map}{CoverMap} class is used to keep track of the own base and which Tiles that are occupied by buildings, and which Tiles are free and possibly can be used to construct new buildings on.
+
+Internally a matrix of the same size as the map is used. If a Tile is occupied or cant be reached by ground units, the value if the tile is 0. If the Tile can be built on, the value is 1. Buildings typically use up more space in the matrix than their actual size since we want some free space around each building. Different types of buildings have different space requirements.
+
+The \hyperlink{class_cover_map}{CoverMap} is implemented as a singleton class. Each class that needs to access \hyperlink{class_cover_map}{CoverMap} can request an instance, and all classes shares the same \hyperlink{class_cover_map}{CoverMap} instance.
+
+Author: Johan Hagelback (\href{mailto:johan.hagelback@gmail.com}{\tt johan.hagelback@gmail.com}) 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_cover_map_ac76348f6ca0eabb8836bea9692065dc9}{
+\index{CoverMap@{CoverMap}!$\sim$CoverMap@{$\sim$CoverMap}}
+\index{$\sim$CoverMap@{$\sim$CoverMap}!CoverMap@{CoverMap}}
+\subsubsection[{$\sim$CoverMap}]{\setlength{\rightskip}{0pt plus 5cm}CoverMap::$\sim$CoverMap (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_cover_map_ac76348f6ca0eabb8836bea9692065dc9}
+Destructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_cover_map_ae6d2e12a52e2ad902ead0e19bf3c5c6f}{
+\index{CoverMap@{CoverMap}!addConstructedBuilding@{addConstructedBuilding}}
+\index{addConstructedBuilding@{addConstructedBuilding}!CoverMap@{CoverMap}}
+\subsubsection[{addConstructedBuilding}]{\setlength{\rightskip}{0pt plus 5cm}void CoverMap::addConstructedBuilding (
+\begin{DoxyParamCaption}
+\item[{Unit $\ast$}]{unit}
+\end{DoxyParamCaption}
+)}}
+\label{class_cover_map_ae6d2e12a52e2ad902ead0e19bf3c5c6f}
+Adds a newly constructed building to the cover map. \hypertarget{class_cover_map_a4e8d06ef538d1e3187066ee1c192453c}{
+\index{CoverMap@{CoverMap}!blockPosition@{blockPosition}}
+\index{blockPosition@{blockPosition}!CoverMap@{CoverMap}}
+\subsubsection[{blockPosition}]{\setlength{\rightskip}{0pt plus 5cm}void CoverMap::blockPosition (
+\begin{DoxyParamCaption}
+\item[{TilePosition}]{buildSpot}
+\end{DoxyParamCaption}
+)}}
+\label{class_cover_map_a4e8d06ef538d1e3187066ee1c192453c}
+Blocks a position from being used as a valid buildSpot. Used when a worker is timedout when moving towards the buildSpot. \hypertarget{class_cover_map_a18440b76633fafcb66d53f281b6ba29e}{
+\index{CoverMap@{CoverMap}!buildingDestroyed@{buildingDestroyed}}
+\index{buildingDestroyed@{buildingDestroyed}!CoverMap@{CoverMap}}
+\subsubsection[{buildingDestroyed}]{\setlength{\rightskip}{0pt plus 5cm}void CoverMap::buildingDestroyed (
+\begin{DoxyParamCaption}
+\item[{Unit $\ast$}]{unit}
+\end{DoxyParamCaption}
+)}}
+\label{class_cover_map_a18440b76633fafcb66d53f281b6ba29e}
+Called when a building is destroyed, to free up the space. \hypertarget{class_cover_map_a900bc7d4f09fbbe3f594d6be14ff0ed8}{
+\index{CoverMap@{CoverMap}!canBuild@{canBuild}}
+\index{canBuild@{canBuild}!CoverMap@{CoverMap}}
+\subsubsection[{canBuild}]{\setlength{\rightskip}{0pt plus 5cm}bool CoverMap::canBuild (
+\begin{DoxyParamCaption}
+\item[{UnitType}]{toBuild, }
+\item[{TilePosition}]{buildSpot}
+\end{DoxyParamCaption}
+)}}
+\label{class_cover_map_a900bc7d4f09fbbe3f594d6be14ff0ed8}
+Checks if the specified building type can be built at the buildSpot. True if it can, false otherwise. \hypertarget{class_cover_map_aea7ff0bf5b6ea6e2f41cf2d2d5c01b85}{
+\index{CoverMap@{CoverMap}!clearTemp@{clearTemp}}
+\index{clearTemp@{clearTemp}!CoverMap@{CoverMap}}
+\subsubsection[{clearTemp}]{\setlength{\rightskip}{0pt plus 5cm}void CoverMap::clearTemp (
+\begin{DoxyParamCaption}
+\item[{UnitType}]{toBuild, }
+\item[{TilePosition}]{buildSpot}
+\end{DoxyParamCaption}
+)}}
+\label{class_cover_map_aea7ff0bf5b6ea6e2f41cf2d2d5c01b85}
+Used by \hyperlink{class_worker_agent}{WorkerAgent} when constructing builds. \hypertarget{class_cover_map_af0b838bc7bb46e2f310015b00ae7e5b4}{
+\index{CoverMap@{CoverMap}!debug@{debug}}
+\index{debug@{debug}!CoverMap@{CoverMap}}
+\subsubsection[{debug}]{\setlength{\rightskip}{0pt plus 5cm}void CoverMap::debug (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_cover_map_af0b838bc7bb46e2f310015b00ae7e5b4}
+Shows debug info on screen. \hypertarget{class_cover_map_ab98feb5027869307d10778b5b5cb41cc}{
+\index{CoverMap@{CoverMap}!fillTemp@{fillTemp}}
+\index{fillTemp@{fillTemp}!CoverMap@{CoverMap}}
+\subsubsection[{fillTemp}]{\setlength{\rightskip}{0pt plus 5cm}void CoverMap::fillTemp (
+\begin{DoxyParamCaption}
+\item[{UnitType}]{toBuild, }
+\item[{TilePosition}]{buildSpot}
+\end{DoxyParamCaption}
+)}}
+\label{class_cover_map_ab98feb5027869307d10778b5b5cb41cc}
+Used by \hyperlink{class_worker_agent}{WorkerAgent} when constructing builds. \hypertarget{class_cover_map_a1e655d9c172d0bb84ae6f4daa24cdb95}{
+\index{CoverMap@{CoverMap}!findBuildSpot@{findBuildSpot}}
+\index{findBuildSpot@{findBuildSpot}!CoverMap@{CoverMap}}
+\subsubsection[{findBuildSpot}]{\setlength{\rightskip}{0pt plus 5cm}TilePosition CoverMap::findBuildSpot (
+\begin{DoxyParamCaption}
+\item[{UnitType}]{toBuild}
+\end{DoxyParamCaption}
+)}}
+\label{class_cover_map_a1e655d9c172d0bb84ae6f4daa24cdb95}
+Finds and returns a buildSpot for the specified building type. If no buildspot is found, a TilePosition(-\/1,-\/1) is returned. \hypertarget{class_cover_map_a27f8ac5aa64bd32f643cfdfa26a4b347}{
+\index{CoverMap@{CoverMap}!findClosestGasWithoutRefinery@{findClosestGasWithoutRefinery}}
+\index{findClosestGasWithoutRefinery@{findClosestGasWithoutRefinery}!CoverMap@{CoverMap}}
+\subsubsection[{findClosestGasWithoutRefinery}]{\setlength{\rightskip}{0pt plus 5cm}TilePosition CoverMap::findClosestGasWithoutRefinery (
+\begin{DoxyParamCaption}
+\item[{UnitType}]{toBuild, }
+\item[{TilePosition}]{start}
+\end{DoxyParamCaption}
+)}}
+\label{class_cover_map_a27f8ac5aa64bd32f643cfdfa26a4b347}
+Finds and returns the position of the closest free vespene gas around the specified start position. If no gas vein is found, a TilePosition(-\/1, -\/1) is returned. \hypertarget{class_cover_map_a209b7480d6fbcd7c652352fbfef46157}{
+\index{CoverMap@{CoverMap}!findClosestMineral@{findClosestMineral}}
+\index{findClosestMineral@{findClosestMineral}!CoverMap@{CoverMap}}
+\subsubsection[{findClosestMineral}]{\setlength{\rightskip}{0pt plus 5cm}Unit $\ast$ CoverMap::findClosestMineral (
+\begin{DoxyParamCaption}
+\item[{TilePosition}]{workerPos}
+\end{DoxyParamCaption}
+)}}
+\label{class_cover_map_a209b7480d6fbcd7c652352fbfef46157}
+Finds a mineral to gather from. \hypertarget{class_cover_map_ab5676549181f2ec7d5584d833c9aea3a}{
+\index{CoverMap@{CoverMap}!findExpansionSite@{findExpansionSite}}
+\index{findExpansionSite@{findExpansionSite}!CoverMap@{CoverMap}}
+\subsubsection[{findExpansionSite}]{\setlength{\rightskip}{0pt plus 5cm}TilePosition CoverMap::findExpansionSite (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_cover_map_ab5676549181f2ec7d5584d833c9aea3a}
+Returns a position of a suitable site for expansion, i.e. new bases. \hypertarget{class_cover_map_a850a386ca7671d099d5f18c51fe589be}{
+\index{CoverMap@{CoverMap}!findRefineryBuildSpot@{findRefineryBuildSpot}}
+\index{findRefineryBuildSpot@{findRefineryBuildSpot}!CoverMap@{CoverMap}}
+\subsubsection[{findRefineryBuildSpot}]{\setlength{\rightskip}{0pt plus 5cm}TilePosition CoverMap::findRefineryBuildSpot (
+\begin{DoxyParamCaption}
+\item[{UnitType}]{toBuild, }
+\item[{TilePosition}]{start}
+\end{DoxyParamCaption}
+)}}
+\label{class_cover_map_a850a386ca7671d099d5f18c51fe589be}
+Searches for the closest vespene gas that is not in use. If no gas is sighted, the \hyperlink{class_exploration_manager}{ExplorationManager} is queried. \hypertarget{class_cover_map_a31274aefb0aea800df900a6ce3fcb0a2}{
+\index{CoverMap@{CoverMap}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!CoverMap@{CoverMap}}
+\subsubsection[{getInstance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CoverMap} $\ast$ CoverMap::getInstance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_cover_map_a31274aefb0aea800df900a6ce3fcb0a2}
+Returns the instance of the class. \hypertarget{class_cover_map_ac899fce8c1d35baa45c5d277867dd743}{
+\index{CoverMap@{CoverMap}!positionFree@{positionFree}}
+\index{positionFree@{positionFree}!CoverMap@{CoverMap}}
+\subsubsection[{positionFree}]{\setlength{\rightskip}{0pt plus 5cm}bool CoverMap::positionFree (
+\begin{DoxyParamCaption}
+\item[{TilePosition}]{pos}
+\end{DoxyParamCaption}
+)}}
+\label{class_cover_map_ac899fce8c1d35baa45c5d277867dd743}
+Checks if a position is free. \hypertarget{class_cover_map_afa09fc30a8eca398d334603ad94ca17c}{
+\index{CoverMap@{CoverMap}!searchRefinerySpot@{searchRefinerySpot}}
+\index{searchRefinerySpot@{searchRefinerySpot}!CoverMap@{CoverMap}}
+\subsubsection[{searchRefinerySpot}]{\setlength{\rightskip}{0pt plus 5cm}TilePosition CoverMap::searchRefinerySpot (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_cover_map_afa09fc30a8eca398d334603ad94ca17c}
+Searches for a spot to build a refinery at. Returns TilePosition(-\/1, -\/1) if no spot was found. 
+
+\subsection{Member Data Documentation}
+\hypertarget{class_cover_map_a39ca0fa62d0d64888eb11eea0885fa80}{
+\index{CoverMap@{CoverMap}!BLOCKED@{BLOCKED}}
+\index{BLOCKED@{BLOCKED}!CoverMap@{CoverMap}}
+\subsubsection[{BLOCKED}]{\setlength{\rightskip}{0pt plus 5cm}const int {\bf CoverMap::BLOCKED} = 0\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_cover_map_a39ca0fa62d0d64888eb11eea0885fa80}
+Tile is blocked and cannot be built on. \hypertarget{class_cover_map_a0d4d47ca7b4daf26d5eb421abb01a842}{
+\index{CoverMap@{CoverMap}!BUILDABLE@{BUILDABLE}}
+\index{BUILDABLE@{BUILDABLE}!CoverMap@{CoverMap}}
+\subsubsection[{BUILDABLE}]{\setlength{\rightskip}{0pt plus 5cm}const int {\bf CoverMap::BUILDABLE} = 1\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_cover_map_a0d4d47ca7b4daf26d5eb421abb01a842}
+Tile is buildable. \hypertarget{class_cover_map_a5a178427ea42b747890f537e9627beef}{
+\index{CoverMap@{CoverMap}!GAS@{GAS}}
+\index{GAS@{GAS}!CoverMap@{CoverMap}}
+\subsubsection[{GAS}]{\setlength{\rightskip}{0pt plus 5cm}const int {\bf CoverMap::GAS} = 3\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_cover_map_a5a178427ea42b747890f537e9627beef}
+Tile contains a gas vein. \hypertarget{class_cover_map_a0e9b93904f0aa5af78b197cae5805911}{
+\index{CoverMap@{CoverMap}!MINERAL@{MINERAL}}
+\index{MINERAL@{MINERAL}!CoverMap@{CoverMap}}
+\subsubsection[{MINERAL}]{\setlength{\rightskip}{0pt plus 5cm}const int {\bf CoverMap::MINERAL} = 2\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_cover_map_a0e9b93904f0aa5af78b197cae5805911}
+Tile contains a mineral vein. \hypertarget{class_cover_map_a0dec904690c6527b04b0af293009e248}{
+\index{CoverMap@{CoverMap}!TEMPBLOCKED@{TEMPBLOCKED}}
+\index{TEMPBLOCKED@{TEMPBLOCKED}!CoverMap@{CoverMap}}
+\subsubsection[{TEMPBLOCKED}]{\setlength{\rightskip}{0pt plus 5cm}const int {\bf CoverMap::TEMPBLOCKED} = 4\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_cover_map_a0dec904690c6527b04b0af293009e248}
+Tile is temporary blocked and cannot be built on. 
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+BTHAIModule/Source/CoverMap.h\item 
+BTHAIModule/Source/CoverMap.cpp\end{DoxyCompactItemize}

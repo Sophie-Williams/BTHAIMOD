@@ -1,0 +1,105 @@
+\hypertarget{class_pathfinder}{\section{Pathfinder Class Reference}
+\label{class_pathfinder}\index{Pathfinder@{Pathfinder}}
+}
+
+
+{\ttfamily \#include $<$Pathfinder.\-h$>$}
+
+Inheritance diagram for Pathfinder\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_pathfinder}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_pathfinder_a5b39561ad7375cfdc493d58cbb9fdc1b}{$\sim$\-Pathfinder} ()
+\item 
+int \hyperlink{class_pathfinder_a1ed4dafd51a8eedb2f3159c18950a52e}{get\-Distance} (Tile\-Position start, Tile\-Position end)
+\item 
+\hypertarget{class_pathfinder_afa77218f0b90cc818218c897621d8e62}{void {\bfseries request\-Path} (Tile\-Position start, Tile\-Position end)}\label{class_pathfinder_afa77218f0b90cc818218c897621d8e62}
+
+\item 
+\hypertarget{class_pathfinder_ac54cfce251c9e7730e747b024cf0f421}{bool {\bfseries is\-Ready} (Tile\-Position start, Tile\-Position end)}\label{class_pathfinder_ac54cfce251c9e7730e747b024cf0f421}
+
+\item 
+vector$<$ Tile\-Position $>$ \hyperlink{class_pathfinder_a2a6e818ed33335b67863d8da97003dba}{get\-Path} (Tile\-Position start, Tile\-Position end)
+\item 
+void \hyperlink{class_pathfinder_a3c84fc45c5478079cddcee0929749494}{stop} ()
+\item 
+unsigned long \hyperlink{class_pathfinder_affcc7b9fcf249de527987eff60ddbea7}{Process} (void $\ast$parameter)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_pathfinder}{Pathfinder} $\ast$ \hyperlink{class_pathfinder_a96bcea412cfa432d8392b2e4d33a29a5}{get\-Instance} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This class is used to find a path betweed two tiles in the game world. Currently it uses the A-\/star implementation in B\-W\-T\-A, but it can easily be changed to another algorithm if needed.
+
+The pathfinder is threaded, so agents have to request a path that is put in a queue. Agents have to check the is\-Ready() method to find out when the path finding is finished.
+
+Author\-: Johan Hagelback (\href{mailto:johan.hagelback@gmail.com}{\tt johan.\-hagelback@gmail.\-com}) 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_pathfinder_a5b39561ad7375cfdc493d58cbb9fdc1b}{\index{Pathfinder@{Pathfinder}!$\sim$\-Pathfinder@{$\sim$\-Pathfinder}}
+\index{$\sim$\-Pathfinder@{$\sim$\-Pathfinder}!Pathfinder@{Pathfinder}}
+\subsubsection[{$\sim$\-Pathfinder}]{\setlength{\rightskip}{0pt plus 5cm}Pathfinder\-::$\sim$\-Pathfinder (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_pathfinder_a5b39561ad7375cfdc493d58cbb9fdc1b}
+Destructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_pathfinder_a1ed4dafd51a8eedb2f3159c18950a52e}{\index{Pathfinder@{Pathfinder}!get\-Distance@{get\-Distance}}
+\index{get\-Distance@{get\-Distance}!Pathfinder@{Pathfinder}}
+\subsubsection[{get\-Distance}]{\setlength{\rightskip}{0pt plus 5cm}int Pathfinder\-::get\-Distance (
+\begin{DoxyParamCaption}
+\item[{Tile\-Position}]{start, }
+\item[{Tile\-Position}]{end}
+\end{DoxyParamCaption}
+)}}\label{class_pathfinder_a1ed4dafd51a8eedb2f3159c18950a52e}
+Returns the ground distance between two positions. \hypertarget{class_pathfinder_a96bcea412cfa432d8392b2e4d33a29a5}{\index{Pathfinder@{Pathfinder}!get\-Instance@{get\-Instance}}
+\index{get\-Instance@{get\-Instance}!Pathfinder@{Pathfinder}}
+\subsubsection[{get\-Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Pathfinder} $\ast$ Pathfinder\-::get\-Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_pathfinder_a96bcea412cfa432d8392b2e4d33a29a5}
+Returns the instance of the class. \hypertarget{class_pathfinder_a2a6e818ed33335b67863d8da97003dba}{\index{Pathfinder@{Pathfinder}!get\-Path@{get\-Path}}
+\index{get\-Path@{get\-Path}!Pathfinder@{Pathfinder}}
+\subsubsection[{get\-Path}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ Tile\-Position $>$ Pathfinder\-::get\-Path (
+\begin{DoxyParamCaption}
+\item[{Tile\-Position}]{start, }
+\item[{Tile\-Position}]{end}
+\end{DoxyParamCaption}
+)}}\label{class_pathfinder_a2a6e818ed33335b67863d8da97003dba}
+Returns the path between two positions. \hypertarget{class_pathfinder_affcc7b9fcf249de527987eff60ddbea7}{\index{Pathfinder@{Pathfinder}!Process@{Process}}
+\index{Process@{Process}!Pathfinder@{Pathfinder}}
+\subsubsection[{Process}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long Pathfinder\-::\-Process (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{parameter}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_pathfinder_affcc7b9fcf249de527987eff60ddbea7}
+Thread update method. 
+
+Reimplemented from \hyperlink{class_c_thread}{C\-Thread}.
+
+\hypertarget{class_pathfinder_a3c84fc45c5478079cddcee0929749494}{\index{Pathfinder@{Pathfinder}!stop@{stop}}
+\index{stop@{stop}!Pathfinder@{Pathfinder}}
+\subsubsection[{stop}]{\setlength{\rightskip}{0pt plus 5cm}void Pathfinder\-::stop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_pathfinder_a3c84fc45c5478079cddcee0929749494}
+Stops the pathfinder thread. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+B\-T\-H\-A\-I\-Module/\-Source/Pathfinder.\-h\item 
+B\-T\-H\-A\-I\-Module/\-Source/Pathfinder.\-cpp\end{DoxyCompactItemize}

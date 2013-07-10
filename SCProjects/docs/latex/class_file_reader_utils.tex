@@ -1,0 +1,134 @@
+\hypertarget{class_file_reader_utils}{\section{File\-Reader\-Utils Class Reference}
+\label{class_file_reader_utils}\index{File\-Reader\-Utils@{File\-Reader\-Utils}}
+}
+
+
+{\ttfamily \#include $<$File\-Reader\-Utils.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{class_file_reader_utils_ac97c05c74d38a30718053a8487c35ae5}{get\-Filename} (string subpath)
+\item 
+string \hyperlink{class_file_reader_utils_a14fcca343121a7bee04674ae292b1e2c}{get\-Script\-Path} ()
+\item 
+bool \hyperlink{class_file_reader_utils_a39a019e35e82cd2ba6693f9de53f823e}{file\-Exists} (string subpath, string filename)
+\item 
+Unit\-Type \hyperlink{class_file_reader_utils_a3610e4425373e34077c8aa6a0cebc0d2}{get\-Unit\-Type} (string line)
+\item 
+Upgrade\-Type \hyperlink{class_file_reader_utils_a1fc2d2cc1710e13a2b789c629a014e35}{get\-Upgrade\-Type} (string line)
+\item 
+Tech\-Type \hyperlink{class_file_reader_utils_a1826e7fa51b8c8af1857924a900647a2}{get\-Tech\-Type} (string line)
+\item 
+void \hyperlink{class_file_reader_utils_ab7caf12d9315c0fede08ebecccdde74e}{replace} (string \&line)
+\item 
+\hyperlink{struct_tokens}{Tokens} \hyperlink{class_file_reader_utils_ab7228c9717c2f278b440b61db712974d}{split} (string line, string delimiter)
+\item 
+int \hyperlink{class_file_reader_utils_a681030da28963b166b13e5bdd601807c}{to\-Int} (string \&str)
+\item 
+string \hyperlink{class_file_reader_utils_a91e2dc2098d36acde7ea5d1bfc157ac1}{get\-Map\-Name} ()
+\item 
+string \hyperlink{class_file_reader_utils_a447d938ec051d5934fcf0729f1a02003}{name\-To\-Hash} (string name)
+\item 
+string \hyperlink{class_file_reader_utils_aa2cd7e46cc9775270dc51196b87e3c08}{hash\-To\-Name} (string hash)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class contains some common methods used by classes handling the reading of buildorder/techs/upgrades/squad setup files.
+
+Author\-: Johan Hagelback (\href{mailto:johan.hagelback@gmail.com}{\tt johan.\-hagelback@gmail.\-com}) 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_file_reader_utils_a39a019e35e82cd2ba6693f9de53f823e}{\index{File\-Reader\-Utils@{File\-Reader\-Utils}!file\-Exists@{file\-Exists}}
+\index{file\-Exists@{file\-Exists}!FileReaderUtils@{File\-Reader\-Utils}}
+\subsubsection[{file\-Exists}]{\setlength{\rightskip}{0pt plus 5cm}bool File\-Reader\-Utils\-::file\-Exists (
+\begin{DoxyParamCaption}
+\item[{string}]{subpath, }
+\item[{string}]{filename}
+\end{DoxyParamCaption}
+)}}\label{class_file_reader_utils_a39a019e35e82cd2ba6693f9de53f823e}
+Checks if a file in the specified subpath exists, for example Pv\-Z.\-txt in subfolder buildorder. \hypertarget{class_file_reader_utils_ac97c05c74d38a30718053a8487c35ae5}{\index{File\-Reader\-Utils@{File\-Reader\-Utils}!get\-Filename@{get\-Filename}}
+\index{get\-Filename@{get\-Filename}!FileReaderUtils@{File\-Reader\-Utils}}
+\subsubsection[{get\-Filename}]{\setlength{\rightskip}{0pt plus 5cm}string File\-Reader\-Utils\-::get\-Filename (
+\begin{DoxyParamCaption}
+\item[{string}]{subpath}
+\end{DoxyParamCaption}
+)}}\label{class_file_reader_utils_ac97c05c74d38a30718053a8487c35ae5}
+Returns the filename to use in sub folder squads, buildorder or upgrades. The methods checks if for example Pv\-Z is defined, and if not Pv\-X is used. \hypertarget{class_file_reader_utils_a91e2dc2098d36acde7ea5d1bfc157ac1}{\index{File\-Reader\-Utils@{File\-Reader\-Utils}!get\-Map\-Name@{get\-Map\-Name}}
+\index{get\-Map\-Name@{get\-Map\-Name}!FileReaderUtils@{File\-Reader\-Utils}}
+\subsubsection[{get\-Map\-Name}]{\setlength{\rightskip}{0pt plus 5cm}string File\-Reader\-Utils\-::get\-Map\-Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_file_reader_utils_a91e2dc2098d36acde7ea5d1bfc157ac1}
+Gets the name for the current map. \hypertarget{class_file_reader_utils_a14fcca343121a7bee04674ae292b1e2c}{\index{File\-Reader\-Utils@{File\-Reader\-Utils}!get\-Script\-Path@{get\-Script\-Path}}
+\index{get\-Script\-Path@{get\-Script\-Path}!FileReaderUtils@{File\-Reader\-Utils}}
+\subsubsection[{get\-Script\-Path}]{\setlength{\rightskip}{0pt plus 5cm}string File\-Reader\-Utils\-::get\-Script\-Path (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_file_reader_utils_a14fcca343121a7bee04674ae292b1e2c}
+Returns the path to the folder where the scripfiles are placed. \hypertarget{class_file_reader_utils_a1826e7fa51b8c8af1857924a900647a2}{\index{File\-Reader\-Utils@{File\-Reader\-Utils}!get\-Tech\-Type@{get\-Tech\-Type}}
+\index{get\-Tech\-Type@{get\-Tech\-Type}!FileReaderUtils@{File\-Reader\-Utils}}
+\subsubsection[{get\-Tech\-Type}]{\setlength{\rightskip}{0pt plus 5cm}Tech\-Type File\-Reader\-Utils\-::get\-Tech\-Type (
+\begin{DoxyParamCaption}
+\item[{string}]{line}
+\end{DoxyParamCaption}
+)}}\label{class_file_reader_utils_a1826e7fa51b8c8af1857924a900647a2}
+Returns a tech type from a textline, or Unknown if no type was found. \hypertarget{class_file_reader_utils_a3610e4425373e34077c8aa6a0cebc0d2}{\index{File\-Reader\-Utils@{File\-Reader\-Utils}!get\-Unit\-Type@{get\-Unit\-Type}}
+\index{get\-Unit\-Type@{get\-Unit\-Type}!FileReaderUtils@{File\-Reader\-Utils}}
+\subsubsection[{get\-Unit\-Type}]{\setlength{\rightskip}{0pt plus 5cm}Unit\-Type File\-Reader\-Utils\-::get\-Unit\-Type (
+\begin{DoxyParamCaption}
+\item[{string}]{line}
+\end{DoxyParamCaption}
+)}}\label{class_file_reader_utils_a3610e4425373e34077c8aa6a0cebc0d2}
+Returns a unit type from a textline, or Unknown if no type was found. \hypertarget{class_file_reader_utils_a1fc2d2cc1710e13a2b789c629a014e35}{\index{File\-Reader\-Utils@{File\-Reader\-Utils}!get\-Upgrade\-Type@{get\-Upgrade\-Type}}
+\index{get\-Upgrade\-Type@{get\-Upgrade\-Type}!FileReaderUtils@{File\-Reader\-Utils}}
+\subsubsection[{get\-Upgrade\-Type}]{\setlength{\rightskip}{0pt plus 5cm}Upgrade\-Type File\-Reader\-Utils\-::get\-Upgrade\-Type (
+\begin{DoxyParamCaption}
+\item[{string}]{line}
+\end{DoxyParamCaption}
+)}}\label{class_file_reader_utils_a1fc2d2cc1710e13a2b789c629a014e35}
+Returns an upgrade type from a textline, or Unknown if no type was found. \hypertarget{class_file_reader_utils_aa2cd7e46cc9775270dc51196b87e3c08}{\index{File\-Reader\-Utils@{File\-Reader\-Utils}!hash\-To\-Name@{hash\-To\-Name}}
+\index{hash\-To\-Name@{hash\-To\-Name}!FileReaderUtils@{File\-Reader\-Utils}}
+\subsubsection[{hash\-To\-Name}]{\setlength{\rightskip}{0pt plus 5cm}string File\-Reader\-Utils\-::hash\-To\-Name (
+\begin{DoxyParamCaption}
+\item[{string}]{hash}
+\end{DoxyParamCaption}
+)}}\label{class_file_reader_utils_aa2cd7e46cc9775270dc51196b87e3c08}
+Returns the map name for a hash id. \hypertarget{class_file_reader_utils_a447d938ec051d5934fcf0729f1a02003}{\index{File\-Reader\-Utils@{File\-Reader\-Utils}!name\-To\-Hash@{name\-To\-Hash}}
+\index{name\-To\-Hash@{name\-To\-Hash}!FileReaderUtils@{File\-Reader\-Utils}}
+\subsubsection[{name\-To\-Hash}]{\setlength{\rightskip}{0pt plus 5cm}string File\-Reader\-Utils\-::name\-To\-Hash (
+\begin{DoxyParamCaption}
+\item[{string}]{name}
+\end{DoxyParamCaption}
+)}}\label{class_file_reader_utils_a447d938ec051d5934fcf0729f1a02003}
+Returns the hash id for a map name. \hypertarget{class_file_reader_utils_ab7caf12d9315c0fede08ebecccdde74e}{\index{File\-Reader\-Utils@{File\-Reader\-Utils}!replace@{replace}}
+\index{replace@{replace}!FileReaderUtils@{File\-Reader\-Utils}}
+\subsubsection[{replace}]{\setlength{\rightskip}{0pt plus 5cm}void File\-Reader\-Utils\-::replace (
+\begin{DoxyParamCaption}
+\item[{string \&}]{line}
+\end{DoxyParamCaption}
+)}}\label{class_file_reader_utils_ab7caf12d9315c0fede08ebecccdde74e}
+Replaces all underscores (\-\_\-) with whitespaces in a string. \hypertarget{class_file_reader_utils_ab7228c9717c2f278b440b61db712974d}{\index{File\-Reader\-Utils@{File\-Reader\-Utils}!split@{split}}
+\index{split@{split}!FileReaderUtils@{File\-Reader\-Utils}}
+\subsubsection[{split}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Tokens} File\-Reader\-Utils\-::split (
+\begin{DoxyParamCaption}
+\item[{string}]{line, }
+\item[{string}]{delimiter}
+\end{DoxyParamCaption}
+)}}\label{class_file_reader_utils_ab7228c9717c2f278b440b61db712974d}
+Splits a line into tokens. Delimiter is the characted to split at, for example = or \-:. \hypertarget{class_file_reader_utils_a681030da28963b166b13e5bdd601807c}{\index{File\-Reader\-Utils@{File\-Reader\-Utils}!to\-Int@{to\-Int}}
+\index{to\-Int@{to\-Int}!FileReaderUtils@{File\-Reader\-Utils}}
+\subsubsection[{to\-Int}]{\setlength{\rightskip}{0pt plus 5cm}int File\-Reader\-Utils\-::to\-Int (
+\begin{DoxyParamCaption}
+\item[{string \&}]{str}
+\end{DoxyParamCaption}
+)}}\label{class_file_reader_utils_a681030da28963b166b13e5bdd601807c}
+Converts a string to an int. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+B\-T\-H\-A\-I\-Module/\-Source/File\-Reader\-Utils.\-h\item 
+B\-T\-H\-A\-I\-Module/\-Source/File\-Reader\-Utils.\-cpp\end{DoxyCompactItemize}

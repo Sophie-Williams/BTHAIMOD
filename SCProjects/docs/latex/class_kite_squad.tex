@@ -1,0 +1,162 @@
+\hypertarget{class_kite_squad}{\section{Kite\-Squad Class Reference}
+\label{class_kite_squad}\index{Kite\-Squad@{Kite\-Squad}}
+}
+
+
+{\ttfamily \#include $<$Kite\-Squad.\-h$>$}
+
+Inheritance diagram for Kite\-Squad\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_kite_squad}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_kite_squad_a8986c7e37d466183bb9acbbc3f1833c4}{Kite\-Squad} (int m\-Id, string m\-Name, int m\-Priority)
+\item 
+bool \hyperlink{class_kite_squad_a5ad4642151131cf0e8314e2a7681b7e7}{is\-Active} ()
+\item 
+void \hyperlink{class_kite_squad_a698aa209bf16b58892a397ec296d4815}{compute\-Actions} ()
+\item 
+void \hyperlink{class_kite_squad_a2aa62831b44a56d96c3ab51d60df4a69}{defend} (Tile\-Position m\-Goal)
+\item 
+void \hyperlink{class_kite_squad_a4a892e3d48cece93652c8c9466f399d8}{attack} (Tile\-Position m\-Goal)
+\item 
+void \hyperlink{class_kite_squad_ab30b684272bf68ee267e07960f669508}{assist} (Tile\-Position m\-Goal)
+\item 
+void \hyperlink{class_kite_squad_a48ffdfb34672a313572daf71e3a29cf1}{clear\-Goal} ()
+\item 
+Tile\-Position \hyperlink{class_kite_squad_a64cb8b009ddb33ac2d3ddacc02644bce}{get\-Goal} ()
+\item 
+bool \hyperlink{class_kite_squad_adc93a87ea13615e3aa75d06ae80d5a2b}{has\-Goal} ()
+\item 
+void \hyperlink{class_kite_squad_a6281202a63de91a93d33f868a08e128f}{print\-Info} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This is the same as \hyperlink{class_rush_squad}{Rush\-Squad}, except that agents kite enemy units once they have been attacked.
+
+Author\-: Johan Hagelback (\href{mailto:johan.hagelback@gmail.com}{\tt johan.\-hagelback@gmail.\-com}) 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_kite_squad_a8986c7e37d466183bb9acbbc3f1833c4}{\index{Kite\-Squad@{Kite\-Squad}!Kite\-Squad@{Kite\-Squad}}
+\index{Kite\-Squad@{Kite\-Squad}!KiteSquad@{Kite\-Squad}}
+\subsubsection[{Kite\-Squad}]{\setlength{\rightskip}{0pt plus 5cm}Kite\-Squad\-::\-Kite\-Squad (
+\begin{DoxyParamCaption}
+\item[{int}]{m\-Id, }
+\item[{string}]{m\-Name, }
+\item[{int}]{m\-Priority}
+\end{DoxyParamCaption}
+)}}\label{class_kite_squad_a8986c7e37d466183bb9acbbc3f1833c4}
+\hyperlink{class_constructor}{Constructor}. See \hyperlink{_squad_8h_source}{Squad.\-h} for more details. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_kite_squad_ab30b684272bf68ee267e07960f669508}{\index{Kite\-Squad@{Kite\-Squad}!assist@{assist}}
+\index{assist@{assist}!KiteSquad@{Kite\-Squad}}
+\subsubsection[{assist}]{\setlength{\rightskip}{0pt plus 5cm}void Kite\-Squad\-::assist (
+\begin{DoxyParamCaption}
+\item[{Tile\-Position}]{m\-Goal}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_kite_squad_ab30b684272bf68ee267e07960f669508}
+Orders this squad to assist units at a position. 
+
+Reimplemented from \hyperlink{class_squad_aefeccd46eb2bf673e1bb7e4d7b913a49}{Squad}.
+
+\hypertarget{class_kite_squad_a4a892e3d48cece93652c8c9466f399d8}{\index{Kite\-Squad@{Kite\-Squad}!attack@{attack}}
+\index{attack@{attack}!KiteSquad@{Kite\-Squad}}
+\subsubsection[{attack}]{\setlength{\rightskip}{0pt plus 5cm}void Kite\-Squad\-::attack (
+\begin{DoxyParamCaption}
+\item[{Tile\-Position}]{m\-Goal}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_kite_squad_a4a892e3d48cece93652c8c9466f399d8}
+Orders this squad to launch an attack at a position. 
+
+Reimplemented from \hyperlink{class_squad_a4e405c83103c69dda302a367e2dfed3f}{Squad}.
+
+\hypertarget{class_kite_squad_a48ffdfb34672a313572daf71e3a29cf1}{\index{Kite\-Squad@{Kite\-Squad}!clear\-Goal@{clear\-Goal}}
+\index{clear\-Goal@{clear\-Goal}!KiteSquad@{Kite\-Squad}}
+\subsubsection[{clear\-Goal}]{\setlength{\rightskip}{0pt plus 5cm}void Kite\-Squad\-::clear\-Goal (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_kite_squad_a48ffdfb34672a313572daf71e3a29cf1}
+Clears the goal for this \hyperlink{class_squad}{Squad}, i.\-e. sets the goal to Tile\-Position(-\/1,-\/1). 
+
+Reimplemented from \hyperlink{class_squad_a54380c521be6f5b3be723c24e2bd9ab7}{Squad}.
+
+\hypertarget{class_kite_squad_a698aa209bf16b58892a397ec296d4815}{\index{Kite\-Squad@{Kite\-Squad}!compute\-Actions@{compute\-Actions}}
+\index{compute\-Actions@{compute\-Actions}!KiteSquad@{Kite\-Squad}}
+\subsubsection[{compute\-Actions}]{\setlength{\rightskip}{0pt plus 5cm}void Kite\-Squad\-::compute\-Actions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_kite_squad_a698aa209bf16b58892a397ec296d4815}
+Called each update to issue orders. 
+
+Reimplemented from \hyperlink{class_squad_ac338d389b81cbec76cb8d240f0833e43}{Squad}.
+
+\hypertarget{class_kite_squad_a2aa62831b44a56d96c3ab51d60df4a69}{\index{Kite\-Squad@{Kite\-Squad}!defend@{defend}}
+\index{defend@{defend}!KiteSquad@{Kite\-Squad}}
+\subsubsection[{defend}]{\setlength{\rightskip}{0pt plus 5cm}void Kite\-Squad\-::defend (
+\begin{DoxyParamCaption}
+\item[{Tile\-Position}]{m\-Goal}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_kite_squad_a2aa62831b44a56d96c3ab51d60df4a69}
+Orders this squad to defend a position. 
+
+Reimplemented from \hyperlink{class_squad_aca337f45691b4e6ea361f3f8de06c536}{Squad}.
+
+\hypertarget{class_kite_squad_a64cb8b009ddb33ac2d3ddacc02644bce}{\index{Kite\-Squad@{Kite\-Squad}!get\-Goal@{get\-Goal}}
+\index{get\-Goal@{get\-Goal}!KiteSquad@{Kite\-Squad}}
+\subsubsection[{get\-Goal}]{\setlength{\rightskip}{0pt plus 5cm}Tile\-Position Kite\-Squad\-::get\-Goal (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_kite_squad_a64cb8b009ddb33ac2d3ddacc02644bce}
+Returns the current goal of this \hyperlink{class_squad}{Squad}. 
+
+Reimplemented from \hyperlink{class_squad_ae9278dcf91e317c4316ce19e4c7c3b9e}{Squad}.
+
+\hypertarget{class_kite_squad_adc93a87ea13615e3aa75d06ae80d5a2b}{\index{Kite\-Squad@{Kite\-Squad}!has\-Goal@{has\-Goal}}
+\index{has\-Goal@{has\-Goal}!KiteSquad@{Kite\-Squad}}
+\subsubsection[{has\-Goal}]{\setlength{\rightskip}{0pt plus 5cm}bool Kite\-Squad\-::has\-Goal (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_kite_squad_adc93a87ea13615e3aa75d06ae80d5a2b}
+Returns true if this squad has an assigned goal. 
+
+Reimplemented from \hyperlink{class_squad_a5ad7231b7644be74b42318ff97d6f5e3}{Squad}.
+
+\hypertarget{class_kite_squad_a5ad4642151131cf0e8314e2a7681b7e7}{\index{Kite\-Squad@{Kite\-Squad}!is\-Active@{is\-Active}}
+\index{is\-Active@{is\-Active}!KiteSquad@{Kite\-Squad}}
+\subsubsection[{is\-Active}]{\setlength{\rightskip}{0pt plus 5cm}bool Kite\-Squad\-::is\-Active (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_kite_squad_a5ad4642151131cf0e8314e2a7681b7e7}
+Returns true if this \hyperlink{class_squad}{Squad} is active, or false if not. A \hyperlink{class_squad}{Squad} is active when it first has been filled with agents. A \hyperlink{class_squad}{Squad} with destroyed units are still considered Active. 
+
+Reimplemented from \hyperlink{class_squad_a20f3ca360518b8908b405c44a858ccbd}{Squad}.
+
+\hypertarget{class_kite_squad_a6281202a63de91a93d33f868a08e128f}{\index{Kite\-Squad@{Kite\-Squad}!print\-Info@{print\-Info}}
+\index{print\-Info@{print\-Info}!KiteSquad@{Kite\-Squad}}
+\subsubsection[{print\-Info}]{\setlength{\rightskip}{0pt plus 5cm}void Kite\-Squad\-::print\-Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_kite_squad_a6281202a63de91a93d33f868a08e128f}
+Prints some info about the squad. 
+
+Reimplemented from \hyperlink{class_squad_a02e1bb7b5d5579df71cc94ce372ae13c}{Squad}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+B\-T\-H\-A\-I\-Module/\-Source/Kite\-Squad.\-h\item 
+B\-T\-H\-A\-I\-Module/\-Source/Kite\-Squad.\-cpp\end{DoxyCompactItemize}

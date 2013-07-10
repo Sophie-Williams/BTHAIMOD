@@ -1,0 +1,66 @@
+\hypertarget{class_upgrades_planner}{
+\section{UpgradesPlanner Class Reference}
+\label{class_upgrades_planner}\index{UpgradesPlanner@{UpgradesPlanner}}
+}
+
+
+{\ttfamily \#include $<$UpgradesPlanner.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_upgrades_planner_adca8c838dbffb0b1e9d6460e180b214c}{$\sim$UpgradesPlanner} ()
+\item 
+bool \hyperlink{class_upgrades_planner_ad012551792d7c672038a34dcb634b685}{checkUpgrade} (\hyperlink{class_base_agent}{BaseAgent} $\ast$agent)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_upgrades_planner}{UpgradesPlanner} $\ast$ \hyperlink{class_upgrades_planner_a6572326e44b217b8ee85d542fabc538a}{getInstance} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_upgrades_planner}{UpgradesPlanner} contains which updates/techs to be research and in which order.
+
+The \hyperlink{class_upgrades_planner}{UpgradesPlanner} is implemented as a singleton class. Each class that needs to access \hyperlink{class_upgrades_planner}{UpgradesPlanner} can request an instance, and all classes shares the same \hyperlink{class_upgrades_planner}{UpgradesPlanner} instance.
+
+Author: Johan Hagelback (\href{mailto:johan.hagelback@gmail.com}{\tt johan.hagelback@gmail.com}) 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_upgrades_planner_adca8c838dbffb0b1e9d6460e180b214c}{
+\index{UpgradesPlanner@{UpgradesPlanner}!$\sim$UpgradesPlanner@{$\sim$UpgradesPlanner}}
+\index{$\sim$UpgradesPlanner@{$\sim$UpgradesPlanner}!UpgradesPlanner@{UpgradesPlanner}}
+\subsubsection[{$\sim$UpgradesPlanner}]{\setlength{\rightskip}{0pt plus 5cm}UpgradesPlanner::$\sim$UpgradesPlanner (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_upgrades_planner_adca8c838dbffb0b1e9d6460e180b214c}
+Destructor. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_upgrades_planner_ad012551792d7c672038a34dcb634b685}{
+\index{UpgradesPlanner@{UpgradesPlanner}!checkUpgrade@{checkUpgrade}}
+\index{checkUpgrade@{checkUpgrade}!UpgradesPlanner@{UpgradesPlanner}}
+\subsubsection[{checkUpgrade}]{\setlength{\rightskip}{0pt plus 5cm}bool UpgradesPlanner::checkUpgrade (
+\begin{DoxyParamCaption}
+\item[{{\bf BaseAgent} $\ast$}]{agent}
+\end{DoxyParamCaption}
+)}}
+\label{class_upgrades_planner_ad012551792d7c672038a34dcb634b685}
+Checks if there is an upgrade the specified agent need to upgrade/research. \hypertarget{class_upgrades_planner_a6572326e44b217b8ee85d542fabc538a}{
+\index{UpgradesPlanner@{UpgradesPlanner}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!UpgradesPlanner@{UpgradesPlanner}}
+\subsubsection[{getInstance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf UpgradesPlanner} $\ast$ UpgradesPlanner::getInstance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_upgrades_planner_a6572326e44b217b8ee85d542fabc538a}
+Returns the instance to the \hyperlink{class_upgrades_planner}{UpgradesPlanner} that is currently used. 
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+BTHAIModule/Source/UpgradesPlanner.h\item 
+BTHAIModule/Source/UpgradesPlanner.cpp\end{DoxyCompactItemize}

@@ -1,0 +1,78 @@
+\hypertarget{class_stargate_agent}{
+\section{StargateAgent Class Reference}
+\label{class_stargate_agent}\index{StargateAgent@{StargateAgent}}
+}
+
+
+{\ttfamily \#include $<$StargateAgent.h$>$}
+
+Inheritance diagram for StargateAgent:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_stargate_agent}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_stargate_agent_ab2af86492670119dac54c68c05a4bb71}{
+{\bfseries StargateAgent} (Unit $\ast$mUnit)}
+\label{class_stargate_agent_ab2af86492670119dac54c68c05a4bb71}
+
+\item 
+void \hyperlink{class_stargate_agent_a79107dd5186ecfe294efc5f75b166aeb}{computeActions} ()
+\item 
+string \hyperlink{class_stargate_agent_a2f09834418356f02f8a39a7083ec3eaa}{getTypeName} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_stargate_agent}{StargateAgent} handles Protoss Stargate buildings.
+
+Implemented abilities:
+\begin{DoxyItemize}
+\item Can train Scouts.
+\item Can train Corsairs.
+\item Can train Arbiters.
+\end{DoxyItemize}
+
+TODO:
+\begin{DoxyItemize}
+\item Transports using Carriers has not been implemented.
+\end{DoxyItemize}
+
+Author: Johan Hagelback (\href{mailto:johan.hagelback@gmail.com}{\tt johan.hagelback@gmail.com}) 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_stargate_agent_a79107dd5186ecfe294efc5f75b166aeb}{
+\index{StargateAgent@{StargateAgent}!computeActions@{computeActions}}
+\index{computeActions@{computeActions}!StargateAgent@{StargateAgent}}
+\subsubsection[{computeActions}]{\setlength{\rightskip}{0pt plus 5cm}void StargateAgent::computeActions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_stargate_agent_a79107dd5186ecfe294efc5f75b166aeb}
+Called each update to issue orders. 
+
+Reimplemented from \hyperlink{class_structure_agent_af53d1389d80784bb254605ffd9f9e4e4}{StructureAgent}.
+
+\hypertarget{class_stargate_agent_a2f09834418356f02f8a39a7083ec3eaa}{
+\index{StargateAgent@{StargateAgent}!getTypeName@{getTypeName}}
+\index{getTypeName@{getTypeName}!StargateAgent@{StargateAgent}}
+\subsubsection[{getTypeName}]{\setlength{\rightskip}{0pt plus 5cm}string StargateAgent::getTypeName (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_stargate_agent_a2f09834418356f02f8a39a7083ec3eaa}
+Returns the unique type name for structure agents. 
+
+Reimplemented from \hyperlink{class_structure_agent_acbeb3232c3c9c647ba526defa22264cd}{StructureAgent}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+BTHAIModule/Source/StargateAgent.h\item 
+BTHAIModule/Source/StargateAgent.cpp\end{DoxyCompactItemize}

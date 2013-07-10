@@ -1,0 +1,149 @@
+\hypertarget{class_rush_squad}{\section{Rush\-Squad Class Reference}
+\label{class_rush_squad}\index{Rush\-Squad@{Rush\-Squad}}
+}
+
+
+{\ttfamily \#include $<$Rush\-Squad.\-h$>$}
+
+Inheritance diagram for Rush\-Squad\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_rush_squad}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_rush_squad_ad5f111392247c4be3ab1fb9f7d19fb2e}{Rush\-Squad} (int m\-Id, string m\-Name, int m\-Priority)
+\item 
+bool \hyperlink{class_rush_squad_a5cc0121df4c3948c189de4a1ef40401d}{is\-Active} ()
+\item 
+void \hyperlink{class_rush_squad_a075afcb471c368c2315a42cedb58e84f}{compute\-Actions} ()
+\item 
+void \hyperlink{class_rush_squad_abd54cdfc77e3b32551fd27770313cfe7}{defend} (Tile\-Position m\-Goal)
+\item 
+void \hyperlink{class_rush_squad_ad2f77ce2e4af380cb66492a340fa535c}{attack} (Tile\-Position m\-Goal)
+\item 
+void \hyperlink{class_rush_squad_a5f19b2252ebe72769d11d79fe0de6646}{assist} (Tile\-Position m\-Goal)
+\item 
+void \hyperlink{class_rush_squad_a11d8bb67344e053598ae072234394811}{clear\-Goal} ()
+\item 
+Tile\-Position \hyperlink{class_rush_squad_afab5f8f1bdfad56a5d39ce257fc74753}{get\-Goal} ()
+\item 
+bool \hyperlink{class_rush_squad_a889e5b7adcb6621e5d3d97fc3136b94d}{has\-Goal} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This squad rushes to each start location until the enemy has been located.
+
+Author\-: Johan Hagelback (\href{mailto:johan.hagelback@gmail.com}{\tt johan.\-hagelback@gmail.\-com}) 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_rush_squad_ad5f111392247c4be3ab1fb9f7d19fb2e}{\index{Rush\-Squad@{Rush\-Squad}!Rush\-Squad@{Rush\-Squad}}
+\index{Rush\-Squad@{Rush\-Squad}!RushSquad@{Rush\-Squad}}
+\subsubsection[{Rush\-Squad}]{\setlength{\rightskip}{0pt plus 5cm}Rush\-Squad\-::\-Rush\-Squad (
+\begin{DoxyParamCaption}
+\item[{int}]{m\-Id, }
+\item[{string}]{m\-Name, }
+\item[{int}]{m\-Priority}
+\end{DoxyParamCaption}
+)}}\label{class_rush_squad_ad5f111392247c4be3ab1fb9f7d19fb2e}
+\hyperlink{class_constructor}{Constructor}. See \hyperlink{_squad_8h_source}{Squad.\-h} for more details. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_rush_squad_a5f19b2252ebe72769d11d79fe0de6646}{\index{Rush\-Squad@{Rush\-Squad}!assist@{assist}}
+\index{assist@{assist}!RushSquad@{Rush\-Squad}}
+\subsubsection[{assist}]{\setlength{\rightskip}{0pt plus 5cm}void Rush\-Squad\-::assist (
+\begin{DoxyParamCaption}
+\item[{Tile\-Position}]{m\-Goal}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_rush_squad_a5f19b2252ebe72769d11d79fe0de6646}
+Orders this squad to assist units at a position. 
+
+Reimplemented from \hyperlink{class_squad_aefeccd46eb2bf673e1bb7e4d7b913a49}{Squad}.
+
+\hypertarget{class_rush_squad_ad2f77ce2e4af380cb66492a340fa535c}{\index{Rush\-Squad@{Rush\-Squad}!attack@{attack}}
+\index{attack@{attack}!RushSquad@{Rush\-Squad}}
+\subsubsection[{attack}]{\setlength{\rightskip}{0pt plus 5cm}void Rush\-Squad\-::attack (
+\begin{DoxyParamCaption}
+\item[{Tile\-Position}]{m\-Goal}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_rush_squad_ad2f77ce2e4af380cb66492a340fa535c}
+Orders this squad to launch an attack at a position. 
+
+Reimplemented from \hyperlink{class_squad_a4e405c83103c69dda302a367e2dfed3f}{Squad}.
+
+\hypertarget{class_rush_squad_a11d8bb67344e053598ae072234394811}{\index{Rush\-Squad@{Rush\-Squad}!clear\-Goal@{clear\-Goal}}
+\index{clear\-Goal@{clear\-Goal}!RushSquad@{Rush\-Squad}}
+\subsubsection[{clear\-Goal}]{\setlength{\rightskip}{0pt plus 5cm}void Rush\-Squad\-::clear\-Goal (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_rush_squad_a11d8bb67344e053598ae072234394811}
+Clears the goal for this \hyperlink{class_squad}{Squad}, i.\-e. sets the goal to Tile\-Position(-\/1,-\/1). 
+
+Reimplemented from \hyperlink{class_squad_a54380c521be6f5b3be723c24e2bd9ab7}{Squad}.
+
+\hypertarget{class_rush_squad_a075afcb471c368c2315a42cedb58e84f}{\index{Rush\-Squad@{Rush\-Squad}!compute\-Actions@{compute\-Actions}}
+\index{compute\-Actions@{compute\-Actions}!RushSquad@{Rush\-Squad}}
+\subsubsection[{compute\-Actions}]{\setlength{\rightskip}{0pt plus 5cm}void Rush\-Squad\-::compute\-Actions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_rush_squad_a075afcb471c368c2315a42cedb58e84f}
+Called each update to issue orders. 
+
+Reimplemented from \hyperlink{class_squad_ac338d389b81cbec76cb8d240f0833e43}{Squad}.
+
+\hypertarget{class_rush_squad_abd54cdfc77e3b32551fd27770313cfe7}{\index{Rush\-Squad@{Rush\-Squad}!defend@{defend}}
+\index{defend@{defend}!RushSquad@{Rush\-Squad}}
+\subsubsection[{defend}]{\setlength{\rightskip}{0pt plus 5cm}void Rush\-Squad\-::defend (
+\begin{DoxyParamCaption}
+\item[{Tile\-Position}]{m\-Goal}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_rush_squad_abd54cdfc77e3b32551fd27770313cfe7}
+Orders this squad to defend a position. 
+
+Reimplemented from \hyperlink{class_squad_aca337f45691b4e6ea361f3f8de06c536}{Squad}.
+
+\hypertarget{class_rush_squad_afab5f8f1bdfad56a5d39ce257fc74753}{\index{Rush\-Squad@{Rush\-Squad}!get\-Goal@{get\-Goal}}
+\index{get\-Goal@{get\-Goal}!RushSquad@{Rush\-Squad}}
+\subsubsection[{get\-Goal}]{\setlength{\rightskip}{0pt plus 5cm}Tile\-Position Rush\-Squad\-::get\-Goal (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_rush_squad_afab5f8f1bdfad56a5d39ce257fc74753}
+Returns the current goal of this \hyperlink{class_squad}{Squad}. 
+
+Reimplemented from \hyperlink{class_squad_ae9278dcf91e317c4316ce19e4c7c3b9e}{Squad}.
+
+\hypertarget{class_rush_squad_a889e5b7adcb6621e5d3d97fc3136b94d}{\index{Rush\-Squad@{Rush\-Squad}!has\-Goal@{has\-Goal}}
+\index{has\-Goal@{has\-Goal}!RushSquad@{Rush\-Squad}}
+\subsubsection[{has\-Goal}]{\setlength{\rightskip}{0pt plus 5cm}bool Rush\-Squad\-::has\-Goal (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_rush_squad_a889e5b7adcb6621e5d3d97fc3136b94d}
+Returns true if this squad has an assigned goal. 
+
+Reimplemented from \hyperlink{class_squad_a5ad7231b7644be74b42318ff97d6f5e3}{Squad}.
+
+\hypertarget{class_rush_squad_a5cc0121df4c3948c189de4a1ef40401d}{\index{Rush\-Squad@{Rush\-Squad}!is\-Active@{is\-Active}}
+\index{is\-Active@{is\-Active}!RushSquad@{Rush\-Squad}}
+\subsubsection[{is\-Active}]{\setlength{\rightskip}{0pt plus 5cm}bool Rush\-Squad\-::is\-Active (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_rush_squad_a5cc0121df4c3948c189de4a1ef40401d}
+Returns true if this \hyperlink{class_squad}{Squad} is active, or false if not. A \hyperlink{class_squad}{Squad} is active when it first has been filled with agents. A \hyperlink{class_squad}{Squad} with destroyed units are still considered Active. 
+
+Reimplemented from \hyperlink{class_squad_a20f3ca360518b8908b405c44a858ccbd}{Squad}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+B\-T\-H\-A\-I\-Module/\-Source/Rush\-Squad.\-h\item 
+B\-T\-H\-A\-I\-Module/\-Source/Rush\-Squad.\-cpp\end{DoxyCompactItemize}

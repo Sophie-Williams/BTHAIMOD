@@ -1,0 +1,214 @@
+\hypertarget{class_structure_positioner}{\section{Structure\-Positioner Class Reference}
+\label{class_structure_positioner}\index{Structure\-Positioner@{Structure\-Positioner}}
+}
+
+
+{\ttfamily \#include $<$Structure\-Positioner.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_structure_positioner_a185adcb9c16813aea873479aff2742fe}{$\sim$\-Structure\-Positioner} ()
+\item 
+void \hyperlink{class_structure_positioner_adb3c0b25a7f5aab221f0c4dad4e4b366}{add\-Constructed\-Building} (Unit $\ast$unit)
+\item 
+void \hyperlink{class_structure_positioner_a26f5177844c57cbe0b3b39cd2dfad3fb}{fill\-Temp} (Unit\-Type to\-Build, Tile\-Position build\-Spot)
+\item 
+void \hyperlink{class_structure_positioner_a507198ab61e3b89d46a2606764cd290d}{clear\-Temp} (Unit\-Type to\-Build, Tile\-Position build\-Spot)
+\item 
+void \hyperlink{class_structure_positioner_a2bb50dd6519f68778e5c988a86333b9a}{building\-Destroyed} (Unit $\ast$unit)
+\item 
+bool \hyperlink{class_structure_positioner_a524b5483a0cd30d39de6dc0a84a310ac}{can\-Build} (Unit\-Type to\-Build, Tile\-Position build\-Spot)
+\item 
+bool \hyperlink{class_structure_positioner_aee8a7e9ec413287ad0b47dacb8f467ff}{position\-Free} (Tile\-Position pos)
+\item 
+void \hyperlink{class_structure_positioner_a16b9b68a98dcabb1d059fba1a3aac182}{block\-Position} (Tile\-Position build\-Spot)
+\item 
+Tile\-Position \hyperlink{class_structure_positioner_add091d597cb6963b9141c7bb259e4aba}{find\-Build\-Spot} (Unit\-Type to\-Build)
+\item 
+Tile\-Position \hyperlink{class_structure_positioner_a29cd82d658d54df10bc15d7304023680}{find\-Refinery\-Build\-Spot} (Unit\-Type to\-Build, Tile\-Position start)
+\item 
+Tile\-Position \hyperlink{class_structure_positioner_a04642322946745406ee1927a2d19af22}{find\-Closest\-Gas\-Without\-Refinery} (Unit\-Type to\-Build, Tile\-Position start)
+\item 
+Tile\-Position \hyperlink{class_structure_positioner_ac98af8b499f0875d3ac62d82d3046f08}{search\-Refinery\-Spot} ()
+\item 
+Tile\-Position \hyperlink{class_structure_positioner_a31cb4e031792bc10b23d2a6617dc0beb}{find\-Expansion\-Site} ()
+\item 
+Unit $\ast$ \hyperlink{class_structure_positioner_ac5278d8404365b6864c9dc5517d5c840}{find\-Closest\-Mineral} (Tile\-Position worker\-Pos)
+\item 
+void \hyperlink{class_structure_positioner_a93f082db7ea29452a3690e2694f0a2ca}{debug} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_structure_positioner}{Structure\-Positioner} $\ast$ \hyperlink{class_structure_positioner_a736f73eee46a728f613d45be884bf674}{get\-Instance} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \hyperlink{class_structure_positioner_a52b8f5eec2db29464b7e7da910031cda}{B\-U\-I\-L\-D\-A\-B\-L\-E} = 1
+\item 
+static const int \hyperlink{class_structure_positioner_a808a58757b50522f54517ebe0f53f884}{B\-L\-O\-C\-K\-E\-D} = 0
+\item 
+static const int \hyperlink{class_structure_positioner_ad08ca89033039a7d467a5d2865328d84}{T\-E\-M\-P\-B\-L\-O\-C\-K\-E\-D} = 4
+\item 
+static const int \hyperlink{class_structure_positioner_a62fd11d736c0792adbe85ad1da4d9b48}{M\-I\-N\-E\-R\-A\-L} = 2
+\item 
+static const int \hyperlink{class_structure_positioner_aed20514df64d4a4ef64fa124b2709140}{G\-A\-S} = 3
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_structure_positioner}{Structure\-Positioner} class is used to find positions to place new buildings at. It keeps track of which map tiles are occupied (by own buildings) or unavailable (blocked by terrain, minerals patches etc.).
+
+Internally a matrix of the same size as the map is used. If a Tile is occupied or cant be reached by ground units, the value if the tile is 0. If the Tile can be built on, the value is 1. Buildings typically use up more space in the matrix than their actual size since we want some free space around each building. Different types of buildings have different space requirements.
+
+The \hyperlink{class_structure_positioner}{Structure\-Positioner} is implemented as a singleton class. Each class that needs to access \hyperlink{class_structure_positioner}{Structure\-Positioner} can request an instance, and all classes shares the same \hyperlink{class_structure_positioner}{Structure\-Positioner} instance.
+
+Author\-: Johan Hagelback (\href{mailto:johan.hagelback@gmail.com}{\tt johan.\-hagelback@gmail.\-com}) 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_structure_positioner_a185adcb9c16813aea873479aff2742fe}{\index{Structure\-Positioner@{Structure\-Positioner}!$\sim$\-Structure\-Positioner@{$\sim$\-Structure\-Positioner}}
+\index{$\sim$\-Structure\-Positioner@{$\sim$\-Structure\-Positioner}!StructurePositioner@{Structure\-Positioner}}
+\subsubsection[{$\sim$\-Structure\-Positioner}]{\setlength{\rightskip}{0pt plus 5cm}Structure\-Positioner\-::$\sim$\-Structure\-Positioner (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_structure_positioner_a185adcb9c16813aea873479aff2742fe}
+Destructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_structure_positioner_adb3c0b25a7f5aab221f0c4dad4e4b366}{\index{Structure\-Positioner@{Structure\-Positioner}!add\-Constructed\-Building@{add\-Constructed\-Building}}
+\index{add\-Constructed\-Building@{add\-Constructed\-Building}!StructurePositioner@{Structure\-Positioner}}
+\subsubsection[{add\-Constructed\-Building}]{\setlength{\rightskip}{0pt plus 5cm}void Structure\-Positioner\-::add\-Constructed\-Building (
+\begin{DoxyParamCaption}
+\item[{Unit $\ast$}]{unit}
+\end{DoxyParamCaption}
+)}}\label{class_structure_positioner_adb3c0b25a7f5aab221f0c4dad4e4b366}
+Adds a newly constructed building to the cover map. \hypertarget{class_structure_positioner_a16b9b68a98dcabb1d059fba1a3aac182}{\index{Structure\-Positioner@{Structure\-Positioner}!block\-Position@{block\-Position}}
+\index{block\-Position@{block\-Position}!StructurePositioner@{Structure\-Positioner}}
+\subsubsection[{block\-Position}]{\setlength{\rightskip}{0pt plus 5cm}void Structure\-Positioner\-::block\-Position (
+\begin{DoxyParamCaption}
+\item[{Tile\-Position}]{build\-Spot}
+\end{DoxyParamCaption}
+)}}\label{class_structure_positioner_a16b9b68a98dcabb1d059fba1a3aac182}
+Blocks a position from being used as a valid build\-Spot. Used when a worker is timedout when moving towards the build\-Spot. \hypertarget{class_structure_positioner_a2bb50dd6519f68778e5c988a86333b9a}{\index{Structure\-Positioner@{Structure\-Positioner}!building\-Destroyed@{building\-Destroyed}}
+\index{building\-Destroyed@{building\-Destroyed}!StructurePositioner@{Structure\-Positioner}}
+\subsubsection[{building\-Destroyed}]{\setlength{\rightskip}{0pt plus 5cm}void Structure\-Positioner\-::building\-Destroyed (
+\begin{DoxyParamCaption}
+\item[{Unit $\ast$}]{unit}
+\end{DoxyParamCaption}
+)}}\label{class_structure_positioner_a2bb50dd6519f68778e5c988a86333b9a}
+Called when a building is destroyed, to free up the space. \hypertarget{class_structure_positioner_a524b5483a0cd30d39de6dc0a84a310ac}{\index{Structure\-Positioner@{Structure\-Positioner}!can\-Build@{can\-Build}}
+\index{can\-Build@{can\-Build}!StructurePositioner@{Structure\-Positioner}}
+\subsubsection[{can\-Build}]{\setlength{\rightskip}{0pt plus 5cm}bool Structure\-Positioner\-::can\-Build (
+\begin{DoxyParamCaption}
+\item[{Unit\-Type}]{to\-Build, }
+\item[{Tile\-Position}]{build\-Spot}
+\end{DoxyParamCaption}
+)}}\label{class_structure_positioner_a524b5483a0cd30d39de6dc0a84a310ac}
+Checks if the specified building type can be built at the build\-Spot. True if it can, false otherwise. \hypertarget{class_structure_positioner_a507198ab61e3b89d46a2606764cd290d}{\index{Structure\-Positioner@{Structure\-Positioner}!clear\-Temp@{clear\-Temp}}
+\index{clear\-Temp@{clear\-Temp}!StructurePositioner@{Structure\-Positioner}}
+\subsubsection[{clear\-Temp}]{\setlength{\rightskip}{0pt plus 5cm}void Structure\-Positioner\-::clear\-Temp (
+\begin{DoxyParamCaption}
+\item[{Unit\-Type}]{to\-Build, }
+\item[{Tile\-Position}]{build\-Spot}
+\end{DoxyParamCaption}
+)}}\label{class_structure_positioner_a507198ab61e3b89d46a2606764cd290d}
+Used by \hyperlink{class_worker_agent}{Worker\-Agent} when constructing builds. \hypertarget{class_structure_positioner_a93f082db7ea29452a3690e2694f0a2ca}{\index{Structure\-Positioner@{Structure\-Positioner}!debug@{debug}}
+\index{debug@{debug}!StructurePositioner@{Structure\-Positioner}}
+\subsubsection[{debug}]{\setlength{\rightskip}{0pt plus 5cm}void Structure\-Positioner\-::debug (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_structure_positioner_a93f082db7ea29452a3690e2694f0a2ca}
+Shows debug info on screen. \hypertarget{class_structure_positioner_a26f5177844c57cbe0b3b39cd2dfad3fb}{\index{Structure\-Positioner@{Structure\-Positioner}!fill\-Temp@{fill\-Temp}}
+\index{fill\-Temp@{fill\-Temp}!StructurePositioner@{Structure\-Positioner}}
+\subsubsection[{fill\-Temp}]{\setlength{\rightskip}{0pt plus 5cm}void Structure\-Positioner\-::fill\-Temp (
+\begin{DoxyParamCaption}
+\item[{Unit\-Type}]{to\-Build, }
+\item[{Tile\-Position}]{build\-Spot}
+\end{DoxyParamCaption}
+)}}\label{class_structure_positioner_a26f5177844c57cbe0b3b39cd2dfad3fb}
+Used by \hyperlink{class_worker_agent}{Worker\-Agent} when constructing builds. \hypertarget{class_structure_positioner_add091d597cb6963b9141c7bb259e4aba}{\index{Structure\-Positioner@{Structure\-Positioner}!find\-Build\-Spot@{find\-Build\-Spot}}
+\index{find\-Build\-Spot@{find\-Build\-Spot}!StructurePositioner@{Structure\-Positioner}}
+\subsubsection[{find\-Build\-Spot}]{\setlength{\rightskip}{0pt plus 5cm}Tile\-Position Structure\-Positioner\-::find\-Build\-Spot (
+\begin{DoxyParamCaption}
+\item[{Unit\-Type}]{to\-Build}
+\end{DoxyParamCaption}
+)}}\label{class_structure_positioner_add091d597cb6963b9141c7bb259e4aba}
+Finds and returns a build\-Spot for the specified building type. If no buildspot is found, a Tile\-Position(-\/1,-\/1) is returned. \hypertarget{class_structure_positioner_a04642322946745406ee1927a2d19af22}{\index{Structure\-Positioner@{Structure\-Positioner}!find\-Closest\-Gas\-Without\-Refinery@{find\-Closest\-Gas\-Without\-Refinery}}
+\index{find\-Closest\-Gas\-Without\-Refinery@{find\-Closest\-Gas\-Without\-Refinery}!StructurePositioner@{Structure\-Positioner}}
+\subsubsection[{find\-Closest\-Gas\-Without\-Refinery}]{\setlength{\rightskip}{0pt plus 5cm}Tile\-Position Structure\-Positioner\-::find\-Closest\-Gas\-Without\-Refinery (
+\begin{DoxyParamCaption}
+\item[{Unit\-Type}]{to\-Build, }
+\item[{Tile\-Position}]{start}
+\end{DoxyParamCaption}
+)}}\label{class_structure_positioner_a04642322946745406ee1927a2d19af22}
+Finds and returns the position of the closest free vespene gas around the specified start position. If no gas vein is found, a Tile\-Position(-\/1, -\/1) is returned. \hypertarget{class_structure_positioner_ac5278d8404365b6864c9dc5517d5c840}{\index{Structure\-Positioner@{Structure\-Positioner}!find\-Closest\-Mineral@{find\-Closest\-Mineral}}
+\index{find\-Closest\-Mineral@{find\-Closest\-Mineral}!StructurePositioner@{Structure\-Positioner}}
+\subsubsection[{find\-Closest\-Mineral}]{\setlength{\rightskip}{0pt plus 5cm}Unit $\ast$ Structure\-Positioner\-::find\-Closest\-Mineral (
+\begin{DoxyParamCaption}
+\item[{Tile\-Position}]{worker\-Pos}
+\end{DoxyParamCaption}
+)}}\label{class_structure_positioner_ac5278d8404365b6864c9dc5517d5c840}
+Finds a mineral to gather from. \hypertarget{class_structure_positioner_a31cb4e031792bc10b23d2a6617dc0beb}{\index{Structure\-Positioner@{Structure\-Positioner}!find\-Expansion\-Site@{find\-Expansion\-Site}}
+\index{find\-Expansion\-Site@{find\-Expansion\-Site}!StructurePositioner@{Structure\-Positioner}}
+\subsubsection[{find\-Expansion\-Site}]{\setlength{\rightskip}{0pt plus 5cm}Tile\-Position Structure\-Positioner\-::find\-Expansion\-Site (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_structure_positioner_a31cb4e031792bc10b23d2a6617dc0beb}
+Returns a position of a suitable site for expansion, i.\-e. new bases. \hypertarget{class_structure_positioner_a29cd82d658d54df10bc15d7304023680}{\index{Structure\-Positioner@{Structure\-Positioner}!find\-Refinery\-Build\-Spot@{find\-Refinery\-Build\-Spot}}
+\index{find\-Refinery\-Build\-Spot@{find\-Refinery\-Build\-Spot}!StructurePositioner@{Structure\-Positioner}}
+\subsubsection[{find\-Refinery\-Build\-Spot}]{\setlength{\rightskip}{0pt plus 5cm}Tile\-Position Structure\-Positioner\-::find\-Refinery\-Build\-Spot (
+\begin{DoxyParamCaption}
+\item[{Unit\-Type}]{to\-Build, }
+\item[{Tile\-Position}]{start}
+\end{DoxyParamCaption}
+)}}\label{class_structure_positioner_a29cd82d658d54df10bc15d7304023680}
+Searches for the closest vespene gas that is not in use. If no gas is sighted, the \hyperlink{class_exploration_manager}{Exploration\-Manager} is queried. \hypertarget{class_structure_positioner_a736f73eee46a728f613d45be884bf674}{\index{Structure\-Positioner@{Structure\-Positioner}!get\-Instance@{get\-Instance}}
+\index{get\-Instance@{get\-Instance}!StructurePositioner@{Structure\-Positioner}}
+\subsubsection[{get\-Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Structure\-Positioner} $\ast$ Structure\-Positioner\-::get\-Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_structure_positioner_a736f73eee46a728f613d45be884bf674}
+Returns the instance of the class. \hypertarget{class_structure_positioner_aee8a7e9ec413287ad0b47dacb8f467ff}{\index{Structure\-Positioner@{Structure\-Positioner}!position\-Free@{position\-Free}}
+\index{position\-Free@{position\-Free}!StructurePositioner@{Structure\-Positioner}}
+\subsubsection[{position\-Free}]{\setlength{\rightskip}{0pt plus 5cm}bool Structure\-Positioner\-::position\-Free (
+\begin{DoxyParamCaption}
+\item[{Tile\-Position}]{pos}
+\end{DoxyParamCaption}
+)}}\label{class_structure_positioner_aee8a7e9ec413287ad0b47dacb8f467ff}
+Checks if a position is free. \hypertarget{class_structure_positioner_ac98af8b499f0875d3ac62d82d3046f08}{\index{Structure\-Positioner@{Structure\-Positioner}!search\-Refinery\-Spot@{search\-Refinery\-Spot}}
+\index{search\-Refinery\-Spot@{search\-Refinery\-Spot}!StructurePositioner@{Structure\-Positioner}}
+\subsubsection[{search\-Refinery\-Spot}]{\setlength{\rightskip}{0pt plus 5cm}Tile\-Position Structure\-Positioner\-::search\-Refinery\-Spot (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_structure_positioner_ac98af8b499f0875d3ac62d82d3046f08}
+Searches for a spot to build a refinery at. Returns Tile\-Position(-\/1, -\/1) if no spot was found. 
+
+\subsection{Member Data Documentation}
+\hypertarget{class_structure_positioner_a808a58757b50522f54517ebe0f53f884}{\index{Structure\-Positioner@{Structure\-Positioner}!B\-L\-O\-C\-K\-E\-D@{B\-L\-O\-C\-K\-E\-D}}
+\index{B\-L\-O\-C\-K\-E\-D@{B\-L\-O\-C\-K\-E\-D}!StructurePositioner@{Structure\-Positioner}}
+\subsubsection[{B\-L\-O\-C\-K\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}const int Structure\-Positioner\-::\-B\-L\-O\-C\-K\-E\-D = 0\hspace{0.3cm}{\ttfamily [static]}}}\label{class_structure_positioner_a808a58757b50522f54517ebe0f53f884}
+Tile is blocked and cannot be built on. \hypertarget{class_structure_positioner_a52b8f5eec2db29464b7e7da910031cda}{\index{Structure\-Positioner@{Structure\-Positioner}!B\-U\-I\-L\-D\-A\-B\-L\-E@{B\-U\-I\-L\-D\-A\-B\-L\-E}}
+\index{B\-U\-I\-L\-D\-A\-B\-L\-E@{B\-U\-I\-L\-D\-A\-B\-L\-E}!StructurePositioner@{Structure\-Positioner}}
+\subsubsection[{B\-U\-I\-L\-D\-A\-B\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}const int Structure\-Positioner\-::\-B\-U\-I\-L\-D\-A\-B\-L\-E = 1\hspace{0.3cm}{\ttfamily [static]}}}\label{class_structure_positioner_a52b8f5eec2db29464b7e7da910031cda}
+Tile is buildable. \hypertarget{class_structure_positioner_aed20514df64d4a4ef64fa124b2709140}{\index{Structure\-Positioner@{Structure\-Positioner}!G\-A\-S@{G\-A\-S}}
+\index{G\-A\-S@{G\-A\-S}!StructurePositioner@{Structure\-Positioner}}
+\subsubsection[{G\-A\-S}]{\setlength{\rightskip}{0pt plus 5cm}const int Structure\-Positioner\-::\-G\-A\-S = 3\hspace{0.3cm}{\ttfamily [static]}}}\label{class_structure_positioner_aed20514df64d4a4ef64fa124b2709140}
+Tile contains a gas vein. \hypertarget{class_structure_positioner_a62fd11d736c0792adbe85ad1da4d9b48}{\index{Structure\-Positioner@{Structure\-Positioner}!M\-I\-N\-E\-R\-A\-L@{M\-I\-N\-E\-R\-A\-L}}
+\index{M\-I\-N\-E\-R\-A\-L@{M\-I\-N\-E\-R\-A\-L}!StructurePositioner@{Structure\-Positioner}}
+\subsubsection[{M\-I\-N\-E\-R\-A\-L}]{\setlength{\rightskip}{0pt plus 5cm}const int Structure\-Positioner\-::\-M\-I\-N\-E\-R\-A\-L = 2\hspace{0.3cm}{\ttfamily [static]}}}\label{class_structure_positioner_a62fd11d736c0792adbe85ad1da4d9b48}
+Tile contains a mineral vein. \hypertarget{class_structure_positioner_ad08ca89033039a7d467a5d2865328d84}{\index{Structure\-Positioner@{Structure\-Positioner}!T\-E\-M\-P\-B\-L\-O\-C\-K\-E\-D@{T\-E\-M\-P\-B\-L\-O\-C\-K\-E\-D}}
+\index{T\-E\-M\-P\-B\-L\-O\-C\-K\-E\-D@{T\-E\-M\-P\-B\-L\-O\-C\-K\-E\-D}!StructurePositioner@{Structure\-Positioner}}
+\subsubsection[{T\-E\-M\-P\-B\-L\-O\-C\-K\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}const int Structure\-Positioner\-::\-T\-E\-M\-P\-B\-L\-O\-C\-K\-E\-D = 4\hspace{0.3cm}{\ttfamily [static]}}}\label{class_structure_positioner_ad08ca89033039a7d467a5d2865328d84}
+Tile is temporary blocked and cannot be built on. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+B\-T\-H\-A\-I\-Module/\-Source/Structure\-Positioner.\-h\item 
+B\-T\-H\-A\-I\-Module/\-Source/Structure\-Positioner.\-cpp\end{DoxyCompactItemize}

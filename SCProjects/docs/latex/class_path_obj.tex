@@ -1,0 +1,83 @@
+\hypertarget{class_path_obj}{\section{Path\-Obj Class Reference}
+\label{class_path_obj}\index{Path\-Obj@{Path\-Obj}}
+}
+
+
+{\ttfamily \#include $<$Path\-Obj.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_path_obj_ae9f641a64cfc22a592186f0d55ec2021}{Path\-Obj} (Tile\-Position c\-Start, Tile\-Position c\-End)
+\item 
+\hyperlink{class_path_obj_aeea1e8f794c0416d4498fa0c706d5b39}{$\sim$\-Path\-Obj} ()
+\item 
+bool \hyperlink{class_path_obj_a63fe0a9810085e3571fef042dc38c2c3}{matches} (Tile\-Position c\-Start, Tile\-Position c\-End)
+\item 
+bool \hyperlink{class_path_obj_aaf44849ab49de76b50a9088e41fdabd9}{is\-Finished} ()
+\item 
+void \hyperlink{class_path_obj_ac2da681813e12a9b87e47ed6bdd0f60d}{calculate\-Path} ()
+\item 
+vector$<$ Tile\-Position $>$ \hyperlink{class_path_obj_af43d4958056969711265fc851932283c}{get\-Path} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Helper class for the threaded \hyperlink{class_pathfinder}{Pathfinder} agent. Each \hyperlink{class_path_obj}{Path\-Obj} contains the path between two two positions, start and end.
+
+Author\-: Johan Hagelback (\href{mailto:johan.hagelback@gmail.com}{\tt johan.\-hagelback@gmail.\-com}) 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_path_obj_ae9f641a64cfc22a592186f0d55ec2021}{\index{Path\-Obj@{Path\-Obj}!Path\-Obj@{Path\-Obj}}
+\index{Path\-Obj@{Path\-Obj}!PathObj@{Path\-Obj}}
+\subsubsection[{Path\-Obj}]{\setlength{\rightskip}{0pt plus 5cm}Path\-Obj\-::\-Path\-Obj (
+\begin{DoxyParamCaption}
+\item[{Tile\-Position}]{c\-Start, }
+\item[{Tile\-Position}]{c\-End}
+\end{DoxyParamCaption}
+)}}\label{class_path_obj_ae9f641a64cfc22a592186f0d55ec2021}
+\hyperlink{class_constructor}{Constructor} \hypertarget{class_path_obj_aeea1e8f794c0416d4498fa0c706d5b39}{\index{Path\-Obj@{Path\-Obj}!$\sim$\-Path\-Obj@{$\sim$\-Path\-Obj}}
+\index{$\sim$\-Path\-Obj@{$\sim$\-Path\-Obj}!PathObj@{Path\-Obj}}
+\subsubsection[{$\sim$\-Path\-Obj}]{\setlength{\rightskip}{0pt plus 5cm}Path\-Obj\-::$\sim$\-Path\-Obj (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_path_obj_aeea1e8f794c0416d4498fa0c706d5b39}
+Destructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_path_obj_ac2da681813e12a9b87e47ed6bdd0f60d}{\index{Path\-Obj@{Path\-Obj}!calculate\-Path@{calculate\-Path}}
+\index{calculate\-Path@{calculate\-Path}!PathObj@{Path\-Obj}}
+\subsubsection[{calculate\-Path}]{\setlength{\rightskip}{0pt plus 5cm}void Path\-Obj\-::calculate\-Path (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_path_obj_ac2da681813e12a9b87e47ed6bdd0f60d}
+Calculates the path. \hypertarget{class_path_obj_af43d4958056969711265fc851932283c}{\index{Path\-Obj@{Path\-Obj}!get\-Path@{get\-Path}}
+\index{get\-Path@{get\-Path}!PathObj@{Path\-Obj}}
+\subsubsection[{get\-Path}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ Tile\-Position $>$ Path\-Obj\-::get\-Path (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_path_obj_af43d4958056969711265fc851932283c}
+Returns the path. \hypertarget{class_path_obj_aaf44849ab49de76b50a9088e41fdabd9}{\index{Path\-Obj@{Path\-Obj}!is\-Finished@{is\-Finished}}
+\index{is\-Finished@{is\-Finished}!PathObj@{Path\-Obj}}
+\subsubsection[{is\-Finished}]{\setlength{\rightskip}{0pt plus 5cm}bool Path\-Obj\-::is\-Finished (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_path_obj_aaf44849ab49de76b50a9088e41fdabd9}
+Checks if this path has been calculated. \hypertarget{class_path_obj_a63fe0a9810085e3571fef042dc38c2c3}{\index{Path\-Obj@{Path\-Obj}!matches@{matches}}
+\index{matches@{matches}!PathObj@{Path\-Obj}}
+\subsubsection[{matches}]{\setlength{\rightskip}{0pt plus 5cm}bool Path\-Obj\-::matches (
+\begin{DoxyParamCaption}
+\item[{Tile\-Position}]{c\-Start, }
+\item[{Tile\-Position}]{c\-End}
+\end{DoxyParamCaption}
+)}}\label{class_path_obj_a63fe0a9810085e3571fef042dc38c2c3}
+Checks if this path object matches the start and end positions. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+B\-T\-H\-A\-I\-Module/\-Source/Path\-Obj.\-h\item 
+B\-T\-H\-A\-I\-Module/\-Source/Path\-Obj.\-cpp\end{DoxyCompactItemize}

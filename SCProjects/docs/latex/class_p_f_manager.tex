@@ -1,0 +1,106 @@
+\hypertarget{class_p_f_manager}{
+\section{PFManager Class Reference}
+\label{class_p_f_manager}\index{PFManager@{PFManager}}
+}
+
+
+{\ttfamily \#include $<$PFManager.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_p_f_manager_a04f2602085897ac33710160724c2171c}{$\sim$PFManager} ()
+\item 
+void \hyperlink{class_p_f_manager_a3a9ab60146bf43535e85c3bf8e286022}{computeAttackingUnitActions} (\hyperlink{class_base_agent}{BaseAgent} $\ast$agent, TilePosition goal, bool defensive)
+\item 
+void \hyperlink{class_p_f_manager_a350d3168c841259608c52959947538de}{computeAttackingUnitActions} (\hyperlink{class_base_agent}{BaseAgent} $\ast$agent, TilePosition goal, bool defensive, bool forceMove)
+\item 
+void \hyperlink{class_p_f_manager_af7866c8608e6905568d7f0b8246bef6e}{displayPF} (\hyperlink{class_base_agent}{BaseAgent} $\ast$agent)
+\item 
+bool \hyperlink{class_p_f_manager_aa107984ee233c0847cb1e4c2a1b0c070}{moveToGoal} (\hyperlink{class_base_agent}{BaseAgent} $\ast$agent, TilePosition checkpoint, TilePosition goal)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_p_f_manager}{PFManager} $\ast$ \hyperlink{class_p_f_manager_a4f6a01d09a9896e38d2a34c03d57de56}{getInstance} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+In the bot unit navigation uses two techniques; if no enemy units are close units navigate using the built in pathfinder in Starcraft. If enemy units are close, own units uses potential fields to engage and surround the enemy. The \hyperlink{class_p_f_manager}{PFManager} class is the main class for the potential fields navigation system, and it shall be used compute and execute movement orders using potential fields.
+
+The \hyperlink{class_p_f_manager}{PFManager} is implemented as a singleton class. Each class that needs to access \hyperlink{class_p_f_manager}{PFManager} can request an instance, and all classes shares the same \hyperlink{class_p_f_manager}{PFManager} instance.
+
+Author: Johan Hagelback (\href{mailto:johan.hagelback@gmail.com}{\tt johan.hagelback@gmail.com}) 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_p_f_manager_a04f2602085897ac33710160724c2171c}{
+\index{PFManager@{PFManager}!$\sim$PFManager@{$\sim$PFManager}}
+\index{$\sim$PFManager@{$\sim$PFManager}!PFManager@{PFManager}}
+\subsubsection[{$\sim$PFManager}]{\setlength{\rightskip}{0pt plus 5cm}PFManager::$\sim$PFManager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_p_f_manager_a04f2602085897ac33710160724c2171c}
+Destructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_p_f_manager_a3a9ab60146bf43535e85c3bf8e286022}{
+\index{PFManager@{PFManager}!computeAttackingUnitActions@{computeAttackingUnitActions}}
+\index{computeAttackingUnitActions@{computeAttackingUnitActions}!PFManager@{PFManager}}
+\subsubsection[{computeAttackingUnitActions}]{\setlength{\rightskip}{0pt plus 5cm}void PFManager::computeAttackingUnitActions (
+\begin{DoxyParamCaption}
+\item[{{\bf BaseAgent} $\ast$}]{agent, }
+\item[{TilePosition}]{goal, }
+\item[{bool}]{defensive}
+\end{DoxyParamCaption}
+)}}
+\label{class_p_f_manager_a3a9ab60146bf43535e85c3bf8e286022}
+Is used to compute and execute movement commands for attacking units using the potential field navigation system. \hypertarget{class_p_f_manager_a350d3168c841259608c52959947538de}{
+\index{PFManager@{PFManager}!computeAttackingUnitActions@{computeAttackingUnitActions}}
+\index{computeAttackingUnitActions@{computeAttackingUnitActions}!PFManager@{PFManager}}
+\subsubsection[{computeAttackingUnitActions}]{\setlength{\rightskip}{0pt plus 5cm}void PFManager::computeAttackingUnitActions (
+\begin{DoxyParamCaption}
+\item[{{\bf BaseAgent} $\ast$}]{agent, }
+\item[{TilePosition}]{goal, }
+\item[{bool}]{defensive, }
+\item[{bool}]{forceMove}
+\end{DoxyParamCaption}
+)}}
+\label{class_p_f_manager_a350d3168c841259608c52959947538de}
+Is used to compute and execute movement commands for attacking units using the potential field navigation system. If forceMove is set to true, units always move even if they can attack. \hypertarget{class_p_f_manager_af7866c8608e6905568d7f0b8246bef6e}{
+\index{PFManager@{PFManager}!displayPF@{displayPF}}
+\index{displayPF@{displayPF}!PFManager@{PFManager}}
+\subsubsection[{displayPF}]{\setlength{\rightskip}{0pt plus 5cm}void PFManager::displayPF (
+\begin{DoxyParamCaption}
+\item[{{\bf BaseAgent} $\ast$}]{agent}
+\end{DoxyParamCaption}
+)}}
+\label{class_p_f_manager_af7866c8608e6905568d7f0b8246bef6e}
+Displays a debug view of the potential fields for an agent. \hypertarget{class_p_f_manager_a4f6a01d09a9896e38d2a34c03d57de56}{
+\index{PFManager@{PFManager}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!PFManager@{PFManager}}
+\subsubsection[{getInstance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf PFManager} $\ast$ PFManager::getInstance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_p_f_manager_a4f6a01d09a9896e38d2a34c03d57de56}
+Returns the instance to the class. \hypertarget{class_p_f_manager_aa107984ee233c0847cb1e4c2a1b0c070}{
+\index{PFManager@{PFManager}!moveToGoal@{moveToGoal}}
+\index{moveToGoal@{moveToGoal}!PFManager@{PFManager}}
+\subsubsection[{moveToGoal}]{\setlength{\rightskip}{0pt plus 5cm}bool PFManager::moveToGoal (
+\begin{DoxyParamCaption}
+\item[{{\bf BaseAgent} $\ast$}]{agent, }
+\item[{TilePosition}]{checkpoint, }
+\item[{TilePosition}]{goal}
+\end{DoxyParamCaption}
+)}}
+\label{class_p_f_manager_aa107984ee233c0847cb1e4c2a1b0c070}
+Moves a unit to the specified goal using the pathfinder, and stops at a distance where the potential field navigation system should be used instead. 
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+BTHAIModule/Source/PFManager.h\item 
+BTHAIModule/Source/PFManager.cpp\end{DoxyCompactItemize}

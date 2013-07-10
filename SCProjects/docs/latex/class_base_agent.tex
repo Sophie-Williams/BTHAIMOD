@@ -1,0 +1,573 @@
+\hypertarget{class_base_agent}{\section{Base\-Agent Class Reference}
+\label{class_base_agent}\index{Base\-Agent@{Base\-Agent}}
+}
+
+
+{\ttfamily \#include $<$Base\-Agent.\-h$>$}
+
+Inheritance diagram for Base\-Agent\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{class_base_agent}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_base_agent_a479c84820c9602369e3e56161d5d4437}{Base\-Agent} ()
+\item 
+\hyperlink{class_base_agent_a700f7c3ecb4f21ed598053276a8a8276}{Base\-Agent} (Unit $\ast$m\-Unit)
+\item 
+virtual \hyperlink{class_base_agent_a726616004d0d1c1c0b3ed6577510a002}{$\sim$\-Base\-Agent} ()
+\item 
+virtual void \hyperlink{class_base_agent_a5b5a8bd2592ee1bb82254cf7e8423321}{compute\-Actions} ()
+\item 
+virtual void \hyperlink{class_base_agent_a58e65cf5df5e8db1973f177889e8c0cb}{debug\-\_\-show\-Goal} ()
+\item 
+bool \hyperlink{class_base_agent_a2b9755f279c4e8242acf91aa96c88715}{enemy\-Units\-Visible} ()
+\item 
+bool \hyperlink{class_base_agent_aab9406598b04c34b8f9c18b211457f05}{can\-Attack} (Unit $\ast$target)
+\item 
+bool \hyperlink{class_base_agent_a6ead79be31629f91e54c6b1171076416}{can\-Attack} (Unit\-Type type)
+\item 
+virtual void \hyperlink{class_base_agent_a404490fc9d2609f4ec56cda163383a7c}{set\-Goal} (Tile\-Position goal)
+\item 
+virtual void \hyperlink{class_base_agent_a58f73fcb862ba233f6a24492022a5f02}{clear\-Goal} ()
+\item 
+Tile\-Position \hyperlink{class_base_agent_a471a1f01fa28e9f1fa2b5bb86f6ab954}{get\-Goal} ()
+\item 
+void \hyperlink{class_base_agent_a82301b0f2195ed4d5f6c8d1dbb2fb417}{set\-Action\-Frame} ()
+\item 
+int \hyperlink{class_base_agent_a532608568d9beffea3ef0df09da4f33c}{get\-Last\-Action\-Frame} ()
+\item 
+string \hyperlink{class_base_agent_a521c6d21041e3452cd28a1bf6e9c4bbe}{get\-Type\-Name} ()
+\item 
+virtual bool \hyperlink{class_base_agent_a861a4564ef195eef8b91edad84230f65}{assign\-To\-Build} (Unit\-Type type)
+\item 
+virtual bool \hyperlink{class_base_agent_a26e1e72f340716be8f551bb357029c5b}{assign\-To\-Repair} (Unit $\ast$building)
+\item 
+virtual bool \hyperlink{class_base_agent_ad74416faba79cf2b92102246dad27b7d}{assign\-To\-Finish\-Build} (Unit $\ast$building)
+\item 
+virtual void \hyperlink{class_base_agent_aaea0152398078c0293016bf50d7d24ba}{assign\-To\-Explore} ()
+\item 
+virtual void \hyperlink{class_base_agent_a58ae08d893e41426f7e3ee17db490680}{assign\-To\-Attack} ()
+\item 
+virtual void \hyperlink{class_base_agent_ae2d7f49adb18aebcffdcfde56406c91d}{assign\-To\-Defend} ()
+\item 
+virtual bool \hyperlink{class_base_agent_aa6cb5310933d186dc968ce1fdbd670d2}{is\-Exploring} ()
+\item 
+virtual bool \hyperlink{class_base_agent_a389b85fe410a8ea9738524f56f9c13a1}{is\-Attacking} ()
+\item 
+virtual bool \hyperlink{class_base_agent_aaa15c0952be9181df51285fb87eec560}{is\-Defending} ()
+\item 
+virtual void \hyperlink{class_base_agent_a80433bb4a354687c5f039e90f112a197}{print\-Info} ()
+\item 
+string \hyperlink{class_base_agent_a08a6832834fcce26937161e0e4461a8a}{format} (string str)
+\item 
+virtual bool \hyperlink{class_base_agent_a750f5bd0688b6dc2133a8644f36d8cf5}{can\-Build} (Unit\-Type type)
+\item 
+int \hyperlink{class_base_agent_a21552b1d092a6a162443e099aee953fd}{get\-Unit\-I\-D} ()
+\item 
+Unit\-Type \hyperlink{class_base_agent_a1fab6cde80aa0af1bdfe41561857c9ae}{get\-Unit\-Type} ()
+\item 
+Unit $\ast$ \hyperlink{class_base_agent_acb7af111f08893d616c4762589c24842}{get\-Unit} ()
+\item 
+virtual void \hyperlink{class_base_agent_abc62bb505cb4ced4353feade1bb80e33}{destroyed} ()
+\item 
+bool \hyperlink{class_base_agent_a6fd9449d82a8a9a39f68c34c1b3462dd}{is\-Alive} ()
+\item 
+bool \hyperlink{class_base_agent_a33dea9c0e91369fd6d8d80bddbd9ac67}{matches} (Unit $\ast$m\-Unit)
+\item 
+bool \hyperlink{class_base_agent_aca222c58843a3b61f5ad643175a5ce45}{is\-Of\-Type} (Unit\-Type type)
+\item 
+bool \hyperlink{class_base_agent_a8569c74f788e3d1134032e61f93d01eb}{is\-Detector\-Within\-Range} (Tile\-Position pos, int range)
+\item 
+bool \hyperlink{class_base_agent_a4e850b1c9ecad16d75bc9d6b61111f87}{is\-Building} ()
+\item 
+bool \hyperlink{class_base_agent_a4c117b1a14974aca702a7ff2494e8c5d}{is\-Worker} ()
+\item 
+virtual bool \hyperlink{class_base_agent_a8aa4716711f964b6a073d67b35ec97b9}{is\-Free\-Worker} ()
+\item 
+bool \hyperlink{class_base_agent_a8fbf66934f3cd9fc916a812daa5c31c2}{is\-Unit} ()
+\item 
+bool \hyperlink{class_base_agent_af93f69d8e3c920870330b9e70811a04b}{is\-Under\-Attack} ()
+\item 
+bool \hyperlink{class_base_agent_a746e53d8672c1851811dcc4ab899d249}{is\-Damaged} ()
+\item 
+bool \hyperlink{class_base_agent_ae5ad4f80bcc9a7e884a55224286cbfa2}{do\-Scanner\-Sweep} (Tile\-Position pos)
+\item 
+void \hyperlink{class_base_agent_aede66e43677663e01cb248e4d6e0d03b}{set\-Squad\-I\-D} (int id)
+\item 
+int \hyperlink{class_base_agent_ae6ae191be91ea177653e79e57ede7c8e}{get\-Squad\-I\-D} ()
+\item 
+virtual bool \hyperlink{class_base_agent_a23057db63ff07aec82c7fc3b94c735a4}{get\-Defensive} ()
+\item 
+void \hyperlink{class_base_agent_a8a2f737f4f55ef53145f100d7a9434d0}{add\-Trail\-Position} (\hyperlink{class_walk_tile}{Walk\-Tile} wt)
+\item 
+vector$<$ \hyperlink{class_walk_tile}{Walk\-Tile} $>$ \hyperlink{class_base_agent_a1de9312ae3f7c6f460846c37778a52d0}{get\-Trail} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \hyperlink{class_base_agent_adb4be451cefe38cd2f53eb69a14bbb38}{is\-Of\-Type} (Unit $\ast$m\-Unit, Unit\-Type type)
+\item 
+static bool \hyperlink{class_base_agent_a4b87e405fc064008c981b086850dbdcb}{is\-Of\-Type} (Unit\-Type m\-Type, Unit\-Type to\-Check\-Type)
+\item 
+static bool \hyperlink{class_base_agent_a46b835684a3d52f928e04daef8b418de}{do\-Ensnare} (Tile\-Position pos)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_base_agent_a30f94d4de1935b80800e1e6a848af750}{Unit $\ast$ {\bfseries unit}}\label{class_base_agent_a30f94d4de1935b80800e1e6a848af750}
+
+\item 
+\hypertarget{class_base_agent_ad7ae672a5f5ce2ba54dfac8b917d7711}{Unit\-Type {\bfseries type}}\label{class_base_agent_ad7ae672a5f5ce2ba54dfac8b917d7711}
+
+\item 
+\hypertarget{class_base_agent_a0f50f853d318a33279d573bbe5b2f083}{Tile\-Position {\bfseries goal}}\label{class_base_agent_a0f50f853d318a33279d573bbe5b2f083}
+
+\item 
+\hypertarget{class_base_agent_af2ff9726ba704a277b879e5444b3d320}{int {\bfseries unit\-I\-D}}\label{class_base_agent_af2ff9726ba704a277b879e5444b3d320}
+
+\item 
+\hypertarget{class_base_agent_a82b1ad78dd3c7738490b300e0ba17a10}{int {\bfseries squad\-I\-D}}\label{class_base_agent_a82b1ad78dd3c7738490b300e0ba17a10}
+
+\item 
+\hypertarget{class_base_agent_ac83ee84004ec58997fad6dcd1f8792dd}{bool {\bfseries alive}}\label{class_base_agent_ac83ee84004ec58997fad6dcd1f8792dd}
+
+\item 
+\hypertarget{class_base_agent_a1e7a82c045f67e527a5517eccbcac4fb}{int {\bfseries last\-Action\-Frame}}\label{class_base_agent_a1e7a82c045f67e527a5517eccbcac4fb}
+
+\item 
+\hypertarget{class_base_agent_ab6d7ac556de7d7782fa0866b69cd3185}{bool {\bfseries b\-Block}}\label{class_base_agent_ab6d7ac556de7d7782fa0866b69cd3185}
+
+\item 
+\hypertarget{class_base_agent_ad5b004b10b17f63e3deb1914163758c1}{string {\bfseries agent\-Type}}\label{class_base_agent_ad5b004b10b17f63e3deb1914163758c1}
+
+\item 
+\hypertarget{class_base_agent_a4b7f6658886971ff387bd30ecd45e254}{int {\bfseries info\-Update\-Frame}}\label{class_base_agent_a4b7f6658886971ff387bd30ecd45e254}
+
+\item 
+\hypertarget{class_base_agent_a6204252c872f1f4dff852b87cd16b691}{int {\bfseries info\-Update\-Time}}\label{class_base_agent_a6204252c872f1f4dff852b87cd16b691}
+
+\item 
+\hypertarget{class_base_agent_aaf7d21e65ac96780aff931e56214b23b}{int {\bfseries sx}}\label{class_base_agent_aaf7d21e65ac96780aff931e56214b23b}
+
+\item 
+\hypertarget{class_base_agent_a1d4555f32a745987a09c42f085d6dc68}{int {\bfseries sy}}\label{class_base_agent_a1d4555f32a745987a09c42f085d6dc68}
+
+\item 
+\hypertarget{class_base_agent_a36c508dc8eae977d3296e0022ee868aa}{vector$<$ \hyperlink{class_walk_tile}{Walk\-Tile} $>$ {\bfseries trail}}\label{class_base_agent_a36c508dc8eae977d3296e0022ee868aa}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_base_agent}{Base\-Agent} is the base agent class all agent classes directly or indirectly must extend. It contains some common logic that is needed for several other agent implementations.
+
+Author\-: Johan Hagelback (\href{mailto:johan.hagelback@gmail.com}{\tt johan.\-hagelback@gmail.\-com}) 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_base_agent_a479c84820c9602369e3e56161d5d4437}{\index{Base\-Agent@{Base\-Agent}!Base\-Agent@{Base\-Agent}}
+\index{Base\-Agent@{Base\-Agent}!BaseAgent@{Base\-Agent}}
+\subsubsection[{Base\-Agent}]{\setlength{\rightskip}{0pt plus 5cm}Base\-Agent\-::\-Base\-Agent (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_base_agent_a479c84820c9602369e3e56161d5d4437}
+Default constructor. Not used. \hypertarget{class_base_agent_a700f7c3ecb4f21ed598053276a8a8276}{\index{Base\-Agent@{Base\-Agent}!Base\-Agent@{Base\-Agent}}
+\index{Base\-Agent@{Base\-Agent}!BaseAgent@{Base\-Agent}}
+\subsubsection[{Base\-Agent}]{\setlength{\rightskip}{0pt plus 5cm}Base\-Agent\-::\-Base\-Agent (
+\begin{DoxyParamCaption}
+\item[{Unit $\ast$}]{m\-Unit}
+\end{DoxyParamCaption}
+)}}\label{class_base_agent_a700f7c3ecb4f21ed598053276a8a8276}
+\hyperlink{class_constructor}{Constructor}. \hypertarget{class_base_agent_a726616004d0d1c1c0b3ed6577510a002}{\index{Base\-Agent@{Base\-Agent}!$\sim$\-Base\-Agent@{$\sim$\-Base\-Agent}}
+\index{$\sim$\-Base\-Agent@{$\sim$\-Base\-Agent}!BaseAgent@{Base\-Agent}}
+\subsubsection[{$\sim$\-Base\-Agent}]{\setlength{\rightskip}{0pt plus 5cm}Base\-Agent\-::$\sim$\-Base\-Agent (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_base_agent_a726616004d0d1c1c0b3ed6577510a002}
+Destructor. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_base_agent_a8a2f737f4f55ef53145f100d7a9434d0}{\index{Base\-Agent@{Base\-Agent}!add\-Trail\-Position@{add\-Trail\-Position}}
+\index{add\-Trail\-Position@{add\-Trail\-Position}!BaseAgent@{Base\-Agent}}
+\subsubsection[{add\-Trail\-Position}]{\setlength{\rightskip}{0pt plus 5cm}void Base\-Agent\-::add\-Trail\-Position (
+\begin{DoxyParamCaption}
+\item[{{\bf Walk\-Tile}}]{wt}
+\end{DoxyParamCaption}
+)}}\label{class_base_agent_a8a2f737f4f55ef53145f100d7a9434d0}
+Adds a new trail entry to a P\-F pheromone trail. \hypertarget{class_base_agent_a58ae08d893e41426f7e3ee17db490680}{\index{Base\-Agent@{Base\-Agent}!assign\-To\-Attack@{assign\-To\-Attack}}
+\index{assign\-To\-Attack@{assign\-To\-Attack}!BaseAgent@{Base\-Agent}}
+\subsubsection[{assign\-To\-Attack}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Base\-Agent\-::assign\-To\-Attack (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_base_agent_a58ae08d893e41426f7e3ee17db490680}
+Assigns this agent to be in the attack force. \hypertarget{class_base_agent_a861a4564ef195eef8b91edad84230f65}{\index{Base\-Agent@{Base\-Agent}!assign\-To\-Build@{assign\-To\-Build}}
+\index{assign\-To\-Build@{assign\-To\-Build}!BaseAgent@{Base\-Agent}}
+\subsubsection[{assign\-To\-Build}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Base\-Agent\-::assign\-To\-Build (
+\begin{DoxyParamCaption}
+\item[{Unit\-Type}]{type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_base_agent_a861a4564ef195eef8b91edad84230f65}
+Assigns the agent to build the specified type of unit. 
+
+Reimplemented in \hyperlink{class_worker_agent_a74313cf2cb466b680ad3e67aa6533962}{Worker\-Agent}.
+
+\hypertarget{class_base_agent_ae2d7f49adb18aebcffdcfde56406c91d}{\index{Base\-Agent@{Base\-Agent}!assign\-To\-Defend@{assign\-To\-Defend}}
+\index{assign\-To\-Defend@{assign\-To\-Defend}!BaseAgent@{Base\-Agent}}
+\subsubsection[{assign\-To\-Defend}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Base\-Agent\-::assign\-To\-Defend (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_base_agent_ae2d7f49adb18aebcffdcfde56406c91d}
+Assigns this agent to defend the base. \hypertarget{class_base_agent_aaea0152398078c0293016bf50d7d24ba}{\index{Base\-Agent@{Base\-Agent}!assign\-To\-Explore@{assign\-To\-Explore}}
+\index{assign\-To\-Explore@{assign\-To\-Explore}!BaseAgent@{Base\-Agent}}
+\subsubsection[{assign\-To\-Explore}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Base\-Agent\-::assign\-To\-Explore (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_base_agent_aaea0152398078c0293016bf50d7d24ba}
+Assigns this agent to explore the game world. \hypertarget{class_base_agent_ad74416faba79cf2b92102246dad27b7d}{\index{Base\-Agent@{Base\-Agent}!assign\-To\-Finish\-Build@{assign\-To\-Finish\-Build}}
+\index{assign\-To\-Finish\-Build@{assign\-To\-Finish\-Build}!BaseAgent@{Base\-Agent}}
+\subsubsection[{assign\-To\-Finish\-Build}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Base\-Agent\-::assign\-To\-Finish\-Build (
+\begin{DoxyParamCaption}
+\item[{Unit $\ast$}]{building}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_base_agent_ad74416faba79cf2b92102246dad27b7d}
+Assigns the agent to continue building a non-\/finished building. 
+
+Reimplemented in \hyperlink{class_worker_agent_a82af6ee8c50ab752618c0e9079f1a91e}{Worker\-Agent}.
+
+\hypertarget{class_base_agent_a26e1e72f340716be8f551bb357029c5b}{\index{Base\-Agent@{Base\-Agent}!assign\-To\-Repair@{assign\-To\-Repair}}
+\index{assign\-To\-Repair@{assign\-To\-Repair}!BaseAgent@{Base\-Agent}}
+\subsubsection[{assign\-To\-Repair}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Base\-Agent\-::assign\-To\-Repair (
+\begin{DoxyParamCaption}
+\item[{Unit $\ast$}]{building}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_base_agent_a26e1e72f340716be8f551bb357029c5b}
+Assigns the agent to repair a unit. 
+
+Reimplemented in \hyperlink{class_worker_agent_afedb96096579720d6b9cf9577e621272}{Worker\-Agent}.
+
+\hypertarget{class_base_agent_aab9406598b04c34b8f9c18b211457f05}{\index{Base\-Agent@{Base\-Agent}!can\-Attack@{can\-Attack}}
+\index{can\-Attack@{can\-Attack}!BaseAgent@{Base\-Agent}}
+\subsubsection[{can\-Attack}]{\setlength{\rightskip}{0pt plus 5cm}bool Base\-Agent\-::can\-Attack (
+\begin{DoxyParamCaption}
+\item[{Unit $\ast$}]{target}
+\end{DoxyParamCaption}
+)}}\label{class_base_agent_aab9406598b04c34b8f9c18b211457f05}
+Checks if this unit can attack the specified target unit. \hypertarget{class_base_agent_a6ead79be31629f91e54c6b1171076416}{\index{Base\-Agent@{Base\-Agent}!can\-Attack@{can\-Attack}}
+\index{can\-Attack@{can\-Attack}!BaseAgent@{Base\-Agent}}
+\subsubsection[{can\-Attack}]{\setlength{\rightskip}{0pt plus 5cm}bool Base\-Agent\-::can\-Attack (
+\begin{DoxyParamCaption}
+\item[{Unit\-Type}]{type}
+\end{DoxyParamCaption}
+)}}\label{class_base_agent_a6ead79be31629f91e54c6b1171076416}
+Checks if this unit can attack the specified unit type. \hypertarget{class_base_agent_a750f5bd0688b6dc2133a8644f36d8cf5}{\index{Base\-Agent@{Base\-Agent}!can\-Build@{can\-Build}}
+\index{can\-Build@{can\-Build}!BaseAgent@{Base\-Agent}}
+\subsubsection[{can\-Build}]{\setlength{\rightskip}{0pt plus 5cm}bool Base\-Agent\-::can\-Build (
+\begin{DoxyParamCaption}
+\item[{Unit\-Type}]{type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_base_agent_a750f5bd0688b6dc2133a8644f36d8cf5}
+Returns true if this agent can build units of the specified type. 
+
+Reimplemented in \hyperlink{class_worker_agent_af185b1df9bcd14cebb6cc39f4d19fb2b}{Worker\-Agent}.
+
+\hypertarget{class_base_agent_a58f73fcb862ba233f6a24492022a5f02}{\index{Base\-Agent@{Base\-Agent}!clear\-Goal@{clear\-Goal}}
+\index{clear\-Goal@{clear\-Goal}!BaseAgent@{Base\-Agent}}
+\subsubsection[{clear\-Goal}]{\setlength{\rightskip}{0pt plus 5cm}void Base\-Agent\-::clear\-Goal (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_base_agent_a58f73fcb862ba233f6a24492022a5f02}
+Clears the goal for this unit. 
+
+Reimplemented in \hyperlink{class_unit_agent_a5968219c503d74d9649e39a2166ec7ea}{Unit\-Agent}.
+
+\hypertarget{class_base_agent_a5b5a8bd2592ee1bb82254cf7e8423321}{\index{Base\-Agent@{Base\-Agent}!compute\-Actions@{compute\-Actions}}
+\index{compute\-Actions@{compute\-Actions}!BaseAgent@{Base\-Agent}}
+\subsubsection[{compute\-Actions}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Base\-Agent\-::compute\-Actions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_base_agent_a5b5a8bd2592ee1bb82254cf7e8423321}
+Called each update to issue orders. 
+
+Reimplemented in \hyperlink{class_worker_agent_a9bf641c8747b567dd62b4d1d496b492d}{Worker\-Agent}, \hyperlink{class_structure_agent_abaf0a18b1a60aa15af603b3470823a07}{Structure\-Agent}, \hyperlink{class_unit_agent_aecfbb299e0aed1fe456247cedb3f1660}{Unit\-Agent}, \hyperlink{class_science_vessel_agent_a585ba9344d8ceed21b809ee6f4c0896e}{Science\-Vessel\-Agent}, \hyperlink{class_high_templar_agent_adc387e330e1d8f5b1603c301c233896b}{High\-Templar\-Agent}, \hyperlink{class_dark_templar_agent_a390375acf1fa737e7fd9518112607a7a}{Dark\-Templar\-Agent}, \hyperlink{class_hatchery_agent_ae96945db71ce4347b2599e9af4da6bf2}{Hatchery\-Agent}, \hyperlink{class_wraith_agent_a37866613a9b2cadecaa45e38459e782c}{Wraith\-Agent}, \hyperlink{class_command_center_agent_ab65d18822f93a222f8bce3c85836217d}{Command\-Center\-Agent}, \hyperlink{class_defiler_agent_a925760676459ac4b9fc2becaeb291f6f}{Defiler\-Agent}, \hyperlink{class_fleet_beacon_agent_af4097bf4cdc94bd32db440b2c8919d7b}{Fleet\-Beacon\-Agent}, \hyperlink{class_marine_agent_aa3aa92fd667bb693e11820b084b80f22}{Marine\-Agent}, \hyperlink{class_medic_agent_a2d7e2fe20f5aa2504418022267326582}{Medic\-Agent}, \hyperlink{class_transport_agent_a36e0a537419178fde4713c476951c06a}{Transport\-Agent}, \hyperlink{class_vulture_agent_a3ebe87b78ef090c6baf3dbd094cf4aeb}{Vulture\-Agent}, \hyperlink{class_battlecruiser_agent_a8e27cc343b663e6cc23f0f4cd3ace56b}{Battlecruiser\-Agent}, \hyperlink{class_ghost_agent_a31600d696462cf1ab683fe8653ce5514}{Ghost\-Agent}, \hyperlink{class_mutalisk_agent_a7845c4837ba3f84da6318c2bc7910867}{Mutalisk\-Agent}, \hyperlink{class_overlord_agent_a8669fde4071d78fe759dccabbedd9cbd}{Overlord\-Agent}, \hyperlink{class_queen_agent_a600bf84cc4f4ed902daffaba83179e6e}{Queen\-Agent}, \hyperlink{class_corsair_agent_a8e90c5ceefaeb8090943b0c673679603}{Corsair\-Agent}, \hyperlink{class_dragoon_agent_a17736519acfc278cc7d0ba37d7065f1a}{Dragoon\-Agent}, \hyperlink{class_firebat_agent_a56f4a45bde7387b2acea59b4c0b3554f}{Firebat\-Agent}, \hyperlink{class_nexus_agent_af918e93ad5401e6a5c5d29665cca1ebf}{Nexus\-Agent}, \hyperlink{class_observer_agent_ad84822ff5d2fc4431dbb65ce5156ed5b}{Observer\-Agent}, \hyperlink{class_refinery_agent_af4ea866916e13e258f9df2ff6167cb5e}{Refinery\-Agent}, \hyperlink{class_arbiter_agent_ae154eab7bfdf7c07601412b457467371}{Arbiter\-Agent}, \hyperlink{class_carrier_agent_ae27c99321285fe3490bfed94d3192b3c}{Carrier\-Agent}, \hyperlink{class_devourer_agent_ad9d9403d0035a4f8737a60573dd8053f}{Devourer\-Agent}, \hyperlink{class_goliath_agent_a594e35f31718d61aa400036b66afa7b8}{Goliath\-Agent}, \hyperlink{class_guardian_agent_ae25d3e3d17a76bc842e4a58c28d924a7}{Guardian\-Agent}, \hyperlink{class_hydralisk_agent_a0f762bccecf98e58feeaf1991c5f8d8e}{Hydralisk\-Agent}, \hyperlink{class_infested_terran_agent_afa0932ddf33e826320547cc507941c0b}{Infested\-Terran\-Agent}, \hyperlink{class_lurker_agent_a0bc09de792eac29436d93c0d47842038}{Lurker\-Agent}, \hyperlink{class_scourge_agent_a99075a27d780c1e4af7314c3e8efc837}{Scourge\-Agent}, \hyperlink{class_scout_agent_a99d8dce2c84eba5a20196b3125f6110a}{Scout\-Agent}, \hyperlink{class_ultralisk_agent_a2591c446dfb5029a738b9b21f30b6347}{Ultralisk\-Agent}, \hyperlink{class_valkyrie_agent_a81bd5a7f94e72c1f2f0d1f8f20fc30f2}{Valkyrie\-Agent}, \hyperlink{class_zealot_agent_a76b7effe1b4406950f7d7301b0fc6719}{Zealot\-Agent}, \hyperlink{class_zergling_agent_a79b5a2faf4e338b6ac2b227eef28f370}{Zergling\-Agent}, \hyperlink{class_reaver_agent_afcfdbb6e0de0de7dca7a5426852c71e5}{Reaver\-Agent}, \hyperlink{class_siege_tank_agent_adc0c1111bcbc5c5a5aff2ce66cfb2a3d}{Siege\-Tank\-Agent}, and \hyperlink{class_comsat_agent_aa94033d23d7c19d68476d8eecf174f08}{Comsat\-Agent}.
+
+\hypertarget{class_base_agent_a58e65cf5df5e8db1973f177889e8c0cb}{\index{Base\-Agent@{Base\-Agent}!debug\-\_\-show\-Goal@{debug\-\_\-show\-Goal}}
+\index{debug\-\_\-show\-Goal@{debug\-\_\-show\-Goal}!BaseAgent@{Base\-Agent}}
+\subsubsection[{debug\-\_\-show\-Goal}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Base\-Agent\-::debug\-\_\-show\-Goal (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_base_agent_a58e65cf5df5e8db1973f177889e8c0cb}
+Used in debug modes to show a line to the agents' goal. 
+
+Reimplemented in \hyperlink{class_worker_agent_a53f907fd51fa4ddefb3c0f165bce82fb}{Worker\-Agent}, \hyperlink{class_structure_agent_a64cbd21350ebb2c69b2f95108bcff775}{Structure\-Agent}, and \hyperlink{class_unit_agent_a13d53899455072fd7140df774e3ad450}{Unit\-Agent}.
+
+\hypertarget{class_base_agent_abc62bb505cb4ced4353feade1bb80e33}{\index{Base\-Agent@{Base\-Agent}!destroyed@{destroyed}}
+\index{destroyed@{destroyed}!BaseAgent@{Base\-Agent}}
+\subsubsection[{destroyed}]{\setlength{\rightskip}{0pt plus 5cm}void Base\-Agent\-::destroyed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_base_agent_abc62bb505cb4ced4353feade1bb80e33}
+Called when the unit assigned to this agent is destroyed. 
+
+Reimplemented in \hyperlink{class_worker_agent_a53cd5eb9a92d2fa9922106d2d2b3f28c}{Worker\-Agent}.
+
+\hypertarget{class_base_agent_a46b835684a3d52f928e04daef8b418de}{\index{Base\-Agent@{Base\-Agent}!do\-Ensnare@{do\-Ensnare}}
+\index{do\-Ensnare@{do\-Ensnare}!BaseAgent@{Base\-Agent}}
+\subsubsection[{do\-Ensnare}]{\setlength{\rightskip}{0pt plus 5cm}bool Base\-Agent\-::do\-Ensnare (
+\begin{DoxyParamCaption}
+\item[{Tile\-Position}]{pos}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_base_agent_a46b835684a3d52f928e04daef8b418de}
+Orders the Zerg Queen to do an Ensnare at the specified area. \hypertarget{class_base_agent_ae5ad4f80bcc9a7e884a55224286cbfa2}{\index{Base\-Agent@{Base\-Agent}!do\-Scanner\-Sweep@{do\-Scanner\-Sweep}}
+\index{do\-Scanner\-Sweep@{do\-Scanner\-Sweep}!BaseAgent@{Base\-Agent}}
+\subsubsection[{do\-Scanner\-Sweep}]{\setlength{\rightskip}{0pt plus 5cm}bool Base\-Agent\-::do\-Scanner\-Sweep (
+\begin{DoxyParamCaption}
+\item[{Tile\-Position}]{pos}
+\end{DoxyParamCaption}
+)}}\label{class_base_agent_ae5ad4f80bcc9a7e884a55224286cbfa2}
+Orders the Terran Comsat Station to do a Scanner Sweep at the specified area. \hypertarget{class_base_agent_a2b9755f279c4e8242acf91aa96c88715}{\index{Base\-Agent@{Base\-Agent}!enemy\-Units\-Visible@{enemy\-Units\-Visible}}
+\index{enemy\-Units\-Visible@{enemy\-Units\-Visible}!BaseAgent@{Base\-Agent}}
+\subsubsection[{enemy\-Units\-Visible}]{\setlength{\rightskip}{0pt plus 5cm}bool Base\-Agent\-::enemy\-Units\-Visible (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_base_agent_a2b9755f279c4e8242acf91aa96c88715}
+Checks if there are any enemy units within seekrange. \hypertarget{class_base_agent_a08a6832834fcce26937161e0e4461a8a}{\index{Base\-Agent@{Base\-Agent}!format@{format}}
+\index{format@{format}!BaseAgent@{Base\-Agent}}
+\subsubsection[{format}]{\setlength{\rightskip}{0pt plus 5cm}string Base\-Agent\-::format (
+\begin{DoxyParamCaption}
+\item[{string}]{str}
+\end{DoxyParamCaption}
+)}}\label{class_base_agent_a08a6832834fcce26937161e0e4461a8a}
+Removes race name from a string (Terran Marine -\/$>$ Marine) \hypertarget{class_base_agent_a23057db63ff07aec82c7fc3b94c735a4}{\index{Base\-Agent@{Base\-Agent}!get\-Defensive@{get\-Defensive}}
+\index{get\-Defensive@{get\-Defensive}!BaseAgent@{Base\-Agent}}
+\subsubsection[{get\-Defensive}]{\setlength{\rightskip}{0pt plus 5cm}bool Base\-Agent\-::get\-Defensive (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_base_agent_a23057db63ff07aec82c7fc3b94c735a4}
+Returns true (defensive) or false (offensive) depending on how the agent moves. 
+
+Reimplemented in \hyperlink{class_unit_agent_a0138fb142342db79cdc41412d2d87cba}{Unit\-Agent}.
+
+\hypertarget{class_base_agent_a471a1f01fa28e9f1fa2b5bb86f6ab954}{\index{Base\-Agent@{Base\-Agent}!get\-Goal@{get\-Goal}}
+\index{get\-Goal@{get\-Goal}!BaseAgent@{Base\-Agent}}
+\subsubsection[{get\-Goal}]{\setlength{\rightskip}{0pt plus 5cm}Tile\-Position Base\-Agent\-::get\-Goal (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_base_agent_a471a1f01fa28e9f1fa2b5bb86f6ab954}
+Returns the current goal for this unit. \hypertarget{class_base_agent_a532608568d9beffea3ef0df09da4f33c}{\index{Base\-Agent@{Base\-Agent}!get\-Last\-Action\-Frame@{get\-Last\-Action\-Frame}}
+\index{get\-Last\-Action\-Frame@{get\-Last\-Action\-Frame}!BaseAgent@{Base\-Agent}}
+\subsubsection[{get\-Last\-Action\-Frame}]{\setlength{\rightskip}{0pt plus 5cm}int Base\-Agent\-::get\-Last\-Action\-Frame (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_base_agent_a532608568d9beffea3ef0df09da4f33c}
+Returns the last frame this agent was issued an order. \hypertarget{class_base_agent_ae6ae191be91ea177653e79e57ede7c8e}{\index{Base\-Agent@{Base\-Agent}!get\-Squad\-I\-D@{get\-Squad\-I\-D}}
+\index{get\-Squad\-I\-D@{get\-Squad\-I\-D}!BaseAgent@{Base\-Agent}}
+\subsubsection[{get\-Squad\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}int Base\-Agent\-::get\-Squad\-I\-D (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_base_agent_ae6ae191be91ea177653e79e57ede7c8e}
+Returns the squad this agent belongs to, or -\/1 if it doesnt belong to any squad. \hypertarget{class_base_agent_a1de9312ae3f7c6f460846c37778a52d0}{\index{Base\-Agent@{Base\-Agent}!get\-Trail@{get\-Trail}}
+\index{get\-Trail@{get\-Trail}!BaseAgent@{Base\-Agent}}
+\subsubsection[{get\-Trail}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ {\bf Walk\-Tile} $>$ Base\-Agent\-::get\-Trail (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_base_agent_a1de9312ae3f7c6f460846c37778a52d0}
+Returns the P\-F pheromone trail. \hypertarget{class_base_agent_a521c6d21041e3452cd28a1bf6e9c4bbe}{\index{Base\-Agent@{Base\-Agent}!get\-Type\-Name@{get\-Type\-Name}}
+\index{get\-Type\-Name@{get\-Type\-Name}!BaseAgent@{Base\-Agent}}
+\subsubsection[{get\-Type\-Name}]{\setlength{\rightskip}{0pt plus 5cm}string Base\-Agent\-::get\-Type\-Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_base_agent_a521c6d21041e3452cd28a1bf6e9c4bbe}
+Returns the unique type name for the agent type. \hypertarget{class_base_agent_acb7af111f08893d616c4762589c24842}{\index{Base\-Agent@{Base\-Agent}!get\-Unit@{get\-Unit}}
+\index{get\-Unit@{get\-Unit}!BaseAgent@{Base\-Agent}}
+\subsubsection[{get\-Unit}]{\setlength{\rightskip}{0pt plus 5cm}Unit $\ast$ Base\-Agent\-::get\-Unit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_base_agent_acb7af111f08893d616c4762589c24842}
+Returns a reference to the unit assigned to this agent. \hypertarget{class_base_agent_a21552b1d092a6a162443e099aee953fd}{\index{Base\-Agent@{Base\-Agent}!get\-Unit\-I\-D@{get\-Unit\-I\-D}}
+\index{get\-Unit\-I\-D@{get\-Unit\-I\-D}!BaseAgent@{Base\-Agent}}
+\subsubsection[{get\-Unit\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}int Base\-Agent\-::get\-Unit\-I\-D (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_base_agent_a21552b1d092a6a162443e099aee953fd}
+Returns the unique id for this agent. Agent id is the same as the id of the unit assigned to the agent. \hypertarget{class_base_agent_a1fab6cde80aa0af1bdfe41561857c9ae}{\index{Base\-Agent@{Base\-Agent}!get\-Unit\-Type@{get\-Unit\-Type}}
+\index{get\-Unit\-Type@{get\-Unit\-Type}!BaseAgent@{Base\-Agent}}
+\subsubsection[{get\-Unit\-Type}]{\setlength{\rightskip}{0pt plus 5cm}Unit\-Type Base\-Agent\-::get\-Unit\-Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_base_agent_a1fab6cde80aa0af1bdfe41561857c9ae}
+Returns the type for the unit handled by this agent. \hypertarget{class_base_agent_a6fd9449d82a8a9a39f68c34c1b3462dd}{\index{Base\-Agent@{Base\-Agent}!is\-Alive@{is\-Alive}}
+\index{is\-Alive@{is\-Alive}!BaseAgent@{Base\-Agent}}
+\subsubsection[{is\-Alive}]{\setlength{\rightskip}{0pt plus 5cm}bool Base\-Agent\-::is\-Alive (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_base_agent_a6fd9449d82a8a9a39f68c34c1b3462dd}
+Returns true if this agent is active, i.\-e. the unit is not destroyed. \hypertarget{class_base_agent_a389b85fe410a8ea9738524f56f9c13a1}{\index{Base\-Agent@{Base\-Agent}!is\-Attacking@{is\-Attacking}}
+\index{is\-Attacking@{is\-Attacking}!BaseAgent@{Base\-Agent}}
+\subsubsection[{is\-Attacking}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Base\-Agent\-::is\-Attacking (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_base_agent_a389b85fe410a8ea9738524f56f9c13a1}
+Returns true if this agent is used to attack the enemy. \hypertarget{class_base_agent_a4e850b1c9ecad16d75bc9d6b61111f87}{\index{Base\-Agent@{Base\-Agent}!is\-Building@{is\-Building}}
+\index{is\-Building@{is\-Building}!BaseAgent@{Base\-Agent}}
+\subsubsection[{is\-Building}]{\setlength{\rightskip}{0pt plus 5cm}bool Base\-Agent\-::is\-Building (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_base_agent_a4e850b1c9ecad16d75bc9d6b61111f87}
+Returns true if this agent is a building. \hypertarget{class_base_agent_a746e53d8672c1851811dcc4ab899d249}{\index{Base\-Agent@{Base\-Agent}!is\-Damaged@{is\-Damaged}}
+\index{is\-Damaged@{is\-Damaged}!BaseAgent@{Base\-Agent}}
+\subsubsection[{is\-Damaged}]{\setlength{\rightskip}{0pt plus 5cm}bool Base\-Agent\-::is\-Damaged (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_base_agent_a746e53d8672c1851811dcc4ab899d249}
+Returns true if this agent is damaged. \hypertarget{class_base_agent_aaa15c0952be9181df51285fb87eec560}{\index{Base\-Agent@{Base\-Agent}!is\-Defending@{is\-Defending}}
+\index{is\-Defending@{is\-Defending}!BaseAgent@{Base\-Agent}}
+\subsubsection[{is\-Defending}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Base\-Agent\-::is\-Defending (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_base_agent_aaa15c0952be9181df51285fb87eec560}
+Returns true if this agent is defending the own base. \hypertarget{class_base_agent_a8569c74f788e3d1134032e61f93d01eb}{\index{Base\-Agent@{Base\-Agent}!is\-Detector\-Within\-Range@{is\-Detector\-Within\-Range}}
+\index{is\-Detector\-Within\-Range@{is\-Detector\-Within\-Range}!BaseAgent@{Base\-Agent}}
+\subsubsection[{is\-Detector\-Within\-Range}]{\setlength{\rightskip}{0pt plus 5cm}bool Base\-Agent\-::is\-Detector\-Within\-Range (
+\begin{DoxyParamCaption}
+\item[{Tile\-Position}]{pos, }
+\item[{int}]{range}
+\end{DoxyParamCaption}
+)}}\label{class_base_agent_a8569c74f788e3d1134032e61f93d01eb}
+Checks if there are any enemy detector units withing range of the specified position. True if there is, false if not. \hypertarget{class_base_agent_aa6cb5310933d186dc968ce1fdbd670d2}{\index{Base\-Agent@{Base\-Agent}!is\-Exploring@{is\-Exploring}}
+\index{is\-Exploring@{is\-Exploring}!BaseAgent@{Base\-Agent}}
+\subsubsection[{is\-Exploring}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Base\-Agent\-::is\-Exploring (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_base_agent_aa6cb5310933d186dc968ce1fdbd670d2}
+Returns true if this agent is used to explore the game world. \hypertarget{class_base_agent_a8aa4716711f964b6a073d67b35ec97b9}{\index{Base\-Agent@{Base\-Agent}!is\-Free\-Worker@{is\-Free\-Worker}}
+\index{is\-Free\-Worker@{is\-Free\-Worker}!BaseAgent@{Base\-Agent}}
+\subsubsection[{is\-Free\-Worker}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Base\-Agent\-::is\-Free\-Worker (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_base_agent_a8aa4716711f964b6a073d67b35ec97b9}
+Returns true if this agent is a free worker, i.\-e. is idle or is gathering minerals. 
+
+Reimplemented in \hyperlink{class_worker_agent_a915eac0b771494a8e1ca03d04e986ac0}{Worker\-Agent}.
+
+\hypertarget{class_base_agent_aca222c58843a3b61f5ad643175a5ce45}{\index{Base\-Agent@{Base\-Agent}!is\-Of\-Type@{is\-Of\-Type}}
+\index{is\-Of\-Type@{is\-Of\-Type}!BaseAgent@{Base\-Agent}}
+\subsubsection[{is\-Of\-Type}]{\setlength{\rightskip}{0pt plus 5cm}bool Base\-Agent\-::is\-Of\-Type (
+\begin{DoxyParamCaption}
+\item[{Unit\-Type}]{type}
+\end{DoxyParamCaption}
+)}}\label{class_base_agent_aca222c58843a3b61f5ad643175a5ce45}
+Returns true if the agent is of the specified type. \hypertarget{class_base_agent_adb4be451cefe38cd2f53eb69a14bbb38}{\index{Base\-Agent@{Base\-Agent}!is\-Of\-Type@{is\-Of\-Type}}
+\index{is\-Of\-Type@{is\-Of\-Type}!BaseAgent@{Base\-Agent}}
+\subsubsection[{is\-Of\-Type}]{\setlength{\rightskip}{0pt plus 5cm}bool Base\-Agent\-::is\-Of\-Type (
+\begin{DoxyParamCaption}
+\item[{Unit $\ast$}]{m\-Unit, }
+\item[{Unit\-Type}]{type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_base_agent_adb4be451cefe38cd2f53eb69a14bbb38}
+Returns true if the unit is of the specified type. \hypertarget{class_base_agent_a4b87e405fc064008c981b086850dbdcb}{\index{Base\-Agent@{Base\-Agent}!is\-Of\-Type@{is\-Of\-Type}}
+\index{is\-Of\-Type@{is\-Of\-Type}!BaseAgent@{Base\-Agent}}
+\subsubsection[{is\-Of\-Type}]{\setlength{\rightskip}{0pt plus 5cm}bool Base\-Agent\-::is\-Of\-Type (
+\begin{DoxyParamCaption}
+\item[{Unit\-Type}]{m\-Type, }
+\item[{Unit\-Type}]{to\-Check\-Type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_base_agent_a4b87e405fc064008c981b086850dbdcb}
+Returns true if m\-Type is the same Unit\-Type as to\-Check\-Type. \hypertarget{class_base_agent_af93f69d8e3c920870330b9e70811a04b}{\index{Base\-Agent@{Base\-Agent}!is\-Under\-Attack@{is\-Under\-Attack}}
+\index{is\-Under\-Attack@{is\-Under\-Attack}!BaseAgent@{Base\-Agent}}
+\subsubsection[{is\-Under\-Attack}]{\setlength{\rightskip}{0pt plus 5cm}bool Base\-Agent\-::is\-Under\-Attack (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_base_agent_af93f69d8e3c920870330b9e70811a04b}
+Returns true if this agent is under attack, i.\-e. lost hitpoints since last check. \hypertarget{class_base_agent_a8fbf66934f3cd9fc916a812daa5c31c2}{\index{Base\-Agent@{Base\-Agent}!is\-Unit@{is\-Unit}}
+\index{is\-Unit@{is\-Unit}!BaseAgent@{Base\-Agent}}
+\subsubsection[{is\-Unit}]{\setlength{\rightskip}{0pt plus 5cm}bool Base\-Agent\-::is\-Unit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_base_agent_a8fbf66934f3cd9fc916a812daa5c31c2}
+Returns true if this agent is a combat unit. \hypertarget{class_base_agent_a4c117b1a14974aca702a7ff2494e8c5d}{\index{Base\-Agent@{Base\-Agent}!is\-Worker@{is\-Worker}}
+\index{is\-Worker@{is\-Worker}!BaseAgent@{Base\-Agent}}
+\subsubsection[{is\-Worker}]{\setlength{\rightskip}{0pt plus 5cm}bool Base\-Agent\-::is\-Worker (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_base_agent_a4c117b1a14974aca702a7ff2494e8c5d}
+Returns true if this agent is a worker. \hypertarget{class_base_agent_a33dea9c0e91369fd6d8d80bddbd9ac67}{\index{Base\-Agent@{Base\-Agent}!matches@{matches}}
+\index{matches@{matches}!BaseAgent@{Base\-Agent}}
+\subsubsection[{matches}]{\setlength{\rightskip}{0pt plus 5cm}bool Base\-Agent\-::matches (
+\begin{DoxyParamCaption}
+\item[{Unit $\ast$}]{m\-Unit}
+\end{DoxyParamCaption}
+)}}\label{class_base_agent_a33dea9c0e91369fd6d8d80bddbd9ac67}
+Returns true if the specified unit is the same unit assigned to this agent. \hypertarget{class_base_agent_a80433bb4a354687c5f039e90f112a197}{\index{Base\-Agent@{Base\-Agent}!print\-Info@{print\-Info}}
+\index{print\-Info@{print\-Info}!BaseAgent@{Base\-Agent}}
+\subsubsection[{print\-Info}]{\setlength{\rightskip}{0pt plus 5cm}void Base\-Agent\-::print\-Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_base_agent_a80433bb4a354687c5f039e90f112a197}
+Used to print info about this agent to the screen. 
+
+Reimplemented in \hyperlink{class_unit_agent_a3f339a7aed3a5c77b8ba434411fd023f}{Unit\-Agent}, \hyperlink{class_worker_agent_accc6df915044157f38f1937c2c787d3e}{Worker\-Agent}, and \hyperlink{class_structure_agent_adac3c70b613e6d10ac921e11bb89b633}{Structure\-Agent}.
+
+\hypertarget{class_base_agent_a82301b0f2195ed4d5f6c8d1dbb2fb417}{\index{Base\-Agent@{Base\-Agent}!set\-Action\-Frame@{set\-Action\-Frame}}
+\index{set\-Action\-Frame@{set\-Action\-Frame}!BaseAgent@{Base\-Agent}}
+\subsubsection[{set\-Action\-Frame}]{\setlength{\rightskip}{0pt plus 5cm}void Base\-Agent\-::set\-Action\-Frame (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_base_agent_a82301b0f2195ed4d5f6c8d1dbb2fb417}
+Sets the current frame when this agent is issued an order. \hypertarget{class_base_agent_a404490fc9d2609f4ec56cda163383a7c}{\index{Base\-Agent@{Base\-Agent}!set\-Goal@{set\-Goal}}
+\index{set\-Goal@{set\-Goal}!BaseAgent@{Base\-Agent}}
+\subsubsection[{set\-Goal}]{\setlength{\rightskip}{0pt plus 5cm}void Base\-Agent\-::set\-Goal (
+\begin{DoxyParamCaption}
+\item[{Tile\-Position}]{goal}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_base_agent_a404490fc9d2609f4ec56cda163383a7c}
+Sets the goal for this unit. Goals are set from either the Squad\-Commander for attacking or defending units, or from \hyperlink{class_exploration_manager}{Exploration\-Manager} for explore units. 
+
+Reimplemented in \hyperlink{class_unit_agent_a202b37248a06875dd72ccde429db1a20}{Unit\-Agent}.
+
+\hypertarget{class_base_agent_aede66e43677663e01cb248e4d6e0d03b}{\index{Base\-Agent@{Base\-Agent}!set\-Squad\-I\-D@{set\-Squad\-I\-D}}
+\index{set\-Squad\-I\-D@{set\-Squad\-I\-D}!BaseAgent@{Base\-Agent}}
+\subsubsection[{set\-Squad\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}void Base\-Agent\-::set\-Squad\-I\-D (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)}}\label{class_base_agent_aede66e43677663e01cb248e4d6e0d03b}
+Assigns this agent to the squad with the specified id. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+B\-T\-H\-A\-I\-Module/\-Source/Base\-Agent.\-h\item 
+B\-T\-H\-A\-I\-Module/\-Source/Base\-Agent.\-cpp\end{DoxyCompactItemize}

@@ -1,0 +1,162 @@
+\hypertarget{class_choke_harass_squad}{\section{Choke\-Harass\-Squad Class Reference}
+\label{class_choke_harass_squad}\index{Choke\-Harass\-Squad@{Choke\-Harass\-Squad}}
+}
+
+
+{\ttfamily \#include $<$Choke\-Harass\-Squad.\-h$>$}
+
+Inheritance diagram for Choke\-Harass\-Squad\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_choke_harass_squad}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_choke_harass_squad_a58eeecb59ca8ccb6f06f63abb78ae7c8}{Choke\-Harass\-Squad} (int m\-Id, string m\-Name, int m\-Priority)
+\item 
+bool \hyperlink{class_choke_harass_squad_a539b0d145bf8f008dea8c43391d04b68}{is\-Active} ()
+\item 
+void \hyperlink{class_choke_harass_squad_a17ae34d4e776469004908c3b9fb82912}{compute\-Actions} ()
+\item 
+void \hyperlink{class_choke_harass_squad_a7246fcd5beca03ed7baeeb53d902335a}{defend} (Tile\-Position m\-Goal)
+\item 
+void \hyperlink{class_choke_harass_squad_a797d5de4bb64bfae0db084d57d025df5}{attack} (Tile\-Position m\-Goal)
+\item 
+void \hyperlink{class_choke_harass_squad_ad017919f055532c6dda726ebfe9eab94}{assist} (Tile\-Position m\-Goal)
+\item 
+void \hyperlink{class_choke_harass_squad_a204f26d3d521881db9dea355293ab3cd}{clear\-Goal} ()
+\item 
+Tile\-Position \hyperlink{class_choke_harass_squad_a87434b71eb3832c68bb77026774f0ded}{get\-Goal} ()
+\item 
+bool \hyperlink{class_choke_harass_squad_a634ed2e28b01a4681dc105df907394e6}{has\-Goal} ()
+\item 
+void \hyperlink{class_choke_harass_squad_ac7f907baeaa192a598f89dec7b503912}{print\-Info} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This squad locates a chokepoint around the enemy base and guards it to prevent the enemy from expanding.
+
+Author\-: Johan Hagelback (\href{mailto:johan.hagelback@gmail.com}{\tt johan.\-hagelback@gmail.\-com}) 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_choke_harass_squad_a58eeecb59ca8ccb6f06f63abb78ae7c8}{\index{Choke\-Harass\-Squad@{Choke\-Harass\-Squad}!Choke\-Harass\-Squad@{Choke\-Harass\-Squad}}
+\index{Choke\-Harass\-Squad@{Choke\-Harass\-Squad}!ChokeHarassSquad@{Choke\-Harass\-Squad}}
+\subsubsection[{Choke\-Harass\-Squad}]{\setlength{\rightskip}{0pt plus 5cm}Choke\-Harass\-Squad\-::\-Choke\-Harass\-Squad (
+\begin{DoxyParamCaption}
+\item[{int}]{m\-Id, }
+\item[{string}]{m\-Name, }
+\item[{int}]{m\-Priority}
+\end{DoxyParamCaption}
+)}}\label{class_choke_harass_squad_a58eeecb59ca8ccb6f06f63abb78ae7c8}
+\hyperlink{class_constructor}{Constructor}. See \hyperlink{_squad_8h_source}{Squad.\-h} for more details. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_choke_harass_squad_ad017919f055532c6dda726ebfe9eab94}{\index{Choke\-Harass\-Squad@{Choke\-Harass\-Squad}!assist@{assist}}
+\index{assist@{assist}!ChokeHarassSquad@{Choke\-Harass\-Squad}}
+\subsubsection[{assist}]{\setlength{\rightskip}{0pt plus 5cm}void Choke\-Harass\-Squad\-::assist (
+\begin{DoxyParamCaption}
+\item[{Tile\-Position}]{m\-Goal}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_choke_harass_squad_ad017919f055532c6dda726ebfe9eab94}
+Orders this squad to assist units at a position. 
+
+Reimplemented from \hyperlink{class_squad_aefeccd46eb2bf673e1bb7e4d7b913a49}{Squad}.
+
+\hypertarget{class_choke_harass_squad_a797d5de4bb64bfae0db084d57d025df5}{\index{Choke\-Harass\-Squad@{Choke\-Harass\-Squad}!attack@{attack}}
+\index{attack@{attack}!ChokeHarassSquad@{Choke\-Harass\-Squad}}
+\subsubsection[{attack}]{\setlength{\rightskip}{0pt plus 5cm}void Choke\-Harass\-Squad\-::attack (
+\begin{DoxyParamCaption}
+\item[{Tile\-Position}]{m\-Goal}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_choke_harass_squad_a797d5de4bb64bfae0db084d57d025df5}
+Orders this squad to launch an attack at a position. 
+
+Reimplemented from \hyperlink{class_squad_a4e405c83103c69dda302a367e2dfed3f}{Squad}.
+
+\hypertarget{class_choke_harass_squad_a204f26d3d521881db9dea355293ab3cd}{\index{Choke\-Harass\-Squad@{Choke\-Harass\-Squad}!clear\-Goal@{clear\-Goal}}
+\index{clear\-Goal@{clear\-Goal}!ChokeHarassSquad@{Choke\-Harass\-Squad}}
+\subsubsection[{clear\-Goal}]{\setlength{\rightskip}{0pt plus 5cm}void Choke\-Harass\-Squad\-::clear\-Goal (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_choke_harass_squad_a204f26d3d521881db9dea355293ab3cd}
+Clears the goal for this \hyperlink{class_squad}{Squad}, i.\-e. sets the goal to Tile\-Position(-\/1,-\/1). 
+
+Reimplemented from \hyperlink{class_squad_a54380c521be6f5b3be723c24e2bd9ab7}{Squad}.
+
+\hypertarget{class_choke_harass_squad_a17ae34d4e776469004908c3b9fb82912}{\index{Choke\-Harass\-Squad@{Choke\-Harass\-Squad}!compute\-Actions@{compute\-Actions}}
+\index{compute\-Actions@{compute\-Actions}!ChokeHarassSquad@{Choke\-Harass\-Squad}}
+\subsubsection[{compute\-Actions}]{\setlength{\rightskip}{0pt plus 5cm}void Choke\-Harass\-Squad\-::compute\-Actions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_choke_harass_squad_a17ae34d4e776469004908c3b9fb82912}
+Called each update to issue orders. 
+
+Reimplemented from \hyperlink{class_squad_ac338d389b81cbec76cb8d240f0833e43}{Squad}.
+
+\hypertarget{class_choke_harass_squad_a7246fcd5beca03ed7baeeb53d902335a}{\index{Choke\-Harass\-Squad@{Choke\-Harass\-Squad}!defend@{defend}}
+\index{defend@{defend}!ChokeHarassSquad@{Choke\-Harass\-Squad}}
+\subsubsection[{defend}]{\setlength{\rightskip}{0pt plus 5cm}void Choke\-Harass\-Squad\-::defend (
+\begin{DoxyParamCaption}
+\item[{Tile\-Position}]{m\-Goal}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_choke_harass_squad_a7246fcd5beca03ed7baeeb53d902335a}
+Orders this squad to defend a position. 
+
+Reimplemented from \hyperlink{class_squad_aca337f45691b4e6ea361f3f8de06c536}{Squad}.
+
+\hypertarget{class_choke_harass_squad_a87434b71eb3832c68bb77026774f0ded}{\index{Choke\-Harass\-Squad@{Choke\-Harass\-Squad}!get\-Goal@{get\-Goal}}
+\index{get\-Goal@{get\-Goal}!ChokeHarassSquad@{Choke\-Harass\-Squad}}
+\subsubsection[{get\-Goal}]{\setlength{\rightskip}{0pt plus 5cm}Tile\-Position Choke\-Harass\-Squad\-::get\-Goal (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_choke_harass_squad_a87434b71eb3832c68bb77026774f0ded}
+Returns the current goal of this \hyperlink{class_squad}{Squad}. 
+
+Reimplemented from \hyperlink{class_squad_ae9278dcf91e317c4316ce19e4c7c3b9e}{Squad}.
+
+\hypertarget{class_choke_harass_squad_a634ed2e28b01a4681dc105df907394e6}{\index{Choke\-Harass\-Squad@{Choke\-Harass\-Squad}!has\-Goal@{has\-Goal}}
+\index{has\-Goal@{has\-Goal}!ChokeHarassSquad@{Choke\-Harass\-Squad}}
+\subsubsection[{has\-Goal}]{\setlength{\rightskip}{0pt plus 5cm}bool Choke\-Harass\-Squad\-::has\-Goal (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_choke_harass_squad_a634ed2e28b01a4681dc105df907394e6}
+Returns true if this squad has an assigned goal. 
+
+Reimplemented from \hyperlink{class_squad_a5ad7231b7644be74b42318ff97d6f5e3}{Squad}.
+
+\hypertarget{class_choke_harass_squad_a539b0d145bf8f008dea8c43391d04b68}{\index{Choke\-Harass\-Squad@{Choke\-Harass\-Squad}!is\-Active@{is\-Active}}
+\index{is\-Active@{is\-Active}!ChokeHarassSquad@{Choke\-Harass\-Squad}}
+\subsubsection[{is\-Active}]{\setlength{\rightskip}{0pt plus 5cm}bool Choke\-Harass\-Squad\-::is\-Active (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_choke_harass_squad_a539b0d145bf8f008dea8c43391d04b68}
+Returns true if this \hyperlink{class_squad}{Squad} is active, or false if not. A \hyperlink{class_squad}{Squad} is active when it first has been filled with agents. A \hyperlink{class_squad}{Squad} with destroyed units are still considered Active. 
+
+Reimplemented from \hyperlink{class_squad_a20f3ca360518b8908b405c44a858ccbd}{Squad}.
+
+\hypertarget{class_choke_harass_squad_ac7f907baeaa192a598f89dec7b503912}{\index{Choke\-Harass\-Squad@{Choke\-Harass\-Squad}!print\-Info@{print\-Info}}
+\index{print\-Info@{print\-Info}!ChokeHarassSquad@{Choke\-Harass\-Squad}}
+\subsubsection[{print\-Info}]{\setlength{\rightskip}{0pt plus 5cm}void Choke\-Harass\-Squad\-::print\-Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_choke_harass_squad_ac7f907baeaa192a598f89dec7b503912}
+Prints some info about the squad. 
+
+Reimplemented from \hyperlink{class_squad_a02e1bb7b5d5579df71cc94ce372ae13c}{Squad}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+B\-T\-H\-A\-I\-Module/\-Source/Choke\-Harass\-Squad.\-h\item 
+B\-T\-H\-A\-I\-Module/\-Source/Choke\-Harass\-Squad.\-cpp\end{DoxyCompactItemize}

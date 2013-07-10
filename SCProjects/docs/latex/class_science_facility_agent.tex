@@ -1,0 +1,88 @@
+\hypertarget{class_science_facility_agent}{
+\section{ScienceFacilityAgent Class Reference}
+\label{class_science_facility_agent}\index{ScienceFacilityAgent@{ScienceFacilityAgent}}
+}
+
+
+{\ttfamily \#include $<$ScienceFacilityAgent.h$>$}
+
+Inheritance diagram for ScienceFacilityAgent:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_science_facility_agent}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_science_facility_agent_a42e90cdc7fab696600568a2f24885e0f}{
+{\bfseries ScienceFacilityAgent} (Unit $\ast$mUnit)}
+\label{class_science_facility_agent_a42e90cdc7fab696600568a2f24885e0f}
+
+\item 
+void \hyperlink{class_science_facility_agent_aeb2cd482b337cc5e96307c710e0f951d}{computeActions} ()
+\item 
+string \hyperlink{class_science_facility_agent_aaf14b0b2641601516d18969552b15665}{getTypeName} ()
+\item 
+void \hyperlink{class_science_facility_agent_aa0749b77bba28ad952717418cf5d33b5}{assignToBuild} (UnitType type)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_science_facility_agent}{ScienceFacilityAgent} handles Terran Science Facility buildings.
+
+Implemented abilities:
+\begin{DoxyItemize}
+\item Builds the Covert Ops addon to support Ghosts.
+\item Can build the Physics Lab addon to support Battlecruisers.
+\item Research the EMP Shockwave and Irradiate abilities for Science Vessels.
+\end{DoxyItemize}
+
+Author: Johan Hagelback (\href{mailto:johan.hagelback@gmail.com}{\tt johan.hagelback@gmail.com}) 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_science_facility_agent_aa0749b77bba28ad952717418cf5d33b5}{
+\index{ScienceFacilityAgent@{ScienceFacilityAgent}!assignToBuild@{assignToBuild}}
+\index{assignToBuild@{assignToBuild}!ScienceFacilityAgent@{ScienceFacilityAgent}}
+\subsubsection[{assignToBuild}]{\setlength{\rightskip}{0pt plus 5cm}void ScienceFacilityAgent::assignToBuild (
+\begin{DoxyParamCaption}
+\item[{UnitType}]{type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_science_facility_agent_aa0749b77bba28ad952717418cf5d33b5}
+Used when building an addon. 
+
+Reimplemented from \hyperlink{class_base_agent_a3bab1641b8ba847e9254e174666dbd31}{BaseAgent}.
+
+\hypertarget{class_science_facility_agent_aeb2cd482b337cc5e96307c710e0f951d}{
+\index{ScienceFacilityAgent@{ScienceFacilityAgent}!computeActions@{computeActions}}
+\index{computeActions@{computeActions}!ScienceFacilityAgent@{ScienceFacilityAgent}}
+\subsubsection[{computeActions}]{\setlength{\rightskip}{0pt plus 5cm}void ScienceFacilityAgent::computeActions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_science_facility_agent_aeb2cd482b337cc5e96307c710e0f951d}
+Called each update to issue orders. 
+
+Reimplemented from \hyperlink{class_structure_agent_af53d1389d80784bb254605ffd9f9e4e4}{StructureAgent}.
+
+\hypertarget{class_science_facility_agent_aaf14b0b2641601516d18969552b15665}{
+\index{ScienceFacilityAgent@{ScienceFacilityAgent}!getTypeName@{getTypeName}}
+\index{getTypeName@{getTypeName}!ScienceFacilityAgent@{ScienceFacilityAgent}}
+\subsubsection[{getTypeName}]{\setlength{\rightskip}{0pt plus 5cm}string ScienceFacilityAgent::getTypeName (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_science_facility_agent_aaf14b0b2641601516d18969552b15665}
+Returns the unique type name for structure agents. 
+
+Reimplemented from \hyperlink{class_structure_agent_acbeb3232c3c9c647ba526defa22264cd}{StructureAgent}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+BTHAIModule/Source/ScienceFacilityAgent.h\item 
+BTHAIModule/Source/ScienceFacilityAgent.cpp\end{DoxyCompactItemize}

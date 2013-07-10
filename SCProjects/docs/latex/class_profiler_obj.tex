@@ -1,0 +1,99 @@
+\hypertarget{class_profiler_obj}{\section{Profiler\-Obj Class Reference}
+\label{class_profiler_obj}\index{Profiler\-Obj@{Profiler\-Obj}}
+}
+
+
+{\ttfamily \#include $<$Profiler\-Obj.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_profiler_obj_a8325dc4571537b9a3da0e0c305e00c18}{Profiler\-Obj} (string m\-Id)
+\item 
+\hyperlink{class_profiler_obj_a1103c5bcee4507ec4995ad812d3f5aa4}{$\sim$\-Profiler\-Obj} ()
+\item 
+bool \hyperlink{class_profiler_obj_ac5eb8d8990bf0a8849a83b915ead3ae5}{matches} (string m\-Id)
+\item 
+void \hyperlink{class_profiler_obj_a8ee28f19edb059b3a8c053bf9a454c9f}{start} ()
+\item 
+void \hyperlink{class_profiler_obj_a532ea624936449485bb05606254114f2}{end} ()
+\item 
+int \hyperlink{class_profiler_obj_ad95b7505c760b79467b0e17f7b4a0b46}{get\-Elapsed} ()
+\item 
+void \hyperlink{class_profiler_obj_a898d439c88e07b773523b4fae3a65c94}{show} ()
+\item 
+string \hyperlink{class_profiler_obj_a887b28c2812f3740eec00f03cfa89c95}{get\-Dump\-Str} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Helper class for \hyperlink{class_profiler}{Profiler}. This class represents a profiling of one specific codeblock. Profiling can be done on any number of codeblocks.
+
+Author\-: Johan Hagelback (\href{mailto:johan.hagelback@gmail.com}{\tt johan.\-hagelback@gmail.\-com}) 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_profiler_obj_a8325dc4571537b9a3da0e0c305e00c18}{\index{Profiler\-Obj@{Profiler\-Obj}!Profiler\-Obj@{Profiler\-Obj}}
+\index{Profiler\-Obj@{Profiler\-Obj}!ProfilerObj@{Profiler\-Obj}}
+\subsubsection[{Profiler\-Obj}]{\setlength{\rightskip}{0pt plus 5cm}Profiler\-Obj\-::\-Profiler\-Obj (
+\begin{DoxyParamCaption}
+\item[{string}]{m\-Id}
+\end{DoxyParamCaption}
+)}}\label{class_profiler_obj_a8325dc4571537b9a3da0e0c305e00c18}
+\hyperlink{class_constructor}{Constructor} \hypertarget{class_profiler_obj_a1103c5bcee4507ec4995ad812d3f5aa4}{\index{Profiler\-Obj@{Profiler\-Obj}!$\sim$\-Profiler\-Obj@{$\sim$\-Profiler\-Obj}}
+\index{$\sim$\-Profiler\-Obj@{$\sim$\-Profiler\-Obj}!ProfilerObj@{Profiler\-Obj}}
+\subsubsection[{$\sim$\-Profiler\-Obj}]{\setlength{\rightskip}{0pt plus 5cm}Profiler\-Obj\-::$\sim$\-Profiler\-Obj (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_profiler_obj_a1103c5bcee4507ec4995ad812d3f5aa4}
+Destructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_profiler_obj_a532ea624936449485bb05606254114f2}{\index{Profiler\-Obj@{Profiler\-Obj}!end@{end}}
+\index{end@{end}!ProfilerObj@{Profiler\-Obj}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}void Profiler\-Obj\-::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_profiler_obj_a532ea624936449485bb05606254114f2}
+Stops measuring a codeblock. \hypertarget{class_profiler_obj_a887b28c2812f3740eec00f03cfa89c95}{\index{Profiler\-Obj@{Profiler\-Obj}!get\-Dump\-Str@{get\-Dump\-Str}}
+\index{get\-Dump\-Str@{get\-Dump\-Str}!ProfilerObj@{Profiler\-Obj}}
+\subsubsection[{get\-Dump\-Str}]{\setlength{\rightskip}{0pt plus 5cm}string Profiler\-Obj\-::get\-Dump\-Str (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_profiler_obj_a887b28c2812f3740eec00f03cfa89c95}
+Returns the html string for this profiling object. \hypertarget{class_profiler_obj_ad95b7505c760b79467b0e17f7b4a0b46}{\index{Profiler\-Obj@{Profiler\-Obj}!get\-Elapsed@{get\-Elapsed}}
+\index{get\-Elapsed@{get\-Elapsed}!ProfilerObj@{Profiler\-Obj}}
+\subsubsection[{get\-Elapsed}]{\setlength{\rightskip}{0pt plus 5cm}int Profiler\-Obj\-::get\-Elapsed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_profiler_obj_ad95b7505c760b79467b0e17f7b4a0b46}
+Returns the time elapsed between last start and end (in milliseconds). \hypertarget{class_profiler_obj_ac5eb8d8990bf0a8849a83b915ead3ae5}{\index{Profiler\-Obj@{Profiler\-Obj}!matches@{matches}}
+\index{matches@{matches}!ProfilerObj@{Profiler\-Obj}}
+\subsubsection[{matches}]{\setlength{\rightskip}{0pt plus 5cm}bool Profiler\-Obj\-::matches (
+\begin{DoxyParamCaption}
+\item[{string}]{m\-Id}
+\end{DoxyParamCaption}
+)}}\label{class_profiler_obj_ac5eb8d8990bf0a8849a83b915ead3ae5}
+Checks if this object matches the specified id string. \hypertarget{class_profiler_obj_a898d439c88e07b773523b4fae3a65c94}{\index{Profiler\-Obj@{Profiler\-Obj}!show@{show}}
+\index{show@{show}!ProfilerObj@{Profiler\-Obj}}
+\subsubsection[{show}]{\setlength{\rightskip}{0pt plus 5cm}void Profiler\-Obj\-::show (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_profiler_obj_a898d439c88e07b773523b4fae3a65c94}
+Print data to the ingame chat window. \hypertarget{class_profiler_obj_a8ee28f19edb059b3a8c053bf9a454c9f}{\index{Profiler\-Obj@{Profiler\-Obj}!start@{start}}
+\index{start@{start}!ProfilerObj@{Profiler\-Obj}}
+\subsubsection[{start}]{\setlength{\rightskip}{0pt plus 5cm}void Profiler\-Obj\-::start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_profiler_obj_a8ee28f19edb059b3a8c053bf9a454c9f}
+Starts measuring a codeblock. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+B\-T\-H\-A\-I\-Module/\-Source/Profiler\-Obj.\-h\item 
+B\-T\-H\-A\-I\-Module/\-Source/Profiler\-Obj.\-cpp\end{DoxyCompactItemize}

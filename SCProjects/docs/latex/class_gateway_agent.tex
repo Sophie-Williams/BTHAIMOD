@@ -1,0 +1,73 @@
+\hypertarget{class_gateway_agent}{
+\section{GatewayAgent Class Reference}
+\label{class_gateway_agent}\index{GatewayAgent@{GatewayAgent}}
+}
+
+
+{\ttfamily \#include $<$GatewayAgent.h$>$}
+
+Inheritance diagram for GatewayAgent:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_gateway_agent}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_gateway_agent_ad0a3bc01881355a5a719fd4d0c471490}{
+{\bfseries GatewayAgent} (Unit $\ast$mUnit)}
+\label{class_gateway_agent_ad0a3bc01881355a5a719fd4d0c471490}
+
+\item 
+void \hyperlink{class_gateway_agent_a423351023b1a1ed7db6f254d26a0c1df}{computeActions} ()
+\item 
+string \hyperlink{class_gateway_agent_a6e427f6745502c494cdf42db4ec6d2e0}{getTypeName} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_gateway_agent}{GatewayAgent} handles Protoss Gateway buildings.
+
+Implemented abilities:
+\begin{DoxyItemize}
+\item Can train Zealots.
+\item If Cybernetics Core has been built, can train Dragoons.
+\item If Templar Archives has been built, can train Dark Templars and High Templars.
+\end{DoxyItemize}
+
+Author: Johan Hagelback (\href{mailto:johan.hagelback@gmail.com}{\tt johan.hagelback@gmail.com}) 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gateway_agent_a423351023b1a1ed7db6f254d26a0c1df}{
+\index{GatewayAgent@{GatewayAgent}!computeActions@{computeActions}}
+\index{computeActions@{computeActions}!GatewayAgent@{GatewayAgent}}
+\subsubsection[{computeActions}]{\setlength{\rightskip}{0pt plus 5cm}void GatewayAgent::computeActions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_gateway_agent_a423351023b1a1ed7db6f254d26a0c1df}
+Called each update to issue orders. 
+
+Reimplemented from \hyperlink{class_structure_agent_af53d1389d80784bb254605ffd9f9e4e4}{StructureAgent}.
+
+\hypertarget{class_gateway_agent_a6e427f6745502c494cdf42db4ec6d2e0}{
+\index{GatewayAgent@{GatewayAgent}!getTypeName@{getTypeName}}
+\index{getTypeName@{getTypeName}!GatewayAgent@{GatewayAgent}}
+\subsubsection[{getTypeName}]{\setlength{\rightskip}{0pt plus 5cm}string GatewayAgent::getTypeName (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_gateway_agent_a6e427f6745502c494cdf42db4ec6d2e0}
+Returns the unique type name for structure agents. 
+
+Reimplemented from \hyperlink{class_structure_agent_acbeb3232c3c9c647ba526defa22264cd}{StructureAgent}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+BTHAIModule/Source/GatewayAgent.h\item 
+BTHAIModule/Source/GatewayAgent.cpp\end{DoxyCompactItemize}

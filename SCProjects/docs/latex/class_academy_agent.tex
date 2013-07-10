@@ -1,0 +1,76 @@
+\hypertarget{class_academy_agent}{
+\section{AcademyAgent Class Reference}
+\label{class_academy_agent}\index{AcademyAgent@{AcademyAgent}}
+}
+
+
+{\ttfamily \#include $<$AcademyAgent.h$>$}
+
+Inheritance diagram for AcademyAgent:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_academy_agent}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_academy_agent_a6e9118fd5995186a41c4344c3037b520}{
+{\bfseries AcademyAgent} (Unit $\ast$mUnit)}
+\label{class_academy_agent_a6e9118fd5995186a41c4344c3037b520}
+
+\item 
+void \hyperlink{class_academy_agent_a21879ae618f0e1b9bdf29e64d2a5d2ac}{computeActions} ()
+\item 
+string \hyperlink{class_academy_agent_a6932ff43bb7ab5773a41cb33adb20f51}{getTypeName} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_academy_agent}{AcademyAgent} handles Terran Academy buildings.
+
+Implemented abilities:
+\begin{DoxyItemize}
+\item Upgrades to U 238 Shells and research Stim Packs.
+\end{DoxyItemize}
+
+TODO:
+\begin{DoxyItemize}
+\item Research/upgrades for Medics are missing.
+\end{DoxyItemize}
+
+Author: Johan Hagelback (\href{mailto:johan.hagelback@gmail.com}{\tt johan.hagelback@gmail.com}) 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_academy_agent_a21879ae618f0e1b9bdf29e64d2a5d2ac}{
+\index{AcademyAgent@{AcademyAgent}!computeActions@{computeActions}}
+\index{computeActions@{computeActions}!AcademyAgent@{AcademyAgent}}
+\subsubsection[{computeActions}]{\setlength{\rightskip}{0pt plus 5cm}void AcademyAgent::computeActions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_academy_agent_a21879ae618f0e1b9bdf29e64d2a5d2ac}
+Called each update to issue orders. 
+
+Reimplemented from \hyperlink{class_structure_agent_af53d1389d80784bb254605ffd9f9e4e4}{StructureAgent}.
+
+\hypertarget{class_academy_agent_a6932ff43bb7ab5773a41cb33adb20f51}{
+\index{AcademyAgent@{AcademyAgent}!getTypeName@{getTypeName}}
+\index{getTypeName@{getTypeName}!AcademyAgent@{AcademyAgent}}
+\subsubsection[{getTypeName}]{\setlength{\rightskip}{0pt plus 5cm}string AcademyAgent::getTypeName (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_academy_agent_a6932ff43bb7ab5773a41cb33adb20f51}
+Returns the unique type name for structure agents. 
+
+Reimplemented from \hyperlink{class_structure_agent_acbeb3232c3c9c647ba526defa22264cd}{StructureAgent}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+BTHAIModule/Source/AcademyAgent.h\item 
+BTHAIModule/Source/AcademyAgent.cpp\end{DoxyCompactItemize}

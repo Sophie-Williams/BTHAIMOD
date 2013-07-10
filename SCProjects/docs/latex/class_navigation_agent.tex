@@ -1,0 +1,93 @@
+\hypertarget{class_navigation_agent}{\section{Navigation\-Agent Class Reference}
+\label{class_navigation_agent}\index{Navigation\-Agent@{Navigation\-Agent}}
+}
+
+
+{\ttfamily \#include $<$Navigation\-Agent.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_navigation_agent_a84f0b71064dec4510ed89f8462b7f88f}{$\sim$\-Navigation\-Agent} ()
+\item 
+void \hyperlink{class_navigation_agent_a5539e6251fd6545340db21fead6b9be8}{compute\-Move} (\hyperlink{class_base_agent}{Base\-Agent} $\ast$agent, Tile\-Position goal, bool defensive)
+\item 
+void \hyperlink{class_navigation_agent_a296e6e934a56440807933ab9552cec4c}{compute\-Pathfinding\-Move} (\hyperlink{class_base_agent}{Base\-Agent} $\ast$agent, Tile\-Position goal)
+\item 
+void \hyperlink{class_navigation_agent_a9cab8df64c0079f786b137b601d64cb5}{compute\-Potential\-Field\-Move} (\hyperlink{class_base_agent}{Base\-Agent} $\ast$agent, bool defensive)
+\item 
+\hypertarget{class_navigation_agent_a34d013eef5b8fb5434a5506a570181eb}{void {\bfseries compute\-Potential\-Field\-Defending\-Move} (\hyperlink{class_base_agent}{Base\-Agent} $\ast$agent)}\label{class_navigation_agent_a34d013eef5b8fb5434a5506a570181eb}
+
+\item 
+void \hyperlink{class_navigation_agent_a608f7b54a28c2fe273ee2d726265dfce}{display\-P\-F} (\hyperlink{class_base_agent}{Base\-Agent} $\ast$agent)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_navigation_agent}{Navigation\-Agent} $\ast$ \hyperlink{class_navigation_agent_aaa13ab0c04f9c1be76b177a37813e580}{get\-Instance} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The bot uses two techniques for navigation\-: if no enemy units are close units navigate using the built in pathfinder in Starcraft. If enemy units are close, own units uses potential fields to engage and surround the enemy. The \hyperlink{class_navigation_agent}{Navigation\-Agent} class is the main class for the navigation system, and it switches between built in pathfinder and potential fields when necessary.
+
+The \hyperlink{class_navigation_agent}{Navigation\-Agent} is implemented as a singleton class. Each class that needs to access \hyperlink{class_navigation_agent}{Navigation\-Agent} can request an instance, and all classes shares the same \hyperlink{class_navigation_agent}{Navigation\-Agent} instance.
+
+Author\-: Johan Hagelback (\href{mailto:johan.hagelback@gmail.com}{\tt johan.\-hagelback@gmail.\-com}) 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_navigation_agent_a84f0b71064dec4510ed89f8462b7f88f}{\index{Navigation\-Agent@{Navigation\-Agent}!$\sim$\-Navigation\-Agent@{$\sim$\-Navigation\-Agent}}
+\index{$\sim$\-Navigation\-Agent@{$\sim$\-Navigation\-Agent}!NavigationAgent@{Navigation\-Agent}}
+\subsubsection[{$\sim$\-Navigation\-Agent}]{\setlength{\rightskip}{0pt plus 5cm}Navigation\-Agent\-::$\sim$\-Navigation\-Agent (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_navigation_agent_a84f0b71064dec4510ed89f8462b7f88f}
+Destructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_navigation_agent_a5539e6251fd6545340db21fead6b9be8}{\index{Navigation\-Agent@{Navigation\-Agent}!compute\-Move@{compute\-Move}}
+\index{compute\-Move@{compute\-Move}!NavigationAgent@{Navigation\-Agent}}
+\subsubsection[{compute\-Move}]{\setlength{\rightskip}{0pt plus 5cm}void Navigation\-Agent\-::compute\-Move (
+\begin{DoxyParamCaption}
+\item[{{\bf Base\-Agent} $\ast$}]{agent, }
+\item[{Tile\-Position}]{goal, }
+\item[{bool}]{defensive}
+\end{DoxyParamCaption}
+)}}\label{class_navigation_agent_a5539e6251fd6545340db21fead6b9be8}
+Is used to compute and execute movement commands for attacking units using the potential field navigation system. \hypertarget{class_navigation_agent_a296e6e934a56440807933ab9552cec4c}{\index{Navigation\-Agent@{Navigation\-Agent}!compute\-Pathfinding\-Move@{compute\-Pathfinding\-Move}}
+\index{compute\-Pathfinding\-Move@{compute\-Pathfinding\-Move}!NavigationAgent@{Navigation\-Agent}}
+\subsubsection[{compute\-Pathfinding\-Move}]{\setlength{\rightskip}{0pt plus 5cm}void Navigation\-Agent\-::compute\-Pathfinding\-Move (
+\begin{DoxyParamCaption}
+\item[{{\bf Base\-Agent} $\ast$}]{agent, }
+\item[{Tile\-Position}]{goal}
+\end{DoxyParamCaption}
+)}}\label{class_navigation_agent_a296e6e934a56440807933ab9552cec4c}
+Computes a pathfinding move (no enemy units in range) \hypertarget{class_navigation_agent_a9cab8df64c0079f786b137b601d64cb5}{\index{Navigation\-Agent@{Navigation\-Agent}!compute\-Potential\-Field\-Move@{compute\-Potential\-Field\-Move}}
+\index{compute\-Potential\-Field\-Move@{compute\-Potential\-Field\-Move}!NavigationAgent@{Navigation\-Agent}}
+\subsubsection[{compute\-Potential\-Field\-Move}]{\setlength{\rightskip}{0pt plus 5cm}void Navigation\-Agent\-::compute\-Potential\-Field\-Move (
+\begin{DoxyParamCaption}
+\item[{{\bf Base\-Agent} $\ast$}]{agent, }
+\item[{bool}]{defensive}
+\end{DoxyParamCaption}
+)}}\label{class_navigation_agent_a9cab8df64c0079f786b137b601d64cb5}
+Computes a P\-F move (enemy units within range) \hypertarget{class_navigation_agent_a608f7b54a28c2fe273ee2d726265dfce}{\index{Navigation\-Agent@{Navigation\-Agent}!display\-P\-F@{display\-P\-F}}
+\index{display\-P\-F@{display\-P\-F}!NavigationAgent@{Navigation\-Agent}}
+\subsubsection[{display\-P\-F}]{\setlength{\rightskip}{0pt plus 5cm}void Navigation\-Agent\-::display\-P\-F (
+\begin{DoxyParamCaption}
+\item[{{\bf Base\-Agent} $\ast$}]{agent}
+\end{DoxyParamCaption}
+)}}\label{class_navigation_agent_a608f7b54a28c2fe273ee2d726265dfce}
+Displays a debug view of the potential fields for an agent. \hypertarget{class_navigation_agent_aaa13ab0c04f9c1be76b177a37813e580}{\index{Navigation\-Agent@{Navigation\-Agent}!get\-Instance@{get\-Instance}}
+\index{get\-Instance@{get\-Instance}!NavigationAgent@{Navigation\-Agent}}
+\subsubsection[{get\-Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Navigation\-Agent} $\ast$ Navigation\-Agent\-::get\-Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_navigation_agent_aaa13ab0c04f9c1be76b177a37813e580}
+Returns the instance to the class. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+B\-T\-H\-A\-I\-Module/\-Source/Navigation\-Agent.\-h\item 
+B\-T\-H\-A\-I\-Module/\-Source/Navigation\-Agent.\-cpp\end{DoxyCompactItemize}

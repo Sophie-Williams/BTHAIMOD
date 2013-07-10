@@ -1,0 +1,255 @@
+\hypertarget{class_agent_manager}{\section{Agent\-Manager Class Reference}
+\label{class_agent_manager}\index{Agent\-Manager@{Agent\-Manager}}
+}
+
+
+{\ttfamily \#include $<$Agent\-Manager.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_agent_manager_a9dd0d16d66f2cfada2f20397b33bc5cd}{add\-Agent} (Unit $\ast$unit)
+\item 
+void \hyperlink{class_agent_manager_ad1da6ed354a16c0b6f482732a24a09df}{remove\-Agent} (Unit $\ast$unit)
+\item 
+void \hyperlink{class_agent_manager_a4b1480ecb76df3ede61e5b39dfbf7032}{morph\-Drone} (Unit $\ast$unit)
+\item 
+void \hyperlink{class_agent_manager_a7eedeb3178b8d9a5b091867646d9e536}{compute\-Actions} ()
+\item 
+int \hyperlink{class_agent_manager_ac4ae750f805a987300fe65bdb4f336b1}{get\-No\-Workers} ()
+\item 
+int \hyperlink{class_agent_manager_a2dfe87ce8581ba48eb0b1da67cd122d0}{no\-Mining\-Workers} ()
+\item 
+\hyperlink{class_base_agent}{Base\-Agent} $\ast$ \hyperlink{class_agent_manager_a06155f45244270a4a70102b98b983b75}{find\-Closest\-Free\-Worker} (Tile\-Position pos)
+\item 
+bool \hyperlink{class_agent_manager_afb5e43191c541cdc7324b7a0bc02c932}{is\-Any\-Agent\-Repairing\-This\-Agent} (\hyperlink{class_base_agent}{Base\-Agent} $\ast$repaired\-Agent)
+\item 
+bool \hyperlink{class_agent_manager_ac7f2ac03687eed854d1f3fb4ca0e2775}{has\-Building} (Unit\-Type type)
+\item 
+int \hyperlink{class_agent_manager_a3f4d24334600f80648ec24a94caa006c}{count\-No\-Units} (Unit\-Type type)
+\item 
+int \hyperlink{class_agent_manager_ae582c2031f0bd10831a698daec68b05d}{count\-No\-Finished\-Units} (Unit\-Type type)
+\item 
+int \hyperlink{class_agent_manager_a8493841682201fb2fa07f25b57fa3086}{no\-In\-Production} (Unit\-Type type)
+\item 
+int \hyperlink{class_agent_manager_a2e83c9fd3ac2e6119eded5785c8f04ce}{count\-No\-Bases} ()
+\item 
+const vector$<$ \hyperlink{class_base_agent}{Base\-Agent} $\ast$ $>$ \& \hyperlink{class_agent_manager_ac569494f341aa7387467de606b2f966a}{get\-Agents} ()
+\item 
+int \hyperlink{class_agent_manager_a8536930d26278a365165e8cdc0e12f44}{size} ()
+\item 
+\hyperlink{class_base_agent}{Base\-Agent} $\ast$ \hyperlink{class_agent_manager_a294399a85d15e11dfd06728f35bd6d23}{get\-Agent} (int unit\-I\-D)
+\item 
+\hyperlink{class_base_agent}{Base\-Agent} $\ast$ \hyperlink{class_agent_manager_aa5c4ca79ff252151f426095e914caac6}{get\-Agent} (Unit\-Type type)
+\item 
+void \hyperlink{class_agent_manager_a5bd9d232ef3e7d4a7d26bbade757a57d}{request\-Overlord} (Tile\-Position pos)
+\item 
+\hyperlink{class_base_agent}{Base\-Agent} $\ast$ \hyperlink{class_agent_manager_ac82b461b794ee807e01b26bbfa746068}{get\-Closest\-Agent} (Tile\-Position pos, Unit\-Type type)
+\item 
+\hyperlink{class_base_agent}{Base\-Agent} $\ast$ \hyperlink{class_agent_manager_a04a3159ec5e1b551fccb6368ab2db43d}{get\-Closest\-Base} (Tile\-Position pos)
+\item 
+Tile\-Position \hyperlink{class_agent_manager_a364cf19e3cd4ec5a6fa381ec77d9d451}{get\-Closest\-Detector} (Tile\-Position start\-Pos)
+\item 
+bool \hyperlink{class_agent_manager_aa41dbe20c6ddfba17f0422a0a879cf76}{units\-In\-Area} (Tile\-Position pos, int tile\-Width, int tile\-Height, int unit\-I\-D)
+\item 
+void \hyperlink{class_agent_manager_ac9cf8b4b1e2cd2aa967861ef0adbe0b6}{cleanup} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_agent_manager}{Agent\-Manager} $\ast$ \hyperlink{class_agent_manager_ade8d13aa64b4343ccd15842eaf9628da}{get\-Instance} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_agent_manager_aa80300f7d2a9a80b3fff57e1c2836c0f}{static int {\bfseries Start\-Frame} = 0}\label{class_agent_manager_aa80300f7d2a9a80b3fff57e1c2836c0f}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_agent_manager}{Agent\-Manager} class is a container that holds a list of all active agents in the game. Each unit, worker, building or or addon is assigned to an agent. See the Main\-Agents, Structure\-Agents and Unit\-Agents folders for detailed information about each specific type of agent.
+
+The \hyperlink{class_agent_manager}{Agent\-Manager} is implemented as a singleton class. Each class that needs to access \hyperlink{class_agent_manager}{Agent\-Manager} can request an instance, and all classes shares the same \hyperlink{class_agent_manager}{Agent\-Manager} instance.
+
+Author\-: Johan Hagelback (\href{mailto:johan.hagelback@gmail.com}{\tt johan.\-hagelback@gmail.\-com}) 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_agent_manager_a9dd0d16d66f2cfada2f20397b33bc5cd}{\index{Agent\-Manager@{Agent\-Manager}!add\-Agent@{add\-Agent}}
+\index{add\-Agent@{add\-Agent}!AgentManager@{Agent\-Manager}}
+\subsubsection[{add\-Agent}]{\setlength{\rightskip}{0pt plus 5cm}void Agent\-Manager\-::add\-Agent (
+\begin{DoxyParamCaption}
+\item[{Unit $\ast$}]{unit}
+\end{DoxyParamCaption}
+)}}\label{class_agent_manager_a9dd0d16d66f2cfada2f20397b33bc5cd}
+Adds an agent to the container. Is called each time a new unit is built. \hypertarget{class_agent_manager_ac9cf8b4b1e2cd2aa967861ef0adbe0b6}{\index{Agent\-Manager@{Agent\-Manager}!cleanup@{cleanup}}
+\index{cleanup@{cleanup}!AgentManager@{Agent\-Manager}}
+\subsubsection[{cleanup}]{\setlength{\rightskip}{0pt plus 5cm}void Agent\-Manager\-::cleanup (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_agent_manager_ac9cf8b4b1e2cd2aa967861ef0adbe0b6}
+Removes inactive agents from the container. Shouldn't be called too often. \hypertarget{class_agent_manager_a7eedeb3178b8d9a5b091867646d9e536}{\index{Agent\-Manager@{Agent\-Manager}!compute\-Actions@{compute\-Actions}}
+\index{compute\-Actions@{compute\-Actions}!AgentManager@{Agent\-Manager}}
+\subsubsection[{compute\-Actions}]{\setlength{\rightskip}{0pt plus 5cm}void Agent\-Manager\-::compute\-Actions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_agent_manager_a7eedeb3178b8d9a5b091867646d9e536}
+Called each update to issue commands from all active agents. \hypertarget{class_agent_manager_a2e83c9fd3ac2e6119eded5785c8f04ce}{\index{Agent\-Manager@{Agent\-Manager}!count\-No\-Bases@{count\-No\-Bases}}
+\index{count\-No\-Bases@{count\-No\-Bases}!AgentManager@{Agent\-Manager}}
+\subsubsection[{count\-No\-Bases}]{\setlength{\rightskip}{0pt plus 5cm}int Agent\-Manager\-::count\-No\-Bases (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_agent_manager_a2e83c9fd3ac2e6119eded5785c8f04ce}
+Returns the number of bases the player has. \hypertarget{class_agent_manager_ae582c2031f0bd10831a698daec68b05d}{\index{Agent\-Manager@{Agent\-Manager}!count\-No\-Finished\-Units@{count\-No\-Finished\-Units}}
+\index{count\-No\-Finished\-Units@{count\-No\-Finished\-Units}!AgentManager@{Agent\-Manager}}
+\subsubsection[{count\-No\-Finished\-Units}]{\setlength{\rightskip}{0pt plus 5cm}int Agent\-Manager\-::count\-No\-Finished\-Units (
+\begin{DoxyParamCaption}
+\item[{Unit\-Type}]{type}
+\end{DoxyParamCaption}
+)}}\label{class_agent_manager_ae582c2031f0bd10831a698daec68b05d}
+Returns the number of own units of a specific type. Does not include units in construction. \hypertarget{class_agent_manager_a3f4d24334600f80648ec24a94caa006c}{\index{Agent\-Manager@{Agent\-Manager}!count\-No\-Units@{count\-No\-Units}}
+\index{count\-No\-Units@{count\-No\-Units}!AgentManager@{Agent\-Manager}}
+\subsubsection[{count\-No\-Units}]{\setlength{\rightskip}{0pt plus 5cm}int Agent\-Manager\-::count\-No\-Units (
+\begin{DoxyParamCaption}
+\item[{Unit\-Type}]{type}
+\end{DoxyParamCaption}
+)}}\label{class_agent_manager_a3f4d24334600f80648ec24a94caa006c}
+Returns the number of own units of a specific type. Includes units currently being constructed. \hypertarget{class_agent_manager_a06155f45244270a4a70102b98b983b75}{\index{Agent\-Manager@{Agent\-Manager}!find\-Closest\-Free\-Worker@{find\-Closest\-Free\-Worker}}
+\index{find\-Closest\-Free\-Worker@{find\-Closest\-Free\-Worker}!AgentManager@{Agent\-Manager}}
+\subsubsection[{find\-Closest\-Free\-Worker}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Base\-Agent} $\ast$ Agent\-Manager\-::find\-Closest\-Free\-Worker (
+\begin{DoxyParamCaption}
+\item[{Tile\-Position}]{pos}
+\end{DoxyParamCaption}
+)}}\label{class_agent_manager_a06155f45244270a4a70102b98b983b75}
+Returns the closest free worker from the specified position, or N\-U\-L\-L if not found. \hypertarget{class_agent_manager_a294399a85d15e11dfd06728f35bd6d23}{\index{Agent\-Manager@{Agent\-Manager}!get\-Agent@{get\-Agent}}
+\index{get\-Agent@{get\-Agent}!AgentManager@{Agent\-Manager}}
+\subsubsection[{get\-Agent}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Base\-Agent} $\ast$ Agent\-Manager\-::get\-Agent (
+\begin{DoxyParamCaption}
+\item[{int}]{unit\-I\-D}
+\end{DoxyParamCaption}
+)}}\label{class_agent_manager_a294399a85d15e11dfd06728f35bd6d23}
+Returns a reference to the agent associated with a specific unit, or N\-U\-L\-L if the unit doesn't exist. \hypertarget{class_agent_manager_aa5c4ca79ff252151f426095e914caac6}{\index{Agent\-Manager@{Agent\-Manager}!get\-Agent@{get\-Agent}}
+\index{get\-Agent@{get\-Agent}!AgentManager@{Agent\-Manager}}
+\subsubsection[{get\-Agent}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Base\-Agent} $\ast$ Agent\-Manager\-::get\-Agent (
+\begin{DoxyParamCaption}
+\item[{Unit\-Type}]{type}
+\end{DoxyParamCaption}
+)}}\label{class_agent_manager_aa5c4ca79ff252151f426095e914caac6}
+Returns the first agent in the list of the specified type, or N\-U\-L\-L if not found. \hypertarget{class_agent_manager_ac569494f341aa7387467de606b2f966a}{\index{Agent\-Manager@{Agent\-Manager}!get\-Agents@{get\-Agents}}
+\index{get\-Agents@{get\-Agents}!AgentManager@{Agent\-Manager}}
+\subsubsection[{get\-Agents}]{\setlength{\rightskip}{0pt plus 5cm}const vector$<$ {\bf Base\-Agent} $\ast$ $>$ \& Agent\-Manager\-::get\-Agents (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_agent_manager_ac569494f341aa7387467de606b2f966a}
+Returns a list of all agents in the container. \hypertarget{class_agent_manager_ac82b461b794ee807e01b26bbfa746068}{\index{Agent\-Manager@{Agent\-Manager}!get\-Closest\-Agent@{get\-Closest\-Agent}}
+\index{get\-Closest\-Agent@{get\-Closest\-Agent}!AgentManager@{Agent\-Manager}}
+\subsubsection[{get\-Closest\-Agent}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Base\-Agent} $\ast$ Agent\-Manager\-::get\-Closest\-Agent (
+\begin{DoxyParamCaption}
+\item[{Tile\-Position}]{pos, }
+\item[{Unit\-Type}]{type}
+\end{DoxyParamCaption}
+)}}\label{class_agent_manager_ac82b461b794ee807e01b26bbfa746068}
+Returns the closest agent in the list of the specified type, or N\-U\-L\-L if not found. \hypertarget{class_agent_manager_a04a3159ec5e1b551fccb6368ab2db43d}{\index{Agent\-Manager@{Agent\-Manager}!get\-Closest\-Base@{get\-Closest\-Base}}
+\index{get\-Closest\-Base@{get\-Closest\-Base}!AgentManager@{Agent\-Manager}}
+\subsubsection[{get\-Closest\-Base}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Base\-Agent} $\ast$ Agent\-Manager\-::get\-Closest\-Base (
+\begin{DoxyParamCaption}
+\item[{Tile\-Position}]{pos}
+\end{DoxyParamCaption}
+)}}\label{class_agent_manager_a04a3159ec5e1b551fccb6368ab2db43d}
+Returns the closest base agent (Terran Command Center, Protoss Nexus), in the list, or N\-U\-L\-L if not found. \hypertarget{class_agent_manager_a364cf19e3cd4ec5a6fa381ec77d9d451}{\index{Agent\-Manager@{Agent\-Manager}!get\-Closest\-Detector@{get\-Closest\-Detector}}
+\index{get\-Closest\-Detector@{get\-Closest\-Detector}!AgentManager@{Agent\-Manager}}
+\subsubsection[{get\-Closest\-Detector}]{\setlength{\rightskip}{0pt plus 5cm}Tile\-Position Agent\-Manager\-::get\-Closest\-Detector (
+\begin{DoxyParamCaption}
+\item[{Tile\-Position}]{start\-Pos}
+\end{DoxyParamCaption}
+)}}\label{class_agent_manager_a364cf19e3cd4ec5a6fa381ec77d9d451}
+Returns the position of the closest detector unit relative to start\-Pos. Returns Tile\-Position(-\/1, -\/1) if none was found. \hypertarget{class_agent_manager_ade8d13aa64b4343ccd15842eaf9628da}{\index{Agent\-Manager@{Agent\-Manager}!get\-Instance@{get\-Instance}}
+\index{get\-Instance@{get\-Instance}!AgentManager@{Agent\-Manager}}
+\subsubsection[{get\-Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Agent\-Manager} $\ast$ Agent\-Manager\-::get\-Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_agent_manager_ade8d13aa64b4343ccd15842eaf9628da}
+Returns the instance to the \hyperlink{class_agent_manager}{Agent\-Manager}. \hypertarget{class_agent_manager_ac4ae750f805a987300fe65bdb4f336b1}{\index{Agent\-Manager@{Agent\-Manager}!get\-No\-Workers@{get\-No\-Workers}}
+\index{get\-No\-Workers@{get\-No\-Workers}!AgentManager@{Agent\-Manager}}
+\subsubsection[{get\-No\-Workers}]{\setlength{\rightskip}{0pt plus 5cm}int Agent\-Manager\-::get\-No\-Workers (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_agent_manager_ac4ae750f805a987300fe65bdb4f336b1}
+Returns the current number of active worker units. \hypertarget{class_agent_manager_ac7f2ac03687eed854d1f3fb4ca0e2775}{\index{Agent\-Manager@{Agent\-Manager}!has\-Building@{has\-Building}}
+\index{has\-Building@{has\-Building}!AgentManager@{Agent\-Manager}}
+\subsubsection[{has\-Building}]{\setlength{\rightskip}{0pt plus 5cm}bool Agent\-Manager\-::has\-Building (
+\begin{DoxyParamCaption}
+\item[{Unit\-Type}]{type}
+\end{DoxyParamCaption}
+)}}\label{class_agent_manager_ac7f2ac03687eed854d1f3fb4ca0e2775}
+Checks if we have a completed building of the specified type \hypertarget{class_agent_manager_afb5e43191c541cdc7324b7a0bc02c932}{\index{Agent\-Manager@{Agent\-Manager}!is\-Any\-Agent\-Repairing\-This\-Agent@{is\-Any\-Agent\-Repairing\-This\-Agent}}
+\index{is\-Any\-Agent\-Repairing\-This\-Agent@{is\-Any\-Agent\-Repairing\-This\-Agent}!AgentManager@{Agent\-Manager}}
+\subsubsection[{is\-Any\-Agent\-Repairing\-This\-Agent}]{\setlength{\rightskip}{0pt plus 5cm}bool Agent\-Manager\-::is\-Any\-Agent\-Repairing\-This\-Agent (
+\begin{DoxyParamCaption}
+\item[{{\bf Base\-Agent} $\ast$}]{repaired\-Agent}
+\end{DoxyParamCaption}
+)}}\label{class_agent_manager_afb5e43191c541cdc7324b7a0bc02c932}
+Checks if any agent has the task to repair this specified agent. \hypertarget{class_agent_manager_a4b1480ecb76df3ede61e5b39dfbf7032}{\index{Agent\-Manager@{Agent\-Manager}!morph\-Drone@{morph\-Drone}}
+\index{morph\-Drone@{morph\-Drone}!AgentManager@{Agent\-Manager}}
+\subsubsection[{morph\-Drone}]{\setlength{\rightskip}{0pt plus 5cm}void Agent\-Manager\-::morph\-Drone (
+\begin{DoxyParamCaption}
+\item[{Unit $\ast$}]{unit}
+\end{DoxyParamCaption}
+)}}\label{class_agent_manager_a4b1480ecb76df3ede61e5b39dfbf7032}
+Called when a Zerg Drone is morphed into another unit. \hypertarget{class_agent_manager_a8493841682201fb2fa07f25b57fa3086}{\index{Agent\-Manager@{Agent\-Manager}!no\-In\-Production@{no\-In\-Production}}
+\index{no\-In\-Production@{no\-In\-Production}!AgentManager@{Agent\-Manager}}
+\subsubsection[{no\-In\-Production}]{\setlength{\rightskip}{0pt plus 5cm}int Agent\-Manager\-::no\-In\-Production (
+\begin{DoxyParamCaption}
+\item[{Unit\-Type}]{type}
+\end{DoxyParamCaption}
+)}}\label{class_agent_manager_a8493841682201fb2fa07f25b57fa3086}
+Returns the number of units or buildings of the specified type that currently is in production. \hypertarget{class_agent_manager_a2dfe87ce8581ba48eb0b1da67cd122d0}{\index{Agent\-Manager@{Agent\-Manager}!no\-Mining\-Workers@{no\-Mining\-Workers}}
+\index{no\-Mining\-Workers@{no\-Mining\-Workers}!AgentManager@{Agent\-Manager}}
+\subsubsection[{no\-Mining\-Workers}]{\setlength{\rightskip}{0pt plus 5cm}int Agent\-Manager\-::no\-Mining\-Workers (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_agent_manager_a2dfe87ce8581ba48eb0b1da67cd122d0}
+Returns the current number of active workers gathering minerals. \hypertarget{class_agent_manager_ad1da6ed354a16c0b6f482732a24a09df}{\index{Agent\-Manager@{Agent\-Manager}!remove\-Agent@{remove\-Agent}}
+\index{remove\-Agent@{remove\-Agent}!AgentManager@{Agent\-Manager}}
+\subsubsection[{remove\-Agent}]{\setlength{\rightskip}{0pt plus 5cm}void Agent\-Manager\-::remove\-Agent (
+\begin{DoxyParamCaption}
+\item[{Unit $\ast$}]{unit}
+\end{DoxyParamCaption}
+)}}\label{class_agent_manager_ad1da6ed354a16c0b6f482732a24a09df}
+Removes an agent from the container. Is called each time a unit is destroyed. The agents are not directly removed, but set to inactive and are removed during the cleanup. \hypertarget{class_agent_manager_a5bd9d232ef3e7d4a7d26bbade757a57d}{\index{Agent\-Manager@{Agent\-Manager}!request\-Overlord@{request\-Overlord}}
+\index{request\-Overlord@{request\-Overlord}!AgentManager@{Agent\-Manager}}
+\subsubsection[{request\-Overlord}]{\setlength{\rightskip}{0pt plus 5cm}void Agent\-Manager\-::request\-Overlord (
+\begin{DoxyParamCaption}
+\item[{Tile\-Position}]{pos}
+\end{DoxyParamCaption}
+)}}\label{class_agent_manager_a5bd9d232ef3e7d4a7d26bbade757a57d}
+Requests a free Zerg Overlord to move to the specified position. \hypertarget{class_agent_manager_a8536930d26278a365165e8cdc0e12f44}{\index{Agent\-Manager@{Agent\-Manager}!size@{size}}
+\index{size@{size}!AgentManager@{Agent\-Manager}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}int Agent\-Manager\-::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_agent_manager_a8536930d26278a365165e8cdc0e12f44}
+Returns the number of agents the exists in the vector. \hypertarget{class_agent_manager_aa41dbe20c6ddfba17f0422a0a879cf76}{\index{Agent\-Manager@{Agent\-Manager}!units\-In\-Area@{units\-In\-Area}}
+\index{units\-In\-Area@{units\-In\-Area}!AgentManager@{Agent\-Manager}}
+\subsubsection[{units\-In\-Area}]{\setlength{\rightskip}{0pt plus 5cm}bool Agent\-Manager\-::units\-In\-Area (
+\begin{DoxyParamCaption}
+\item[{Tile\-Position}]{pos, }
+\item[{int}]{tile\-Width, }
+\item[{int}]{tile\-Height, }
+\item[{int}]{unit\-I\-D}
+\end{DoxyParamCaption}
+)}}\label{class_agent_manager_aa41dbe20c6ddfba17f0422a0a879cf76}
+Checks if there are any units in an area. The unit with id unit\-I\-D is allowed. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+B\-T\-H\-A\-I\-Module/\-Source/Agent\-Manager.\-h\item 
+B\-T\-H\-A\-I\-Module/\-Source/Agent\-Manager.\-cpp\end{DoxyCompactItemize}

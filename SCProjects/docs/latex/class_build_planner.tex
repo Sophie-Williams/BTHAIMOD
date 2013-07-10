@@ -1,0 +1,355 @@
+\hypertarget{class_build_planner}{
+\section{BuildPlanner Class Reference}
+\label{class_build_planner}\index{BuildPlanner@{BuildPlanner}}
+}
+
+
+{\ttfamily \#include $<$BuildPlanner.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_build_planner_a797598ca06af51d824fa8ceffaa2faab}{$\sim$BuildPlanner} ()
+\item 
+int \hyperlink{class_build_planner_adbb59b2cc6c298811460ff0cfd974b5f}{noInProduction} (UnitType type)
+\item 
+void \hyperlink{class_build_planner_a8fa07a03b34847b35b4a44d002d9a46b}{computeActions} ()
+\item 
+void \hyperlink{class_build_planner_ab456f2e1c9df7cf36b437a507fde0d14}{buildingDestroyed} (Unit $\ast$building)
+\item 
+void \hyperlink{class_build_planner_ab56e85871b6593105033ae8ef2aae743}{unlock} (UnitType type)
+\item 
+void \hyperlink{class_build_planner_a08a04aef9457456b6fa5e22e0f6e038d}{remove} (UnitType type)
+\item 
+void \hyperlink{class_build_planner_aea2fa91a14ae565e3c1935647d85cf8f}{handleWorkerDestroyed} (UnitType type, int workerID)
+\item 
+void \hyperlink{class_build_planner_a3478ec0ada31a282755eea8e32fca2a8}{commandCenterBuilt} ()
+\item 
+void \hyperlink{class_build_planner_a477f4f2e160c1d46480c245a4f1c2571}{printInfo} ()
+\item 
+void \hyperlink{class_build_planner_acc4103d9ec70c2a7a7c659230841dce7}{handleNoBuildspotFound} (UnitType toBuild)
+\item 
+bool \hyperlink{class_build_planner_a66309a5fe565470b925343ee0bb07332}{shallBuildSupply} ()
+\item 
+bool \hyperlink{class_build_planner_a99b5007262aa34e7f25ca3cffa3e3184}{supplyBeingBuilt} ()
+\item 
+bool \hyperlink{class_build_planner_a3a6980d66668e74932edc9d8df615d83}{nextIsOfType} (UnitType type)
+\item 
+bool \hyperlink{class_build_planner_a1e228c42f60d883365f02a2642a5fcbc}{containsType} (UnitType type)
+\item 
+void \hyperlink{class_build_planner_ab25b205a10565884465fa94921181a0e}{addBuilding} (UnitType type)
+\item 
+void \hyperlink{class_build_planner_aaf9cda4aeffb69fd68ec92dd9b13fce4}{addBuildingFirst} (UnitType type)
+\item 
+void \hyperlink{class_build_planner_a8d971de74d640a3db44a6fc99876f195}{expand} (UnitType commandCenterUnit)
+\item 
+void \hyperlink{class_build_planner_aa446d469525b760904213b30109549ee}{addRefinery} ()
+\item 
+bool \hyperlink{class_build_planner_a326d634092ab9f7de4118b1697de267f}{executeMorph} (UnitType target, UnitType evolved)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_build_planner}{BuildPlanner} $\ast$ \hyperlink{class_build_planner_a1669ed63fac6eba75cf08ab926eccd83}{getInstance} ()
+\item 
+static bool \hyperlink{class_build_planner_a406d5db82adf5f5d2fba55dbdcb23e9b}{coveredByDetector} (TilePosition pos)
+\item 
+static bool \hyperlink{class_build_planner_aca9b481c6316ae5d11195bf18a3b5053}{isTerran} ()
+\item 
+static bool \hyperlink{class_build_planner_ab5fd2e205f8804a2bbf2297dec8e340d}{isProtoss} ()
+\item 
+static bool \hyperlink{class_build_planner_ad1598add8a5136c7c85a207c656fd26f}{isZerg} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_build_planner_aa031928adce8932c132d0ae375df3e65}{
+void {\bfseries lock} (int buildOrderIndex, int unitId)}
+\label{class_build_planner_aa031928adce8932c132d0ae375df3e65}
+
+\item 
+\hypertarget{class_build_planner_aed6e5d1227e3a81909c14f1b8f15fd11}{
+bool {\bfseries executeOrder} (UnitType type)}
+\label{class_build_planner_aed6e5d1227e3a81909c14f1b8f15fd11}
+
+\item 
+\hypertarget{class_build_planner_af593d01aacb88ca04d1bee4ad4e46072}{
+bool {\bfseries shallBuildSupplyDepot} ()}
+\label{class_build_planner_af593d01aacb88ca04d1bee4ad4e46072}
+
+\item 
+\hypertarget{class_build_planner_a69f73df0f94cc83618f4bfc4ab8eb26e}{
+string {\bfseries format} (UnitType type)}
+\label{class_build_planner_a69f73df0f94cc83618f4bfc4ab8eb26e}
+
+\item 
+\hypertarget{class_build_planner_a201d8e9d93a983f330a82340d9700402}{
+bool {\bfseries hasResourcesLeft} ()}
+\label{class_build_planner_a201d8e9d93a983f330a82340d9700402}
+
+\item 
+\hypertarget{class_build_planner_a87371ee4ad91e47563450835fef9a79a}{
+int {\bfseries mineralsNearby} (TilePosition center)}
+\label{class_build_planner_a87371ee4ad91e47563450835fef9a79a}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_build_planner_a6a82eab6b57bf053f05462e758a20171}{
+vector$<$ UnitType $>$ {\bfseries buildOrder}}
+\label{class_build_planner_a6a82eab6b57bf053f05462e758a20171}
+
+\item 
+\hypertarget{class_build_planner_a6576998dbc3deb8ebea28b2cb9e2732e}{
+vector$<$ \hyperlink{struct_build_queue_item}{BuildQueueItem} $>$ {\bfseries buildQueue}}
+\label{class_build_planner_a6576998dbc3deb8ebea28b2cb9e2732e}
+
+\item 
+\hypertarget{class_build_planner_ae5b832983d0ca87e4a06bfd5a3fe785e}{
+int {\bfseries lastCommandCenter}}
+\label{class_build_planner_ae5b832983d0ca87e4a06bfd5a3fe785e}
+
+\item 
+\hypertarget{class_build_planner_a0bc0567ce47480c68c4e93e808c53d17}{
+int {\bfseries lastCallFrame}}
+\label{class_build_planner_a0bc0567ce47480c68c4e93e808c53d17}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_build_planner}{BuildPlanner} class contains the build order for all buildings and addons that will be constructed during the course of a game. This class is not directly used, instead each race (Terran, Protoss, Zerg) has their own build order class that extends \hyperlink{class_build_planner}{BuildPlanner}.
+
+The \hyperlink{class_build_planner}{BuildPlanner} is implemented as a singleton class. Each class that needs to access \hyperlink{class_build_planner}{BuildPlanner} can request an instance, and all classes shares the same \hyperlink{class_build_planner}{BuildPlanner} instance.
+
+Author: Johan Hagelback (\href{mailto:johan.hagelback@gmail.com}{\tt johan.hagelback@gmail.com}) 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_build_planner_a797598ca06af51d824fa8ceffaa2faab}{
+\index{BuildPlanner@{BuildPlanner}!$\sim$BuildPlanner@{$\sim$BuildPlanner}}
+\index{$\sim$BuildPlanner@{$\sim$BuildPlanner}!BuildPlanner@{BuildPlanner}}
+\subsubsection[{$\sim$BuildPlanner}]{\setlength{\rightskip}{0pt plus 5cm}BuildPlanner::$\sim$BuildPlanner (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_build_planner_a797598ca06af51d824fa8ceffaa2faab}
+Destructor. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_build_planner_ab25b205a10565884465fa94921181a0e}{
+\index{BuildPlanner@{BuildPlanner}!addBuilding@{addBuilding}}
+\index{addBuilding@{addBuilding}!BuildPlanner@{BuildPlanner}}
+\subsubsection[{addBuilding}]{\setlength{\rightskip}{0pt plus 5cm}void BuildPlanner::addBuilding (
+\begin{DoxyParamCaption}
+\item[{UnitType}]{type}
+\end{DoxyParamCaption}
+)}}
+\label{class_build_planner_ab25b205a10565884465fa94921181a0e}
+Adds a building to the buildorder queue. \hypertarget{class_build_planner_aaf9cda4aeffb69fd68ec92dd9b13fce4}{
+\index{BuildPlanner@{BuildPlanner}!addBuildingFirst@{addBuildingFirst}}
+\index{addBuildingFirst@{addBuildingFirst}!BuildPlanner@{BuildPlanner}}
+\subsubsection[{addBuildingFirst}]{\setlength{\rightskip}{0pt plus 5cm}void BuildPlanner::addBuildingFirst (
+\begin{DoxyParamCaption}
+\item[{UnitType}]{type}
+\end{DoxyParamCaption}
+)}}
+\label{class_build_planner_aaf9cda4aeffb69fd68ec92dd9b13fce4}
+Adds a building first in the buildorder queue. \hypertarget{class_build_planner_aa446d469525b760904213b30109549ee}{
+\index{BuildPlanner@{BuildPlanner}!addRefinery@{addRefinery}}
+\index{addRefinery@{addRefinery}!BuildPlanner@{BuildPlanner}}
+\subsubsection[{addRefinery}]{\setlength{\rightskip}{0pt plus 5cm}void BuildPlanner::addRefinery (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_build_planner_aa446d469525b760904213b30109549ee}
+Adds a refinery to the buildorder list. \hypertarget{class_build_planner_ab456f2e1c9df7cf36b437a507fde0d14}{
+\index{BuildPlanner@{BuildPlanner}!buildingDestroyed@{buildingDestroyed}}
+\index{buildingDestroyed@{buildingDestroyed}!BuildPlanner@{BuildPlanner}}
+\subsubsection[{buildingDestroyed}]{\setlength{\rightskip}{0pt plus 5cm}void BuildPlanner::buildingDestroyed (
+\begin{DoxyParamCaption}
+\item[{Unit $\ast$}]{building}
+\end{DoxyParamCaption}
+)}}
+\label{class_build_planner_ab456f2e1c9df7cf36b437a507fde0d14}
+Notifies that an own unit has been destroyed. \hypertarget{class_build_planner_a3478ec0ada31a282755eea8e32fca2a8}{
+\index{BuildPlanner@{BuildPlanner}!commandCenterBuilt@{commandCenterBuilt}}
+\index{commandCenterBuilt@{commandCenterBuilt}!BuildPlanner@{BuildPlanner}}
+\subsubsection[{commandCenterBuilt}]{\setlength{\rightskip}{0pt plus 5cm}void BuildPlanner::commandCenterBuilt (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_build_planner_a3478ec0ada31a282755eea8e32fca2a8}
+Sets that a new command center has been built. \hypertarget{class_build_planner_a8fa07a03b34847b35b4a44d002d9a46b}{
+\index{BuildPlanner@{BuildPlanner}!computeActions@{computeActions}}
+\index{computeActions@{computeActions}!BuildPlanner@{BuildPlanner}}
+\subsubsection[{computeActions}]{\setlength{\rightskip}{0pt plus 5cm}void BuildPlanner::computeActions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_build_planner_a8fa07a03b34847b35b4a44d002d9a46b}
+Called each update to issue orders. \hypertarget{class_build_planner_a1e228c42f60d883365f02a2642a5fcbc}{
+\index{BuildPlanner@{BuildPlanner}!containsType@{containsType}}
+\index{containsType@{containsType}!BuildPlanner@{BuildPlanner}}
+\subsubsection[{containsType}]{\setlength{\rightskip}{0pt plus 5cm}bool BuildPlanner::containsType (
+\begin{DoxyParamCaption}
+\item[{UnitType}]{type}
+\end{DoxyParamCaption}
+)}}
+\label{class_build_planner_a1e228c42f60d883365f02a2642a5fcbc}
+Returns true if buildorder contains a unit of the specified type. \hypertarget{class_build_planner_a406d5db82adf5f5d2fba55dbdcb23e9b}{
+\index{BuildPlanner@{BuildPlanner}!coveredByDetector@{coveredByDetector}}
+\index{coveredByDetector@{coveredByDetector}!BuildPlanner@{BuildPlanner}}
+\subsubsection[{coveredByDetector}]{\setlength{\rightskip}{0pt plus 5cm}bool BuildPlanner::coveredByDetector (
+\begin{DoxyParamCaption}
+\item[{TilePosition}]{pos}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_build_planner_a406d5db82adf5f5d2fba55dbdcb23e9b}
+Checks if the specified TilePosition is covered by a detector buildings sight radius. \hypertarget{class_build_planner_a326d634092ab9f7de4118b1697de267f}{
+\index{BuildPlanner@{BuildPlanner}!executeMorph@{executeMorph}}
+\index{executeMorph@{executeMorph}!BuildPlanner@{BuildPlanner}}
+\subsubsection[{executeMorph}]{\setlength{\rightskip}{0pt plus 5cm}bool BuildPlanner::executeMorph (
+\begin{DoxyParamCaption}
+\item[{UnitType}]{target, }
+\item[{UnitType}]{evolved}
+\end{DoxyParamCaption}
+)}}
+\label{class_build_planner_a326d634092ab9f7de4118b1697de267f}
+Morphs a Zerg drone to a building. \hypertarget{class_build_planner_a8d971de74d640a3db44a6fc99876f195}{
+\index{BuildPlanner@{BuildPlanner}!expand@{expand}}
+\index{expand@{expand}!BuildPlanner@{BuildPlanner}}
+\subsubsection[{expand}]{\setlength{\rightskip}{0pt plus 5cm}void BuildPlanner::expand (
+\begin{DoxyParamCaption}
+\item[{UnitType}]{commandCenterUnit}
+\end{DoxyParamCaption}
+)}}
+\label{class_build_planner_a8d971de74d640a3db44a6fc99876f195}
+Requests to expand the base. \hypertarget{class_build_planner_a1669ed63fac6eba75cf08ab926eccd83}{
+\index{BuildPlanner@{BuildPlanner}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!BuildPlanner@{BuildPlanner}}
+\subsubsection[{getInstance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf BuildPlanner} $\ast$ BuildPlanner::getInstance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_build_planner_a1669ed63fac6eba75cf08ab926eccd83}
+Returns the instance to the \hyperlink{class_build_planner}{BuildPlanner} that is currently used. \hypertarget{class_build_planner_acc4103d9ec70c2a7a7c659230841dce7}{
+\index{BuildPlanner@{BuildPlanner}!handleNoBuildspotFound@{handleNoBuildspotFound}}
+\index{handleNoBuildspotFound@{handleNoBuildspotFound}!BuildPlanner@{BuildPlanner}}
+\subsubsection[{handleNoBuildspotFound}]{\setlength{\rightskip}{0pt plus 5cm}void BuildPlanner::handleNoBuildspotFound (
+\begin{DoxyParamCaption}
+\item[{UnitType}]{toBuild}
+\end{DoxyParamCaption}
+)}}
+\label{class_build_planner_acc4103d9ec70c2a7a7c659230841dce7}
+Is called when no buildspot has been found for the specified type. Gives each buildplanner an opportunity to handle it. \hypertarget{class_build_planner_aea2fa91a14ae565e3c1935647d85cf8f}{
+\index{BuildPlanner@{BuildPlanner}!handleWorkerDestroyed@{handleWorkerDestroyed}}
+\index{handleWorkerDestroyed@{handleWorkerDestroyed}!BuildPlanner@{BuildPlanner}}
+\subsubsection[{handleWorkerDestroyed}]{\setlength{\rightskip}{0pt plus 5cm}void BuildPlanner::handleWorkerDestroyed (
+\begin{DoxyParamCaption}
+\item[{UnitType}]{type, }
+\item[{int}]{workerID}
+\end{DoxyParamCaption}
+)}}
+\label{class_build_planner_aea2fa91a14ae565e3c1935647d85cf8f}
+Called when a worker that is constructing a building is destroyed. \hypertarget{class_build_planner_ab5fd2e205f8804a2bbf2297dec8e340d}{
+\index{BuildPlanner@{BuildPlanner}!isProtoss@{isProtoss}}
+\index{isProtoss@{isProtoss}!BuildPlanner@{BuildPlanner}}
+\subsubsection[{isProtoss}]{\setlength{\rightskip}{0pt plus 5cm}bool BuildPlanner::isProtoss (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_build_planner_ab5fd2e205f8804a2bbf2297dec8e340d}
+Returns true if the player is Protoss. \hypertarget{class_build_planner_aca9b481c6316ae5d11195bf18a3b5053}{
+\index{BuildPlanner@{BuildPlanner}!isTerran@{isTerran}}
+\index{isTerran@{isTerran}!BuildPlanner@{BuildPlanner}}
+\subsubsection[{isTerran}]{\setlength{\rightskip}{0pt plus 5cm}bool BuildPlanner::isTerran (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_build_planner_aca9b481c6316ae5d11195bf18a3b5053}
+Returns true if the player is Terran. \hypertarget{class_build_planner_ad1598add8a5136c7c85a207c656fd26f}{
+\index{BuildPlanner@{BuildPlanner}!isZerg@{isZerg}}
+\index{isZerg@{isZerg}!BuildPlanner@{BuildPlanner}}
+\subsubsection[{isZerg}]{\setlength{\rightskip}{0pt plus 5cm}bool BuildPlanner::isZerg (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_build_planner_ad1598add8a5136c7c85a207c656fd26f}
+Returns true if the player is Zerg. \hypertarget{class_build_planner_a3a6980d66668e74932edc9d8df615d83}{
+\index{BuildPlanner@{BuildPlanner}!nextIsOfType@{nextIsOfType}}
+\index{nextIsOfType@{nextIsOfType}!BuildPlanner@{BuildPlanner}}
+\subsubsection[{nextIsOfType}]{\setlength{\rightskip}{0pt plus 5cm}bool BuildPlanner::nextIsOfType (
+\begin{DoxyParamCaption}
+\item[{UnitType}]{type}
+\end{DoxyParamCaption}
+)}}
+\label{class_build_planner_a3a6980d66668e74932edc9d8df615d83}
+Returns true if next in buildorder is of the specified type. Returns false if buildorder is empty. \hypertarget{class_build_planner_adbb59b2cc6c298811460ff0cfd974b5f}{
+\index{BuildPlanner@{BuildPlanner}!noInProduction@{noInProduction}}
+\index{noInProduction@{noInProduction}!BuildPlanner@{BuildPlanner}}
+\subsubsection[{noInProduction}]{\setlength{\rightskip}{0pt plus 5cm}int BuildPlanner::noInProduction (
+\begin{DoxyParamCaption}
+\item[{UnitType}]{type}
+\end{DoxyParamCaption}
+)}}
+\label{class_build_planner_adbb59b2cc6c298811460ff0cfd974b5f}
+Returns the number of units of the specified type currently being produced. \hypertarget{class_build_planner_a477f4f2e160c1d46480c245a4f1c2571}{
+\index{BuildPlanner@{BuildPlanner}!printInfo@{printInfo}}
+\index{printInfo@{printInfo}!BuildPlanner@{BuildPlanner}}
+\subsubsection[{printInfo}]{\setlength{\rightskip}{0pt plus 5cm}void BuildPlanner::printInfo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_build_planner_a477f4f2e160c1d46480c245a4f1c2571}
+Shows some debug info on screen. \hypertarget{class_build_planner_a08a04aef9457456b6fa5e22e0f6e038d}{
+\index{BuildPlanner@{BuildPlanner}!remove@{remove}}
+\index{remove@{remove}!BuildPlanner@{BuildPlanner}}
+\subsubsection[{remove}]{\setlength{\rightskip}{0pt plus 5cm}void BuildPlanner::remove (
+\begin{DoxyParamCaption}
+\item[{UnitType}]{type}
+\end{DoxyParamCaption}
+)}}
+\label{class_build_planner_a08a04aef9457456b6fa5e22e0f6e038d}
+Removes a building from the buildorder. \hypertarget{class_build_planner_a66309a5fe565470b925343ee0bb07332}{
+\index{BuildPlanner@{BuildPlanner}!shallBuildSupply@{shallBuildSupply}}
+\index{shallBuildSupply@{shallBuildSupply}!BuildPlanner@{BuildPlanner}}
+\subsubsection[{shallBuildSupply}]{\setlength{\rightskip}{0pt plus 5cm}bool BuildPlanner::shallBuildSupply (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_build_planner_a66309a5fe565470b925343ee0bb07332}
+Checks if more supply buildings are needed. \hypertarget{class_build_planner_a99b5007262aa34e7f25ca3cffa3e3184}{
+\index{BuildPlanner@{BuildPlanner}!supplyBeingBuilt@{supplyBeingBuilt}}
+\index{supplyBeingBuilt@{supplyBeingBuilt}!BuildPlanner@{BuildPlanner}}
+\subsubsection[{supplyBeingBuilt}]{\setlength{\rightskip}{0pt plus 5cm}bool BuildPlanner::supplyBeingBuilt (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_build_planner_a99b5007262aa34e7f25ca3cffa3e3184}
+Checks if a supply is under construction. \hypertarget{class_build_planner_ab56e85871b6593105033ae8ef2aae743}{
+\index{BuildPlanner@{BuildPlanner}!unlock@{unlock}}
+\index{unlock@{unlock}!BuildPlanner@{BuildPlanner}}
+\subsubsection[{unlock}]{\setlength{\rightskip}{0pt plus 5cm}void BuildPlanner::unlock (
+\begin{DoxyParamCaption}
+\item[{UnitType}]{type}
+\end{DoxyParamCaption}
+)}}
+\label{class_build_planner_ab56e85871b6593105033ae8ef2aae743}
+When a request to construct a new building is issued, no construction are allowed until the worker has moved to the buildspot and started constructing the building. This is to avoid that the needed resources are not used up by other build orders. During this time the \hyperlink{class_build_planner}{BuildPlanner} is locked, and new construction can only be done when unlock has been called. 
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+BTHAIModule/Source/BuildPlanner.h\item 
+BTHAIModule/Source/BuildPlanner.cpp\end{DoxyCompactItemize}

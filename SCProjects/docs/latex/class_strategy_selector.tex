@@ -1,0 +1,93 @@
+\hypertarget{class_strategy_selector}{\section{Strategy\-Selector Class Reference}
+\label{class_strategy_selector}\index{Strategy\-Selector@{Strategy\-Selector}}
+}
+
+
+{\ttfamily \#include $<$Strategy\-Selector.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_strategy_selector_ad0583333556509ae239885e310e6f5d2}{$\sim$\-Strategy\-Selector} ()
+\item 
+\hyperlink{class_commander}{Commander} $\ast$ \hyperlink{class_strategy_selector_a44e9f0fcca6f9efce33a81647311d02b}{get\-Strategy} ()
+\item 
+void \hyperlink{class_strategy_selector_a987d3e0280e28ea2e61a5dac17e57595}{load\-Stats} ()
+\item 
+void \hyperlink{class_strategy_selector_a19e9e46f32820cc63111bf3e98e0ea15}{print\-Info} ()
+\item 
+void \hyperlink{class_strategy_selector_a7bb1e4ec14885dc6bae4bb2b910e4e39}{add\-Result} (bool won)
+\item 
+void \hyperlink{class_strategy_selector_a05d2c492efaffadbabf339efefcd98b6}{save\-Stats} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_strategy_selector}{Strategy\-Selector} $\ast$ \hyperlink{class_strategy_selector_a30eb026989e78bd89dbcc3006a9d5753}{get\-Instance} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+When a game is started a strategy is selected depending on the map and, if known, the opponent race. After each game the result is stored to a statistics file (bwapi-\/data/\-A\-I/\-B\-T\-H\-A\-I/\-Strategy\-Stats.\-csv). Strategies that previously have been successful have a higher probability of being selected, but all strategies have at least 15\% chance of being used.
+
+Author\-: Johan Hagelback (\href{mailto:johan.hagelback@gmail.com}{\tt johan.\-hagelback@gmail.\-com}) 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_strategy_selector_ad0583333556509ae239885e310e6f5d2}{\index{Strategy\-Selector@{Strategy\-Selector}!$\sim$\-Strategy\-Selector@{$\sim$\-Strategy\-Selector}}
+\index{$\sim$\-Strategy\-Selector@{$\sim$\-Strategy\-Selector}!StrategySelector@{Strategy\-Selector}}
+\subsubsection[{$\sim$\-Strategy\-Selector}]{\setlength{\rightskip}{0pt plus 5cm}Strategy\-Selector\-::$\sim$\-Strategy\-Selector (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_strategy_selector_ad0583333556509ae239885e310e6f5d2}
+Destructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_strategy_selector_a7bb1e4ec14885dc6bae4bb2b910e4e39}{\index{Strategy\-Selector@{Strategy\-Selector}!add\-Result@{add\-Result}}
+\index{add\-Result@{add\-Result}!StrategySelector@{Strategy\-Selector}}
+\subsubsection[{add\-Result}]{\setlength{\rightskip}{0pt plus 5cm}void Strategy\-Selector\-::add\-Result (
+\begin{DoxyParamCaption}
+\item[{bool}]{won}
+\end{DoxyParamCaption}
+)}}\label{class_strategy_selector_a7bb1e4ec14885dc6bae4bb2b910e4e39}
+Adds the result after a game is finished. \hypertarget{class_strategy_selector_a30eb026989e78bd89dbcc3006a9d5753}{\index{Strategy\-Selector@{Strategy\-Selector}!get\-Instance@{get\-Instance}}
+\index{get\-Instance@{get\-Instance}!StrategySelector@{Strategy\-Selector}}
+\subsubsection[{get\-Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Strategy\-Selector} $\ast$ Strategy\-Selector\-::get\-Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_strategy_selector_a30eb026989e78bd89dbcc3006a9d5753}
+Returns the instance of the class. \hypertarget{class_strategy_selector_a44e9f0fcca6f9efce33a81647311d02b}{\index{Strategy\-Selector@{Strategy\-Selector}!get\-Strategy@{get\-Strategy}}
+\index{get\-Strategy@{get\-Strategy}!StrategySelector@{Strategy\-Selector}}
+\subsubsection[{get\-Strategy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Commander} $\ast$ Strategy\-Selector\-::get\-Strategy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_strategy_selector_a44e9f0fcca6f9efce33a81647311d02b}
+Returns the selected strategy for this game. \hypertarget{class_strategy_selector_a987d3e0280e28ea2e61a5dac17e57595}{\index{Strategy\-Selector@{Strategy\-Selector}!load\-Stats@{load\-Stats}}
+\index{load\-Stats@{load\-Stats}!StrategySelector@{Strategy\-Selector}}
+\subsubsection[{load\-Stats}]{\setlength{\rightskip}{0pt plus 5cm}void Strategy\-Selector\-::load\-Stats (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_strategy_selector_a987d3e0280e28ea2e61a5dac17e57595}
+Loads the stats file. \hypertarget{class_strategy_selector_a19e9e46f32820cc63111bf3e98e0ea15}{\index{Strategy\-Selector@{Strategy\-Selector}!print\-Info@{print\-Info}}
+\index{print\-Info@{print\-Info}!StrategySelector@{Strategy\-Selector}}
+\subsubsection[{print\-Info}]{\setlength{\rightskip}{0pt plus 5cm}void Strategy\-Selector\-::print\-Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_strategy_selector_a19e9e46f32820cc63111bf3e98e0ea15}
+Prints debug info to the screen. \hypertarget{class_strategy_selector_a05d2c492efaffadbabf339efefcd98b6}{\index{Strategy\-Selector@{Strategy\-Selector}!save\-Stats@{save\-Stats}}
+\index{save\-Stats@{save\-Stats}!StrategySelector@{Strategy\-Selector}}
+\subsubsection[{save\-Stats}]{\setlength{\rightskip}{0pt plus 5cm}void Strategy\-Selector\-::save\-Stats (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_strategy_selector_a05d2c492efaffadbabf339efefcd98b6}
+Saves the stats file. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+B\-T\-H\-A\-I\-Module/\-Source/Strategy\-Selector.\-h\item 
+B\-T\-H\-A\-I\-Module/\-Source/Strategy\-Selector.\-cpp\end{DoxyCompactItemize}

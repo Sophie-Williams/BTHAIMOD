@@ -1,0 +1,104 @@
+\hypertarget{class_factory_agent}{
+\section{FactoryAgent Class Reference}
+\label{class_factory_agent}\index{FactoryAgent@{FactoryAgent}}
+}
+
+
+{\ttfamily \#include $<$FactoryAgent.h$>$}
+
+Inheritance diagram for FactoryAgent:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_factory_agent}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_factory_agent_a394c4718ee5e62a9767dddb43500e5bb}{
+{\bfseries FactoryAgent} (Unit $\ast$mUnit)}
+\label{class_factory_agent_a394c4718ee5e62a9767dddb43500e5bb}
+
+\item 
+void \hyperlink{class_factory_agent_a47a75cbb9b94f228360d60bd8be61483}{computeActions} ()
+\item 
+string \hyperlink{class_factory_agent_a0cab993095a23ec78f932cc580a7ce57}{getTypeName} ()
+\item 
+void \hyperlink{class_factory_agent_ad3072919567875ea73dce12639e811a7}{assignToBuild} (UnitType type)
+\item 
+void \hyperlink{class_factory_agent_a7169ea3bb8e8fc4daa2568b879156bc1}{printInfo} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_factory_agent}{FactoryAgent} handles Terran Factory buildings.
+
+Implemented abilities:
+\begin{DoxyItemize}
+\item Can build the Machine Shop addon.
+\item Trains Vultures.
+\item Trains Goliaths
+\item If Machine Shop addon has been created, trains Siege Tanks.
+\end{DoxyItemize}
+
+Author: Johan Hagelback (\href{mailto:johan.hagelback@gmail.com}{\tt johan.hagelback@gmail.com}) 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_factory_agent_ad3072919567875ea73dce12639e811a7}{
+\index{FactoryAgent@{FactoryAgent}!assignToBuild@{assignToBuild}}
+\index{assignToBuild@{assignToBuild}!FactoryAgent@{FactoryAgent}}
+\subsubsection[{assignToBuild}]{\setlength{\rightskip}{0pt plus 5cm}void FactoryAgent::assignToBuild (
+\begin{DoxyParamCaption}
+\item[{UnitType}]{type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_factory_agent_ad3072919567875ea73dce12639e811a7}
+Used when assigning the Factory to build the Machine Shop addon. 
+
+Reimplemented from \hyperlink{class_base_agent_a3bab1641b8ba847e9254e174666dbd31}{BaseAgent}.
+
+\hypertarget{class_factory_agent_a47a75cbb9b94f228360d60bd8be61483}{
+\index{FactoryAgent@{FactoryAgent}!computeActions@{computeActions}}
+\index{computeActions@{computeActions}!FactoryAgent@{FactoryAgent}}
+\subsubsection[{computeActions}]{\setlength{\rightskip}{0pt plus 5cm}void FactoryAgent::computeActions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_factory_agent_a47a75cbb9b94f228360d60bd8be61483}
+Called each update to issue orders. 
+
+Reimplemented from \hyperlink{class_structure_agent_af53d1389d80784bb254605ffd9f9e4e4}{StructureAgent}.
+
+\hypertarget{class_factory_agent_a0cab993095a23ec78f932cc580a7ce57}{
+\index{FactoryAgent@{FactoryAgent}!getTypeName@{getTypeName}}
+\index{getTypeName@{getTypeName}!FactoryAgent@{FactoryAgent}}
+\subsubsection[{getTypeName}]{\setlength{\rightskip}{0pt plus 5cm}string FactoryAgent::getTypeName (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_factory_agent_a0cab993095a23ec78f932cc580a7ce57}
+Returns the unique type name for structure agents. 
+
+Reimplemented from \hyperlink{class_structure_agent_acbeb3232c3c9c647ba526defa22264cd}{StructureAgent}.
+
+\hypertarget{class_factory_agent_a7169ea3bb8e8fc4daa2568b879156bc1}{
+\index{FactoryAgent@{FactoryAgent}!printInfo@{printInfo}}
+\index{printInfo@{printInfo}!FactoryAgent@{FactoryAgent}}
+\subsubsection[{printInfo}]{\setlength{\rightskip}{0pt plus 5cm}void FactoryAgent::printInfo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_factory_agent_a7169ea3bb8e8fc4daa2568b879156bc1}
+Used to print info about this agent to the screen. 
+
+Reimplemented from \hyperlink{class_structure_agent_adac3c70b613e6d10ac921e11bb89b633}{StructureAgent}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+BTHAIModule/Source/FactoryAgent.h\item 
+BTHAIModule/Source/FactoryAgent.cpp\end{DoxyCompactItemize}

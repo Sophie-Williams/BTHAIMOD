@@ -1,0 +1,59 @@
+\hypertarget{class_defense_locator}{\section{Defense\-Locator Class Reference}
+\label{class_defense_locator}\index{Defense\-Locator@{Defense\-Locator}}
+}
+
+
+{\ttfamily \#include $<$Defense\-Locator.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_defense_locator_a0e807e3b2d2b2f833441f57a513ff1b2}{$\sim$\-Defense\-Locator} ()
+\item 
+Tile\-Position \hyperlink{class_defense_locator_a133a0b22e4e8372e85a8e545d28099da}{get\-Base\-Defense\-Pos} (string m\-Maphash)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_defense_locator}{Defense\-Locator} $\ast$ \hyperlink{class_defense_locator_a17e896385df7bb1d75acc2385f51d2ae}{get\-Instance} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class holds manually selected defense positions for a map. The \hyperlink{class_commander}{Commander} first checks if a defense position has been added to the \hyperlink{class_defense_locator}{Defense\-Locator}, otherwise the standard choke point defense strategy is used.
+
+Note\-: The functionality is heavily dependent on that defense positions are choosen wisely.
+
+Author\-: Johan Hagelback (\href{mailto:johan.hagelback@gmail.com}{\tt johan.\-hagelback@gmail.\-com}) 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_defense_locator_a0e807e3b2d2b2f833441f57a513ff1b2}{\index{Defense\-Locator@{Defense\-Locator}!$\sim$\-Defense\-Locator@{$\sim$\-Defense\-Locator}}
+\index{$\sim$\-Defense\-Locator@{$\sim$\-Defense\-Locator}!DefenseLocator@{Defense\-Locator}}
+\subsubsection[{$\sim$\-Defense\-Locator}]{\setlength{\rightskip}{0pt plus 5cm}Defense\-Locator\-::$\sim$\-Defense\-Locator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_defense_locator_a0e807e3b2d2b2f833441f57a513ff1b2}
+Destructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_defense_locator_a133a0b22e4e8372e85a8e545d28099da}{\index{Defense\-Locator@{Defense\-Locator}!get\-Base\-Defense\-Pos@{get\-Base\-Defense\-Pos}}
+\index{get\-Base\-Defense\-Pos@{get\-Base\-Defense\-Pos}!DefenseLocator@{Defense\-Locator}}
+\subsubsection[{get\-Base\-Defense\-Pos}]{\setlength{\rightskip}{0pt plus 5cm}Tile\-Position Defense\-Locator\-::get\-Base\-Defense\-Pos (
+\begin{DoxyParamCaption}
+\item[{string}]{m\-Maphash}
+\end{DoxyParamCaption}
+)}}\label{class_defense_locator_a133a0b22e4e8372e85a8e545d28099da}
+Returns the best defense position for the last constructed base on the specified map. \hypertarget{class_defense_locator_a17e896385df7bb1d75acc2385f51d2ae}{\index{Defense\-Locator@{Defense\-Locator}!get\-Instance@{get\-Instance}}
+\index{get\-Instance@{get\-Instance}!DefenseLocator@{Defense\-Locator}}
+\subsubsection[{get\-Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Defense\-Locator} $\ast$ Defense\-Locator\-::get\-Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_defense_locator_a17e896385df7bb1d75acc2385f51d2ae}
+Returns the instance of the class. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+B\-T\-H\-A\-I\-Module/\-Source/Defense\-Locator.\-h\item 
+B\-T\-H\-A\-I\-Module/\-Source/Defense\-Locator.\-cpp\end{DoxyCompactItemize}

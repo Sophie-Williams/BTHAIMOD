@@ -1,0 +1,135 @@
+\hypertarget{class_a_iloop}{\section{A\-Iloop Class Reference}
+\label{class_a_iloop}\index{A\-Iloop@{A\-Iloop}}
+}
+
+
+{\ttfamily \#include $<$A\-Iloop.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_a_iloop_a20217dd1458618fe080f78e51341dae4}{A\-Iloop} ()
+\item 
+\hyperlink{class_a_iloop_a8bc15ee25c29beeca460f7682f62d69a}{$\sim$\-A\-Iloop} ()
+\item 
+void \hyperlink{class_a_iloop_a801c656f08b869162aada7ea07acee7c}{compute\-Actions} ()
+\item 
+void \hyperlink{class_a_iloop_afefb108f23a44fb3d3476980f200bec7}{toggle\-Debug} ()
+\item 
+void \hyperlink{class_a_iloop_a7b3a52d22b2327b9a40b1dcbcbf47097}{toggle\-Unit\-Debug} ()
+\item 
+void \hyperlink{class_a_iloop_a1c37bca877bb6e97468076e4256763d1}{toggle\-P\-F\-Debug} ()
+\item 
+void \hyperlink{class_a_iloop_a770c5331543570b3554688af7d85099b}{toggle\-B\-P\-Debug} ()
+\item 
+void \hyperlink{class_a_iloop_a68a5eb0b37ed3bb02e02f39bc31a953e}{set\-Debug\-S\-Q} (int squad\-I\-D)
+\item 
+void \hyperlink{class_a_iloop_ad7fa805bcc3cb770b3c862780dd26c07}{show\-\_\-debug} ()
+\item 
+void \hyperlink{class_a_iloop_a27e674d2b42ab12f7b444a21619c0fb1}{add\-Unit} (Unit $\ast$unit)
+\item 
+void \hyperlink{class_a_iloop_a29a2d542b7ea41632e6f1a80d5265e59}{unit\-Destroyed} (Unit $\ast$unit)
+\item 
+void \hyperlink{class_a_iloop_a09f7cb36c4c29d91da1de12170bd208c}{morph\-Unit} (Unit $\ast$unit)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class handles the main A\-I loop that is executed each frame. It is separated from the B\-T\-H\-A\-I\-Module\-::on\-Frame() to make it possible to use multi-\/threading.
+
+Author\-: Johan Hagelback (\href{mailto:johan.hagelback@gmail.com}{\tt johan.\-hagelback@gmail.\-com}) 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_a_iloop_a20217dd1458618fe080f78e51341dae4}{\index{A\-Iloop@{A\-Iloop}!A\-Iloop@{A\-Iloop}}
+\index{A\-Iloop@{A\-Iloop}!AIloop@{A\-Iloop}}
+\subsubsection[{A\-Iloop}]{\setlength{\rightskip}{0pt plus 5cm}A\-Iloop\-::\-A\-Iloop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_a_iloop_a20217dd1458618fe080f78e51341dae4}
+\hyperlink{class_constructor}{Constructor} \hypertarget{class_a_iloop_a8bc15ee25c29beeca460f7682f62d69a}{\index{A\-Iloop@{A\-Iloop}!$\sim$\-A\-Iloop@{$\sim$\-A\-Iloop}}
+\index{$\sim$\-A\-Iloop@{$\sim$\-A\-Iloop}!AIloop@{A\-Iloop}}
+\subsubsection[{$\sim$\-A\-Iloop}]{\setlength{\rightskip}{0pt plus 5cm}A\-Iloop\-::$\sim$\-A\-Iloop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_a_iloop_a8bc15ee25c29beeca460f7682f62d69a}
+Destructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_a_iloop_a27e674d2b42ab12f7b444a21619c0fb1}{\index{A\-Iloop@{A\-Iloop}!add\-Unit@{add\-Unit}}
+\index{add\-Unit@{add\-Unit}!AIloop@{A\-Iloop}}
+\subsubsection[{add\-Unit}]{\setlength{\rightskip}{0pt plus 5cm}void A\-Iloop\-::add\-Unit (
+\begin{DoxyParamCaption}
+\item[{Unit $\ast$}]{unit}
+\end{DoxyParamCaption}
+)}}\label{class_a_iloop_a27e674d2b42ab12f7b444a21619c0fb1}
+Called when a new unit is added to the game. \hypertarget{class_a_iloop_a801c656f08b869162aada7ea07acee7c}{\index{A\-Iloop@{A\-Iloop}!compute\-Actions@{compute\-Actions}}
+\index{compute\-Actions@{compute\-Actions}!AIloop@{A\-Iloop}}
+\subsubsection[{compute\-Actions}]{\setlength{\rightskip}{0pt plus 5cm}void A\-Iloop\-::compute\-Actions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_a_iloop_a801c656f08b869162aada7ea07acee7c}
+Call this each A\-I frame. \hypertarget{class_a_iloop_a09f7cb36c4c29d91da1de12170bd208c}{\index{A\-Iloop@{A\-Iloop}!morph\-Unit@{morph\-Unit}}
+\index{morph\-Unit@{morph\-Unit}!AIloop@{A\-Iloop}}
+\subsubsection[{morph\-Unit}]{\setlength{\rightskip}{0pt plus 5cm}void A\-Iloop\-::morph\-Unit (
+\begin{DoxyParamCaption}
+\item[{Unit $\ast$}]{unit}
+\end{DoxyParamCaption}
+)}}\label{class_a_iloop_a09f7cb36c4c29d91da1de12170bd208c}
+Called when a unit is morphed in in the game. \hypertarget{class_a_iloop_a68a5eb0b37ed3bb02e02f39bc31a953e}{\index{A\-Iloop@{A\-Iloop}!set\-Debug\-S\-Q@{set\-Debug\-S\-Q}}
+\index{set\-Debug\-S\-Q@{set\-Debug\-S\-Q}!AIloop@{A\-Iloop}}
+\subsubsection[{set\-Debug\-S\-Q}]{\setlength{\rightskip}{0pt plus 5cm}void A\-Iloop\-::set\-Debug\-S\-Q (
+\begin{DoxyParamCaption}
+\item[{int}]{squad\-I\-D}
+\end{DoxyParamCaption}
+)}}\label{class_a_iloop_a68a5eb0b37ed3bb02e02f39bc31a953e}
+Shows debug info for the specified squad. Use -\/1 to disable info. \hypertarget{class_a_iloop_ad7fa805bcc3cb770b3c862780dd26c07}{\index{A\-Iloop@{A\-Iloop}!show\-\_\-debug@{show\-\_\-debug}}
+\index{show\-\_\-debug@{show\-\_\-debug}!AIloop@{A\-Iloop}}
+\subsubsection[{show\-\_\-debug}]{\setlength{\rightskip}{0pt plus 5cm}void A\-Iloop\-::show\-\_\-debug (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_a_iloop_ad7fa805bcc3cb770b3c862780dd26c07}
+Show debug info. \hypertarget{class_a_iloop_a770c5331543570b3554688af7d85099b}{\index{A\-Iloop@{A\-Iloop}!toggle\-B\-P\-Debug@{toggle\-B\-P\-Debug}}
+\index{toggle\-B\-P\-Debug@{toggle\-B\-P\-Debug}!AIloop@{A\-Iloop}}
+\subsubsection[{toggle\-B\-P\-Debug}]{\setlength{\rightskip}{0pt plus 5cm}void A\-Iloop\-::toggle\-B\-P\-Debug (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_a_iloop_a770c5331543570b3554688af7d85099b}
+Toggles the building placer debug info on/off. \hypertarget{class_a_iloop_afefb108f23a44fb3d3476980f200bec7}{\index{A\-Iloop@{A\-Iloop}!toggle\-Debug@{toggle\-Debug}}
+\index{toggle\-Debug@{toggle\-Debug}!AIloop@{A\-Iloop}}
+\subsubsection[{toggle\-Debug}]{\setlength{\rightskip}{0pt plus 5cm}void A\-Iloop\-::toggle\-Debug (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_a_iloop_afefb108f23a44fb3d3476980f200bec7}
+Toggles debug info on/off. \hypertarget{class_a_iloop_a1c37bca877bb6e97468076e4256763d1}{\index{A\-Iloop@{A\-Iloop}!toggle\-P\-F\-Debug@{toggle\-P\-F\-Debug}}
+\index{toggle\-P\-F\-Debug@{toggle\-P\-F\-Debug}!AIloop@{A\-Iloop}}
+\subsubsection[{toggle\-P\-F\-Debug}]{\setlength{\rightskip}{0pt plus 5cm}void A\-Iloop\-::toggle\-P\-F\-Debug (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_a_iloop_a1c37bca877bb6e97468076e4256763d1}
+Toggles the potential field debug info on/off. \hypertarget{class_a_iloop_a7b3a52d22b2327b9a40b1dcbcbf47097}{\index{A\-Iloop@{A\-Iloop}!toggle\-Unit\-Debug@{toggle\-Unit\-Debug}}
+\index{toggle\-Unit\-Debug@{toggle\-Unit\-Debug}!AIloop@{A\-Iloop}}
+\subsubsection[{toggle\-Unit\-Debug}]{\setlength{\rightskip}{0pt plus 5cm}void A\-Iloop\-::toggle\-Unit\-Debug (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_a_iloop_a7b3a52d22b2327b9a40b1dcbcbf47097}
+Toggles the unit debug info on/off. \hypertarget{class_a_iloop_a29a2d542b7ea41632e6f1a80d5265e59}{\index{A\-Iloop@{A\-Iloop}!unit\-Destroyed@{unit\-Destroyed}}
+\index{unit\-Destroyed@{unit\-Destroyed}!AIloop@{A\-Iloop}}
+\subsubsection[{unit\-Destroyed}]{\setlength{\rightskip}{0pt plus 5cm}void A\-Iloop\-::unit\-Destroyed (
+\begin{DoxyParamCaption}
+\item[{Unit $\ast$}]{unit}
+\end{DoxyParamCaption}
+)}}\label{class_a_iloop_a29a2d542b7ea41632e6f1a80d5265e59}
+Called when a unit is destroyed in the game. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+B\-T\-H\-A\-I\-Module/\-Source/A\-Iloop.\-h\item 
+B\-T\-H\-A\-I\-Module/\-Source/A\-Iloop.\-cpp\end{DoxyCompactItemize}

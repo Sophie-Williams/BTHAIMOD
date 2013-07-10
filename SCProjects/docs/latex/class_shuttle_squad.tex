@@ -1,0 +1,183 @@
+\hypertarget{class_shuttle_squad}{
+\section{ShuttleSquad Class Reference}
+\label{class_shuttle_squad}\index{ShuttleSquad@{ShuttleSquad}}
+}
+
+
+{\ttfamily \#include $<$ShuttleSquad.h$>$}
+
+Inheritance diagram for ShuttleSquad:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_shuttle_squad}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_shuttle_squad_a1fe26ca2cbaf14e7d6981f94b2c7a34e}{ShuttleSquad} (int mId, string mName, int mPriority, bool mIsBaseHarass)
+\item 
+bool \hyperlink{class_shuttle_squad_a7200fe253df2b1e7c239becf1d5936db}{isActive} ()
+\item 
+void \hyperlink{class_shuttle_squad_a89cff150c53b894c7cfafb99f89027a5}{computeActions} ()
+\item 
+void \hyperlink{class_shuttle_squad_a0746bffe2a0155ccfd26e8834ce1c516}{defend} (TilePosition mGoal)
+\item 
+void \hyperlink{class_shuttle_squad_a8e2cb3b333d12671a39cdccf365b2af5}{attack} (TilePosition mGoal)
+\item 
+void \hyperlink{class_shuttle_squad_a28ccbaa15e04a38638879bb0a17f1186}{assist} (TilePosition mGoal)
+\item 
+void \hyperlink{class_shuttle_squad_a6017ba95442c3536da97c1c9fb4f68f4}{clearGoal} ()
+\item 
+TilePosition \hyperlink{class_shuttle_squad_a884fb24e4e9cc394cdec26db7ef0f591}{getGoal} ()
+\item 
+bool \hyperlink{class_shuttle_squad_abfcd03bfbb68fe3d8820304746083c11}{hasGoal} ()
+\item 
+void \hyperlink{class_shuttle_squad_a94b9ed957ba9c69fe6da501e8c816568}{printInfo} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is a special squad used to handle Protoss Shuttles carrying and dropping off Reavers.
+
+Author: Johan Hagelback (\href{mailto:johan.hagelback@gmail.com}{\tt johan.hagelback@gmail.com}) 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_shuttle_squad_a1fe26ca2cbaf14e7d6981f94b2c7a34e}{
+\index{ShuttleSquad@{ShuttleSquad}!ShuttleSquad@{ShuttleSquad}}
+\index{ShuttleSquad@{ShuttleSquad}!ShuttleSquad@{ShuttleSquad}}
+\subsubsection[{ShuttleSquad}]{\setlength{\rightskip}{0pt plus 5cm}ShuttleSquad::ShuttleSquad (
+\begin{DoxyParamCaption}
+\item[{int}]{mId, }
+\item[{string}]{mName, }
+\item[{int}]{mPriority, }
+\item[{bool}]{mIsBaseHarass}
+\end{DoxyParamCaption}
+)}}
+\label{class_shuttle_squad_a1fe26ca2cbaf14e7d6981f94b2c7a34e}
+Creates a Shuttle squad with a unique id and a name (for example AirAttackSquad, MainGroundSquad). 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_shuttle_squad_a28ccbaa15e04a38638879bb0a17f1186}{
+\index{ShuttleSquad@{ShuttleSquad}!assist@{assist}}
+\index{assist@{assist}!ShuttleSquad@{ShuttleSquad}}
+\subsubsection[{assist}]{\setlength{\rightskip}{0pt plus 5cm}void ShuttleSquad::assist (
+\begin{DoxyParamCaption}
+\item[{TilePosition}]{mGoal}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_shuttle_squad_a28ccbaa15e04a38638879bb0a17f1186}
+Orders this squad to assist units at a position. 
+
+Reimplemented from \hyperlink{class_squad_aefeccd46eb2bf673e1bb7e4d7b913a49}{Squad}.
+
+\hypertarget{class_shuttle_squad_a8e2cb3b333d12671a39cdccf365b2af5}{
+\index{ShuttleSquad@{ShuttleSquad}!attack@{attack}}
+\index{attack@{attack}!ShuttleSquad@{ShuttleSquad}}
+\subsubsection[{attack}]{\setlength{\rightskip}{0pt plus 5cm}void ShuttleSquad::attack (
+\begin{DoxyParamCaption}
+\item[{TilePosition}]{mGoal}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_shuttle_squad_a8e2cb3b333d12671a39cdccf365b2af5}
+Orders this squad to launch an attack at a position. 
+
+Reimplemented from \hyperlink{class_squad_a4e405c83103c69dda302a367e2dfed3f}{Squad}.
+
+\hypertarget{class_shuttle_squad_a6017ba95442c3536da97c1c9fb4f68f4}{
+\index{ShuttleSquad@{ShuttleSquad}!clearGoal@{clearGoal}}
+\index{clearGoal@{clearGoal}!ShuttleSquad@{ShuttleSquad}}
+\subsubsection[{clearGoal}]{\setlength{\rightskip}{0pt plus 5cm}void ShuttleSquad::clearGoal (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_shuttle_squad_a6017ba95442c3536da97c1c9fb4f68f4}
+Clears the goal for this \hyperlink{class_squad}{Squad}, i.e. sets the goal to TilePosition(-\/1,-\/1). 
+
+Reimplemented from \hyperlink{class_squad_a54380c521be6f5b3be723c24e2bd9ab7}{Squad}.
+
+\hypertarget{class_shuttle_squad_a89cff150c53b894c7cfafb99f89027a5}{
+\index{ShuttleSquad@{ShuttleSquad}!computeActions@{computeActions}}
+\index{computeActions@{computeActions}!ShuttleSquad@{ShuttleSquad}}
+\subsubsection[{computeActions}]{\setlength{\rightskip}{0pt plus 5cm}void ShuttleSquad::computeActions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_shuttle_squad_a89cff150c53b894c7cfafb99f89027a5}
+Called each update to issue orders. 
+
+Reimplemented from \hyperlink{class_squad_ac338d389b81cbec76cb8d240f0833e43}{Squad}.
+
+\hypertarget{class_shuttle_squad_a0746bffe2a0155ccfd26e8834ce1c516}{
+\index{ShuttleSquad@{ShuttleSquad}!defend@{defend}}
+\index{defend@{defend}!ShuttleSquad@{ShuttleSquad}}
+\subsubsection[{defend}]{\setlength{\rightskip}{0pt plus 5cm}void ShuttleSquad::defend (
+\begin{DoxyParamCaption}
+\item[{TilePosition}]{mGoal}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_shuttle_squad_a0746bffe2a0155ccfd26e8834ce1c516}
+Orders this squad to defend a position. 
+
+Reimplemented from \hyperlink{class_squad_aca337f45691b4e6ea361f3f8de06c536}{Squad}.
+
+\hypertarget{class_shuttle_squad_a884fb24e4e9cc394cdec26db7ef0f591}{
+\index{ShuttleSquad@{ShuttleSquad}!getGoal@{getGoal}}
+\index{getGoal@{getGoal}!ShuttleSquad@{ShuttleSquad}}
+\subsubsection[{getGoal}]{\setlength{\rightskip}{0pt plus 5cm}TilePosition ShuttleSquad::getGoal (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_shuttle_squad_a884fb24e4e9cc394cdec26db7ef0f591}
+Returns the current goal of this \hyperlink{class_squad}{Squad}. 
+
+Reimplemented from \hyperlink{class_squad_ae9278dcf91e317c4316ce19e4c7c3b9e}{Squad}.
+
+\hypertarget{class_shuttle_squad_abfcd03bfbb68fe3d8820304746083c11}{
+\index{ShuttleSquad@{ShuttleSquad}!hasGoal@{hasGoal}}
+\index{hasGoal@{hasGoal}!ShuttleSquad@{ShuttleSquad}}
+\subsubsection[{hasGoal}]{\setlength{\rightskip}{0pt plus 5cm}bool ShuttleSquad::hasGoal (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_shuttle_squad_abfcd03bfbb68fe3d8820304746083c11}
+Returns true if this squad has an assigned goal. 
+
+Reimplemented from \hyperlink{class_squad_a5ad7231b7644be74b42318ff97d6f5e3}{Squad}.
+
+\hypertarget{class_shuttle_squad_a7200fe253df2b1e7c239becf1d5936db}{
+\index{ShuttleSquad@{ShuttleSquad}!isActive@{isActive}}
+\index{isActive@{isActive}!ShuttleSquad@{ShuttleSquad}}
+\subsubsection[{isActive}]{\setlength{\rightskip}{0pt plus 5cm}bool ShuttleSquad::isActive (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_shuttle_squad_a7200fe253df2b1e7c239becf1d5936db}
+Returns true if this \hyperlink{class_squad}{Squad} is active, or false if not. A \hyperlink{class_squad}{Squad} is active when it first has been filled with agents. A \hyperlink{class_squad}{Squad} with destroyed units are still considered Active. 
+
+Reimplemented from \hyperlink{class_squad_a20f3ca360518b8908b405c44a858ccbd}{Squad}.
+
+\hypertarget{class_shuttle_squad_a94b9ed957ba9c69fe6da501e8c816568}{
+\index{ShuttleSquad@{ShuttleSquad}!printInfo@{printInfo}}
+\index{printInfo@{printInfo}!ShuttleSquad@{ShuttleSquad}}
+\subsubsection[{printInfo}]{\setlength{\rightskip}{0pt plus 5cm}void ShuttleSquad::printInfo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_shuttle_squad_a94b9ed957ba9c69fe6da501e8c816568}
+Prints some info about the squad. 
+
+Reimplemented from \hyperlink{class_squad_a02e1bb7b5d5579df71cc94ce372ae13c}{Squad}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+BTHAIModule/Source/ShuttleSquad.h\item 
+BTHAIModule/Source/ShuttleSquad.cpp\end{DoxyCompactItemize}

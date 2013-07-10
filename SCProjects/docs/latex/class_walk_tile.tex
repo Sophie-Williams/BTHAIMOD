@@ -1,0 +1,109 @@
+\hypertarget{class_walk_tile}{\section{Walk\-Tile Class Reference}
+\label{class_walk_tile}\index{Walk\-Tile@{Walk\-Tile}}
+}
+
+
+{\ttfamily \#include $<$Walk\-Tile.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_walk_tile_ac694558494c54ac1d058ca86082912a2}{Walk\-Tile} (Tile\-Position tp)
+\item 
+\hyperlink{class_walk_tile_af532792f9c7e4a978b9c7e7f8ebf802c}{Walk\-Tile} (Position pos)
+\item 
+\hyperlink{class_walk_tile_a5abbafc81a2d90d9c5bbdfebd739b5ea}{Walk\-Tile} (Unit $\ast$unit)
+\item 
+\hyperlink{class_walk_tile_af8bc211e7c819451ecd6d47002b95960}{Walk\-Tile} (int x, int y)
+\item 
+int \hyperlink{class_walk_tile_a8d1200b5312a94f9e9db611ac6320ce3}{X} ()
+\item 
+int \hyperlink{class_walk_tile_afc15c4f046d0f4c01a65aa03486a6a85}{Y} ()
+\item 
+Tile\-Position \hyperlink{class_walk_tile_a492263379f433f11761661ef1eaba127}{get\-Tile\-Position} ()
+\item 
+Position \hyperlink{class_walk_tile_a667e0069bcef992e7306a60597ac98a6}{get\-Position} ()
+\item 
+double \hyperlink{class_walk_tile_afc645670c0d5a7246b2eeed32e1e9c0e}{get\-Distance} (\hyperlink{class_walk_tile}{Walk\-Tile} wt)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class represents a Starcraft walk tile. Walk tiles are 8 positions/0.\-25 terrain tile.
+
+Author\-: Johan Hagelback (\href{mailto:johan.hagelback@gmail.com}{\tt johan.\-hagelback@gmail.\-com}) 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_walk_tile_ac694558494c54ac1d058ca86082912a2}{\index{Walk\-Tile@{Walk\-Tile}!Walk\-Tile@{Walk\-Tile}}
+\index{Walk\-Tile@{Walk\-Tile}!WalkTile@{Walk\-Tile}}
+\subsubsection[{Walk\-Tile}]{\setlength{\rightskip}{0pt plus 5cm}Walk\-Tile\-::\-Walk\-Tile (
+\begin{DoxyParamCaption}
+\item[{Tile\-Position}]{tp}
+\end{DoxyParamCaption}
+)}}\label{class_walk_tile_ac694558494c54ac1d058ca86082912a2}
+Constructs a walk tile from a terrain tile. \hypertarget{class_walk_tile_af532792f9c7e4a978b9c7e7f8ebf802c}{\index{Walk\-Tile@{Walk\-Tile}!Walk\-Tile@{Walk\-Tile}}
+\index{Walk\-Tile@{Walk\-Tile}!WalkTile@{Walk\-Tile}}
+\subsubsection[{Walk\-Tile}]{\setlength{\rightskip}{0pt plus 5cm}Walk\-Tile\-::\-Walk\-Tile (
+\begin{DoxyParamCaption}
+\item[{Position}]{pos}
+\end{DoxyParamCaption}
+)}}\label{class_walk_tile_af532792f9c7e4a978b9c7e7f8ebf802c}
+Constructs a walk tile from a position. \hypertarget{class_walk_tile_a5abbafc81a2d90d9c5bbdfebd739b5ea}{\index{Walk\-Tile@{Walk\-Tile}!Walk\-Tile@{Walk\-Tile}}
+\index{Walk\-Tile@{Walk\-Tile}!WalkTile@{Walk\-Tile}}
+\subsubsection[{Walk\-Tile}]{\setlength{\rightskip}{0pt plus 5cm}Walk\-Tile\-::\-Walk\-Tile (
+\begin{DoxyParamCaption}
+\item[{Unit $\ast$}]{unit}
+\end{DoxyParamCaption}
+)}}\label{class_walk_tile_a5abbafc81a2d90d9c5bbdfebd739b5ea}
+Constructs a walk tile for a unit. \hypertarget{class_walk_tile_af8bc211e7c819451ecd6d47002b95960}{\index{Walk\-Tile@{Walk\-Tile}!Walk\-Tile@{Walk\-Tile}}
+\index{Walk\-Tile@{Walk\-Tile}!WalkTile@{Walk\-Tile}}
+\subsubsection[{Walk\-Tile}]{\setlength{\rightskip}{0pt plus 5cm}Walk\-Tile\-::\-Walk\-Tile (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}}\label{class_walk_tile_af8bc211e7c819451ecd6d47002b95960}
+Constructs a walk tile. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_walk_tile_afc645670c0d5a7246b2eeed32e1e9c0e}{\index{Walk\-Tile@{Walk\-Tile}!get\-Distance@{get\-Distance}}
+\index{get\-Distance@{get\-Distance}!WalkTile@{Walk\-Tile}}
+\subsubsection[{get\-Distance}]{\setlength{\rightskip}{0pt plus 5cm}double Walk\-Tile\-::get\-Distance (
+\begin{DoxyParamCaption}
+\item[{{\bf Walk\-Tile}}]{wt}
+\end{DoxyParamCaption}
+)}}\label{class_walk_tile_afc645670c0d5a7246b2eeed32e1e9c0e}
+Returns the distance (in walk tiles) between two walk tiles. \hypertarget{class_walk_tile_a667e0069bcef992e7306a60597ac98a6}{\index{Walk\-Tile@{Walk\-Tile}!get\-Position@{get\-Position}}
+\index{get\-Position@{get\-Position}!WalkTile@{Walk\-Tile}}
+\subsubsection[{get\-Position}]{\setlength{\rightskip}{0pt plus 5cm}Position Walk\-Tile\-::get\-Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_walk_tile_a667e0069bcef992e7306a60597ac98a6}
+Converts this walk tile to a position. \hypertarget{class_walk_tile_a492263379f433f11761661ef1eaba127}{\index{Walk\-Tile@{Walk\-Tile}!get\-Tile\-Position@{get\-Tile\-Position}}
+\index{get\-Tile\-Position@{get\-Tile\-Position}!WalkTile@{Walk\-Tile}}
+\subsubsection[{get\-Tile\-Position}]{\setlength{\rightskip}{0pt plus 5cm}Tile\-Position Walk\-Tile\-::get\-Tile\-Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_walk_tile_a492263379f433f11761661ef1eaba127}
+Converts this walk tile to a terrain tile. \hypertarget{class_walk_tile_a8d1200b5312a94f9e9db611ac6320ce3}{\index{Walk\-Tile@{Walk\-Tile}!X@{X}}
+\index{X@{X}!WalkTile@{Walk\-Tile}}
+\subsubsection[{X}]{\setlength{\rightskip}{0pt plus 5cm}int Walk\-Tile\-::\-X (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_walk_tile_a8d1200b5312a94f9e9db611ac6320ce3}
+X position. \hypertarget{class_walk_tile_afc15c4f046d0f4c01a65aa03486a6a85}{\index{Walk\-Tile@{Walk\-Tile}!Y@{Y}}
+\index{Y@{Y}!WalkTile@{Walk\-Tile}}
+\subsubsection[{Y}]{\setlength{\rightskip}{0pt plus 5cm}int Walk\-Tile\-::\-Y (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_walk_tile_afc15c4f046d0f4c01a65aa03486a6a85}
+Y position. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+B\-T\-H\-A\-I\-Module/\-Source/Walk\-Tile.\-h\item 
+B\-T\-H\-A\-I\-Module/\-Source/Walk\-Tile.\-cpp\end{DoxyCompactItemize}

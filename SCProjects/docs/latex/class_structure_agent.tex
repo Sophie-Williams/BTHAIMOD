@@ -1,0 +1,116 @@
+\hypertarget{class_structure_agent}{\section{Structure\-Agent Class Reference}
+\label{class_structure_agent}\index{Structure\-Agent@{Structure\-Agent}}
+}
+
+
+{\ttfamily \#include $<$Structure\-Agent.\-h$>$}
+
+Inheritance diagram for Structure\-Agent\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.917808cm]{class_structure_agent}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_structure_agent_aaca41a2576d63446730c75241ebc00c0}{{\bfseries Structure\-Agent} (Unit $\ast$m\-Unit)}\label{class_structure_agent_aaca41a2576d63446730c75241ebc00c0}
+
+\item 
+virtual void \hyperlink{class_structure_agent_abaf0a18b1a60aa15af603b3470823a07}{compute\-Actions} ()
+\item 
+virtual void \hyperlink{class_structure_agent_a64cbd21350ebb2c69b2f95108bcff775}{debug\-\_\-show\-Goal} ()
+\item 
+bool \hyperlink{class_structure_agent_a5fd9a870537fa4db414cb4b8c2b0177c}{can\-Morph\-Into} (Unit\-Type type)
+\item 
+void \hyperlink{class_structure_agent_acb2fd9dac6c1262016e76ebfc210749b}{send\-Workers} ()
+\item 
+virtual void \hyperlink{class_structure_agent_adac3c70b613e6d10ac921e11bb89b633}{print\-Info} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_structure_agent_acd70cd5f5cfd30cb4ef6fef796b2d559}{bool {\bfseries can\-Build\-Unit} (Unit\-Type type)}\label{class_structure_agent_acd70cd5f5cfd30cb4ef6fef796b2d559}
+
+\item 
+\hypertarget{class_structure_agent_a1b922893f99a7580d02b262f2d558dea}{bool {\bfseries can\-Evolve\-Unit} (Unit\-Type type)}\label{class_structure_agent_a1b922893f99a7580d02b262f2d558dea}
+
+\item 
+\hypertarget{class_structure_agent_a0a7cf16b36da8528b59a5d2f1bc407f0}{Tile\-Position {\bfseries get\-Next\-Scan\-Location} ()}\label{class_structure_agent_a0a7cf16b36da8528b59a5d2f1bc407f0}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_structure_agent_abbe59b170a39875ee621987cc60c1fba}{bool {\bfseries repairing}}\label{class_structure_agent_abbe59b170a39875ee621987cc60c1fba}
+
+\item 
+\hypertarget{class_structure_agent_a17dc75ed638bfd9446d6b112ea64f63e}{vector$<$ Tile\-Position $>$ {\bfseries has\-Scanned}}\label{class_structure_agent_a17dc75ed638bfd9446d6b112ea64f63e}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_structure_agent}{Structure\-Agent} is the base agent class for all agents handling buildings. If a building is created and no specific agent for that type is found, the building is assigned to a \hyperlink{class_structure_agent}{Structure\-Agent}. Structure\-Agents are typically agents without logic, for example supply depots. To add logic to a building, for example Terran Academy researching stim packs, an agent implementation for that unit type must be created.
+
+Author\-: Johan Hagelback (\href{mailto:johan.hagelback@gmail.com}{\tt johan.\-hagelback@gmail.\-com}) 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_structure_agent_a5fd9a870537fa4db414cb4b8c2b0177c}{\index{Structure\-Agent@{Structure\-Agent}!can\-Morph\-Into@{can\-Morph\-Into}}
+\index{can\-Morph\-Into@{can\-Morph\-Into}!StructureAgent@{Structure\-Agent}}
+\subsubsection[{can\-Morph\-Into}]{\setlength{\rightskip}{0pt plus 5cm}bool Structure\-Agent\-::can\-Morph\-Into (
+\begin{DoxyParamCaption}
+\item[{Unit\-Type}]{type}
+\end{DoxyParamCaption}
+)}}\label{class_structure_agent_a5fd9a870537fa4db414cb4b8c2b0177c}
+Checks if the agent can morph into the specified type. Zerg only. \hypertarget{class_structure_agent_abaf0a18b1a60aa15af603b3470823a07}{\index{Structure\-Agent@{Structure\-Agent}!compute\-Actions@{compute\-Actions}}
+\index{compute\-Actions@{compute\-Actions}!StructureAgent@{Structure\-Agent}}
+\subsubsection[{compute\-Actions}]{\setlength{\rightskip}{0pt plus 5cm}void Structure\-Agent\-::compute\-Actions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_structure_agent_abaf0a18b1a60aa15af603b3470823a07}
+Called each update to issue orders. 
+
+Reimplemented from \hyperlink{class_base_agent_a5b5a8bd2592ee1bb82254cf7e8423321}{Base\-Agent}.
+
+
+
+Reimplemented in \hyperlink{class_hatchery_agent_ae96945db71ce4347b2599e9af4da6bf2}{Hatchery\-Agent}, \hyperlink{class_command_center_agent_ab65d18822f93a222f8bce3c85836217d}{Command\-Center\-Agent}, \hyperlink{class_fleet_beacon_agent_af4097bf4cdc94bd32db440b2c8919d7b}{Fleet\-Beacon\-Agent}, \hyperlink{class_nexus_agent_af918e93ad5401e6a5c5d29665cca1ebf}{Nexus\-Agent}, \hyperlink{class_refinery_agent_af4ea866916e13e258f9df2ff6167cb5e}{Refinery\-Agent}, and \hyperlink{class_comsat_agent_aa94033d23d7c19d68476d8eecf174f08}{Comsat\-Agent}.
+
+\hypertarget{class_structure_agent_a64cbd21350ebb2c69b2f95108bcff775}{\index{Structure\-Agent@{Structure\-Agent}!debug\-\_\-show\-Goal@{debug\-\_\-show\-Goal}}
+\index{debug\-\_\-show\-Goal@{debug\-\_\-show\-Goal}!StructureAgent@{Structure\-Agent}}
+\subsubsection[{debug\-\_\-show\-Goal}]{\setlength{\rightskip}{0pt plus 5cm}void Structure\-Agent\-::debug\-\_\-show\-Goal (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_structure_agent_a64cbd21350ebb2c69b2f95108bcff775}
+Used in debug modes to show a line to the agents' goal. 
+
+Reimplemented from \hyperlink{class_base_agent_a58e65cf5df5e8db1973f177889e8c0cb}{Base\-Agent}.
+
+\hypertarget{class_structure_agent_adac3c70b613e6d10ac921e11bb89b633}{\index{Structure\-Agent@{Structure\-Agent}!print\-Info@{print\-Info}}
+\index{print\-Info@{print\-Info}!StructureAgent@{Structure\-Agent}}
+\subsubsection[{print\-Info}]{\setlength{\rightskip}{0pt plus 5cm}void Structure\-Agent\-::print\-Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_structure_agent_adac3c70b613e6d10ac921e11bb89b633}
+Used to print info about this agent to the screen. 
+
+Reimplemented from \hyperlink{class_base_agent_a80433bb4a354687c5f039e90f112a197}{Base\-Agent}.
+
+\hypertarget{class_structure_agent_acb2fd9dac6c1262016e76ebfc210749b}{\index{Structure\-Agent@{Structure\-Agent}!send\-Workers@{send\-Workers}}
+\index{send\-Workers@{send\-Workers}!StructureAgent@{Structure\-Agent}}
+\subsubsection[{send\-Workers}]{\setlength{\rightskip}{0pt plus 5cm}void Structure\-Agent\-::send\-Workers (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_structure_agent_acb2fd9dac6c1262016e76ebfc210749b}
+Sends a number of workers to a newly constructed base. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+B\-T\-H\-A\-I\-Module/\-Source/Structure\-Agent.\-h\item 
+B\-T\-H\-A\-I\-Module/\-Source/Structure\-Agent.\-cpp\end{DoxyCompactItemize}

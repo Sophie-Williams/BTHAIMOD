@@ -1,0 +1,62 @@
+\hypertarget{class_wraith_agent}{\section{Wraith\-Agent Class Reference}
+\label{class_wraith_agent}\index{Wraith\-Agent@{Wraith\-Agent}}
+}
+
+
+{\ttfamily \#include $<$Wraith\-Agent.\-h$>$}
+
+Inheritance diagram for Wraith\-Agent\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_wraith_agent}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_wraith_agent_afc433cc29e6f6aceb332039290804ca6}{{\bfseries Wraith\-Agent} (Unit $\ast$m\-Unit)}\label{class_wraith_agent_afc433cc29e6f6aceb332039290804ca6}
+
+\item 
+void \hyperlink{class_wraith_agent_a37866613a9b2cadecaa45e38459e782c}{compute\-Actions} ()
+\item 
+bool \hyperlink{class_wraith_agent_abb74d889431272aa9d2e20c6e2bfe009}{can\-Be\-Attacked} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_wraith_agent}{Wraith\-Agent} handles Terran Wraith flying units.
+
+Implemented special abilities\-:
+\begin{DoxyItemize}
+\item If there are enemy units within firerange, the Wraith uses Cloaking Field (if researched).
+\item Wraiths can be used as explorers.
+\end{DoxyItemize}
+
+Author\-: Johan Hagelback (\href{mailto:johan.hagelback@gmail.com}{\tt johan.\-hagelback@gmail.\-com}) 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_wraith_agent_abb74d889431272aa9d2e20c6e2bfe009}{\index{Wraith\-Agent@{Wraith\-Agent}!can\-Be\-Attacked@{can\-Be\-Attacked}}
+\index{can\-Be\-Attacked@{can\-Be\-Attacked}!WraithAgent@{Wraith\-Agent}}
+\subsubsection[{can\-Be\-Attacked}]{\setlength{\rightskip}{0pt plus 5cm}bool Wraith\-Agent\-::can\-Be\-Attacked (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_wraith_agent_abb74d889431272aa9d2e20c6e2bfe009}
+Checks if the Wraith can be attacked. \hypertarget{class_wraith_agent_a37866613a9b2cadecaa45e38459e782c}{\index{Wraith\-Agent@{Wraith\-Agent}!compute\-Actions@{compute\-Actions}}
+\index{compute\-Actions@{compute\-Actions}!WraithAgent@{Wraith\-Agent}}
+\subsubsection[{compute\-Actions}]{\setlength{\rightskip}{0pt plus 5cm}void Wraith\-Agent\-::compute\-Actions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_wraith_agent_a37866613a9b2cadecaa45e38459e782c}
+Called each update to issue orders. 
+
+Reimplemented from \hyperlink{class_unit_agent_aecfbb299e0aed1fe456247cedb3f1660}{Unit\-Agent}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+B\-T\-H\-A\-I\-Module/\-Source/Wraith\-Agent.\-h\item 
+B\-T\-H\-A\-I\-Module/\-Source/Wraith\-Agent.\-cpp\end{DoxyCompactItemize}

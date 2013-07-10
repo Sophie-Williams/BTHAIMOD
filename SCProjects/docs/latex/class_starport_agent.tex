@@ -1,0 +1,93 @@
+\hypertarget{class_starport_agent}{
+\section{StarportAgent Class Reference}
+\label{class_starport_agent}\index{StarportAgent@{StarportAgent}}
+}
+
+
+{\ttfamily \#include $<$StarportAgent.h$>$}
+
+Inheritance diagram for StarportAgent:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_starport_agent}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_starport_agent_a2864a89ed1da4f11822af16ec69ea8ec}{
+{\bfseries StarportAgent} (Unit $\ast$mUnit)}
+\label{class_starport_agent_a2864a89ed1da4f11822af16ec69ea8ec}
+
+\item 
+void \hyperlink{class_starport_agent_a1ddbcc07b46782ed6b4e9874e6603201}{computeActions} ()
+\item 
+string \hyperlink{class_starport_agent_a9c898199b9060db855f75f331187de69}{getTypeName} ()
+\item 
+void \hyperlink{class_starport_agent_a01d22b2d1476f1f484c18e1781d6aab1}{assignToBuild} (UnitType type)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_starport_agent}{StarportAgent} handles Terran Starport buildings.
+
+Implemented abilities:
+\begin{DoxyItemize}
+\item Trains Wraiths.
+\item Trains Science Vessels.
+\item If Science Facility with Physics Lab has been built, trains Battlecruisers.
+\end{DoxyItemize}
+
+TODO:
+\begin{DoxyItemize}
+\item Valkyries and Dropships are not implemented.
+\end{DoxyItemize}
+
+Author: Johan Hagelback (\href{mailto:johan.hagelback@gmail.com}{\tt johan.hagelback@gmail.com}) 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_starport_agent_a01d22b2d1476f1f484c18e1781d6aab1}{
+\index{StarportAgent@{StarportAgent}!assignToBuild@{assignToBuild}}
+\index{assignToBuild@{assignToBuild}!StarportAgent@{StarportAgent}}
+\subsubsection[{assignToBuild}]{\setlength{\rightskip}{0pt plus 5cm}void StarportAgent::assignToBuild (
+\begin{DoxyParamCaption}
+\item[{UnitType}]{type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_starport_agent_a01d22b2d1476f1f484c18e1781d6aab1}
+Used when building the Control Tower addon. 
+
+Reimplemented from \hyperlink{class_base_agent_a3bab1641b8ba847e9254e174666dbd31}{BaseAgent}.
+
+\hypertarget{class_starport_agent_a1ddbcc07b46782ed6b4e9874e6603201}{
+\index{StarportAgent@{StarportAgent}!computeActions@{computeActions}}
+\index{computeActions@{computeActions}!StarportAgent@{StarportAgent}}
+\subsubsection[{computeActions}]{\setlength{\rightskip}{0pt plus 5cm}void StarportAgent::computeActions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_starport_agent_a1ddbcc07b46782ed6b4e9874e6603201}
+Called each update to issue orders. 
+
+Reimplemented from \hyperlink{class_structure_agent_af53d1389d80784bb254605ffd9f9e4e4}{StructureAgent}.
+
+\hypertarget{class_starport_agent_a9c898199b9060db855f75f331187de69}{
+\index{StarportAgent@{StarportAgent}!getTypeName@{getTypeName}}
+\index{getTypeName@{getTypeName}!StarportAgent@{StarportAgent}}
+\subsubsection[{getTypeName}]{\setlength{\rightskip}{0pt plus 5cm}string StarportAgent::getTypeName (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_starport_agent_a9c898199b9060db855f75f331187de69}
+Returns the unique type name for structure agents. 
+
+Reimplemented from \hyperlink{class_structure_agent_acbeb3232c3c9c647ba526defa22264cd}{StructureAgent}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+BTHAIModule/Source/StarportAgent.h\item 
+BTHAIModule/Source/StarportAgent.cpp\end{DoxyCompactItemize}

@@ -1,0 +1,287 @@
+\hypertarget{class_exploration_manager}{\section{Exploration\-Manager Class Reference}
+\label{class_exploration_manager}\index{Exploration\-Manager@{Exploration\-Manager}}
+}
+
+
+{\ttfamily \#include $<$Exploration\-Manager.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_exploration_manager_a4a57562735f2726c292263069c230b82}{$\sim$\-Exploration\-Manager} ()
+\item 
+void \hyperlink{class_exploration_manager_a02b37f885bd230031e3f88cd59142739}{set\-Inactive} ()
+\item 
+bool \hyperlink{class_exploration_manager_a85a400f645b4c2cb06be6e2432a03a86}{is\-Active} ()
+\item 
+void \hyperlink{class_exploration_manager_a12d28742ee52b7b1e346e207407418f5}{compute\-Actions} ()
+\item 
+Tile\-Position \hyperlink{class_exploration_manager_afadc17819584bf0dc2278bdbbe51ba15}{get\-Next\-To\-Explore} (\hyperlink{class_squad}{Squad} $\ast$squad)
+\item 
+Tile\-Position \hyperlink{class_exploration_manager_a16610708e583b0249221feced788aa0e}{search\-Expansion\-Site} ()
+\item 
+Tile\-Position \hyperlink{class_exploration_manager_a912fb84ce3563759e2547b86c5e39ecc}{get\-Expansion\-Site} ()
+\item 
+void \hyperlink{class_exploration_manager_ae8ebcf92769caaf505f82c25d4b9982b}{set\-Expansion\-Site} (Tile\-Position pos)
+\item 
+void \hyperlink{class_exploration_manager_a6fc2e3258037b4d8fb52fa24ab6c5f1a}{print\-Info} ()
+\item 
+void \hyperlink{class_exploration_manager_a0a06516952a01099a41993a4ce44621f}{add\-Spotted\-Unit} (Unit $\ast$unit)
+\item 
+int \hyperlink{class_exploration_manager_abf9a57f87f3ebb778dac95d60a091b9e}{get\-No\-Enemy\-Detectors} ()
+\item 
+void \hyperlink{class_exploration_manager_acc423ab64c13c9e63ec2cd83f7cc3ccb}{unit\-Destroyed} (Unit $\ast$unit)
+\item 
+const vector$<$ \hyperlink{class_spotted_object}{Spotted\-Object} $\ast$ $>$ \& \hyperlink{class_exploration_manager_a9f960b45782e863979a7795eedee8a6f}{get\-Spotted\-Buildings} ()
+\item 
+Tile\-Position \hyperlink{class_exploration_manager_aa9e211acbc6151fdad4c18919144300d}{get\-Closest\-Spotted\-Building} (Tile\-Position start)
+\item 
+int \hyperlink{class_exploration_manager_a20936d696394e1860a70b1ca0d23872b}{spotted\-Buildings\-Within\-Range} (Tile\-Position pos, int range)
+\item 
+bool \hyperlink{class_exploration_manager_a8e5343060fd9f6fd7fcee353fc4af746}{buildings\-Spotted} ()
+\item 
+void \hyperlink{class_exploration_manager_a1d800673b5e57e81fc555d862e4885da}{show\-Intell\-Data} ()
+\item 
+void \hyperlink{class_exploration_manager_a9984dd436e014947289def3172bfb13c}{set\-Explored} (Tile\-Position goal)
+\item 
+Tile\-Position \hyperlink{class_exploration_manager_a8681689039f4fa17b6287ace18030259}{scan\-For\-Vulnerable\-Base} ()
+\item 
+bool \hyperlink{class_exploration_manager_a2bff78255c2505cbaaab85d9c13bb4b6}{is\-Detector\-Covering} (Tile\-Position pos)
+\item 
+bool \hyperlink{class_exploration_manager_a853f44af81ce152857967e7a4240017b}{is\-Detector\-Covering} (Position pos)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_exploration_manager}{Exploration\-Manager} $\ast$ \hyperlink{class_exploration_manager_aa02f4d88b05e9fbd16edf75b95c03ea1}{get\-Instance} ()
+\item 
+static bool \hyperlink{class_exploration_manager_a9d6c888b3de596500709c066599e8263}{can\-Reach} (Tile\-Position a, Tile\-Position b)
+\item 
+static bool \hyperlink{class_exploration_manager_a89208c080d691c0b73a78945b017c6ba}{can\-Reach} (\hyperlink{class_base_agent}{Base\-Agent} $\ast$agent, Tile\-Position b)
+\item 
+static bool \hyperlink{class_exploration_manager_a9988f36db374fb797f4ea881f410b709}{enemy\-Is\-Protoss} ()
+\item 
+static bool \hyperlink{class_exploration_manager_ab5f2e9dd74fe898af4f870a5175ab36f}{enemy\-Is\-Zerg} ()
+\item 
+static bool \hyperlink{class_exploration_manager_abf2f53be68b91b886ee1be84a8e27b55}{enemy\-Is\-Terran} ()
+\item 
+static bool \hyperlink{class_exploration_manager_ad2059b552d8b15ca1e0fda85372f46f2}{enemy\-Is\-Unknown} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_exploration_manager}{Exploration\-Manager} handles all tasks involving exploration of the game world. It issue orders to a number of units that is used as explorers, keep track of areas recently explored, and keep track of spotted resources or enemy buildings.
+
+The \hyperlink{class_exploration_manager}{Exploration\-Manager} is implemented as a singleton class. Each class that needs to access \hyperlink{class_exploration_manager}{Exploration\-Manager} can request an instance, and all classes shares the same \hyperlink{class_exploration_manager}{Exploration\-Manager} instance.
+
+Author\-: Johan Hagelback (\href{mailto:johan.hagelback@gmail.com}{\tt johan.\-hagelback@gmail.\-com}) 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_exploration_manager_a4a57562735f2726c292263069c230b82}{\index{Exploration\-Manager@{Exploration\-Manager}!$\sim$\-Exploration\-Manager@{$\sim$\-Exploration\-Manager}}
+\index{$\sim$\-Exploration\-Manager@{$\sim$\-Exploration\-Manager}!ExplorationManager@{Exploration\-Manager}}
+\subsubsection[{$\sim$\-Exploration\-Manager}]{\setlength{\rightskip}{0pt plus 5cm}Exploration\-Manager\-::$\sim$\-Exploration\-Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_exploration_manager_a4a57562735f2726c292263069c230b82}
+Destructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_exploration_manager_a0a06516952a01099a41993a4ce44621f}{\index{Exploration\-Manager@{Exploration\-Manager}!add\-Spotted\-Unit@{add\-Spotted\-Unit}}
+\index{add\-Spotted\-Unit@{add\-Spotted\-Unit}!ExplorationManager@{Exploration\-Manager}}
+\subsubsection[{add\-Spotted\-Unit}]{\setlength{\rightskip}{0pt plus 5cm}void Exploration\-Manager\-::add\-Spotted\-Unit (
+\begin{DoxyParamCaption}
+\item[{Unit $\ast$}]{unit}
+\end{DoxyParamCaption}
+)}}\label{class_exploration_manager_a0a06516952a01099a41993a4ce44621f}
+Notifies about an enemy unit that has been spotted. \hypertarget{class_exploration_manager_a8e5343060fd9f6fd7fcee353fc4af746}{\index{Exploration\-Manager@{Exploration\-Manager}!buildings\-Spotted@{buildings\-Spotted}}
+\index{buildings\-Spotted@{buildings\-Spotted}!ExplorationManager@{Exploration\-Manager}}
+\subsubsection[{buildings\-Spotted}]{\setlength{\rightskip}{0pt plus 5cm}bool Exploration\-Manager\-::buildings\-Spotted (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_exploration_manager_a8e5343060fd9f6fd7fcee353fc4af746}
+Returns true if any enemy buildings have been spotted. \hypertarget{class_exploration_manager_a9d6c888b3de596500709c066599e8263}{\index{Exploration\-Manager@{Exploration\-Manager}!can\-Reach@{can\-Reach}}
+\index{can\-Reach@{can\-Reach}!ExplorationManager@{Exploration\-Manager}}
+\subsubsection[{can\-Reach}]{\setlength{\rightskip}{0pt plus 5cm}bool Exploration\-Manager\-::can\-Reach (
+\begin{DoxyParamCaption}
+\item[{Tile\-Position}]{a, }
+\item[{Tile\-Position}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_exploration_manager_a9d6c888b3de596500709c066599e8263}
+Returns true if a ground unit can reach position b from position a. Uses B\-W\-T\-A. \hypertarget{class_exploration_manager_a89208c080d691c0b73a78945b017c6ba}{\index{Exploration\-Manager@{Exploration\-Manager}!can\-Reach@{can\-Reach}}
+\index{can\-Reach@{can\-Reach}!ExplorationManager@{Exploration\-Manager}}
+\subsubsection[{can\-Reach}]{\setlength{\rightskip}{0pt plus 5cm}bool Exploration\-Manager\-::can\-Reach (
+\begin{DoxyParamCaption}
+\item[{{\bf Base\-Agent} $\ast$}]{agent, }
+\item[{Tile\-Position}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_exploration_manager_a89208c080d691c0b73a78945b017c6ba}
+Returns true if an agent can reach position b. \hypertarget{class_exploration_manager_a12d28742ee52b7b1e346e207407418f5}{\index{Exploration\-Manager@{Exploration\-Manager}!compute\-Actions@{compute\-Actions}}
+\index{compute\-Actions@{compute\-Actions}!ExplorationManager@{Exploration\-Manager}}
+\subsubsection[{compute\-Actions}]{\setlength{\rightskip}{0pt plus 5cm}void Exploration\-Manager\-::compute\-Actions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_exploration_manager_a12d28742ee52b7b1e346e207407418f5}
+Called each update to issue orders. \hypertarget{class_exploration_manager_a9988f36db374fb797f4ea881f410b709}{\index{Exploration\-Manager@{Exploration\-Manager}!enemy\-Is\-Protoss@{enemy\-Is\-Protoss}}
+\index{enemy\-Is\-Protoss@{enemy\-Is\-Protoss}!ExplorationManager@{Exploration\-Manager}}
+\subsubsection[{enemy\-Is\-Protoss}]{\setlength{\rightskip}{0pt plus 5cm}bool Exploration\-Manager\-::enemy\-Is\-Protoss (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_exploration_manager_a9988f36db374fb797f4ea881f410b709}
+Returns true if an enemy is Protoss. \hypertarget{class_exploration_manager_abf2f53be68b91b886ee1be84a8e27b55}{\index{Exploration\-Manager@{Exploration\-Manager}!enemy\-Is\-Terran@{enemy\-Is\-Terran}}
+\index{enemy\-Is\-Terran@{enemy\-Is\-Terran}!ExplorationManager@{Exploration\-Manager}}
+\subsubsection[{enemy\-Is\-Terran}]{\setlength{\rightskip}{0pt plus 5cm}bool Exploration\-Manager\-::enemy\-Is\-Terran (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_exploration_manager_abf2f53be68b91b886ee1be84a8e27b55}
+Returns true if an enemy is Terran. \hypertarget{class_exploration_manager_ad2059b552d8b15ca1e0fda85372f46f2}{\index{Exploration\-Manager@{Exploration\-Manager}!enemy\-Is\-Unknown@{enemy\-Is\-Unknown}}
+\index{enemy\-Is\-Unknown@{enemy\-Is\-Unknown}!ExplorationManager@{Exploration\-Manager}}
+\subsubsection[{enemy\-Is\-Unknown}]{\setlength{\rightskip}{0pt plus 5cm}bool Exploration\-Manager\-::enemy\-Is\-Unknown (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_exploration_manager_ad2059b552d8b15ca1e0fda85372f46f2}
+All enemy races are currently unknown. \hypertarget{class_exploration_manager_ab5f2e9dd74fe898af4f870a5175ab36f}{\index{Exploration\-Manager@{Exploration\-Manager}!enemy\-Is\-Zerg@{enemy\-Is\-Zerg}}
+\index{enemy\-Is\-Zerg@{enemy\-Is\-Zerg}!ExplorationManager@{Exploration\-Manager}}
+\subsubsection[{enemy\-Is\-Zerg}]{\setlength{\rightskip}{0pt plus 5cm}bool Exploration\-Manager\-::enemy\-Is\-Zerg (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_exploration_manager_ab5f2e9dd74fe898af4f870a5175ab36f}
+Returns true if an enemy is Zerg. \hypertarget{class_exploration_manager_aa9e211acbc6151fdad4c18919144300d}{\index{Exploration\-Manager@{Exploration\-Manager}!get\-Closest\-Spotted\-Building@{get\-Closest\-Spotted\-Building}}
+\index{get\-Closest\-Spotted\-Building@{get\-Closest\-Spotted\-Building}!ExplorationManager@{Exploration\-Manager}}
+\subsubsection[{get\-Closest\-Spotted\-Building}]{\setlength{\rightskip}{0pt plus 5cm}Tile\-Position Exploration\-Manager\-::get\-Closest\-Spotted\-Building (
+\begin{DoxyParamCaption}
+\item[{Tile\-Position}]{start}
+\end{DoxyParamCaption}
+)}}\label{class_exploration_manager_aa9e211acbc6151fdad4c18919144300d}
+Returns the closest enemy spotted building from a start position, or Tile\-Position(-\/1,-\/1) if none was found. \hypertarget{class_exploration_manager_a912fb84ce3563759e2547b86c5e39ecc}{\index{Exploration\-Manager@{Exploration\-Manager}!get\-Expansion\-Site@{get\-Expansion\-Site}}
+\index{get\-Expansion\-Site@{get\-Expansion\-Site}!ExplorationManager@{Exploration\-Manager}}
+\subsubsection[{get\-Expansion\-Site}]{\setlength{\rightskip}{0pt plus 5cm}Tile\-Position Exploration\-Manager\-::get\-Expansion\-Site (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_exploration_manager_a912fb84ce3563759e2547b86c5e39ecc}
+Returns the next position to expand the base to. \hypertarget{class_exploration_manager_aa02f4d88b05e9fbd16edf75b95c03ea1}{\index{Exploration\-Manager@{Exploration\-Manager}!get\-Instance@{get\-Instance}}
+\index{get\-Instance@{get\-Instance}!ExplorationManager@{Exploration\-Manager}}
+\subsubsection[{get\-Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Exploration\-Manager} $\ast$ Exploration\-Manager\-::get\-Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_exploration_manager_aa02f4d88b05e9fbd16edf75b95c03ea1}
+Returns the instance of the class. \hypertarget{class_exploration_manager_afadc17819584bf0dc2278bdbbe51ba15}{\index{Exploration\-Manager@{Exploration\-Manager}!get\-Next\-To\-Explore@{get\-Next\-To\-Explore}}
+\index{get\-Next\-To\-Explore@{get\-Next\-To\-Explore}!ExplorationManager@{Exploration\-Manager}}
+\subsubsection[{get\-Next\-To\-Explore}]{\setlength{\rightskip}{0pt plus 5cm}Tile\-Position Exploration\-Manager\-::get\-Next\-To\-Explore (
+\begin{DoxyParamCaption}
+\item[{{\bf Squad} $\ast$}]{squad}
+\end{DoxyParamCaption}
+)}}\label{class_exploration_manager_afadc17819584bf0dc2278bdbbe51ba15}
+Returns the next position to explore for this squad. \hypertarget{class_exploration_manager_abf9a57f87f3ebb778dac95d60a091b9e}{\index{Exploration\-Manager@{Exploration\-Manager}!get\-No\-Enemy\-Detectors@{get\-No\-Enemy\-Detectors}}
+\index{get\-No\-Enemy\-Detectors@{get\-No\-Enemy\-Detectors}!ExplorationManager@{Exploration\-Manager}}
+\subsubsection[{get\-No\-Enemy\-Detectors}]{\setlength{\rightskip}{0pt plus 5cm}int Exploration\-Manager\-::get\-No\-Enemy\-Detectors (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_exploration_manager_abf9a57f87f3ebb778dac95d60a091b9e}
+Returns the number of enemy detector units and buildings we have spotted. \hypertarget{class_exploration_manager_a9f960b45782e863979a7795eedee8a6f}{\index{Exploration\-Manager@{Exploration\-Manager}!get\-Spotted\-Buildings@{get\-Spotted\-Buildings}}
+\index{get\-Spotted\-Buildings@{get\-Spotted\-Buildings}!ExplorationManager@{Exploration\-Manager}}
+\subsubsection[{get\-Spotted\-Buildings}]{\setlength{\rightskip}{0pt plus 5cm}const vector$<$ {\bf Spotted\-Object} $\ast$ $>$ \& Exploration\-Manager\-::get\-Spotted\-Buildings (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_exploration_manager_a9f960b45782e863979a7795eedee8a6f}
+Returns the list of spotted enemy buildings. \hypertarget{class_exploration_manager_a85a400f645b4c2cb06be6e2432a03a86}{\index{Exploration\-Manager@{Exploration\-Manager}!is\-Active@{is\-Active}}
+\index{is\-Active@{is\-Active}!ExplorationManager@{Exploration\-Manager}}
+\subsubsection[{is\-Active}]{\setlength{\rightskip}{0pt plus 5cm}bool Exploration\-Manager\-::is\-Active (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_exploration_manager_a85a400f645b4c2cb06be6e2432a03a86}
+Returns true if the \hyperlink{class_exploration_manager}{Exploration\-Manager} is active, false if not. \hypertarget{class_exploration_manager_a2bff78255c2505cbaaab85d9c13bb4b6}{\index{Exploration\-Manager@{Exploration\-Manager}!is\-Detector\-Covering@{is\-Detector\-Covering}}
+\index{is\-Detector\-Covering@{is\-Detector\-Covering}!ExplorationManager@{Exploration\-Manager}}
+\subsubsection[{is\-Detector\-Covering}]{\setlength{\rightskip}{0pt plus 5cm}bool Exploration\-Manager\-::is\-Detector\-Covering (
+\begin{DoxyParamCaption}
+\item[{Tile\-Position}]{pos}
+\end{DoxyParamCaption}
+)}}\label{class_exploration_manager_a2bff78255c2505cbaaab85d9c13bb4b6}
+Checks if an enemy detector is covering the specified position. \hypertarget{class_exploration_manager_a853f44af81ce152857967e7a4240017b}{\index{Exploration\-Manager@{Exploration\-Manager}!is\-Detector\-Covering@{is\-Detector\-Covering}}
+\index{is\-Detector\-Covering@{is\-Detector\-Covering}!ExplorationManager@{Exploration\-Manager}}
+\subsubsection[{is\-Detector\-Covering}]{\setlength{\rightskip}{0pt plus 5cm}bool Exploration\-Manager\-::is\-Detector\-Covering (
+\begin{DoxyParamCaption}
+\item[{Position}]{pos}
+\end{DoxyParamCaption}
+)}}\label{class_exploration_manager_a853f44af81ce152857967e7a4240017b}
+Checks if an enemy detector is covering the specified position. \hypertarget{class_exploration_manager_a6fc2e3258037b4d8fb52fa24ab6c5f1a}{\index{Exploration\-Manager@{Exploration\-Manager}!print\-Info@{print\-Info}}
+\index{print\-Info@{print\-Info}!ExplorationManager@{Exploration\-Manager}}
+\subsubsection[{print\-Info}]{\setlength{\rightskip}{0pt plus 5cm}void Exploration\-Manager\-::print\-Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_exploration_manager_a6fc2e3258037b4d8fb52fa24ab6c5f1a}
+Shows all spotted objects as squares on the S\-C map. Use for debug purpose. \hypertarget{class_exploration_manager_a8681689039f4fa17b6287ace18030259}{\index{Exploration\-Manager@{Exploration\-Manager}!scan\-For\-Vulnerable\-Base@{scan\-For\-Vulnerable\-Base}}
+\index{scan\-For\-Vulnerable\-Base@{scan\-For\-Vulnerable\-Base}!ExplorationManager@{Exploration\-Manager}}
+\subsubsection[{scan\-For\-Vulnerable\-Base}]{\setlength{\rightskip}{0pt plus 5cm}Tile\-Position Exploration\-Manager\-::scan\-For\-Vulnerable\-Base (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_exploration_manager_a8681689039f4fa17b6287ace18030259}
+Scans for vulnerable enemy bases, i.\-e. bases without protection from detectors. \hypertarget{class_exploration_manager_a16610708e583b0249221feced788aa0e}{\index{Exploration\-Manager@{Exploration\-Manager}!search\-Expansion\-Site@{search\-Expansion\-Site}}
+\index{search\-Expansion\-Site@{search\-Expansion\-Site}!ExplorationManager@{Exploration\-Manager}}
+\subsubsection[{search\-Expansion\-Site}]{\setlength{\rightskip}{0pt plus 5cm}Tile\-Position Exploration\-Manager\-::search\-Expansion\-Site (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_exploration_manager_a16610708e583b0249221feced788aa0e}
+Searches for the next position to expand the base to. \hypertarget{class_exploration_manager_ae8ebcf92769caaf505f82c25d4b9982b}{\index{Exploration\-Manager@{Exploration\-Manager}!set\-Expansion\-Site@{set\-Expansion\-Site}}
+\index{set\-Expansion\-Site@{set\-Expansion\-Site}!ExplorationManager@{Exploration\-Manager}}
+\subsubsection[{set\-Expansion\-Site}]{\setlength{\rightskip}{0pt plus 5cm}void Exploration\-Manager\-::set\-Expansion\-Site (
+\begin{DoxyParamCaption}
+\item[{Tile\-Position}]{pos}
+\end{DoxyParamCaption}
+)}}\label{class_exploration_manager_ae8ebcf92769caaf505f82c25d4b9982b}
+Sets the next position to expand the base to. \hypertarget{class_exploration_manager_a9984dd436e014947289def3172bfb13c}{\index{Exploration\-Manager@{Exploration\-Manager}!set\-Explored@{set\-Explored}}
+\index{set\-Explored@{set\-Explored}!ExplorationManager@{Exploration\-Manager}}
+\subsubsection[{set\-Explored}]{\setlength{\rightskip}{0pt plus 5cm}void Exploration\-Manager\-::set\-Explored (
+\begin{DoxyParamCaption}
+\item[{Tile\-Position}]{goal}
+\end{DoxyParamCaption}
+)}}\label{class_exploration_manager_a9984dd436e014947289def3172bfb13c}
+Sets that a region is explored. The position must be the Tile\-Position for the center of the region. \hypertarget{class_exploration_manager_a02b37f885bd230031e3f88cd59142739}{\index{Exploration\-Manager@{Exploration\-Manager}!set\-Inactive@{set\-Inactive}}
+\index{set\-Inactive@{set\-Inactive}!ExplorationManager@{Exploration\-Manager}}
+\subsubsection[{set\-Inactive}]{\setlength{\rightskip}{0pt plus 5cm}void Exploration\-Manager\-::set\-Inactive (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_exploration_manager_a02b37f885bd230031e3f88cd59142739}
+Sets \hyperlink{class_exploration_manager}{Exploration\-Manager} to inactive. Is used when perfect information is activated. \hypertarget{class_exploration_manager_a1d800673b5e57e81fc555d862e4885da}{\index{Exploration\-Manager@{Exploration\-Manager}!show\-Intell\-Data@{show\-Intell\-Data}}
+\index{show\-Intell\-Data@{show\-Intell\-Data}!ExplorationManager@{Exploration\-Manager}}
+\subsubsection[{show\-Intell\-Data}]{\setlength{\rightskip}{0pt plus 5cm}void Exploration\-Manager\-::show\-Intell\-Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_exploration_manager_a1d800673b5e57e81fc555d862e4885da}
+Shows some data about the enemy on screen. \hypertarget{class_exploration_manager_a20936d696394e1860a70b1ca0d23872b}{\index{Exploration\-Manager@{Exploration\-Manager}!spotted\-Buildings\-Within\-Range@{spotted\-Buildings\-Within\-Range}}
+\index{spotted\-Buildings\-Within\-Range@{spotted\-Buildings\-Within\-Range}!ExplorationManager@{Exploration\-Manager}}
+\subsubsection[{spotted\-Buildings\-Within\-Range}]{\setlength{\rightskip}{0pt plus 5cm}int Exploration\-Manager\-::spotted\-Buildings\-Within\-Range (
+\begin{DoxyParamCaption}
+\item[{Tile\-Position}]{pos, }
+\item[{int}]{range}
+\end{DoxyParamCaption}
+)}}\label{class_exploration_manager_a20936d696394e1860a70b1ca0d23872b}
+Calculates the number of spotted enemy buildings within the specified range (in tiles). \hypertarget{class_exploration_manager_acc423ab64c13c9e63ec2cd83f7cc3ccb}{\index{Exploration\-Manager@{Exploration\-Manager}!unit\-Destroyed@{unit\-Destroyed}}
+\index{unit\-Destroyed@{unit\-Destroyed}!ExplorationManager@{Exploration\-Manager}}
+\subsubsection[{unit\-Destroyed}]{\setlength{\rightskip}{0pt plus 5cm}void Exploration\-Manager\-::unit\-Destroyed (
+\begin{DoxyParamCaption}
+\item[{Unit $\ast$}]{unit}
+\end{DoxyParamCaption}
+)}}\label{class_exploration_manager_acc423ab64c13c9e63ec2cd83f7cc3ccb}
+Notifies that an enemy unit has been destroyed. If the destroyed unit was among the spotted units, it is removed from the list. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+B\-T\-H\-A\-I\-Module/\-Source/Exploration\-Manager.\-h\item 
+B\-T\-H\-A\-I\-Module/\-Source/Exploration\-Manager.\-cpp\end{DoxyCompactItemize}

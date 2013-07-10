@@ -1,0 +1,78 @@
+\hypertarget{class_templar_archives_agent}{
+\section{TemplarArchivesAgent Class Reference}
+\label{class_templar_archives_agent}\index{TemplarArchivesAgent@{TemplarArchivesAgent}}
+}
+
+
+{\ttfamily \#include $<$TemplarArchivesAgent.h$>$}
+
+Inheritance diagram for TemplarArchivesAgent:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_templar_archives_agent}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_templar_archives_agent_a592ea0714374bbed120027d111bee007}{
+{\bfseries TemplarArchivesAgent} (Unit $\ast$mUnit)}
+\label{class_templar_archives_agent_a592ea0714374bbed120027d111bee007}
+
+\item 
+void \hyperlink{class_templar_archives_agent_adf24a5e890028c9706bea39f7130090d}{computeActions} ()
+\item 
+string \hyperlink{class_templar_archives_agent_a08f8a0e2014192145bb95a16c96165da}{getTypeName} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_templar_archives_agent}{TemplarArchivesAgent} handles Protoss Templar Archive buildings.
+
+Implemented abilities:
+\begin{DoxyItemize}
+\item Research Maelstrom
+\item Researcg Psionic\_\-Storm
+\item Research Mind\_\-Control
+\item Research Hallucination
+\item Upgrades Khaydarin\_\-Amulet
+\item Upgrades Argus\_\-Talisman
+\end{DoxyItemize}
+
+Note: Upgrades and research are only performed after at least one High Templar unit has been created.
+
+Author: Johan Hagelback (\href{mailto:johan.hagelback@gmail.com}{\tt johan.hagelback@gmail.com}) 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_templar_archives_agent_adf24a5e890028c9706bea39f7130090d}{
+\index{TemplarArchivesAgent@{TemplarArchivesAgent}!computeActions@{computeActions}}
+\index{computeActions@{computeActions}!TemplarArchivesAgent@{TemplarArchivesAgent}}
+\subsubsection[{computeActions}]{\setlength{\rightskip}{0pt plus 5cm}void TemplarArchivesAgent::computeActions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_templar_archives_agent_adf24a5e890028c9706bea39f7130090d}
+Called each update to issue orders. 
+
+Reimplemented from \hyperlink{class_structure_agent_af53d1389d80784bb254605ffd9f9e4e4}{StructureAgent}.
+
+\hypertarget{class_templar_archives_agent_a08f8a0e2014192145bb95a16c96165da}{
+\index{TemplarArchivesAgent@{TemplarArchivesAgent}!getTypeName@{getTypeName}}
+\index{getTypeName@{getTypeName}!TemplarArchivesAgent@{TemplarArchivesAgent}}
+\subsubsection[{getTypeName}]{\setlength{\rightskip}{0pt plus 5cm}string TemplarArchivesAgent::getTypeName (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_templar_archives_agent_a08f8a0e2014192145bb95a16c96165da}
+Returns the unique type name for structure agents. 
+
+Reimplemented from \hyperlink{class_structure_agent_acbeb3232c3c9c647ba526defa22264cd}{StructureAgent}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+BTHAIModule/Source/TemplarArchivesAgent.h\item 
+BTHAIModule/Source/TemplarArchivesAgent.cpp\end{DoxyCompactItemize}

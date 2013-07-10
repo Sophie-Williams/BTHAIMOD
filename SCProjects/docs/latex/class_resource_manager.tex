@@ -1,0 +1,114 @@
+\hypertarget{class_resource_manager}{\section{Resource\-Manager Class Reference}
+\label{class_resource_manager}\index{Resource\-Manager@{Resource\-Manager}}
+}
+
+
+{\ttfamily \#include $<$Resource\-Manager.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_resource_manager_a671c186e4630599e7e36d000c53eaf80}{$\sim$\-Resource\-Manager} ()
+\item 
+bool \hyperlink{class_resource_manager_acdc7a8b0f41e36993c0aac844bdc35c1}{has\-Resources} (Unit\-Type type)
+\item 
+bool \hyperlink{class_resource_manager_a3e4a5a940e9b51fc1cf048b7a0b004c2}{has\-Resources} (int n\-Minerals, int n\-Gas)
+\item 
+bool \hyperlink{class_resource_manager_a627d9091c826edc9db84a9ba7329ae03}{has\-Resources} (Upgrade\-Type type)
+\item 
+bool \hyperlink{class_resource_manager_a6aa029782dff7c8db546aaca1f955459}{has\-Resources} (Tech\-Type type)
+\item 
+void \hyperlink{class_resource_manager_aaa722a11f9b7ea4071b998968edc5910}{lock\-Resources} (Unit\-Type type)
+\item 
+void \hyperlink{class_resource_manager_a3e367f687297cf67e67ee3f2b14f420d}{unlock\-Resources} (Unit\-Type type)
+\item 
+void \hyperlink{class_resource_manager_afa004d35dbf80b502f172a4c73cf37dc}{print\-Info} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_resource_manager}{Resource\-Manager} $\ast$ \hyperlink{class_resource_manager_a41943f7fb045ad54f1e24da7c6046502}{get\-Instance} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_resource_manager}{Resource\-Manager} handles the resources and where to spend them. An agent must ask the \hyperlink{class_resource_manager}{Resource\-Manager} for permission to build/upgrade/research before issuing the order.
+
+The \hyperlink{class_resource_manager}{Resource\-Manager} is implemented as a singleton class. Each class that needs to access \hyperlink{class_resource_manager}{Resource\-Manager} can request an instance, and all classes shares the same \hyperlink{class_resource_manager}{Resource\-Manager} instance.
+
+Author\-: Johan Hagelback (\href{mailto:johan.hagelback@gmail.com}{\tt johan.\-hagelback@gmail.\-com}) 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_resource_manager_a671c186e4630599e7e36d000c53eaf80}{\index{Resource\-Manager@{Resource\-Manager}!$\sim$\-Resource\-Manager@{$\sim$\-Resource\-Manager}}
+\index{$\sim$\-Resource\-Manager@{$\sim$\-Resource\-Manager}!ResourceManager@{Resource\-Manager}}
+\subsubsection[{$\sim$\-Resource\-Manager}]{\setlength{\rightskip}{0pt plus 5cm}Resource\-Manager\-::$\sim$\-Resource\-Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_resource_manager_a671c186e4630599e7e36d000c53eaf80}
+Destructor. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_resource_manager_a41943f7fb045ad54f1e24da7c6046502}{\index{Resource\-Manager@{Resource\-Manager}!get\-Instance@{get\-Instance}}
+\index{get\-Instance@{get\-Instance}!ResourceManager@{Resource\-Manager}}
+\subsubsection[{get\-Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Resource\-Manager} $\ast$ Resource\-Manager\-::get\-Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_resource_manager_a41943f7fb045ad54f1e24da7c6046502}
+Returns the instance to the \hyperlink{class_constructor}{Constructor} that is currently used. \hypertarget{class_resource_manager_acdc7a8b0f41e36993c0aac844bdc35c1}{\index{Resource\-Manager@{Resource\-Manager}!has\-Resources@{has\-Resources}}
+\index{has\-Resources@{has\-Resources}!ResourceManager@{Resource\-Manager}}
+\subsubsection[{has\-Resources}]{\setlength{\rightskip}{0pt plus 5cm}bool Resource\-Manager\-::has\-Resources (
+\begin{DoxyParamCaption}
+\item[{Unit\-Type}]{type}
+\end{DoxyParamCaption}
+)}}\label{class_resource_manager_acdc7a8b0f41e36993c0aac844bdc35c1}
+Checks if we have enough resources free to build the specified unit. \hypertarget{class_resource_manager_a3e4a5a940e9b51fc1cf048b7a0b004c2}{\index{Resource\-Manager@{Resource\-Manager}!has\-Resources@{has\-Resources}}
+\index{has\-Resources@{has\-Resources}!ResourceManager@{Resource\-Manager}}
+\subsubsection[{has\-Resources}]{\setlength{\rightskip}{0pt plus 5cm}bool Resource\-Manager\-::has\-Resources (
+\begin{DoxyParamCaption}
+\item[{int}]{n\-Minerals, }
+\item[{int}]{n\-Gas}
+\end{DoxyParamCaption}
+)}}\label{class_resource_manager_a3e4a5a940e9b51fc1cf048b7a0b004c2}
+Checks if we have enough the specified resources free. \hypertarget{class_resource_manager_a627d9091c826edc9db84a9ba7329ae03}{\index{Resource\-Manager@{Resource\-Manager}!has\-Resources@{has\-Resources}}
+\index{has\-Resources@{has\-Resources}!ResourceManager@{Resource\-Manager}}
+\subsubsection[{has\-Resources}]{\setlength{\rightskip}{0pt plus 5cm}bool Resource\-Manager\-::has\-Resources (
+\begin{DoxyParamCaption}
+\item[{Upgrade\-Type}]{type}
+\end{DoxyParamCaption}
+)}}\label{class_resource_manager_a627d9091c826edc9db84a9ba7329ae03}
+Checks if we have enough resources free for the specified upgrade. \hypertarget{class_resource_manager_a6aa029782dff7c8db546aaca1f955459}{\index{Resource\-Manager@{Resource\-Manager}!has\-Resources@{has\-Resources}}
+\index{has\-Resources@{has\-Resources}!ResourceManager@{Resource\-Manager}}
+\subsubsection[{has\-Resources}]{\setlength{\rightskip}{0pt plus 5cm}bool Resource\-Manager\-::has\-Resources (
+\begin{DoxyParamCaption}
+\item[{Tech\-Type}]{type}
+\end{DoxyParamCaption}
+)}}\label{class_resource_manager_a6aa029782dff7c8db546aaca1f955459}
+Checks if we have enough resources free for the specified research. \hypertarget{class_resource_manager_aaa722a11f9b7ea4071b998968edc5910}{\index{Resource\-Manager@{Resource\-Manager}!lock\-Resources@{lock\-Resources}}
+\index{lock\-Resources@{lock\-Resources}!ResourceManager@{Resource\-Manager}}
+\subsubsection[{lock\-Resources}]{\setlength{\rightskip}{0pt plus 5cm}void Resource\-Manager\-::lock\-Resources (
+\begin{DoxyParamCaption}
+\item[{Unit\-Type}]{type}
+\end{DoxyParamCaption}
+)}}\label{class_resource_manager_aaa722a11f9b7ea4071b998968edc5910}
+Locks resources for use. \hypertarget{class_resource_manager_afa004d35dbf80b502f172a4c73cf37dc}{\index{Resource\-Manager@{Resource\-Manager}!print\-Info@{print\-Info}}
+\index{print\-Info@{print\-Info}!ResourceManager@{Resource\-Manager}}
+\subsubsection[{print\-Info}]{\setlength{\rightskip}{0pt plus 5cm}void Resource\-Manager\-::print\-Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_resource_manager_afa004d35dbf80b502f172a4c73cf37dc}
+Shows some debug info on screen. \hypertarget{class_resource_manager_a3e367f687297cf67e67ee3f2b14f420d}{\index{Resource\-Manager@{Resource\-Manager}!unlock\-Resources@{unlock\-Resources}}
+\index{unlock\-Resources@{unlock\-Resources}!ResourceManager@{Resource\-Manager}}
+\subsubsection[{unlock\-Resources}]{\setlength{\rightskip}{0pt plus 5cm}void Resource\-Manager\-::unlock\-Resources (
+\begin{DoxyParamCaption}
+\item[{Unit\-Type}]{type}
+\end{DoxyParamCaption}
+)}}\label{class_resource_manager_a3e367f687297cf67e67ee3f2b14f420d}
+Unlocks resources for use. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+B\-T\-H\-A\-I\-Module/\-Source/Resource\-Manager.\-h\item 
+B\-T\-H\-A\-I\-Module/\-Source/Resource\-Manager.\-cpp\end{DoxyCompactItemize}

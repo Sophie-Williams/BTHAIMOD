@@ -1,0 +1,73 @@
+\hypertarget{class_robotics_facility_agent}{
+\section{RoboticsFacilityAgent Class Reference}
+\label{class_robotics_facility_agent}\index{RoboticsFacilityAgent@{RoboticsFacilityAgent}}
+}
+
+
+{\ttfamily \#include $<$RoboticsFacilityAgent.h$>$}
+
+Inheritance diagram for RoboticsFacilityAgent:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_robotics_facility_agent}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_robotics_facility_agent_ad85fe66d8ac216da4c6581891ed95a71}{
+{\bfseries RoboticsFacilityAgent} (Unit $\ast$mUnit)}
+\label{class_robotics_facility_agent_ad85fe66d8ac216da4c6581891ed95a71}
+
+\item 
+void \hyperlink{class_robotics_facility_agent_a1db39577c8065e48646901d4f8e34f7a}{computeActions} ()
+\item 
+string \hyperlink{class_robotics_facility_agent_a989840053369ee06340523fa58891990}{getTypeName} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_robotics_facility_agent}{RoboticsFacilityAgent} handles Protoss Robotic Facility buildings.
+
+Implemented abilities:
+\begin{DoxyItemize}
+\item If Robotics Support Bay has been created, trains Reavers.
+\item If Observatory has been created, trains Observers.
+\item Can train Shuttles to use in ShuttleSquads.
+\end{DoxyItemize}
+
+Author: Johan Hagelback (\href{mailto:johan.hagelback@gmail.com}{\tt johan.hagelback@gmail.com}) 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_robotics_facility_agent_a1db39577c8065e48646901d4f8e34f7a}{
+\index{RoboticsFacilityAgent@{RoboticsFacilityAgent}!computeActions@{computeActions}}
+\index{computeActions@{computeActions}!RoboticsFacilityAgent@{RoboticsFacilityAgent}}
+\subsubsection[{computeActions}]{\setlength{\rightskip}{0pt plus 5cm}void RoboticsFacilityAgent::computeActions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_robotics_facility_agent_a1db39577c8065e48646901d4f8e34f7a}
+Called each update to issue orders. 
+
+Reimplemented from \hyperlink{class_structure_agent_af53d1389d80784bb254605ffd9f9e4e4}{StructureAgent}.
+
+\hypertarget{class_robotics_facility_agent_a989840053369ee06340523fa58891990}{
+\index{RoboticsFacilityAgent@{RoboticsFacilityAgent}!getTypeName@{getTypeName}}
+\index{getTypeName@{getTypeName}!RoboticsFacilityAgent@{RoboticsFacilityAgent}}
+\subsubsection[{getTypeName}]{\setlength{\rightskip}{0pt plus 5cm}string RoboticsFacilityAgent::getTypeName (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_robotics_facility_agent_a989840053369ee06340523fa58891990}
+Returns the unique type name for structure agents. 
+
+Reimplemented from \hyperlink{class_structure_agent_acbeb3232c3c9c647ba526defa22264cd}{StructureAgent}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+BTHAIModule/Source/RoboticsFacilityAgent.h\item 
+BTHAIModule/Source/RoboticsFacilityAgent.cpp\end{DoxyCompactItemize}

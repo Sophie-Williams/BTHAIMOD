@@ -1,0 +1,73 @@
+\hypertarget{class_forge_agent}{
+\section{ForgeAgent Class Reference}
+\label{class_forge_agent}\index{ForgeAgent@{ForgeAgent}}
+}
+
+
+{\ttfamily \#include $<$ForgeAgent.h$>$}
+
+Inheritance diagram for ForgeAgent:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_forge_agent}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_forge_agent_a1b3faf02ca94e537b6aab5de10f1580b}{
+{\bfseries ForgeAgent} (Unit $\ast$mUnit)}
+\label{class_forge_agent_a1b3faf02ca94e537b6aab5de10f1580b}
+
+\item 
+void \hyperlink{class_forge_agent_a21d377c389696bbe1df52e61563cf7a1}{computeActions} ()
+\item 
+string \hyperlink{class_forge_agent_a970cd61ae3848503baea3047659a30d9}{getTypeName} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_forge_agent}{ForgeAgent} handles Protoss Forge buildings.
+
+Implemented abilities:
+\begin{DoxyItemize}
+\item Upgrades to Plasma Shields.
+\item Upgrades to Ground Armor.
+\item Upgrades to Ground Weapons.
+\end{DoxyItemize}
+
+Author: Johan Hagelback (\href{mailto:johan.hagelback@gmail.com}{\tt johan.hagelback@gmail.com}) 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_forge_agent_a21d377c389696bbe1df52e61563cf7a1}{
+\index{ForgeAgent@{ForgeAgent}!computeActions@{computeActions}}
+\index{computeActions@{computeActions}!ForgeAgent@{ForgeAgent}}
+\subsubsection[{computeActions}]{\setlength{\rightskip}{0pt plus 5cm}void ForgeAgent::computeActions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_forge_agent_a21d377c389696bbe1df52e61563cf7a1}
+Called each update to issue orders. 
+
+Reimplemented from \hyperlink{class_structure_agent_af53d1389d80784bb254605ffd9f9e4e4}{StructureAgent}.
+
+\hypertarget{class_forge_agent_a970cd61ae3848503baea3047659a30d9}{
+\index{ForgeAgent@{ForgeAgent}!getTypeName@{getTypeName}}
+\index{getTypeName@{getTypeName}!ForgeAgent@{ForgeAgent}}
+\subsubsection[{getTypeName}]{\setlength{\rightskip}{0pt plus 5cm}string ForgeAgent::getTypeName (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_forge_agent_a970cd61ae3848503baea3047659a30d9}
+Returns the unique type name for structure agents. 
+
+Reimplemented from \hyperlink{class_structure_agent_acbeb3232c3c9c647ba526defa22264cd}{StructureAgent}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+BTHAIModule/Source/ForgeAgent.h\item 
+BTHAIModule/Source/ForgeAgent.cpp\end{DoxyCompactItemize}

@@ -1,0 +1,214 @@
+\hypertarget{class_building_placer}{\section{Building\-Placer Class Reference}
+\label{class_building_placer}\index{Building\-Placer@{Building\-Placer}}
+}
+
+
+{\ttfamily \#include $<$Building\-Placer.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_building_placer_a39cbfd26c073e97cdee689eacd20320b}{$\sim$\-Building\-Placer} ()
+\item 
+void \hyperlink{class_building_placer_a4db062e35b219e14c7d4f28ddf379c2e}{add\-Constructed\-Building} (Unit $\ast$unit)
+\item 
+void \hyperlink{class_building_placer_ad2dfe73b7517df3f631e17143fce55e2}{fill\-Temp} (Unit\-Type to\-Build, Tile\-Position build\-Spot)
+\item 
+void \hyperlink{class_building_placer_a0ca47382cf0aede49eb1b0e03d963cb7}{clear\-Temp} (Unit\-Type to\-Build, Tile\-Position build\-Spot)
+\item 
+void \hyperlink{class_building_placer_a111eae9e5619a6596e7639794ff747c1}{building\-Destroyed} (Unit $\ast$unit)
+\item 
+bool \hyperlink{class_building_placer_a1a10a22321df1272cbd2a219d33917b0}{can\-Build} (Unit\-Type to\-Build, Tile\-Position build\-Spot)
+\item 
+bool \hyperlink{class_building_placer_a6e6aac0e69a0d5867a096592f1461583}{position\-Free} (Tile\-Position pos)
+\item 
+void \hyperlink{class_building_placer_a2c5196cdc6100a9edfbb8dfe5c269547}{block\-Position} (Tile\-Position build\-Spot)
+\item 
+Tile\-Position \hyperlink{class_building_placer_ab4b1089411f9e9b63aa38272254cd45e}{find\-Build\-Spot} (Unit\-Type to\-Build)
+\item 
+Tile\-Position \hyperlink{class_building_placer_a3f4453346b91cffd94d0f6a222354b98}{find\-Refinery\-Build\-Spot} (Unit\-Type to\-Build, Tile\-Position start)
+\item 
+Tile\-Position \hyperlink{class_building_placer_af49a205210ab9be0eea8e71b26e74d46}{find\-Closest\-Gas\-Without\-Refinery} (Unit\-Type to\-Build, Tile\-Position start)
+\item 
+Tile\-Position \hyperlink{class_building_placer_ab93603c0d38b2931ac3bc1bbbc7a6eb4}{search\-Refinery\-Spot} ()
+\item 
+Tile\-Position \hyperlink{class_building_placer_a7643036b356e9254c2ec0d9b880b78d8}{find\-Expansion\-Site} ()
+\item 
+Unit $\ast$ \hyperlink{class_building_placer_ac527f9a42f1f01f8778d8c5e5321ebe0}{find\-Closest\-Mineral} (Tile\-Position worker\-Pos)
+\item 
+void \hyperlink{class_building_placer_a37c25fb0416548b40ad8317445cc9e90}{debug} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_building_placer}{Building\-Placer} $\ast$ \hyperlink{class_building_placer_a25e1eb64a53be19c85365df5cbe93563}{get\-Instance} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \hyperlink{class_building_placer_ae705dbf64028029a95853e41ef1ef0b5}{B\-U\-I\-L\-D\-A\-B\-L\-E} = 1
+\item 
+static const int \hyperlink{class_building_placer_aa5f18306d21fd2bc117614a037054f72}{B\-L\-O\-C\-K\-E\-D} = 0
+\item 
+static const int \hyperlink{class_building_placer_a9979e3cb4ffded872c27d0e89539ee44}{T\-E\-M\-P\-B\-L\-O\-C\-K\-E\-D} = 4
+\item 
+static const int \hyperlink{class_building_placer_a490d4077d692b82bed675c4604ae6be5}{M\-I\-N\-E\-R\-A\-L} = 2
+\item 
+static const int \hyperlink{class_building_placer_a0d76281f0d12ca202e87c0715c986c9b}{G\-A\-S} = 3
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_building_placer}{Building\-Placer} class is used to find positions to place new buildings at. It keeps track of which map tiles are occupied (by own buildings) or unavailable (blocked by terrain, minerals patches etc.).
+
+Internally a matrix of the same size as the map is used. If a Tile is occupied or cant be reached by ground units, the value if the tile is 0. If the Tile can be built on, the value is 1. Buildings typically use up more space in the matrix than their actual size since we want some free space around each building. Different types of buildings have different space requirements.
+
+The \hyperlink{class_building_placer}{Building\-Placer} is implemented as a singleton class. Each class that needs to access \hyperlink{class_building_placer}{Building\-Placer} can request an instance, and all classes shares the same \hyperlink{class_building_placer}{Building\-Placer} instance.
+
+Author\-: Johan Hagelback (\href{mailto:johan.hagelback@gmail.com}{\tt johan.\-hagelback@gmail.\-com}) 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_building_placer_a39cbfd26c073e97cdee689eacd20320b}{\index{Building\-Placer@{Building\-Placer}!$\sim$\-Building\-Placer@{$\sim$\-Building\-Placer}}
+\index{$\sim$\-Building\-Placer@{$\sim$\-Building\-Placer}!BuildingPlacer@{Building\-Placer}}
+\subsubsection[{$\sim$\-Building\-Placer}]{\setlength{\rightskip}{0pt plus 5cm}Building\-Placer\-::$\sim$\-Building\-Placer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_building_placer_a39cbfd26c073e97cdee689eacd20320b}
+Destructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_building_placer_a4db062e35b219e14c7d4f28ddf379c2e}{\index{Building\-Placer@{Building\-Placer}!add\-Constructed\-Building@{add\-Constructed\-Building}}
+\index{add\-Constructed\-Building@{add\-Constructed\-Building}!BuildingPlacer@{Building\-Placer}}
+\subsubsection[{add\-Constructed\-Building}]{\setlength{\rightskip}{0pt plus 5cm}void Building\-Placer\-::add\-Constructed\-Building (
+\begin{DoxyParamCaption}
+\item[{Unit $\ast$}]{unit}
+\end{DoxyParamCaption}
+)}}\label{class_building_placer_a4db062e35b219e14c7d4f28ddf379c2e}
+Adds a newly constructed building to the cover map. \hypertarget{class_building_placer_a2c5196cdc6100a9edfbb8dfe5c269547}{\index{Building\-Placer@{Building\-Placer}!block\-Position@{block\-Position}}
+\index{block\-Position@{block\-Position}!BuildingPlacer@{Building\-Placer}}
+\subsubsection[{block\-Position}]{\setlength{\rightskip}{0pt plus 5cm}void Building\-Placer\-::block\-Position (
+\begin{DoxyParamCaption}
+\item[{Tile\-Position}]{build\-Spot}
+\end{DoxyParamCaption}
+)}}\label{class_building_placer_a2c5196cdc6100a9edfbb8dfe5c269547}
+Blocks a position from being used as a valid build\-Spot. Used when a worker is timedout when moving towards the build\-Spot. \hypertarget{class_building_placer_a111eae9e5619a6596e7639794ff747c1}{\index{Building\-Placer@{Building\-Placer}!building\-Destroyed@{building\-Destroyed}}
+\index{building\-Destroyed@{building\-Destroyed}!BuildingPlacer@{Building\-Placer}}
+\subsubsection[{building\-Destroyed}]{\setlength{\rightskip}{0pt plus 5cm}void Building\-Placer\-::building\-Destroyed (
+\begin{DoxyParamCaption}
+\item[{Unit $\ast$}]{unit}
+\end{DoxyParamCaption}
+)}}\label{class_building_placer_a111eae9e5619a6596e7639794ff747c1}
+Called when a building is destroyed, to free up the space. \hypertarget{class_building_placer_a1a10a22321df1272cbd2a219d33917b0}{\index{Building\-Placer@{Building\-Placer}!can\-Build@{can\-Build}}
+\index{can\-Build@{can\-Build}!BuildingPlacer@{Building\-Placer}}
+\subsubsection[{can\-Build}]{\setlength{\rightskip}{0pt plus 5cm}bool Building\-Placer\-::can\-Build (
+\begin{DoxyParamCaption}
+\item[{Unit\-Type}]{to\-Build, }
+\item[{Tile\-Position}]{build\-Spot}
+\end{DoxyParamCaption}
+)}}\label{class_building_placer_a1a10a22321df1272cbd2a219d33917b0}
+Checks if the specified building type can be built at the build\-Spot. True if it can, false otherwise. \hypertarget{class_building_placer_a0ca47382cf0aede49eb1b0e03d963cb7}{\index{Building\-Placer@{Building\-Placer}!clear\-Temp@{clear\-Temp}}
+\index{clear\-Temp@{clear\-Temp}!BuildingPlacer@{Building\-Placer}}
+\subsubsection[{clear\-Temp}]{\setlength{\rightskip}{0pt plus 5cm}void Building\-Placer\-::clear\-Temp (
+\begin{DoxyParamCaption}
+\item[{Unit\-Type}]{to\-Build, }
+\item[{Tile\-Position}]{build\-Spot}
+\end{DoxyParamCaption}
+)}}\label{class_building_placer_a0ca47382cf0aede49eb1b0e03d963cb7}
+Used by \hyperlink{class_worker_agent}{Worker\-Agent} when constructing builds. \hypertarget{class_building_placer_a37c25fb0416548b40ad8317445cc9e90}{\index{Building\-Placer@{Building\-Placer}!debug@{debug}}
+\index{debug@{debug}!BuildingPlacer@{Building\-Placer}}
+\subsubsection[{debug}]{\setlength{\rightskip}{0pt plus 5cm}void Building\-Placer\-::debug (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_building_placer_a37c25fb0416548b40ad8317445cc9e90}
+Shows debug info on screen. \hypertarget{class_building_placer_ad2dfe73b7517df3f631e17143fce55e2}{\index{Building\-Placer@{Building\-Placer}!fill\-Temp@{fill\-Temp}}
+\index{fill\-Temp@{fill\-Temp}!BuildingPlacer@{Building\-Placer}}
+\subsubsection[{fill\-Temp}]{\setlength{\rightskip}{0pt plus 5cm}void Building\-Placer\-::fill\-Temp (
+\begin{DoxyParamCaption}
+\item[{Unit\-Type}]{to\-Build, }
+\item[{Tile\-Position}]{build\-Spot}
+\end{DoxyParamCaption}
+)}}\label{class_building_placer_ad2dfe73b7517df3f631e17143fce55e2}
+Used by \hyperlink{class_worker_agent}{Worker\-Agent} when constructing builds. \hypertarget{class_building_placer_ab4b1089411f9e9b63aa38272254cd45e}{\index{Building\-Placer@{Building\-Placer}!find\-Build\-Spot@{find\-Build\-Spot}}
+\index{find\-Build\-Spot@{find\-Build\-Spot}!BuildingPlacer@{Building\-Placer}}
+\subsubsection[{find\-Build\-Spot}]{\setlength{\rightskip}{0pt plus 5cm}Tile\-Position Building\-Placer\-::find\-Build\-Spot (
+\begin{DoxyParamCaption}
+\item[{Unit\-Type}]{to\-Build}
+\end{DoxyParamCaption}
+)}}\label{class_building_placer_ab4b1089411f9e9b63aa38272254cd45e}
+Finds and returns a build\-Spot for the specified building type. If no buildspot is found, a Tile\-Position(-\/1,-\/1) is returned. \hypertarget{class_building_placer_af49a205210ab9be0eea8e71b26e74d46}{\index{Building\-Placer@{Building\-Placer}!find\-Closest\-Gas\-Without\-Refinery@{find\-Closest\-Gas\-Without\-Refinery}}
+\index{find\-Closest\-Gas\-Without\-Refinery@{find\-Closest\-Gas\-Without\-Refinery}!BuildingPlacer@{Building\-Placer}}
+\subsubsection[{find\-Closest\-Gas\-Without\-Refinery}]{\setlength{\rightskip}{0pt plus 5cm}Tile\-Position Building\-Placer\-::find\-Closest\-Gas\-Without\-Refinery (
+\begin{DoxyParamCaption}
+\item[{Unit\-Type}]{to\-Build, }
+\item[{Tile\-Position}]{start}
+\end{DoxyParamCaption}
+)}}\label{class_building_placer_af49a205210ab9be0eea8e71b26e74d46}
+Finds and returns the position of the closest free vespene gas around the specified start position. If no gas vein is found, a Tile\-Position(-\/1, -\/1) is returned. \hypertarget{class_building_placer_ac527f9a42f1f01f8778d8c5e5321ebe0}{\index{Building\-Placer@{Building\-Placer}!find\-Closest\-Mineral@{find\-Closest\-Mineral}}
+\index{find\-Closest\-Mineral@{find\-Closest\-Mineral}!BuildingPlacer@{Building\-Placer}}
+\subsubsection[{find\-Closest\-Mineral}]{\setlength{\rightskip}{0pt plus 5cm}Unit $\ast$ Building\-Placer\-::find\-Closest\-Mineral (
+\begin{DoxyParamCaption}
+\item[{Tile\-Position}]{worker\-Pos}
+\end{DoxyParamCaption}
+)}}\label{class_building_placer_ac527f9a42f1f01f8778d8c5e5321ebe0}
+Finds a mineral to gather from. \hypertarget{class_building_placer_a7643036b356e9254c2ec0d9b880b78d8}{\index{Building\-Placer@{Building\-Placer}!find\-Expansion\-Site@{find\-Expansion\-Site}}
+\index{find\-Expansion\-Site@{find\-Expansion\-Site}!BuildingPlacer@{Building\-Placer}}
+\subsubsection[{find\-Expansion\-Site}]{\setlength{\rightskip}{0pt plus 5cm}Tile\-Position Building\-Placer\-::find\-Expansion\-Site (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_building_placer_a7643036b356e9254c2ec0d9b880b78d8}
+Returns a position of a suitable site for expansion, i.\-e. new bases. \hypertarget{class_building_placer_a3f4453346b91cffd94d0f6a222354b98}{\index{Building\-Placer@{Building\-Placer}!find\-Refinery\-Build\-Spot@{find\-Refinery\-Build\-Spot}}
+\index{find\-Refinery\-Build\-Spot@{find\-Refinery\-Build\-Spot}!BuildingPlacer@{Building\-Placer}}
+\subsubsection[{find\-Refinery\-Build\-Spot}]{\setlength{\rightskip}{0pt plus 5cm}Tile\-Position Building\-Placer\-::find\-Refinery\-Build\-Spot (
+\begin{DoxyParamCaption}
+\item[{Unit\-Type}]{to\-Build, }
+\item[{Tile\-Position}]{start}
+\end{DoxyParamCaption}
+)}}\label{class_building_placer_a3f4453346b91cffd94d0f6a222354b98}
+Searches for the closest vespene gas that is not in use. If no gas is sighted, the \hyperlink{class_exploration_manager}{Exploration\-Manager} is queried. \hypertarget{class_building_placer_a25e1eb64a53be19c85365df5cbe93563}{\index{Building\-Placer@{Building\-Placer}!get\-Instance@{get\-Instance}}
+\index{get\-Instance@{get\-Instance}!BuildingPlacer@{Building\-Placer}}
+\subsubsection[{get\-Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Building\-Placer} $\ast$ Building\-Placer\-::get\-Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_building_placer_a25e1eb64a53be19c85365df5cbe93563}
+Returns the instance of the class. \hypertarget{class_building_placer_a6e6aac0e69a0d5867a096592f1461583}{\index{Building\-Placer@{Building\-Placer}!position\-Free@{position\-Free}}
+\index{position\-Free@{position\-Free}!BuildingPlacer@{Building\-Placer}}
+\subsubsection[{position\-Free}]{\setlength{\rightskip}{0pt plus 5cm}bool Building\-Placer\-::position\-Free (
+\begin{DoxyParamCaption}
+\item[{Tile\-Position}]{pos}
+\end{DoxyParamCaption}
+)}}\label{class_building_placer_a6e6aac0e69a0d5867a096592f1461583}
+Checks if a position is free. \hypertarget{class_building_placer_ab93603c0d38b2931ac3bc1bbbc7a6eb4}{\index{Building\-Placer@{Building\-Placer}!search\-Refinery\-Spot@{search\-Refinery\-Spot}}
+\index{search\-Refinery\-Spot@{search\-Refinery\-Spot}!BuildingPlacer@{Building\-Placer}}
+\subsubsection[{search\-Refinery\-Spot}]{\setlength{\rightskip}{0pt plus 5cm}Tile\-Position Building\-Placer\-::search\-Refinery\-Spot (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_building_placer_ab93603c0d38b2931ac3bc1bbbc7a6eb4}
+Searches for a spot to build a refinery at. Returns Tile\-Position(-\/1, -\/1) if no spot was found. 
+
+\subsection{Member Data Documentation}
+\hypertarget{class_building_placer_aa5f18306d21fd2bc117614a037054f72}{\index{Building\-Placer@{Building\-Placer}!B\-L\-O\-C\-K\-E\-D@{B\-L\-O\-C\-K\-E\-D}}
+\index{B\-L\-O\-C\-K\-E\-D@{B\-L\-O\-C\-K\-E\-D}!BuildingPlacer@{Building\-Placer}}
+\subsubsection[{B\-L\-O\-C\-K\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}const int Building\-Placer\-::\-B\-L\-O\-C\-K\-E\-D = 0\hspace{0.3cm}{\ttfamily [static]}}}\label{class_building_placer_aa5f18306d21fd2bc117614a037054f72}
+Tile is blocked and cannot be built on. \hypertarget{class_building_placer_ae705dbf64028029a95853e41ef1ef0b5}{\index{Building\-Placer@{Building\-Placer}!B\-U\-I\-L\-D\-A\-B\-L\-E@{B\-U\-I\-L\-D\-A\-B\-L\-E}}
+\index{B\-U\-I\-L\-D\-A\-B\-L\-E@{B\-U\-I\-L\-D\-A\-B\-L\-E}!BuildingPlacer@{Building\-Placer}}
+\subsubsection[{B\-U\-I\-L\-D\-A\-B\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}const int Building\-Placer\-::\-B\-U\-I\-L\-D\-A\-B\-L\-E = 1\hspace{0.3cm}{\ttfamily [static]}}}\label{class_building_placer_ae705dbf64028029a95853e41ef1ef0b5}
+Tile is buildable. \hypertarget{class_building_placer_a0d76281f0d12ca202e87c0715c986c9b}{\index{Building\-Placer@{Building\-Placer}!G\-A\-S@{G\-A\-S}}
+\index{G\-A\-S@{G\-A\-S}!BuildingPlacer@{Building\-Placer}}
+\subsubsection[{G\-A\-S}]{\setlength{\rightskip}{0pt plus 5cm}const int Building\-Placer\-::\-G\-A\-S = 3\hspace{0.3cm}{\ttfamily [static]}}}\label{class_building_placer_a0d76281f0d12ca202e87c0715c986c9b}
+Tile contains a gas vein. \hypertarget{class_building_placer_a490d4077d692b82bed675c4604ae6be5}{\index{Building\-Placer@{Building\-Placer}!M\-I\-N\-E\-R\-A\-L@{M\-I\-N\-E\-R\-A\-L}}
+\index{M\-I\-N\-E\-R\-A\-L@{M\-I\-N\-E\-R\-A\-L}!BuildingPlacer@{Building\-Placer}}
+\subsubsection[{M\-I\-N\-E\-R\-A\-L}]{\setlength{\rightskip}{0pt plus 5cm}const int Building\-Placer\-::\-M\-I\-N\-E\-R\-A\-L = 2\hspace{0.3cm}{\ttfamily [static]}}}\label{class_building_placer_a490d4077d692b82bed675c4604ae6be5}
+Tile contains a mineral vein. \hypertarget{class_building_placer_a9979e3cb4ffded872c27d0e89539ee44}{\index{Building\-Placer@{Building\-Placer}!T\-E\-M\-P\-B\-L\-O\-C\-K\-E\-D@{T\-E\-M\-P\-B\-L\-O\-C\-K\-E\-D}}
+\index{T\-E\-M\-P\-B\-L\-O\-C\-K\-E\-D@{T\-E\-M\-P\-B\-L\-O\-C\-K\-E\-D}!BuildingPlacer@{Building\-Placer}}
+\subsubsection[{T\-E\-M\-P\-B\-L\-O\-C\-K\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}const int Building\-Placer\-::\-T\-E\-M\-P\-B\-L\-O\-C\-K\-E\-D = 4\hspace{0.3cm}{\ttfamily [static]}}}\label{class_building_placer_a9979e3cb4ffded872c27d0e89539ee44}
+Tile is temporary blocked and cannot be built on. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+B\-T\-H\-A\-I\-Module/\-Source/Building\-Placer.\-h\item 
+B\-T\-H\-A\-I\-Module/\-Source/Building\-Placer.\-cpp\end{DoxyCompactItemize}

@@ -1,0 +1,313 @@
+\hypertarget{class_constructor}{\section{Constructor Class Reference}
+\label{class_constructor}\index{Constructor@{Constructor}}
+}
+
+
+{\ttfamily \#include $<$Constructor.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_constructor_a4ad4d817192fadf79f16b2a4b72d86a9}{$\sim$\-Constructor} ()
+\item 
+int \hyperlink{class_constructor_a8dd09c6dfb18f97209f926ae7958c37f}{no\-In\-Production} (Unit\-Type type)
+\item 
+bool \hyperlink{class_constructor_a2883b7872bbd65c1cf18ba8a79a43449}{need\-Building} (Unit\-Type type)
+\item 
+void \hyperlink{class_constructor_a47a3a1ceff851d0e495c44366f98a432}{compute\-Actions} ()
+\item 
+void \hyperlink{class_constructor_a15307e790c25014ca22f40056e355d94}{building\-Destroyed} (Unit $\ast$building)
+\item 
+void \hyperlink{class_constructor_a05030bb1c079f9c152c39b48b470db5b}{unlock} (Unit\-Type type)
+\item 
+void \hyperlink{class_constructor_a9e10c2edbb0731a87ba8696f537598c2}{remove} (Unit\-Type type)
+\item 
+void \hyperlink{class_constructor_a85f3519c7db42db09edaa5e012ac3787}{handle\-Worker\-Destroyed} (Unit\-Type type, int worker\-I\-D)
+\item 
+void \hyperlink{class_constructor_aa1ecad48a8c4bd981e471e226a446a56}{command\-Center\-Built} ()
+\item 
+void \hyperlink{class_constructor_a256df62fe0b8c44f072f3403782c0b61}{print\-Info} ()
+\item 
+void \hyperlink{class_constructor_a2264d5f1dc4ff27c603c4616f8076920}{handle\-No\-Buildspot\-Found} (Unit\-Type to\-Build)
+\item 
+bool \hyperlink{class_constructor_a7549bd3bc6a41c7d8b0037f66fb7fd43}{shall\-Build\-Supply} ()
+\item 
+bool \hyperlink{class_constructor_ab148d682269935249336c2ac4809bc3a}{supply\-Being\-Built} ()
+\item 
+bool \hyperlink{class_constructor_a27f427a0cf61618271bbd24df28631ea}{next\-Is\-Of\-Type} (Unit\-Type type)
+\item 
+bool \hyperlink{class_constructor_ad328a2ee63f98b4bfc5be446af43f00f}{contains\-Type} (Unit\-Type type)
+\item 
+void \hyperlink{class_constructor_a0b560d9aaee7c69dd1f0ef0b654db3a3}{add\-Building} (Unit\-Type type)
+\item 
+void \hyperlink{class_constructor_ad6974f94de127dbd8b7b8a0bb3441f24}{add\-Building\-First} (Unit\-Type type)
+\item 
+void \hyperlink{class_constructor_a876984ed1d24dbc7606bc668873bcb03}{expand} (Unit\-Type command\-Center\-Unit)
+\item 
+bool \hyperlink{class_constructor_a77ef10123014fa35e66c966ff3e65ad3}{next\-Is\-Expand} ()
+\item 
+void \hyperlink{class_constructor_a2da408f0a418e16c6ec9b34ebc106dfb}{add\-Refinery} ()
+\item 
+bool \hyperlink{class_constructor_a8a0a9a5044407f95b6a2227a373e5b0c}{execute\-Morph} (Unit\-Type target, Unit\-Type evolved)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_constructor}{Constructor} $\ast$ \hyperlink{class_constructor_a757cc1671f52f15291b89772bef7aa98}{get\-Instance} ()
+\item 
+static bool \hyperlink{class_constructor_aec9731581892d7b443fa416da02b7f9d}{covered\-By\-Detector} (Tile\-Position pos)
+\item 
+static bool \hyperlink{class_constructor_a78b2ae365072317147e1a69fc74c3b2b}{is\-Terran} ()
+\item 
+static bool \hyperlink{class_constructor_a9a87f357e958559cfa13f880a416f1ff}{is\-Protoss} ()
+\item 
+static bool \hyperlink{class_constructor_aa5088eba73a05f25ae61d23471f17b2a}{is\-Zerg} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_constructor_a3f33fd9dc72a965427ded2fa493606bb}{void {\bfseries lock} (int build\-Order\-Index, int unit\-Id)}\label{class_constructor_a3f33fd9dc72a965427ded2fa493606bb}
+
+\item 
+\hypertarget{class_constructor_ac46794dbcb096c5d4fda0f8738a4e136}{bool {\bfseries execute\-Order} (Unit\-Type type)}\label{class_constructor_ac46794dbcb096c5d4fda0f8738a4e136}
+
+\item 
+\hypertarget{class_constructor_a9e2da0d2cfb6433f34d235e7a47c27d3}{bool {\bfseries shall\-Build\-Supply\-Depot} ()}\label{class_constructor_a9e2da0d2cfb6433f34d235e7a47c27d3}
+
+\item 
+\hypertarget{class_constructor_a67ff7f5ee806591e533570518f9fe1b0}{string {\bfseries format} (Unit\-Type type)}\label{class_constructor_a67ff7f5ee806591e533570518f9fe1b0}
+
+\item 
+bool \hyperlink{class_constructor_acc158b03429501fb10d0e394ceaf9639}{is\-Being\-Built} (Unit\-Type type)
+\item 
+\hypertarget{class_constructor_a07993b6e9e33a5fd0d63855898038a4e}{bool {\bfseries has\-Resources\-Left} ()}\label{class_constructor_a07993b6e9e33a5fd0d63855898038a4e}
+
+\item 
+\hypertarget{class_constructor_ae0927f71cbef5f040f5f6ae99e5af72b}{int {\bfseries minerals\-Nearby} (Tile\-Position center)}\label{class_constructor_ae0927f71cbef5f040f5f6ae99e5af72b}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_constructor_a789cbf57c0d447b486c4ba5a29f3b04c}{vector$<$ Unit\-Type $>$ {\bfseries build\-Plan}}\label{class_constructor_a789cbf57c0d447b486c4ba5a29f3b04c}
+
+\item 
+\hypertarget{class_constructor_ab2041ca5fa1f03ac5670df8eb6aa71e5}{vector$<$ \hyperlink{struct_build_queue_item}{Build\-Queue\-Item} $>$ {\bfseries build\-Queue}}\label{class_constructor_ab2041ca5fa1f03ac5670df8eb6aa71e5}
+
+\item 
+\hypertarget{class_constructor_a523a6a888a002cf77e1987d0ff032dca}{int {\bfseries last\-Command\-Center}}\label{class_constructor_a523a6a888a002cf77e1987d0ff032dca}
+
+\item 
+\hypertarget{class_constructor_a39ecb9396956e2082a0da15052d2195b}{int {\bfseries last\-Call\-Frame}}\label{class_constructor_a39ecb9396956e2082a0da15052d2195b}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_constructor}{Constructor} class is resonsible for constructing the buildings added to the build queue.
+
+The \hyperlink{class_constructor}{Constructor} is implemented as a singleton class. Each class that needs to access \hyperlink{class_constructor}{Constructor} can request an instance, and all classes shares the same \hyperlink{class_constructor}{Constructor} instance.
+
+Author\-: Johan Hagelback (\href{mailto:johan.hagelback@gmail.com}{\tt johan.\-hagelback@gmail.\-com}) 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_constructor_a4ad4d817192fadf79f16b2a4b72d86a9}{\index{Constructor@{Constructor}!$\sim$\-Constructor@{$\sim$\-Constructor}}
+\index{$\sim$\-Constructor@{$\sim$\-Constructor}!Constructor@{Constructor}}
+\subsubsection[{$\sim$\-Constructor}]{\setlength{\rightskip}{0pt plus 5cm}Constructor\-::$\sim$\-Constructor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_constructor_a4ad4d817192fadf79f16b2a4b72d86a9}
+Destructor. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_constructor_a0b560d9aaee7c69dd1f0ef0b654db3a3}{\index{Constructor@{Constructor}!add\-Building@{add\-Building}}
+\index{add\-Building@{add\-Building}!Constructor@{Constructor}}
+\subsubsection[{add\-Building}]{\setlength{\rightskip}{0pt plus 5cm}void Constructor\-::add\-Building (
+\begin{DoxyParamCaption}
+\item[{Unit\-Type}]{type}
+\end{DoxyParamCaption}
+)}}\label{class_constructor_a0b560d9aaee7c69dd1f0ef0b654db3a3}
+Adds a building to the buildorder queue. \hypertarget{class_constructor_ad6974f94de127dbd8b7b8a0bb3441f24}{\index{Constructor@{Constructor}!add\-Building\-First@{add\-Building\-First}}
+\index{add\-Building\-First@{add\-Building\-First}!Constructor@{Constructor}}
+\subsubsection[{add\-Building\-First}]{\setlength{\rightskip}{0pt plus 5cm}void Constructor\-::add\-Building\-First (
+\begin{DoxyParamCaption}
+\item[{Unit\-Type}]{type}
+\end{DoxyParamCaption}
+)}}\label{class_constructor_ad6974f94de127dbd8b7b8a0bb3441f24}
+Adds a building first in the buildorder queue. \hypertarget{class_constructor_a2da408f0a418e16c6ec9b34ebc106dfb}{\index{Constructor@{Constructor}!add\-Refinery@{add\-Refinery}}
+\index{add\-Refinery@{add\-Refinery}!Constructor@{Constructor}}
+\subsubsection[{add\-Refinery}]{\setlength{\rightskip}{0pt plus 5cm}void Constructor\-::add\-Refinery (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_constructor_a2da408f0a418e16c6ec9b34ebc106dfb}
+Adds a refinery to the buildorder list. \hypertarget{class_constructor_a15307e790c25014ca22f40056e355d94}{\index{Constructor@{Constructor}!building\-Destroyed@{building\-Destroyed}}
+\index{building\-Destroyed@{building\-Destroyed}!Constructor@{Constructor}}
+\subsubsection[{building\-Destroyed}]{\setlength{\rightskip}{0pt plus 5cm}void Constructor\-::building\-Destroyed (
+\begin{DoxyParamCaption}
+\item[{Unit $\ast$}]{building}
+\end{DoxyParamCaption}
+)}}\label{class_constructor_a15307e790c25014ca22f40056e355d94}
+Notifies that an own unit has been destroyed. \hypertarget{class_constructor_aa1ecad48a8c4bd981e471e226a446a56}{\index{Constructor@{Constructor}!command\-Center\-Built@{command\-Center\-Built}}
+\index{command\-Center\-Built@{command\-Center\-Built}!Constructor@{Constructor}}
+\subsubsection[{command\-Center\-Built}]{\setlength{\rightskip}{0pt plus 5cm}void Constructor\-::command\-Center\-Built (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_constructor_aa1ecad48a8c4bd981e471e226a446a56}
+Sets that a new command center has been built. \hypertarget{class_constructor_a47a3a1ceff851d0e495c44366f98a432}{\index{Constructor@{Constructor}!compute\-Actions@{compute\-Actions}}
+\index{compute\-Actions@{compute\-Actions}!Constructor@{Constructor}}
+\subsubsection[{compute\-Actions}]{\setlength{\rightskip}{0pt plus 5cm}void Constructor\-::compute\-Actions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_constructor_a47a3a1ceff851d0e495c44366f98a432}
+Called each update to issue orders. \hypertarget{class_constructor_ad328a2ee63f98b4bfc5be446af43f00f}{\index{Constructor@{Constructor}!contains\-Type@{contains\-Type}}
+\index{contains\-Type@{contains\-Type}!Constructor@{Constructor}}
+\subsubsection[{contains\-Type}]{\setlength{\rightskip}{0pt plus 5cm}bool Constructor\-::contains\-Type (
+\begin{DoxyParamCaption}
+\item[{Unit\-Type}]{type}
+\end{DoxyParamCaption}
+)}}\label{class_constructor_ad328a2ee63f98b4bfc5be446af43f00f}
+Returns true if buildorder contains a unit of the specified type. \hypertarget{class_constructor_aec9731581892d7b443fa416da02b7f9d}{\index{Constructor@{Constructor}!covered\-By\-Detector@{covered\-By\-Detector}}
+\index{covered\-By\-Detector@{covered\-By\-Detector}!Constructor@{Constructor}}
+\subsubsection[{covered\-By\-Detector}]{\setlength{\rightskip}{0pt plus 5cm}bool Constructor\-::covered\-By\-Detector (
+\begin{DoxyParamCaption}
+\item[{Tile\-Position}]{pos}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_constructor_aec9731581892d7b443fa416da02b7f9d}
+Checks if the specified Tile\-Position is covered by a detector buildings sight radius. \hypertarget{class_constructor_a8a0a9a5044407f95b6a2227a373e5b0c}{\index{Constructor@{Constructor}!execute\-Morph@{execute\-Morph}}
+\index{execute\-Morph@{execute\-Morph}!Constructor@{Constructor}}
+\subsubsection[{execute\-Morph}]{\setlength{\rightskip}{0pt plus 5cm}bool Constructor\-::execute\-Morph (
+\begin{DoxyParamCaption}
+\item[{Unit\-Type}]{target, }
+\item[{Unit\-Type}]{evolved}
+\end{DoxyParamCaption}
+)}}\label{class_constructor_a8a0a9a5044407f95b6a2227a373e5b0c}
+Morphs a Zerg drone to a building. \hypertarget{class_constructor_a876984ed1d24dbc7606bc668873bcb03}{\index{Constructor@{Constructor}!expand@{expand}}
+\index{expand@{expand}!Constructor@{Constructor}}
+\subsubsection[{expand}]{\setlength{\rightskip}{0pt plus 5cm}void Constructor\-::expand (
+\begin{DoxyParamCaption}
+\item[{Unit\-Type}]{command\-Center\-Unit}
+\end{DoxyParamCaption}
+)}}\label{class_constructor_a876984ed1d24dbc7606bc668873bcb03}
+Requests to expand the base. \hypertarget{class_constructor_a757cc1671f52f15291b89772bef7aa98}{\index{Constructor@{Constructor}!get\-Instance@{get\-Instance}}
+\index{get\-Instance@{get\-Instance}!Constructor@{Constructor}}
+\subsubsection[{get\-Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Constructor} $\ast$ Constructor\-::get\-Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_constructor_a757cc1671f52f15291b89772bef7aa98}
+Returns the instance to the \hyperlink{class_constructor}{Constructor} that is currently used. \hypertarget{class_constructor_a2264d5f1dc4ff27c603c4616f8076920}{\index{Constructor@{Constructor}!handle\-No\-Buildspot\-Found@{handle\-No\-Buildspot\-Found}}
+\index{handle\-No\-Buildspot\-Found@{handle\-No\-Buildspot\-Found}!Constructor@{Constructor}}
+\subsubsection[{handle\-No\-Buildspot\-Found}]{\setlength{\rightskip}{0pt plus 5cm}void Constructor\-::handle\-No\-Buildspot\-Found (
+\begin{DoxyParamCaption}
+\item[{Unit\-Type}]{to\-Build}
+\end{DoxyParamCaption}
+)}}\label{class_constructor_a2264d5f1dc4ff27c603c4616f8076920}
+Is called when no buildspot has been found for the specified type. Gives each \hyperlink{class_constructor}{Constructor} an opportunity to handle it. \hypertarget{class_constructor_a85f3519c7db42db09edaa5e012ac3787}{\index{Constructor@{Constructor}!handle\-Worker\-Destroyed@{handle\-Worker\-Destroyed}}
+\index{handle\-Worker\-Destroyed@{handle\-Worker\-Destroyed}!Constructor@{Constructor}}
+\subsubsection[{handle\-Worker\-Destroyed}]{\setlength{\rightskip}{0pt plus 5cm}void Constructor\-::handle\-Worker\-Destroyed (
+\begin{DoxyParamCaption}
+\item[{Unit\-Type}]{type, }
+\item[{int}]{worker\-I\-D}
+\end{DoxyParamCaption}
+)}}\label{class_constructor_a85f3519c7db42db09edaa5e012ac3787}
+Called when a worker that is constructing a building is destroyed. \hypertarget{class_constructor_acc158b03429501fb10d0e394ceaf9639}{\index{Constructor@{Constructor}!is\-Being\-Built@{is\-Being\-Built}}
+\index{is\-Being\-Built@{is\-Being\-Built}!Constructor@{Constructor}}
+\subsubsection[{is\-Being\-Built}]{\setlength{\rightskip}{0pt plus 5cm}bool Constructor\-::is\-Being\-Built (
+\begin{DoxyParamCaption}
+\item[{Unit\-Type}]{type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_constructor_acc158b03429501fb10d0e394ceaf9639}
+Checks if we currently is constructing a building \hypertarget{class_constructor_a9a87f357e958559cfa13f880a416f1ff}{\index{Constructor@{Constructor}!is\-Protoss@{is\-Protoss}}
+\index{is\-Protoss@{is\-Protoss}!Constructor@{Constructor}}
+\subsubsection[{is\-Protoss}]{\setlength{\rightskip}{0pt plus 5cm}bool Constructor\-::is\-Protoss (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_constructor_a9a87f357e958559cfa13f880a416f1ff}
+Returns true if the player is Protoss. \hypertarget{class_constructor_a78b2ae365072317147e1a69fc74c3b2b}{\index{Constructor@{Constructor}!is\-Terran@{is\-Terran}}
+\index{is\-Terran@{is\-Terran}!Constructor@{Constructor}}
+\subsubsection[{is\-Terran}]{\setlength{\rightskip}{0pt plus 5cm}bool Constructor\-::is\-Terran (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_constructor_a78b2ae365072317147e1a69fc74c3b2b}
+Returns true if the player is Terran. \hypertarget{class_constructor_aa5088eba73a05f25ae61d23471f17b2a}{\index{Constructor@{Constructor}!is\-Zerg@{is\-Zerg}}
+\index{is\-Zerg@{is\-Zerg}!Constructor@{Constructor}}
+\subsubsection[{is\-Zerg}]{\setlength{\rightskip}{0pt plus 5cm}bool Constructor\-::is\-Zerg (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_constructor_aa5088eba73a05f25ae61d23471f17b2a}
+Returns true if the player is Zerg. \hypertarget{class_constructor_a2883b7872bbd65c1cf18ba8a79a43449}{\index{Constructor@{Constructor}!need\-Building@{need\-Building}}
+\index{need\-Building@{need\-Building}!Constructor@{Constructor}}
+\subsubsection[{need\-Building}]{\setlength{\rightskip}{0pt plus 5cm}bool Constructor\-::need\-Building (
+\begin{DoxyParamCaption}
+\item[{Unit\-Type}]{type}
+\end{DoxyParamCaption}
+)}}\label{class_constructor_a2883b7872bbd65c1cf18ba8a79a43449}
+Checks if we have, or is currently building, or planning to build a structure. \hypertarget{class_constructor_a77ef10123014fa35e66c966ff3e65ad3}{\index{Constructor@{Constructor}!next\-Is\-Expand@{next\-Is\-Expand}}
+\index{next\-Is\-Expand@{next\-Is\-Expand}!Constructor@{Constructor}}
+\subsubsection[{next\-Is\-Expand}]{\setlength{\rightskip}{0pt plus 5cm}bool Constructor\-::next\-Is\-Expand (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_constructor_a77ef10123014fa35e66c966ff3e65ad3}
+Checks if next building in the buildqueue is an expansion. \hypertarget{class_constructor_a27f427a0cf61618271bbd24df28631ea}{\index{Constructor@{Constructor}!next\-Is\-Of\-Type@{next\-Is\-Of\-Type}}
+\index{next\-Is\-Of\-Type@{next\-Is\-Of\-Type}!Constructor@{Constructor}}
+\subsubsection[{next\-Is\-Of\-Type}]{\setlength{\rightskip}{0pt plus 5cm}bool Constructor\-::next\-Is\-Of\-Type (
+\begin{DoxyParamCaption}
+\item[{Unit\-Type}]{type}
+\end{DoxyParamCaption}
+)}}\label{class_constructor_a27f427a0cf61618271bbd24df28631ea}
+Returns true if next in buildorder is of the specified type. Returns false if buildorder is empty. \hypertarget{class_constructor_a8dd09c6dfb18f97209f926ae7958c37f}{\index{Constructor@{Constructor}!no\-In\-Production@{no\-In\-Production}}
+\index{no\-In\-Production@{no\-In\-Production}!Constructor@{Constructor}}
+\subsubsection[{no\-In\-Production}]{\setlength{\rightskip}{0pt plus 5cm}int Constructor\-::no\-In\-Production (
+\begin{DoxyParamCaption}
+\item[{Unit\-Type}]{type}
+\end{DoxyParamCaption}
+)}}\label{class_constructor_a8dd09c6dfb18f97209f926ae7958c37f}
+Returns the number of units of the specified type currently being produced. \hypertarget{class_constructor_a256df62fe0b8c44f072f3403782c0b61}{\index{Constructor@{Constructor}!print\-Info@{print\-Info}}
+\index{print\-Info@{print\-Info}!Constructor@{Constructor}}
+\subsubsection[{print\-Info}]{\setlength{\rightskip}{0pt plus 5cm}void Constructor\-::print\-Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_constructor_a256df62fe0b8c44f072f3403782c0b61}
+Shows some debug info on screen. \hypertarget{class_constructor_a9e10c2edbb0731a87ba8696f537598c2}{\index{Constructor@{Constructor}!remove@{remove}}
+\index{remove@{remove}!Constructor@{Constructor}}
+\subsubsection[{remove}]{\setlength{\rightskip}{0pt plus 5cm}void Constructor\-::remove (
+\begin{DoxyParamCaption}
+\item[{Unit\-Type}]{type}
+\end{DoxyParamCaption}
+)}}\label{class_constructor_a9e10c2edbb0731a87ba8696f537598c2}
+Removes a building from the buildorder. \hypertarget{class_constructor_a7549bd3bc6a41c7d8b0037f66fb7fd43}{\index{Constructor@{Constructor}!shall\-Build\-Supply@{shall\-Build\-Supply}}
+\index{shall\-Build\-Supply@{shall\-Build\-Supply}!Constructor@{Constructor}}
+\subsubsection[{shall\-Build\-Supply}]{\setlength{\rightskip}{0pt plus 5cm}bool Constructor\-::shall\-Build\-Supply (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_constructor_a7549bd3bc6a41c7d8b0037f66fb7fd43}
+Checks if more supply buildings are needed. \hypertarget{class_constructor_ab148d682269935249336c2ac4809bc3a}{\index{Constructor@{Constructor}!supply\-Being\-Built@{supply\-Being\-Built}}
+\index{supply\-Being\-Built@{supply\-Being\-Built}!Constructor@{Constructor}}
+\subsubsection[{supply\-Being\-Built}]{\setlength{\rightskip}{0pt plus 5cm}bool Constructor\-::supply\-Being\-Built (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_constructor_ab148d682269935249336c2ac4809bc3a}
+Checks if a supply is under construction. \hypertarget{class_constructor_a05030bb1c079f9c152c39b48b470db5b}{\index{Constructor@{Constructor}!unlock@{unlock}}
+\index{unlock@{unlock}!Constructor@{Constructor}}
+\subsubsection[{unlock}]{\setlength{\rightskip}{0pt plus 5cm}void Constructor\-::unlock (
+\begin{DoxyParamCaption}
+\item[{Unit\-Type}]{type}
+\end{DoxyParamCaption}
+)}}\label{class_constructor_a05030bb1c079f9c152c39b48b470db5b}
+When a request to construct a new building is issued, no construction are allowed until the worker has moved to the buildspot and started constructing the building. This is to avoid that the needed resources are not used up by other build orders. During this time the \hyperlink{class_constructor}{Constructor} is locked, and new construction can only be done when unlock has been called. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+B\-T\-H\-A\-I\-Module/\-Source/Constructor.\-h\item 
+B\-T\-H\-A\-I\-Module/\-Source/Constructor.\-cpp\end{DoxyCompactItemize}

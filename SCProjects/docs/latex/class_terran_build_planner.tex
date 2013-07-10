@@ -1,0 +1,108 @@
+\hypertarget{class_terran_build_planner}{
+\section{TerranBuildPlanner Class Reference}
+\label{class_terran_build_planner}\index{TerranBuildPlanner@{TerranBuildPlanner}}
+}
+
+
+{\ttfamily \#include $<$TerranBuildPlanner.h$>$}
+
+Inheritance diagram for TerranBuildPlanner:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_terran_build_planner}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_terran_build_planner_a181de9c603191265e5e83e44930e0f29}{init} ()
+\item 
+void \hyperlink{class_terran_build_planner_aa4450d4f89770cb4d9ae07545fc135fe}{computeActions} ()
+\item 
+void \hyperlink{class_terran_build_planner_a48b1a8d16ba56e95d94003caf067d400}{buildingDestroyed} (Unit $\ast$building)
+\item 
+void \hyperlink{class_terran_build_planner_a22d9e41dc8fa671860bff12ef17ac4cd}{handleNoBuildspotFound} (UnitType toBuild)
+\item 
+void \hyperlink{class_terran_build_planner_a0f5f8da8b80c575414fa89777f6bcfd0}{printInfo} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is the Terran implementation of the \hyperlink{class_build_planner}{BuildPlanner} class. See \hyperlink{class_build_planner}{BuildPlanner} for more details.
+
+This is where you need to modify the code to use different buildorders.
+
+Author: Johan Hagelback (\href{mailto:johan.hagelback@gmail.com}{\tt johan.hagelback@gmail.com}) 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_terran_build_planner_a48b1a8d16ba56e95d94003caf067d400}{
+\index{TerranBuildPlanner@{TerranBuildPlanner}!buildingDestroyed@{buildingDestroyed}}
+\index{buildingDestroyed@{buildingDestroyed}!TerranBuildPlanner@{TerranBuildPlanner}}
+\subsubsection[{buildingDestroyed}]{\setlength{\rightskip}{0pt plus 5cm}void TerranBuildPlanner::buildingDestroyed (
+\begin{DoxyParamCaption}
+\item[{Unit $\ast$}]{building}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_terran_build_planner_a48b1a8d16ba56e95d94003caf067d400}
+Notifies that an own building has been destroyed. 
+
+Reimplemented from \hyperlink{class_build_planner_aa6c4d6878c9bcca305d2f6c015a4b7b8}{BuildPlanner}.
+
+\hypertarget{class_terran_build_planner_aa4450d4f89770cb4d9ae07545fc135fe}{
+\index{TerranBuildPlanner@{TerranBuildPlanner}!computeActions@{computeActions}}
+\index{computeActions@{computeActions}!TerranBuildPlanner@{TerranBuildPlanner}}
+\subsubsection[{computeActions}]{\setlength{\rightskip}{0pt plus 5cm}void TerranBuildPlanner::computeActions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_terran_build_planner_aa4450d4f89770cb4d9ae07545fc135fe}
+Called each update to issue orders. 
+
+Reimplemented from \hyperlink{class_build_planner_ac5ede96fbc4532cd631776911c672527}{BuildPlanner}.
+
+\hypertarget{class_terran_build_planner_a22d9e41dc8fa671860bff12ef17ac4cd}{
+\index{TerranBuildPlanner@{TerranBuildPlanner}!handleNoBuildspotFound@{handleNoBuildspotFound}}
+\index{handleNoBuildspotFound@{handleNoBuildspotFound}!TerranBuildPlanner@{TerranBuildPlanner}}
+\subsubsection[{handleNoBuildspotFound}]{\setlength{\rightskip}{0pt plus 5cm}void TerranBuildPlanner::handleNoBuildspotFound (
+\begin{DoxyParamCaption}
+\item[{UnitType}]{toBuild}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_terran_build_planner_a22d9e41dc8fa671860bff12ef17ac4cd}
+Is called when no buildspot has been found for the specified type. 
+
+Reimplemented from \hyperlink{class_build_planner_acc4103d9ec70c2a7a7c659230841dce7}{BuildPlanner}.
+
+\hypertarget{class_terran_build_planner_a181de9c603191265e5e83e44930e0f29}{
+\index{TerranBuildPlanner@{TerranBuildPlanner}!init@{init}}
+\index{init@{init}!TerranBuildPlanner@{TerranBuildPlanner}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void TerranBuildPlanner::init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_terran_build_planner_a181de9c603191265e5e83e44930e0f29}
+Initial setup of the build order. 
+
+Reimplemented from \hyperlink{class_build_planner_a038f427797ac83a516012654844359d5}{BuildPlanner}.
+
+\hypertarget{class_terran_build_planner_a0f5f8da8b80c575414fa89777f6bcfd0}{
+\index{TerranBuildPlanner@{TerranBuildPlanner}!printInfo@{printInfo}}
+\index{printInfo@{printInfo}!TerranBuildPlanner@{TerranBuildPlanner}}
+\subsubsection[{printInfo}]{\setlength{\rightskip}{0pt plus 5cm}void TerranBuildPlanner::printInfo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_terran_build_planner_a0f5f8da8b80c575414fa89777f6bcfd0}
+Used to print some info to the screen. 
+
+Reimplemented from \hyperlink{class_build_planner_a06b0db27196c7e1ecc0181f2d3865a88}{BuildPlanner}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+BTHAIModule/Source/TerranBuildPlanner.h\item 
+BTHAIModule/Source/TerranBuildPlanner.cpp\end{DoxyCompactItemize}

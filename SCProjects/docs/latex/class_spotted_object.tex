@@ -1,0 +1,135 @@
+\hypertarget{class_spotted_object}{\section{Spotted\-Object Class Reference}
+\label{class_spotted_object}\index{Spotted\-Object@{Spotted\-Object}}
+}
+
+
+{\ttfamily \#include $<$Spotted\-Object.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_spotted_object_affa58c78f3d254f531cd7999d2daf14c}{Spotted\-Object} ()
+\item 
+\hyperlink{class_spotted_object_abf539a72d6dce44be722ddb142be3621}{Spotted\-Object} (Unit $\ast$m\-Unit)
+\item 
+\hyperlink{class_spotted_object_a6737acdf0e9cd0f7d803819ce068d204}{Spotted\-Object} (Position pos)
+\item 
+bool \hyperlink{class_spotted_object_a02e802842a5e59eb417e0f1d93ba7690}{is\-Active} ()
+\item 
+void \hyperlink{class_spotted_object_ae350108ccccc3683df77a5e41f827f36}{set\-Inactive} ()
+\item 
+int \hyperlink{class_spotted_object_a2fb37dace2377f0ebf5de3266d018749}{get\-Unit\-I\-D} ()
+\item 
+Unit\-Type \hyperlink{class_spotted_object_ad140f234166a2987e31f263aad86b0aa}{get\-Type} ()
+\item 
+Position \hyperlink{class_spotted_object_acf6be68073a692d2f13db3feeedf6030}{get\-Position} ()
+\item 
+Tile\-Position \hyperlink{class_spotted_object_a2f4fcb5523e5de5cb75050208060bcf5}{get\-Tile\-Position} ()
+\item 
+bool \hyperlink{class_spotted_object_ade1653e383d666ca7dd3788856973b74}{is\-At} (Tile\-Position tile\-Pos)
+\item 
+double \hyperlink{class_spotted_object_ae62491ae89e336c1981ad88269423bdd}{get\-Distance} (Position pos)
+\item 
+double \hyperlink{class_spotted_object_a25d127bbde29d141d831562348a05b39}{get\-Distance} (Tile\-Position tile\-Pos)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_spotted_object}{Spotted\-Object} class is a help class for the \hyperlink{class_exploration_manager}{Exploration\-Manager}. It contains all details about a spotted enemy unit or neutral resource.
+
+Author\-: Johan Hagelback (\href{mailto:johan.hagelback@gmail.com}{\tt johan.\-hagelback@gmail.\-com}) 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_spotted_object_affa58c78f3d254f531cd7999d2daf14c}{\index{Spotted\-Object@{Spotted\-Object}!Spotted\-Object@{Spotted\-Object}}
+\index{Spotted\-Object@{Spotted\-Object}!SpottedObject@{Spotted\-Object}}
+\subsubsection[{Spotted\-Object}]{\setlength{\rightskip}{0pt plus 5cm}Spotted\-Object\-::\-Spotted\-Object (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_spotted_object_affa58c78f3d254f531cd7999d2daf14c}
+Default constructor. Should not be used. \hypertarget{class_spotted_object_abf539a72d6dce44be722ddb142be3621}{\index{Spotted\-Object@{Spotted\-Object}!Spotted\-Object@{Spotted\-Object}}
+\index{Spotted\-Object@{Spotted\-Object}!SpottedObject@{Spotted\-Object}}
+\subsubsection[{Spotted\-Object}]{\setlength{\rightskip}{0pt plus 5cm}Spotted\-Object\-::\-Spotted\-Object (
+\begin{DoxyParamCaption}
+\item[{Unit $\ast$}]{m\-Unit}
+\end{DoxyParamCaption}
+)}}\label{class_spotted_object_abf539a72d6dce44be722ddb142be3621}
+Creates an object from a unit reference. \hypertarget{class_spotted_object_a6737acdf0e9cd0f7d803819ce068d204}{\index{Spotted\-Object@{Spotted\-Object}!Spotted\-Object@{Spotted\-Object}}
+\index{Spotted\-Object@{Spotted\-Object}!SpottedObject@{Spotted\-Object}}
+\subsubsection[{Spotted\-Object}]{\setlength{\rightskip}{0pt plus 5cm}Spotted\-Object\-::\-Spotted\-Object (
+\begin{DoxyParamCaption}
+\item[{Position}]{pos}
+\end{DoxyParamCaption}
+)}}\label{class_spotted_object_a6737acdf0e9cd0f7d803819ce068d204}
+Creates a spotted object from an interesting position. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_spotted_object_ae62491ae89e336c1981ad88269423bdd}{\index{Spotted\-Object@{Spotted\-Object}!get\-Distance@{get\-Distance}}
+\index{get\-Distance@{get\-Distance}!SpottedObject@{Spotted\-Object}}
+\subsubsection[{get\-Distance}]{\setlength{\rightskip}{0pt plus 5cm}double Spotted\-Object\-::get\-Distance (
+\begin{DoxyParamCaption}
+\item[{Position}]{pos}
+\end{DoxyParamCaption}
+)}}\label{class_spotted_object_ae62491ae89e336c1981ad88269423bdd}
+Returns the distance between the spotted object and a position \hypertarget{class_spotted_object_a25d127bbde29d141d831562348a05b39}{\index{Spotted\-Object@{Spotted\-Object}!get\-Distance@{get\-Distance}}
+\index{get\-Distance@{get\-Distance}!SpottedObject@{Spotted\-Object}}
+\subsubsection[{get\-Distance}]{\setlength{\rightskip}{0pt plus 5cm}double Spotted\-Object\-::get\-Distance (
+\begin{DoxyParamCaption}
+\item[{Tile\-Position}]{tile\-Pos}
+\end{DoxyParamCaption}
+)}}\label{class_spotted_object_a25d127bbde29d141d831562348a05b39}
+Returns the distance between the spotted object and a tileposition \hypertarget{class_spotted_object_acf6be68073a692d2f13db3feeedf6030}{\index{Spotted\-Object@{Spotted\-Object}!get\-Position@{get\-Position}}
+\index{get\-Position@{get\-Position}!SpottedObject@{Spotted\-Object}}
+\subsubsection[{get\-Position}]{\setlength{\rightskip}{0pt plus 5cm}Position Spotted\-Object\-::get\-Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_spotted_object_acf6be68073a692d2f13db3feeedf6030}
+Returns the position of the spotted unit. \hypertarget{class_spotted_object_a2f4fcb5523e5de5cb75050208060bcf5}{\index{Spotted\-Object@{Spotted\-Object}!get\-Tile\-Position@{get\-Tile\-Position}}
+\index{get\-Tile\-Position@{get\-Tile\-Position}!SpottedObject@{Spotted\-Object}}
+\subsubsection[{get\-Tile\-Position}]{\setlength{\rightskip}{0pt plus 5cm}Tile\-Position Spotted\-Object\-::get\-Tile\-Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_spotted_object_a2f4fcb5523e5de5cb75050208060bcf5}
+Returns the tileposition of the spotted unit. \hypertarget{class_spotted_object_ad140f234166a2987e31f263aad86b0aa}{\index{Spotted\-Object@{Spotted\-Object}!get\-Type@{get\-Type}}
+\index{get\-Type@{get\-Type}!SpottedObject@{Spotted\-Object}}
+\subsubsection[{get\-Type}]{\setlength{\rightskip}{0pt plus 5cm}Unit\-Type Spotted\-Object\-::get\-Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_spotted_object_ad140f234166a2987e31f263aad86b0aa}
+Returns the type of the spotted unit. \hypertarget{class_spotted_object_a2fb37dace2377f0ebf5de3266d018749}{\index{Spotted\-Object@{Spotted\-Object}!get\-Unit\-I\-D@{get\-Unit\-I\-D}}
+\index{get\-Unit\-I\-D@{get\-Unit\-I\-D}!SpottedObject@{Spotted\-Object}}
+\subsubsection[{get\-Unit\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}int Spotted\-Object\-::get\-Unit\-I\-D (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_spotted_object_a2fb37dace2377f0ebf5de3266d018749}
+Returns the unique id of the spotted unit. \hypertarget{class_spotted_object_a02e802842a5e59eb417e0f1d93ba7690}{\index{Spotted\-Object@{Spotted\-Object}!is\-Active@{is\-Active}}
+\index{is\-Active@{is\-Active}!SpottedObject@{Spotted\-Object}}
+\subsubsection[{is\-Active}]{\setlength{\rightskip}{0pt plus 5cm}bool Spotted\-Object\-::is\-Active (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_spotted_object_a02e802842a5e59eb417e0f1d93ba7690}
+Returns true if this \hyperlink{class_spotted_object}{Spotted\-Object} is active, false if not. \hypertarget{class_spotted_object_ade1653e383d666ca7dd3788856973b74}{\index{Spotted\-Object@{Spotted\-Object}!is\-At@{is\-At}}
+\index{is\-At@{is\-At}!SpottedObject@{Spotted\-Object}}
+\subsubsection[{is\-At}]{\setlength{\rightskip}{0pt plus 5cm}bool Spotted\-Object\-::is\-At (
+\begin{DoxyParamCaption}
+\item[{Tile\-Position}]{tile\-Pos}
+\end{DoxyParamCaption}
+)}}\label{class_spotted_object_ade1653e383d666ca7dd3788856973b74}
+Returns true if the \hyperlink{class_spotted_object}{Spotted\-Object} is at this Tile\-Position. \hypertarget{class_spotted_object_ae350108ccccc3683df77a5e41f827f36}{\index{Spotted\-Object@{Spotted\-Object}!set\-Inactive@{set\-Inactive}}
+\index{set\-Inactive@{set\-Inactive}!SpottedObject@{Spotted\-Object}}
+\subsubsection[{set\-Inactive}]{\setlength{\rightskip}{0pt plus 5cm}void Spotted\-Object\-::set\-Inactive (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_spotted_object_ae350108ccccc3683df77a5e41f827f36}
+Sets this \hyperlink{class_spotted_object}{Spotted\-Object} as inactive, i.\-e. it is probably destroyed. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+B\-T\-H\-A\-I\-Module/\-Source/Spotted\-Object.\-h\item 
+B\-T\-H\-A\-I\-Module/\-Source/Spotted\-Object.\-cpp\end{DoxyCompactItemize}

@@ -1,0 +1,388 @@
+\hypertarget{class_commander}{\section{Commander Class Reference}
+\label{class_commander}\index{Commander@{Commander}}
+}
+
+
+{\ttfamily \#include $<$Commander.\-h$>$}
+
+Inheritance diagram for Commander\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{class_commander}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_commander_af16b5b1c2b22e5158ce822d1b9180b10}{$\sim$\-Commander} ()
+\item 
+void \hyperlink{class_commander_aea760bef28ae7c34525c3d8738242926}{toggle\-Buildplan\-Debug} ()
+\item 
+void \hyperlink{class_commander_a9e509e1e94e0baf2cf97299e7b328bf2}{toggle\-Squads\-Debug} ()
+\item 
+virtual void \hyperlink{class_commander_a7d01a74af4cf5ed47f9164d6a153b0b5}{compute\-Actions} ()
+\item 
+int \hyperlink{class_commander_ab33008fea8bba27e56a3b4ca9282c0d9}{get\-No\-Workers} ()
+\item 
+int \hyperlink{class_commander_ae69c51a54be14697c5d1d0b9cd9a39b2}{get\-Workers\-Per\-Refinery} ()
+\item 
+virtual void \hyperlink{class_commander_a1785426df06270f82e44cba5d704ad9d}{debug\-\_\-show\-Goal} ()
+\item 
+bool \hyperlink{class_commander_a68db23d58ca867d9ed68c3fb66ecf68e}{shall\-Engage} ()
+\item 
+void \hyperlink{class_commander_a6b47f5f3420eabefbcd39459ee3c268a}{update\-Goals} ()
+\item 
+void \hyperlink{class_commander_a8a5b895fbbc7c4b1010e745e109e3775}{unit\-Created} (\hyperlink{class_base_agent}{Base\-Agent} $\ast$agent)
+\item 
+void \hyperlink{class_commander_a891be0d981a280c9584c71a8d07576c3}{unit\-Destroyed} (\hyperlink{class_base_agent}{Base\-Agent} $\ast$agent)
+\item 
+\hypertarget{class_commander_a75110993e6f09ef98a70b04ffe22a39d}{bool {\bfseries need\-Unit} (Unit\-Type type)}\label{class_commander_a75110993e6f09ef98a70b04ffe22a39d}
+
+\item 
+void \hyperlink{class_commander_aa3e2dec3072ee0073c23f68a4b998f44}{remove\-Squad} (int id)
+\item 
+\hyperlink{class_squad}{Squad} $\ast$ \hyperlink{class_commander_a8c6bd83b95123950edb161ef4395ce0d}{get\-Squad} (int id)
+\item 
+vector$<$ \hyperlink{class_squad}{Squad} $\ast$ $>$ \hyperlink{class_commander_a16a3392a4e017bc4e4805370cbd6fec1}{get\-Squads} ()
+\item 
+Tile\-Position \hyperlink{class_commander_acd7ff7aa80811bf820e83ad46eec6e48}{get\-Closest\-Enemy\-Building} (Tile\-Position start)
+\item 
+bool \hyperlink{class_commander_afa0bccc42094d96c0f2ff94dcf224ae8}{check\-Workers\-Attack} (\hyperlink{class_base_agent}{Base\-Agent} $\ast$base)
+\item 
+void \hyperlink{class_commander_a3d0b1656a2ef98afec99238ef04692b7}{assist\-Building} (\hyperlink{class_base_agent}{Base\-Agent} $\ast$building)
+\item 
+void \hyperlink{class_commander_a5fb987bb896051ddccaab1d178af4ccf}{assist\-Worker} (\hyperlink{class_base_agent}{Base\-Agent} $\ast$worker)
+\item 
+void \hyperlink{class_commander_a5f662ddf34b3411ccb690a2691f49220}{check\-Removable\-Obstacles} ()
+\item 
+void \hyperlink{class_commander_a32b55d75388cd7bfcdde91bc4f558d76}{force\-Attack} ()
+\item 
+void \hyperlink{class_commander_a5e5188ef8f95e452c1d30a6c7146c97d}{print\-Info} ()
+\item 
+Tile\-Position \hyperlink{class_commander_a170195e145723a042fd7a414425ea779}{find\-Unfortified\-Choke\-Point} ()
+\item 
+Tile\-Position \hyperlink{class_commander_a7e3be4f5cd6a9c32db70a4529ab860ad}{find\-Choke\-Point} ()
+\item 
+bool \hyperlink{class_commander_a11fdf9b3e5dd486d22e9e562a80d0f27}{is\-Buildable} (Tile\-Position pos)
+\item 
+bool \hyperlink{class_commander_a76b10404ae1451a7f6dbe5b5b114b539}{check\-Unfinished\-Buildings} ()
+\item 
+void \hyperlink{class_commander_afb4bbb91ac59260727f9efd7e2abe577}{finish\-Build} (\hyperlink{class_base_agent}{Base\-Agent} $\ast$agent)
+\item 
+int \hyperlink{class_commander_a3ce4baacd61123b9ddfd1f0714880379}{add\-Bunker\-Squad} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_commander}{Commander} $\ast$ \hyperlink{class_commander_aa3c904019bf7e98fd843e2613a72bd07}{get\-Instance} ()
+\item 
+static string \hyperlink{class_commander_ac935c0f129b78a62fb03cc3e1a3bceac}{format} (string str)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_commander_a3691e42fa66318d12bc24462915f9786}{own\-Dead\-Score}
+\item 
+int \hyperlink{class_commander_a92767d5f0687dae52eb48ea1d7bcc7e1}{enemy\-Dead\-Score}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_commander_a4461cc2e604a0a3d5ebdcdd553511a4e}{compute\-Actions\-Base} ()
+\item 
+void \hyperlink{class_commander_a1ba5f150a489c9a3b8a7e9b39fec8f3b}{check\-Buildplan} ()
+\item 
+void \hyperlink{class_commander_a08b879c9422287446753b3dd486ff9a1}{cut\-Workers} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_commander_af71903fbccb16d577db18047a659d159}{vector$<$ \hyperlink{class_squad}{Squad} $\ast$ $>$ {\bfseries squads}}\label{class_commander_af71903fbccb16d577db18047a659d159}
+
+\item 
+\hypertarget{class_commander_a97aaa4c9bf3d52e8a40c6b21309de075}{vector$<$ \hyperlink{class_buildplan_entry}{Buildplan\-Entry} $>$ {\bfseries buildplan}}\label{class_commander_a97aaa4c9bf3d52e8a40c6b21309de075}
+
+\item 
+\hypertarget{class_commander_ae37f77ed20543e6cac82d271eeeee688}{int {\bfseries no\-Workers}}\label{class_commander_ae37f77ed20543e6cac82d271eeeee688}
+
+\item 
+\hypertarget{class_commander_ac870a4458255b8d8b6fcf154d984519d}{int {\bfseries no\-Workers\-Per\-Refinery}}\label{class_commander_ac870a4458255b8d8b6fcf154d984519d}
+
+\item 
+\hypertarget{class_commander_af343be3aa50c91a9d62e4dabcb223026}{int {\bfseries current\-State}}\label{class_commander_af343be3aa50c91a9d62e4dabcb223026}
+
+\item 
+\hypertarget{class_commander_ae59f41b6cfaab239f236ae671a9705f9}{bool {\bfseries debug\-\_\-bp}}\label{class_commander_ae59f41b6cfaab239f236ae671a9705f9}
+
+\item 
+\hypertarget{class_commander_a620ea7c592fc5380440f7f16a8591ba8}{bool {\bfseries debug\-\_\-sq}}\label{class_commander_a620ea7c592fc5380440f7f16a8591ba8}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_commander_a508775a065cb2aa9c2d3fd26f4d23943}{static \hyperlink{class_commander}{Commander} $\ast$ {\bfseries instance} = N\-U\-L\-L}\label{class_commander_a508775a065cb2aa9c2d3fd26f4d23943}
+
+\item 
+\hypertarget{class_commander_a48746e31693acaf1f8a794d257bc56d0}{static const int {\bfseries D\-E\-F\-E\-N\-D} = 0}\label{class_commander_a48746e31693acaf1f8a794d257bc56d0}
+
+\item 
+\hypertarget{class_commander_ad97c2a76ba45781c23a5910fef556ce6}{static const int {\bfseries A\-T\-T\-A\-C\-K} = 1}\label{class_commander_ad97c2a76ba45781c23a5910fef556ce6}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_commander}{Commander} class is the base class for commanders. The \hyperlink{class_commander}{Commander} classes are responsible for which and when buildings to construct, when to do upgrades/techs, and which squads to build. It is also responsible for finding defensive positions, launch attacks and where to launch an attack.
+
+The \hyperlink{class_commander}{Commander} is implemented as a singleton class. Each class that needs to access \hyperlink{class_commander}{Commander} can request an instance, and the correct commander (Terran/\-Protoss/\-Zerg) will be returned.
+
+Author\-: Johan Hagelback (\href{mailto:johan.hagelback@gmail.com}{\tt johan.\-hagelback@gmail.\-com}) 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_commander_af16b5b1c2b22e5158ce822d1b9180b10}{\index{Commander@{Commander}!$\sim$\-Commander@{$\sim$\-Commander}}
+\index{$\sim$\-Commander@{$\sim$\-Commander}!Commander@{Commander}}
+\subsubsection[{$\sim$\-Commander}]{\setlength{\rightskip}{0pt plus 5cm}Commander\-::$\sim$\-Commander (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_commander_af16b5b1c2b22e5158ce822d1b9180b10}
+Destructor. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_commander_a3ce4baacd61123b9ddfd1f0714880379}{\index{Commander@{Commander}!add\-Bunker\-Squad@{add\-Bunker\-Squad}}
+\index{add\-Bunker\-Squad@{add\-Bunker\-Squad}!Commander@{Commander}}
+\subsubsection[{add\-Bunker\-Squad}]{\setlength{\rightskip}{0pt plus 5cm}int Commander\-::add\-Bunker\-Squad (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_commander_a3ce4baacd61123b9ddfd1f0714880379}
+Adds a bunker squad when a Terran Bunker has been created. Returns the squad\-I\-D of the bunker squad. \hypertarget{class_commander_a3d0b1656a2ef98afec99238ef04692b7}{\index{Commander@{Commander}!assist\-Building@{assist\-Building}}
+\index{assist\-Building@{assist\-Building}!Commander@{Commander}}
+\subsubsection[{assist\-Building}]{\setlength{\rightskip}{0pt plus 5cm}void Commander\-::assist\-Building (
+\begin{DoxyParamCaption}
+\item[{{\bf Base\-Agent} $\ast$}]{building}
+\end{DoxyParamCaption}
+)}}\label{class_commander_a3d0b1656a2ef98afec99238ef04692b7}
+Tries to find a free squad to assist a building. \hypertarget{class_commander_a5fb987bb896051ddccaab1d178af4ccf}{\index{Commander@{Commander}!assist\-Worker@{assist\-Worker}}
+\index{assist\-Worker@{assist\-Worker}!Commander@{Commander}}
+\subsubsection[{assist\-Worker}]{\setlength{\rightskip}{0pt plus 5cm}void Commander\-::assist\-Worker (
+\begin{DoxyParamCaption}
+\item[{{\bf Base\-Agent} $\ast$}]{worker}
+\end{DoxyParamCaption}
+)}}\label{class_commander_a5fb987bb896051ddccaab1d178af4ccf}
+Tries to find a free squad to assist a worker that is under attack. \hypertarget{class_commander_a1ba5f150a489c9a3b8a7e9b39fec8f3b}{\index{Commander@{Commander}!check\-Buildplan@{check\-Buildplan}}
+\index{check\-Buildplan@{check\-Buildplan}!Commander@{Commander}}
+\subsubsection[{check\-Buildplan}]{\setlength{\rightskip}{0pt plus 5cm}void Commander\-::check\-Buildplan (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_commander_a1ba5f150a489c9a3b8a7e9b39fec8f3b}
+Checks the \hyperlink{class_commander}{Commander} buildplan, and add buildings, techs and upgrades to the planners. \hypertarget{class_commander_a5f662ddf34b3411ccb690a2691f49220}{\index{Commander@{Commander}!check\-Removable\-Obstacles@{check\-Removable\-Obstacles}}
+\index{check\-Removable\-Obstacles@{check\-Removable\-Obstacles}!Commander@{Commander}}
+\subsubsection[{check\-Removable\-Obstacles}]{\setlength{\rightskip}{0pt plus 5cm}void Commander\-::check\-Removable\-Obstacles (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_commander_a5f662ddf34b3411ccb690a2691f49220}
+Checks if there are any removable obstacles nearby, i.\-e. minerals with less than 20 resources left. \hypertarget{class_commander_a76b10404ae1451a7f6dbe5b5b114b539}{\index{Commander@{Commander}!check\-Unfinished\-Buildings@{check\-Unfinished\-Buildings}}
+\index{check\-Unfinished\-Buildings@{check\-Unfinished\-Buildings}!Commander@{Commander}}
+\subsubsection[{check\-Unfinished\-Buildings}]{\setlength{\rightskip}{0pt plus 5cm}bool Commander\-::check\-Unfinished\-Buildings (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_commander_a76b10404ae1451a7f6dbe5b5b114b539}
+Checks if there are any unfinished buildings that does not have an S\-C\-V working on them. Terran only. \hypertarget{class_commander_afa0bccc42094d96c0f2ff94dcf224ae8}{\index{Commander@{Commander}!check\-Workers\-Attack@{check\-Workers\-Attack}}
+\index{check\-Workers\-Attack@{check\-Workers\-Attack}!Commander@{Commander}}
+\subsubsection[{check\-Workers\-Attack}]{\setlength{\rightskip}{0pt plus 5cm}bool Commander\-::check\-Workers\-Attack (
+\begin{DoxyParamCaption}
+\item[{{\bf Base\-Agent} $\ast$}]{base}
+\end{DoxyParamCaption}
+)}}\label{class_commander_afa0bccc42094d96c0f2ff94dcf224ae8}
+Checks if workers needs to attack. Happens if base is under attack and no offensive units are available. \hypertarget{class_commander_a7d01a74af4cf5ed47f9164d6a153b0b5}{\index{Commander@{Commander}!compute\-Actions@{compute\-Actions}}
+\index{compute\-Actions@{compute\-Actions}!Commander@{Commander}}
+\subsubsection[{compute\-Actions}]{\setlength{\rightskip}{0pt plus 5cm}void Commander\-::compute\-Actions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_commander_a7d01a74af4cf5ed47f9164d6a153b0b5}
+Called each update to issue orders. 
+
+Reimplemented in \hyperlink{class_reaver_drop_afa8af5853c82a1f5115283cb0fddfbcd}{Reaver\-Drop}, \hyperlink{class_reaver_drop1_b_ac176205b825f62e5947765f8422e1b17}{Reaver\-Drop1\-B}, \hyperlink{class_templar_rush_a4844082ce98056a9861a499072654a7b}{Templar\-Rush}, \hyperlink{class_hydra_muta_a7bd244b96aea47476415559c1f640ef1}{Hydra\-Muta}, \hyperlink{class_marine_rush_a40179620a326c69bd840fa28e5be8ce4}{Marine\-Rush}, \hyperlink{class_terran_commander_a5f90f675a619ac8c73543181b6b26bcc}{Terran\-Commander}, \hyperlink{class_terran_defensive_a16802114c6c1641483b9dc308a945c9f}{Terran\-Defensive}, \hyperlink{class_terran_defensive_f_b_a4786f11a48862280c0a0ff6bfd8e3a5d}{Terran\-Defensive\-F\-B}, \hyperlink{class_wraith_harass_aebbba0317db7269fdde750216e2077c4}{Wraith\-Harass}, \hyperlink{class_lurker_rush_a46fcdc24bdb39c8ad58338e3c2844655}{Lurker\-Rush}, \hyperlink{class_protoss_commander_a969725a6dac1add63f2bc1954f4bd177}{Protoss\-Commander}, \hyperlink{class_terran_push_a2ef2f4555684c24d95804e37ff801f2a}{Terran\-Push}, and \hyperlink{class_zerg_commander_a22f061c97c1e95803c672f9b7e40bc9b}{Zerg\-Commander}.
+
+\hypertarget{class_commander_a4461cc2e604a0a3d5ebdcdd553511a4e}{\index{Commander@{Commander}!compute\-Actions\-Base@{compute\-Actions\-Base}}
+\index{compute\-Actions\-Base@{compute\-Actions\-Base}!Commander@{Commander}}
+\subsubsection[{compute\-Actions\-Base}]{\setlength{\rightskip}{0pt plus 5cm}void Commander\-::compute\-Actions\-Base (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_commander_a4461cc2e604a0a3d5ebdcdd553511a4e}
+Executes basic code for a commander. \hypertarget{class_commander_a08b879c9422287446753b3dd486ff9a1}{\index{Commander@{Commander}!cut\-Workers@{cut\-Workers}}
+\index{cut\-Workers@{cut\-Workers}!Commander@{Commander}}
+\subsubsection[{cut\-Workers}]{\setlength{\rightskip}{0pt plus 5cm}void Commander\-::cut\-Workers (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_commander_a08b879c9422287446753b3dd486ff9a1}
+Stops the production of workers. \hypertarget{class_commander_a1785426df06270f82e44cba5d704ad9d}{\index{Commander@{Commander}!debug\-\_\-show\-Goal@{debug\-\_\-show\-Goal}}
+\index{debug\-\_\-show\-Goal@{debug\-\_\-show\-Goal}!Commander@{Commander}}
+\subsubsection[{debug\-\_\-show\-Goal}]{\setlength{\rightskip}{0pt plus 5cm}void Commander\-::debug\-\_\-show\-Goal (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_commander_a1785426df06270f82e44cba5d704ad9d}
+Used in debug modes to show goal of squads. \hypertarget{class_commander_a7e3be4f5cd6a9c32db70a4529ab860ad}{\index{Commander@{Commander}!find\-Choke\-Point@{find\-Choke\-Point}}
+\index{find\-Choke\-Point@{find\-Choke\-Point}!Commander@{Commander}}
+\subsubsection[{find\-Choke\-Point}]{\setlength{\rightskip}{0pt plus 5cm}Tile\-Position Commander\-::find\-Choke\-Point (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_commander_a7e3be4f5cd6a9c32db70a4529ab860ad}
+Searches for and returns a good chokepoint position to defend the territory. \hypertarget{class_commander_a170195e145723a042fd7a414425ea779}{\index{Commander@{Commander}!find\-Unfortified\-Choke\-Point@{find\-Unfortified\-Choke\-Point}}
+\index{find\-Unfortified\-Choke\-Point@{find\-Unfortified\-Choke\-Point}!Commander@{Commander}}
+\subsubsection[{find\-Unfortified\-Choke\-Point}]{\setlength{\rightskip}{0pt plus 5cm}Tile\-Position Commander\-::find\-Unfortified\-Choke\-Point (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_commander_a170195e145723a042fd7a414425ea779}
+Searches for a chokepoint that is unfortified, i.\-e. does not contain for example a Bunker or defensive turret. Returns Tile\-Position(-\/1, -\/1) if no position was found. \hypertarget{class_commander_afb4bbb91ac59260727f9efd7e2abe577}{\index{Commander@{Commander}!finish\-Build@{finish\-Build}}
+\index{finish\-Build@{finish\-Build}!Commander@{Commander}}
+\subsubsection[{finish\-Build}]{\setlength{\rightskip}{0pt plus 5cm}void Commander\-::finish\-Build (
+\begin{DoxyParamCaption}
+\item[{{\bf Base\-Agent} $\ast$}]{agent}
+\end{DoxyParamCaption}
+)}}\label{class_commander_afb4bbb91ac59260727f9efd7e2abe577}
+Assigns a worker to finish constructing an interrupted building. Terran only. \hypertarget{class_commander_a32b55d75388cd7bfcdde91bc4f558d76}{\index{Commander@{Commander}!force\-Attack@{force\-Attack}}
+\index{force\-Attack@{force\-Attack}!Commander@{Commander}}
+\subsubsection[{force\-Attack}]{\setlength{\rightskip}{0pt plus 5cm}void Commander\-::force\-Attack (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_commander_a32b55d75388cd7bfcdde91bc4f558d76}
+Forces an attack, even if some squads are not full. \hypertarget{class_commander_ac935c0f129b78a62fb03cc3e1a3bceac}{\index{Commander@{Commander}!format@{format}}
+\index{format@{format}!Commander@{Commander}}
+\subsubsection[{format}]{\setlength{\rightskip}{0pt plus 5cm}string Commander\-::format (
+\begin{DoxyParamCaption}
+\item[{string}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_commander_ac935c0f129b78a62fb03cc3e1a3bceac}
+Removes the race from a string, Terran Marine = Marine. \hypertarget{class_commander_acd7ff7aa80811bf820e83ad46eec6e48}{\index{Commander@{Commander}!get\-Closest\-Enemy\-Building@{get\-Closest\-Enemy\-Building}}
+\index{get\-Closest\-Enemy\-Building@{get\-Closest\-Enemy\-Building}!Commander@{Commander}}
+\subsubsection[{get\-Closest\-Enemy\-Building}]{\setlength{\rightskip}{0pt plus 5cm}Tile\-Position Commander\-::get\-Closest\-Enemy\-Building (
+\begin{DoxyParamCaption}
+\item[{Tile\-Position}]{start}
+\end{DoxyParamCaption}
+)}}\label{class_commander_acd7ff7aa80811bf820e83ad46eec6e48}
+Returns the position of the closest enemy building from the start position, or Tile\-Position(-\/1,-\/1) if not found. \hypertarget{class_commander_aa3c904019bf7e98fd843e2613a72bd07}{\index{Commander@{Commander}!get\-Instance@{get\-Instance}}
+\index{get\-Instance@{get\-Instance}!Commander@{Commander}}
+\subsubsection[{get\-Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Commander} $\ast$ Commander\-::get\-Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_commander_aa3c904019bf7e98fd843e2613a72bd07}
+Returns the instance of the class. \hypertarget{class_commander_ab33008fea8bba27e56a3b4ca9282c0d9}{\index{Commander@{Commander}!get\-No\-Workers@{get\-No\-Workers}}
+\index{get\-No\-Workers@{get\-No\-Workers}!Commander@{Commander}}
+\subsubsection[{get\-No\-Workers}]{\setlength{\rightskip}{0pt plus 5cm}int Commander\-::get\-No\-Workers (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_commander_ab33008fea8bba27e56a3b4ca9282c0d9}
+Returns the number of preferred workers, i.\-e. the number of workers should be built. \hypertarget{class_commander_a8c6bd83b95123950edb161ef4395ce0d}{\index{Commander@{Commander}!get\-Squad@{get\-Squad}}
+\index{get\-Squad@{get\-Squad}!Commander@{Commander}}
+\subsubsection[{get\-Squad}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Squad} $\ast$ Commander\-::get\-Squad (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)}}\label{class_commander_a8c6bd83b95123950edb161ef4395ce0d}
+Returns the \hyperlink{class_squad}{Squad} with the specified id, or N\-U\-L\-L if not found. \hypertarget{class_commander_a16a3392a4e017bc4e4805370cbd6fec1}{\index{Commander@{Commander}!get\-Squads@{get\-Squads}}
+\index{get\-Squads@{get\-Squads}!Commander@{Commander}}
+\subsubsection[{get\-Squads}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ {\bf Squad} $\ast$ $>$ Commander\-::get\-Squads (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_commander_a16a3392a4e017bc4e4805370cbd6fec1}
+Returns all squads. \hypertarget{class_commander_ae69c51a54be14697c5d1d0b9cd9a39b2}{\index{Commander@{Commander}!get\-Workers\-Per\-Refinery@{get\-Workers\-Per\-Refinery}}
+\index{get\-Workers\-Per\-Refinery@{get\-Workers\-Per\-Refinery}!Commander@{Commander}}
+\subsubsection[{get\-Workers\-Per\-Refinery}]{\setlength{\rightskip}{0pt plus 5cm}int Commander\-::get\-Workers\-Per\-Refinery (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_commander_ae69c51a54be14697c5d1d0b9cd9a39b2}
+Returns the preferred number of workers for a refinery. \hypertarget{class_commander_a11fdf9b3e5dd486d22e9e562a80d0f27}{\index{Commander@{Commander}!is\-Buildable@{is\-Buildable}}
+\index{is\-Buildable@{is\-Buildable}!Commander@{Commander}}
+\subsubsection[{is\-Buildable}]{\setlength{\rightskip}{0pt plus 5cm}bool Commander\-::is\-Buildable (
+\begin{DoxyParamCaption}
+\item[{Tile\-Position}]{pos}
+\end{DoxyParamCaption}
+)}}\label{class_commander_a11fdf9b3e5dd486d22e9e562a80d0f27}
+Checks is a position is buildable. \hypertarget{class_commander_a5e5188ef8f95e452c1d30a6c7146c97d}{\index{Commander@{Commander}!print\-Info@{print\-Info}}
+\index{print\-Info@{print\-Info}!Commander@{Commander}}
+\subsubsection[{print\-Info}]{\setlength{\rightskip}{0pt plus 5cm}void Commander\-::print\-Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_commander_a5e5188ef8f95e452c1d30a6c7146c97d}
+Shows some info on the screen. \hypertarget{class_commander_aa3e2dec3072ee0073c23f68a4b998f44}{\index{Commander@{Commander}!remove\-Squad@{remove\-Squad}}
+\index{remove\-Squad@{remove\-Squad}!Commander@{Commander}}
+\subsubsection[{remove\-Squad}]{\setlength{\rightskip}{0pt plus 5cm}void Commander\-::remove\-Squad (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)}}\label{class_commander_aa3e2dec3072ee0073c23f68a4b998f44}
+Removes a squad. \hypertarget{class_commander_a68db23d58ca867d9ed68c3fb66ecf68e}{\index{Commander@{Commander}!shall\-Engage@{shall\-Engage}}
+\index{shall\-Engage@{shall\-Engage}!Commander@{Commander}}
+\subsubsection[{shall\-Engage}]{\setlength{\rightskip}{0pt plus 5cm}bool Commander\-::shall\-Engage (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_commander_a68db23d58ca867d9ed68c3fb66ecf68e}
+Checks if it is time to engage the enemy. This happens when all Required squads are active. \hypertarget{class_commander_aea760bef28ae7c34525c3d8738242926}{\index{Commander@{Commander}!toggle\-Buildplan\-Debug@{toggle\-Buildplan\-Debug}}
+\index{toggle\-Buildplan\-Debug@{toggle\-Buildplan\-Debug}!Commander@{Commander}}
+\subsubsection[{toggle\-Buildplan\-Debug}]{\setlength{\rightskip}{0pt plus 5cm}void Commander\-::toggle\-Buildplan\-Debug (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_commander_aea760bef28ae7c34525c3d8738242926}
+Switch on/off buildplan debug info printing to screen. \hypertarget{class_commander_a9e509e1e94e0baf2cf97299e7b328bf2}{\index{Commander@{Commander}!toggle\-Squads\-Debug@{toggle\-Squads\-Debug}}
+\index{toggle\-Squads\-Debug@{toggle\-Squads\-Debug}!Commander@{Commander}}
+\subsubsection[{toggle\-Squads\-Debug}]{\setlength{\rightskip}{0pt plus 5cm}void Commander\-::toggle\-Squads\-Debug (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_commander_a9e509e1e94e0baf2cf97299e7b328bf2}
+Switch on/off squads debug info printing to screen. \hypertarget{class_commander_a8a5b895fbbc7c4b1010e745e109e3775}{\index{Commander@{Commander}!unit\-Created@{unit\-Created}}
+\index{unit\-Created@{unit\-Created}!Commander@{Commander}}
+\subsubsection[{unit\-Created}]{\setlength{\rightskip}{0pt plus 5cm}void Commander\-::unit\-Created (
+\begin{DoxyParamCaption}
+\item[{{\bf Base\-Agent} $\ast$}]{agent}
+\end{DoxyParamCaption}
+)}}\label{class_commander_a8a5b895fbbc7c4b1010e745e109e3775}
+Called each time a unit is created. The unit is then placed in a \hyperlink{class_squad}{Squad}. \hypertarget{class_commander_a891be0d981a280c9584c71a8d07576c3}{\index{Commander@{Commander}!unit\-Destroyed@{unit\-Destroyed}}
+\index{unit\-Destroyed@{unit\-Destroyed}!Commander@{Commander}}
+\subsubsection[{unit\-Destroyed}]{\setlength{\rightskip}{0pt plus 5cm}void Commander\-::unit\-Destroyed (
+\begin{DoxyParamCaption}
+\item[{{\bf Base\-Agent} $\ast$}]{agent}
+\end{DoxyParamCaption}
+)}}\label{class_commander_a891be0d981a280c9584c71a8d07576c3}
+Called each time a unit is destroyed. The unit is then removed from its \hyperlink{class_squad}{Squad}. \hypertarget{class_commander_a6b47f5f3420eabefbcd39459ee3c268a}{\index{Commander@{Commander}!update\-Goals@{update\-Goals}}
+\index{update\-Goals@{update\-Goals}!Commander@{Commander}}
+\subsubsection[{update\-Goals}]{\setlength{\rightskip}{0pt plus 5cm}void Commander\-::update\-Goals (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_commander_a6b47f5f3420eabefbcd39459ee3c268a}
+Updates the goals for all squads. 
+
+\subsection{Member Data Documentation}
+\hypertarget{class_commander_a92767d5f0687dae52eb48ea1d7bcc7e1}{\index{Commander@{Commander}!enemy\-Dead\-Score@{enemy\-Dead\-Score}}
+\index{enemy\-Dead\-Score@{enemy\-Dead\-Score}!Commander@{Commander}}
+\subsubsection[{enemy\-Dead\-Score}]{\setlength{\rightskip}{0pt plus 5cm}int Commander\-::enemy\-Dead\-Score}}\label{class_commander_a92767d5f0687dae52eb48ea1d7bcc7e1}
+The total kill\-Score points of all enemy, destroyed units (not buildings). \hypertarget{class_commander_a3691e42fa66318d12bc24462915f9786}{\index{Commander@{Commander}!own\-Dead\-Score@{own\-Dead\-Score}}
+\index{own\-Dead\-Score@{own\-Dead\-Score}!Commander@{Commander}}
+\subsubsection[{own\-Dead\-Score}]{\setlength{\rightskip}{0pt plus 5cm}int Commander\-::own\-Dead\-Score}}\label{class_commander_a3691e42fa66318d12bc24462915f9786}
+The total kill\-Score points of all own, destroyed units (not buildings). 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+B\-T\-H\-A\-I\-Module/\-Source/Commander.\-h\item 
+B\-T\-H\-A\-I\-Module/\-Source/Commander.\-cpp\end{DoxyCompactItemize}

@@ -1,0 +1,246 @@
+\hypertarget{class_worker_agent}{\section{Worker\-Agent Class Reference}
+\label{class_worker_agent}\index{Worker\-Agent@{Worker\-Agent}}
+}
+
+
+{\ttfamily \#include $<$Worker\-Agent.\-h$>$}
+
+Inheritance diagram for Worker\-Agent\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_worker_agent}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_worker_agent_a1c55c8206ca0def86c6478ac98d7f2de}{Worker\-Agent} (Unit $\ast$m\-Unit)
+\item 
+void \hyperlink{class_worker_agent_a9bf641c8747b567dd62b4d1d496b492d}{compute\-Actions} ()
+\item 
+bool \hyperlink{class_worker_agent_a915eac0b771494a8e1ca03d04e986ac0}{is\-Free\-Worker} ()
+\item 
+void \hyperlink{class_worker_agent_accc6df915044157f38f1937c2c787d3e}{print\-Info} ()
+\item 
+void \hyperlink{class_worker_agent_a53f907fd51fa4ddefb3c0f165bce82fb}{debug\-\_\-show\-Goal} ()
+\item 
+void \hyperlink{class_worker_agent_a78cd553e1df561f11afc71b2eb918835}{set\-State} (int state)
+\item 
+int \hyperlink{class_worker_agent_ae0bdc1cb52a7cd5643af16d217c3bf47}{get\-State} ()
+\item 
+bool \hyperlink{class_worker_agent_af185b1df9bcd14cebb6cc39f4d19fb2b}{can\-Build} (Unit\-Type type)
+\item 
+bool \hyperlink{class_worker_agent_afedb96096579720d6b9cf9577e621272}{assign\-To\-Repair} (Unit $\ast$building)
+\item 
+bool \hyperlink{class_worker_agent_a74313cf2cb466b680ad3e67aa6533962}{assign\-To\-Build} (Unit\-Type type)
+\item 
+bool \hyperlink{class_worker_agent_a82af6ee8c50ab752618c0e9079f1a91e}{assign\-To\-Finish\-Build} (Unit $\ast$building)
+\item 
+string \hyperlink{class_worker_agent_a2ae840cfc4dfb11ed76459453656e020}{get\-State\-As\-Text} ()
+\item 
+void \hyperlink{class_worker_agent_a53cd5eb9a92d2fa9922106d2d2b3f28c}{destroyed} ()
+\item 
+void \hyperlink{class_worker_agent_abc0ce86cbacb5de7b4fd0ae79ddb780b}{reset} ()
+\item 
+bool \hyperlink{class_worker_agent_ac440df9dc188e9d78113a78a732bef8a}{is\-Constructing} (Unit\-Type type)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \hyperlink{class_worker_agent_a80799cc5623ce3f7715df650c2758180}{G\-A\-T\-H\-E\-R\-\_\-\-M\-I\-N\-E\-R\-A\-L\-S} = 0
+\item 
+static const int \hyperlink{class_worker_agent_a587e98fd64ab6a77970afa3cc154ee1a}{G\-A\-T\-H\-E\-R\-\_\-\-G\-A\-S} = 1
+\item 
+static const int \hyperlink{class_worker_agent_ae82c1bb4ab0a800baf1ad64700dce8fc}{F\-I\-N\-D\-\_\-\-B\-U\-I\-L\-D\-S\-P\-O\-T} = 2
+\item 
+static const int \hyperlink{class_worker_agent_a0101af42f6c248f24f8e4ae5d9d9b89c}{M\-O\-V\-E\-\_\-\-T\-O\-\_\-\-S\-P\-O\-T} = 3
+\item 
+static const int \hyperlink{class_worker_agent_aa6ff635d2c6d5e87c771388b64ae1d4c}{C\-O\-N\-S\-T\-R\-U\-C\-T} = 4
+\item 
+static const int \hyperlink{class_worker_agent_ad395f66af8916a07f16d08f8c2c4f555}{R\-E\-P\-A\-I\-R\-I\-N\-G} = 5
+\item 
+static const int \hyperlink{class_worker_agent_a05f75e7ef9ba5d26a338ae4efa3cd90a}{A\-T\-T\-A\-C\-K\-I\-N\-G} = 6
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_worker_agent}{Worker\-Agent} class handles all tasks that a worker, for example a Terran S\-C\-V, can perform. The tasks involves gathering minerals and gas, move to a selected buildspot and construct the specified building, and if Terran S\-C\-V, repair a building or tank.
+
+Author\-: Johan Hagelback (\href{mailto:johan.hagelback@gmail.com}{\tt johan.\-hagelback@gmail.\-com}) 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_worker_agent_a1c55c8206ca0def86c6478ac98d7f2de}{\index{Worker\-Agent@{Worker\-Agent}!Worker\-Agent@{Worker\-Agent}}
+\index{Worker\-Agent@{Worker\-Agent}!WorkerAgent@{Worker\-Agent}}
+\subsubsection[{Worker\-Agent}]{\setlength{\rightskip}{0pt plus 5cm}Worker\-Agent\-::\-Worker\-Agent (
+\begin{DoxyParamCaption}
+\item[{Unit $\ast$}]{m\-Unit}
+\end{DoxyParamCaption}
+)}}\label{class_worker_agent_a1c55c8206ca0def86c6478ac98d7f2de}
+\hyperlink{class_constructor}{Constructor}. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_worker_agent_a74313cf2cb466b680ad3e67aa6533962}{\index{Worker\-Agent@{Worker\-Agent}!assign\-To\-Build@{assign\-To\-Build}}
+\index{assign\-To\-Build@{assign\-To\-Build}!WorkerAgent@{Worker\-Agent}}
+\subsubsection[{assign\-To\-Build}]{\setlength{\rightskip}{0pt plus 5cm}bool Worker\-Agent\-::assign\-To\-Build (
+\begin{DoxyParamCaption}
+\item[{Unit\-Type}]{type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_worker_agent_a74313cf2cb466b680ad3e67aa6533962}
+Assigns the unit to construct a building of the specified type. 
+
+Reimplemented from \hyperlink{class_base_agent_a861a4564ef195eef8b91edad84230f65}{Base\-Agent}.
+
+\hypertarget{class_worker_agent_a82af6ee8c50ab752618c0e9079f1a91e}{\index{Worker\-Agent@{Worker\-Agent}!assign\-To\-Finish\-Build@{assign\-To\-Finish\-Build}}
+\index{assign\-To\-Finish\-Build@{assign\-To\-Finish\-Build}!WorkerAgent@{Worker\-Agent}}
+\subsubsection[{assign\-To\-Finish\-Build}]{\setlength{\rightskip}{0pt plus 5cm}bool Worker\-Agent\-::assign\-To\-Finish\-Build (
+\begin{DoxyParamCaption}
+\item[{Unit $\ast$}]{building}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_worker_agent_a82af6ee8c50ab752618c0e9079f1a91e}
+Assigns the agent to continue building a non-\/finished building. 
+
+Reimplemented from \hyperlink{class_base_agent_ad74416faba79cf2b92102246dad27b7d}{Base\-Agent}.
+
+\hypertarget{class_worker_agent_afedb96096579720d6b9cf9577e621272}{\index{Worker\-Agent@{Worker\-Agent}!assign\-To\-Repair@{assign\-To\-Repair}}
+\index{assign\-To\-Repair@{assign\-To\-Repair}!WorkerAgent@{Worker\-Agent}}
+\subsubsection[{assign\-To\-Repair}]{\setlength{\rightskip}{0pt plus 5cm}bool Worker\-Agent\-::assign\-To\-Repair (
+\begin{DoxyParamCaption}
+\item[{Unit $\ast$}]{building}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_worker_agent_afedb96096579720d6b9cf9577e621272}
+Assigns the agent to repair a building or tank. 
+
+Reimplemented from \hyperlink{class_base_agent_a26e1e72f340716be8f551bb357029c5b}{Base\-Agent}.
+
+\hypertarget{class_worker_agent_af185b1df9bcd14cebb6cc39f4d19fb2b}{\index{Worker\-Agent@{Worker\-Agent}!can\-Build@{can\-Build}}
+\index{can\-Build@{can\-Build}!WorkerAgent@{Worker\-Agent}}
+\subsubsection[{can\-Build}]{\setlength{\rightskip}{0pt plus 5cm}bool Worker\-Agent\-::can\-Build (
+\begin{DoxyParamCaption}
+\item[{Unit\-Type}]{type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_worker_agent_af185b1df9bcd14cebb6cc39f4d19fb2b}
+Returns true if the Worker agent can create units of the specified type. 
+
+Reimplemented from \hyperlink{class_base_agent_a750f5bd0688b6dc2133a8644f36d8cf5}{Base\-Agent}.
+
+\hypertarget{class_worker_agent_a9bf641c8747b567dd62b4d1d496b492d}{\index{Worker\-Agent@{Worker\-Agent}!compute\-Actions@{compute\-Actions}}
+\index{compute\-Actions@{compute\-Actions}!WorkerAgent@{Worker\-Agent}}
+\subsubsection[{compute\-Actions}]{\setlength{\rightskip}{0pt plus 5cm}void Worker\-Agent\-::compute\-Actions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_worker_agent_a9bf641c8747b567dd62b4d1d496b492d}
+Called each update to issue orders. 
+
+Reimplemented from \hyperlink{class_base_agent_a5b5a8bd2592ee1bb82254cf7e8423321}{Base\-Agent}.
+
+\hypertarget{class_worker_agent_a53f907fd51fa4ddefb3c0f165bce82fb}{\index{Worker\-Agent@{Worker\-Agent}!debug\-\_\-show\-Goal@{debug\-\_\-show\-Goal}}
+\index{debug\-\_\-show\-Goal@{debug\-\_\-show\-Goal}!WorkerAgent@{Worker\-Agent}}
+\subsubsection[{debug\-\_\-show\-Goal}]{\setlength{\rightskip}{0pt plus 5cm}void Worker\-Agent\-::debug\-\_\-show\-Goal (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_worker_agent_a53f907fd51fa4ddefb3c0f165bce82fb}
+Used in debug modes to show a line to the agents' goal. 
+
+Reimplemented from \hyperlink{class_base_agent_a58e65cf5df5e8db1973f177889e8c0cb}{Base\-Agent}.
+
+\hypertarget{class_worker_agent_a53cd5eb9a92d2fa9922106d2d2b3f28c}{\index{Worker\-Agent@{Worker\-Agent}!destroyed@{destroyed}}
+\index{destroyed@{destroyed}!WorkerAgent@{Worker\-Agent}}
+\subsubsection[{destroyed}]{\setlength{\rightskip}{0pt plus 5cm}void Worker\-Agent\-::destroyed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_worker_agent_a53cd5eb9a92d2fa9922106d2d2b3f28c}
+Called when the unit assigned to this agent is destroyed. 
+
+Reimplemented from \hyperlink{class_base_agent_abc62bb505cb4ced4353feade1bb80e33}{Base\-Agent}.
+
+\hypertarget{class_worker_agent_ae0bdc1cb52a7cd5643af16d217c3bf47}{\index{Worker\-Agent@{Worker\-Agent}!get\-State@{get\-State}}
+\index{get\-State@{get\-State}!WorkerAgent@{Worker\-Agent}}
+\subsubsection[{get\-State}]{\setlength{\rightskip}{0pt plus 5cm}int Worker\-Agent\-::get\-State (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_worker_agent_ae0bdc1cb52a7cd5643af16d217c3bf47}
+Returns the current state of the worker. \hypertarget{class_worker_agent_a2ae840cfc4dfb11ed76459453656e020}{\index{Worker\-Agent@{Worker\-Agent}!get\-State\-As\-Text@{get\-State\-As\-Text}}
+\index{get\-State\-As\-Text@{get\-State\-As\-Text}!WorkerAgent@{Worker\-Agent}}
+\subsubsection[{get\-State\-As\-Text}]{\setlength{\rightskip}{0pt plus 5cm}string Worker\-Agent\-::get\-State\-As\-Text (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_worker_agent_a2ae840cfc4dfb11ed76459453656e020}
+Returns the state of the agent as text. Good for printouts. \hypertarget{class_worker_agent_ac440df9dc188e9d78113a78a732bef8a}{\index{Worker\-Agent@{Worker\-Agent}!is\-Constructing@{is\-Constructing}}
+\index{is\-Constructing@{is\-Constructing}!WorkerAgent@{Worker\-Agent}}
+\subsubsection[{is\-Constructing}]{\setlength{\rightskip}{0pt plus 5cm}bool Worker\-Agent\-::is\-Constructing (
+\begin{DoxyParamCaption}
+\item[{Unit\-Type}]{type}
+\end{DoxyParamCaption}
+)}}\label{class_worker_agent_ac440df9dc188e9d78113a78a732bef8a}
+Returns true if this worker is in any of the build states, and is constructing the specified building. \hypertarget{class_worker_agent_a915eac0b771494a8e1ca03d04e986ac0}{\index{Worker\-Agent@{Worker\-Agent}!is\-Free\-Worker@{is\-Free\-Worker}}
+\index{is\-Free\-Worker@{is\-Free\-Worker}!WorkerAgent@{Worker\-Agent}}
+\subsubsection[{is\-Free\-Worker}]{\setlength{\rightskip}{0pt plus 5cm}bool Worker\-Agent\-::is\-Free\-Worker (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_worker_agent_a915eac0b771494a8e1ca03d04e986ac0}
+Returns true if this agent is a free worker, i.\-e. is idle or is gathering minerals. 
+
+Reimplemented from \hyperlink{class_base_agent_a8aa4716711f964b6a073d67b35ec97b9}{Base\-Agent}.
+
+\hypertarget{class_worker_agent_accc6df915044157f38f1937c2c787d3e}{\index{Worker\-Agent@{Worker\-Agent}!print\-Info@{print\-Info}}
+\index{print\-Info@{print\-Info}!WorkerAgent@{Worker\-Agent}}
+\subsubsection[{print\-Info}]{\setlength{\rightskip}{0pt plus 5cm}void Worker\-Agent\-::print\-Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_worker_agent_accc6df915044157f38f1937c2c787d3e}
+Used to print info about this agent to the screen. 
+
+Reimplemented from \hyperlink{class_base_agent_a80433bb4a354687c5f039e90f112a197}{Base\-Agent}.
+
+\hypertarget{class_worker_agent_abc0ce86cbacb5de7b4fd0ae79ddb780b}{\index{Worker\-Agent@{Worker\-Agent}!reset@{reset}}
+\index{reset@{reset}!WorkerAgent@{Worker\-Agent}}
+\subsubsection[{reset}]{\setlength{\rightskip}{0pt plus 5cm}void Worker\-Agent\-::reset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_worker_agent_abc0ce86cbacb5de7b4fd0ae79ddb780b}
+Resets a worker to gathering minerals. \hypertarget{class_worker_agent_a78cd553e1df561f11afc71b2eb918835}{\index{Worker\-Agent@{Worker\-Agent}!set\-State@{set\-State}}
+\index{set\-State@{set\-State}!WorkerAgent@{Worker\-Agent}}
+\subsubsection[{set\-State}]{\setlength{\rightskip}{0pt plus 5cm}void Worker\-Agent\-::set\-State (
+\begin{DoxyParamCaption}
+\item[{int}]{state}
+\end{DoxyParamCaption}
+)}}\label{class_worker_agent_a78cd553e1df561f11afc71b2eb918835}
+Set the state of the worker. I.\-e. what does it do right now. Should only be set if the worker is getting a task not through the functions in this class. Then it is automatic. 
+
+\subsection{Member Data Documentation}
+\hypertarget{class_worker_agent_a05f75e7ef9ba5d26a338ae4efa3cd90a}{\index{Worker\-Agent@{Worker\-Agent}!A\-T\-T\-A\-C\-K\-I\-N\-G@{A\-T\-T\-A\-C\-K\-I\-N\-G}}
+\index{A\-T\-T\-A\-C\-K\-I\-N\-G@{A\-T\-T\-A\-C\-K\-I\-N\-G}!WorkerAgent@{Worker\-Agent}}
+\subsubsection[{A\-T\-T\-A\-C\-K\-I\-N\-G}]{\setlength{\rightskip}{0pt plus 5cm}const int Worker\-Agent\-::\-A\-T\-T\-A\-C\-K\-I\-N\-G = 6\hspace{0.3cm}{\ttfamily [static]}}}\label{class_worker_agent_a05f75e7ef9ba5d26a338ae4efa3cd90a}
+Worker is needed to attack an enemy intruder in a base. \hypertarget{class_worker_agent_aa6ff635d2c6d5e87c771388b64ae1d4c}{\index{Worker\-Agent@{Worker\-Agent}!C\-O\-N\-S\-T\-R\-U\-C\-T@{C\-O\-N\-S\-T\-R\-U\-C\-T}}
+\index{C\-O\-N\-S\-T\-R\-U\-C\-T@{C\-O\-N\-S\-T\-R\-U\-C\-T}!WorkerAgent@{Worker\-Agent}}
+\subsubsection[{C\-O\-N\-S\-T\-R\-U\-C\-T}]{\setlength{\rightskip}{0pt plus 5cm}const int Worker\-Agent\-::\-C\-O\-N\-S\-T\-R\-U\-C\-T = 4\hspace{0.3cm}{\ttfamily [static]}}}\label{class_worker_agent_aa6ff635d2c6d5e87c771388b64ae1d4c}
+Worker is constructing a building. \hypertarget{class_worker_agent_ae82c1bb4ab0a800baf1ad64700dce8fc}{\index{Worker\-Agent@{Worker\-Agent}!F\-I\-N\-D\-\_\-\-B\-U\-I\-L\-D\-S\-P\-O\-T@{F\-I\-N\-D\-\_\-\-B\-U\-I\-L\-D\-S\-P\-O\-T}}
+\index{F\-I\-N\-D\-\_\-\-B\-U\-I\-L\-D\-S\-P\-O\-T@{F\-I\-N\-D\-\_\-\-B\-U\-I\-L\-D\-S\-P\-O\-T}!WorkerAgent@{Worker\-Agent}}
+\subsubsection[{F\-I\-N\-D\-\_\-\-B\-U\-I\-L\-D\-S\-P\-O\-T}]{\setlength{\rightskip}{0pt plus 5cm}const int Worker\-Agent\-::\-F\-I\-N\-D\-\_\-\-B\-U\-I\-L\-D\-S\-P\-O\-T = 2\hspace{0.3cm}{\ttfamily [static]}}}\label{class_worker_agent_ae82c1bb4ab0a800baf1ad64700dce8fc}
+Worker is trying to find a buildspot for a requested building. \hypertarget{class_worker_agent_a587e98fd64ab6a77970afa3cc154ee1a}{\index{Worker\-Agent@{Worker\-Agent}!G\-A\-T\-H\-E\-R\-\_\-\-G\-A\-S@{G\-A\-T\-H\-E\-R\-\_\-\-G\-A\-S}}
+\index{G\-A\-T\-H\-E\-R\-\_\-\-G\-A\-S@{G\-A\-T\-H\-E\-R\-\_\-\-G\-A\-S}!WorkerAgent@{Worker\-Agent}}
+\subsubsection[{G\-A\-T\-H\-E\-R\-\_\-\-G\-A\-S}]{\setlength{\rightskip}{0pt plus 5cm}const int Worker\-Agent\-::\-G\-A\-T\-H\-E\-R\-\_\-\-G\-A\-S = 1\hspace{0.3cm}{\ttfamily [static]}}}\label{class_worker_agent_a587e98fd64ab6a77970afa3cc154ee1a}
+Worker is gathering gas. \hypertarget{class_worker_agent_a80799cc5623ce3f7715df650c2758180}{\index{Worker\-Agent@{Worker\-Agent}!G\-A\-T\-H\-E\-R\-\_\-\-M\-I\-N\-E\-R\-A\-L\-S@{G\-A\-T\-H\-E\-R\-\_\-\-M\-I\-N\-E\-R\-A\-L\-S}}
+\index{G\-A\-T\-H\-E\-R\-\_\-\-M\-I\-N\-E\-R\-A\-L\-S@{G\-A\-T\-H\-E\-R\-\_\-\-M\-I\-N\-E\-R\-A\-L\-S}!WorkerAgent@{Worker\-Agent}}
+\subsubsection[{G\-A\-T\-H\-E\-R\-\_\-\-M\-I\-N\-E\-R\-A\-L\-S}]{\setlength{\rightskip}{0pt plus 5cm}const int Worker\-Agent\-::\-G\-A\-T\-H\-E\-R\-\_\-\-M\-I\-N\-E\-R\-A\-L\-S = 0\hspace{0.3cm}{\ttfamily [static]}}}\label{class_worker_agent_a80799cc5623ce3f7715df650c2758180}
+Worker is gathering minerals. \hypertarget{class_worker_agent_a0101af42f6c248f24f8e4ae5d9d9b89c}{\index{Worker\-Agent@{Worker\-Agent}!M\-O\-V\-E\-\_\-\-T\-O\-\_\-\-S\-P\-O\-T@{M\-O\-V\-E\-\_\-\-T\-O\-\_\-\-S\-P\-O\-T}}
+\index{M\-O\-V\-E\-\_\-\-T\-O\-\_\-\-S\-P\-O\-T@{M\-O\-V\-E\-\_\-\-T\-O\-\_\-\-S\-P\-O\-T}!WorkerAgent@{Worker\-Agent}}
+\subsubsection[{M\-O\-V\-E\-\_\-\-T\-O\-\_\-\-S\-P\-O\-T}]{\setlength{\rightskip}{0pt plus 5cm}const int Worker\-Agent\-::\-M\-O\-V\-E\-\_\-\-T\-O\-\_\-\-S\-P\-O\-T = 3\hspace{0.3cm}{\ttfamily [static]}}}\label{class_worker_agent_a0101af42f6c248f24f8e4ae5d9d9b89c}
+Worker is moving to a found buildspot. \hypertarget{class_worker_agent_ad395f66af8916a07f16d08f8c2c4f555}{\index{Worker\-Agent@{Worker\-Agent}!R\-E\-P\-A\-I\-R\-I\-N\-G@{R\-E\-P\-A\-I\-R\-I\-N\-G}}
+\index{R\-E\-P\-A\-I\-R\-I\-N\-G@{R\-E\-P\-A\-I\-R\-I\-N\-G}!WorkerAgent@{Worker\-Agent}}
+\subsubsection[{R\-E\-P\-A\-I\-R\-I\-N\-G}]{\setlength{\rightskip}{0pt plus 5cm}const int Worker\-Agent\-::\-R\-E\-P\-A\-I\-R\-I\-N\-G = 5\hspace{0.3cm}{\ttfamily [static]}}}\label{class_worker_agent_ad395f66af8916a07f16d08f8c2c4f555}
+Worker is repairing a building (Terran only). 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+B\-T\-H\-A\-I\-Module/\-Source/Worker\-Agent.\-h\item 
+B\-T\-H\-A\-I\-Module/\-Source/Worker\-Agent.\-cpp\end{DoxyCompactItemize}

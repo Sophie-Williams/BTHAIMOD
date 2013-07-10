@@ -1,0 +1,64 @@
+\hypertarget{class_map_data_reader}{\section{Map\-Data\-Reader Class Reference}
+\label{class_map_data_reader}\index{Map\-Data\-Reader@{Map\-Data\-Reader}}
+}
+
+
+{\ttfamily \#include $<$Map\-Data\-Reader.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_map_data_reader_a866267d875d20a6e857e12f3397fc00c}{Map\-Data\-Reader} ()
+\item 
+\hyperlink{class_map_data_reader_a470305a21ae79188fd548fddc5654bab}{$\sim$\-Map\-Data\-Reader} ()
+\item 
+void \hyperlink{class_map_data_reader_afb679d46684faa606b8dabd2a5742700}{read\-Map} ()
+\item 
+int \hyperlink{class_map_data_reader_ade89e244559a1cd09395643fc1a7bcd5}{get\-Distance} (Tile\-Position t1, Tile\-Position t2)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class handles load/save of additional mapdata not contained in bwapi/bwta. This is used to quick calculate ground distances between important regions like start positions.
+
+Author\-: Johan Hagelback (\href{mailto:johan.hagelback@gmail.com}{\tt johan.\-hagelback@gmail.\-com}) 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_map_data_reader_a866267d875d20a6e857e12f3397fc00c}{\index{Map\-Data\-Reader@{Map\-Data\-Reader}!Map\-Data\-Reader@{Map\-Data\-Reader}}
+\index{Map\-Data\-Reader@{Map\-Data\-Reader}!MapDataReader@{Map\-Data\-Reader}}
+\subsubsection[{Map\-Data\-Reader}]{\setlength{\rightskip}{0pt plus 5cm}Map\-Data\-Reader\-::\-Map\-Data\-Reader (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_map_data_reader_a866267d875d20a6e857e12f3397fc00c}
+\hyperlink{class_constructor}{Constructor} \hypertarget{class_map_data_reader_a470305a21ae79188fd548fddc5654bab}{\index{Map\-Data\-Reader@{Map\-Data\-Reader}!$\sim$\-Map\-Data\-Reader@{$\sim$\-Map\-Data\-Reader}}
+\index{$\sim$\-Map\-Data\-Reader@{$\sim$\-Map\-Data\-Reader}!MapDataReader@{Map\-Data\-Reader}}
+\subsubsection[{$\sim$\-Map\-Data\-Reader}]{\setlength{\rightskip}{0pt plus 5cm}Map\-Data\-Reader\-::$\sim$\-Map\-Data\-Reader (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_map_data_reader_a470305a21ae79188fd548fddc5654bab}
+Destructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_map_data_reader_ade89e244559a1cd09395643fc1a7bcd5}{\index{Map\-Data\-Reader@{Map\-Data\-Reader}!get\-Distance@{get\-Distance}}
+\index{get\-Distance@{get\-Distance}!MapDataReader@{Map\-Data\-Reader}}
+\subsubsection[{get\-Distance}]{\setlength{\rightskip}{0pt plus 5cm}int Map\-Data\-Reader\-::get\-Distance (
+\begin{DoxyParamCaption}
+\item[{Tile\-Position}]{t1, }
+\item[{Tile\-Position}]{t2}
+\end{DoxyParamCaption}
+)}}\label{class_map_data_reader_ade89e244559a1cd09395643fc1a7bcd5}
+Returns the ground distance between two positions. If not found in the data, bird distance is used. \hypertarget{class_map_data_reader_afb679d46684faa606b8dabd2a5742700}{\index{Map\-Data\-Reader@{Map\-Data\-Reader}!read\-Map@{read\-Map}}
+\index{read\-Map@{read\-Map}!MapDataReader@{Map\-Data\-Reader}}
+\subsubsection[{read\-Map}]{\setlength{\rightskip}{0pt plus 5cm}void Map\-Data\-Reader\-::read\-Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_map_data_reader_afb679d46684faa606b8dabd2a5742700}
+Reads the map file. If no file is found, a new is generated. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+B\-T\-H\-A\-I\-Module/\-Source/Map\-Data\-Reader.\-h\item 
+B\-T\-H\-A\-I\-Module/\-Source/Map\-Data\-Reader.\-cpp\end{DoxyCompactItemize}

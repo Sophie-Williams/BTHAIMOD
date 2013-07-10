@@ -1,0 +1,79 @@
+\hypertarget{class_unit_setup}{\section{Unit\-Setup Class Reference}
+\label{class_unit_setup}\index{Unit\-Setup@{Unit\-Setup}}
+}
+
+
+{\ttfamily \#include $<$Unit\-Setup.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_unit_setup_a1bec8d24f24962c9afdcc655f37b2741}{Unit\-Setup} ()
+\item 
+bool \hyperlink{class_unit_setup_abf6d1d46a221ed56e5b2274bca316403}{equals} (Unit\-Type m\-Type)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \hyperlink{class_unit_setup_a1415108dca9b17a61eabf2da040f8daf}{equals} (Unit\-Type t1, Unit\-Type t2)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Unit\-Type \hyperlink{class_unit_setup_a6665631fe1080c31e51ac58bd17a9741}{type}
+\item 
+int \hyperlink{class_unit_setup_aed8c7114cbebda909c5ecaed720075a4}{no}
+\item 
+int \hyperlink{class_unit_setup_a4a820e914895b448ad20912421d99ee7}{current}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class is used by the \hyperlink{class_squad}{Squad} class to handle the number of units of a specified type is in the squad.
+
+Author\-: Johan Hagelback (\href{mailto:johan.hagelback@gmail.com}{\tt johan.\-hagelback@gmail.\-com}) 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_unit_setup_a1bec8d24f24962c9afdcc655f37b2741}{\index{Unit\-Setup@{Unit\-Setup}!Unit\-Setup@{Unit\-Setup}}
+\index{Unit\-Setup@{Unit\-Setup}!UnitSetup@{Unit\-Setup}}
+\subsubsection[{Unit\-Setup}]{\setlength{\rightskip}{0pt plus 5cm}Unit\-Setup\-::\-Unit\-Setup (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_unit_setup_a1bec8d24f24962c9afdcc655f37b2741}
+Default constructor. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_unit_setup_abf6d1d46a221ed56e5b2274bca316403}{\index{Unit\-Setup@{Unit\-Setup}!equals@{equals}}
+\index{equals@{equals}!UnitSetup@{Unit\-Setup}}
+\subsubsection[{equals}]{\setlength{\rightskip}{0pt plus 5cm}bool Unit\-Setup\-::equals (
+\begin{DoxyParamCaption}
+\item[{Unit\-Type}]{m\-Type}
+\end{DoxyParamCaption}
+)}}\label{class_unit_setup_abf6d1d46a221ed56e5b2274bca316403}
+Checks if this setup equals to the specified type. \hypertarget{class_unit_setup_a1415108dca9b17a61eabf2da040f8daf}{\index{Unit\-Setup@{Unit\-Setup}!equals@{equals}}
+\index{equals@{equals}!UnitSetup@{Unit\-Setup}}
+\subsubsection[{equals}]{\setlength{\rightskip}{0pt plus 5cm}bool Unit\-Setup\-::equals (
+\begin{DoxyParamCaption}
+\item[{Unit\-Type}]{t1, }
+\item[{Unit\-Type}]{t2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_unit_setup_a1415108dca9b17a61eabf2da040f8daf}
+Checks if unittypes matches. Needed for morphing units like Siege Tanks and Lurkers. 
+
+\subsection{Member Data Documentation}
+\hypertarget{class_unit_setup_a4a820e914895b448ad20912421d99ee7}{\index{Unit\-Setup@{Unit\-Setup}!current@{current}}
+\index{current@{current}!UnitSetup@{Unit\-Setup}}
+\subsubsection[{current}]{\setlength{\rightskip}{0pt plus 5cm}int Unit\-Setup\-::current}}\label{class_unit_setup_a4a820e914895b448ad20912421d99ee7}
+Current number of the unit. \hypertarget{class_unit_setup_aed8c7114cbebda909c5ecaed720075a4}{\index{Unit\-Setup@{Unit\-Setup}!no@{no}}
+\index{no@{no}!UnitSetup@{Unit\-Setup}}
+\subsubsection[{no}]{\setlength{\rightskip}{0pt plus 5cm}int Unit\-Setup\-::no}}\label{class_unit_setup_aed8c7114cbebda909c5ecaed720075a4}
+Wanted number of the unit. \hypertarget{class_unit_setup_a6665631fe1080c31e51ac58bd17a9741}{\index{Unit\-Setup@{Unit\-Setup}!type@{type}}
+\index{type@{type}!UnitSetup@{Unit\-Setup}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}Unit\-Type Unit\-Setup\-::type}}\label{class_unit_setup_a6665631fe1080c31e51ac58bd17a9741}
+Type of unit. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+B\-T\-H\-A\-I\-Module/\-Source/Unit\-Setup.\-h\item 
+B\-T\-H\-A\-I\-Module/\-Source/Unit\-Setup.\-cpp\end{DoxyCompactItemize}

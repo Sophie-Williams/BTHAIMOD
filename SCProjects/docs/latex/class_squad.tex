@@ -1,0 +1,722 @@
+\hypertarget{class_squad}{\section{Squad Class Reference}
+\label{class_squad}\index{Squad@{Squad}}
+}
+
+
+{\ttfamily \#include $<$Squad.\-h$>$}
+
+Inheritance diagram for Squad\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_squad}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_squad_a0e37f7593f55bff89220ec031d19f5f0}{Squad} ()
+\item 
+\hyperlink{class_squad_a38968fb394d3629c844c8f313346ffb7}{Squad} (int m\-Id, int m\-Type, string m\-Name, int m\-Priority)
+\item 
+int \hyperlink{class_squad_a9c639ad5119ecedbf84896b0bb8ef5d7}{get\-I\-D} ()
+\item 
+Tile\-Position \hyperlink{class_squad_ad5ef043e5499101a8d8d4502f0001a5f}{get\-Next\-Start\-Location} ()
+\item 
+string \hyperlink{class_squad_a96feacac86a121f967513eb27efef937}{get\-Name} ()
+\item 
+Unit\-Type \hyperlink{class_squad_af0f25df0c07c6c55a84ff9acefe2c8cf}{morphs\-To} ()
+\item 
+void \hyperlink{class_squad_a34bcb0819d58c91fb5c7d04928381251}{set\-Morphs\-To} (Unit\-Type type)
+\item 
+bool \hyperlink{class_squad_abe4c10a489f4556685b67499cdaa76bd}{is\-Required} ()
+\item 
+void \hyperlink{class_squad_a747a0f006135a5badf2c75ac23d62662}{set\-Required} (bool m\-Required)
+\item 
+void \hyperlink{class_squad_aa4d4efc27308bd79aa200d915bc97fa2}{set\-Buildup} (bool m\-Buildup)
+\item 
+int \hyperlink{class_squad_a86d964bb1983b17b12855bb47585f258}{get\-Priority} ()
+\item 
+void \hyperlink{class_squad_ae7ae6cd3d82507d00ba440608563eb55}{set\-Priority} (int m\-Priority)
+\item 
+void \hyperlink{class_squad_a5c92d1a28a101bcc258791c90d1edd75}{set\-Active\-Priority} (int m\-Priority)
+\item 
+void \hyperlink{class_squad_a9419fdf05db5daf2ed38c3987b7f7739}{add\-Setup} (Unit\-Type type, int no)
+\item 
+void \hyperlink{class_squad_a0b312394675f8fdae5ac2cf846d9a8d2}{remove\-Setup} (Unit\-Type type, int no)
+\item 
+virtual bool \hyperlink{class_squad_a20f3ca360518b8908b405c44a858ccbd}{is\-Active} ()
+\item 
+void \hyperlink{class_squad_a3da88322ad60c25c2f45e37d097366af}{force\-Active} ()
+\item 
+bool \hyperlink{class_squad_aca71297e519ade079733e9a64871a0fe}{is\-Full} ()
+\item 
+int \hyperlink{class_squad_a37f8bfb71799fb9892b47afa15cf0244}{size} ()
+\item 
+int \hyperlink{class_squad_afe7b79c6ae91d3cf8e97f415ab656b33}{max\-Size} ()
+\item 
+virtual void \hyperlink{class_squad_ac338d389b81cbec76cb8d240f0833e43}{compute\-Actions} ()
+\item 
+void \hyperlink{class_squad_a578378fe2e823b1d5448865167d9909f}{set\-Goal} (Tile\-Position m\-Goal)
+\item 
+void \hyperlink{class_squad_a2888079eb1c4e57c8563c61010c3ef48}{debug\-\_\-show\-Goal} ()
+\item 
+bool \hyperlink{class_squad_a0d3ed017d970bbce7889b6cb3a4ffb18}{is\-Attacking} ()
+\item 
+bool \hyperlink{class_squad_a625a91f67527f53e31fb6aba53a91517}{is\-Under\-Attack} ()
+\item 
+bool \hyperlink{class_squad_a675706674e51d5092ceacaa703c582ad}{need\-Unit} (Unit\-Type type)
+\item 
+bool \hyperlink{class_squad_afd258866efe43f6c768513c46af71130}{add\-Member} (\hyperlink{class_base_agent}{Base\-Agent} $\ast$agent)
+\item 
+vector$<$ \hyperlink{class_base_agent}{Base\-Agent} $\ast$ $>$ \hyperlink{class_squad_a2b9b7f1feb60210ede502726fc920f89}{get\-Members} ()
+\item 
+void \hyperlink{class_squad_a37634e58c385b0afd9576a6a67f01141}{remove\-Member} (\hyperlink{class_base_agent}{Base\-Agent} $\ast$agent)
+\item 
+\hyperlink{class_base_agent}{Base\-Agent} $\ast$ \hyperlink{class_squad_a541ce562208ceddead65b49bda6601de}{remove\-Member} (Unit\-Type type)
+\item 
+void \hyperlink{class_squad_a555aa7861a2fbea3394892866ed5464c}{disband} ()
+\item 
+virtual void \hyperlink{class_squad_aca337f45691b4e6ea361f3f8de06c536}{defend} (Tile\-Position m\-Goal)
+\item 
+virtual void \hyperlink{class_squad_a4e405c83103c69dda302a367e2dfed3f}{attack} (Tile\-Position m\-Goal)
+\item 
+virtual void \hyperlink{class_squad_aefeccd46eb2bf673e1bb7e4d7b913a49}{assist} (Tile\-Position m\-Goal)
+\item 
+virtual void \hyperlink{class_squad_a54380c521be6f5b3be723c24e2bd9ab7}{clear\-Goal} ()
+\item 
+virtual Tile\-Position \hyperlink{class_squad_ae9278dcf91e317c4316ce19e4c7c3b9e}{get\-Goal} ()
+\item 
+Tile\-Position \hyperlink{class_squad_a2295fb723176ad50ca7b56b5117c348f}{next\-Follow\-Move\-Position} ()
+\item 
+Tile\-Position \hyperlink{class_squad_a9acb3a00ec6d40b5bf01f1bc7e377661}{next\-Move\-Position} ()
+\item 
+virtual bool \hyperlink{class_squad_a5ad7231b7644be74b42318ff97d6f5e3}{has\-Goal} ()
+\item 
+Tile\-Position \hyperlink{class_squad_a89c5a600f312920314ef0f30dc1e582b}{get\-Center} ()
+\item 
+bool \hyperlink{class_squad_af9d5a2b70babb50dbbe3ae0d3645a871}{is\-Offensive} ()
+\item 
+bool \hyperlink{class_squad_a16a7474f9227ffe52999681032faa2b5}{is\-Defensive} ()
+\item 
+bool \hyperlink{class_squad_af8c45064b410c6902f614d3fea381d24}{is\-Explorer} ()
+\item 
+bool \hyperlink{class_squad_a128b16fd4757537a296f6f21519af7cd}{is\-Bunker\-Defend} ()
+\item 
+bool \hyperlink{class_squad_a879c20e23f8089678e4b49943e4b2bdc}{is\-Shuttle} ()
+\item 
+bool \hyperlink{class_squad_aeddc272cbe51f123f90caa278e359055}{is\-Kite} ()
+\item 
+bool \hyperlink{class_squad_ac50b13fa28d74e46f8c0ca467eaea423}{is\-Rush} ()
+\item 
+bool \hyperlink{class_squad_a2d027738d083b50abeb077cf8658ff78}{is\-Support} ()
+\item 
+bool \hyperlink{class_squad_aef91fd8a4d905615c3c15248e64d8607}{is\-Ground} ()
+\item 
+bool \hyperlink{class_squad_a6ad1be5c9231c15652ae347a34c465dd}{is\-Air} ()
+\item 
+int \hyperlink{class_squad_aa65e364147adb15d93f82ce57f9b6fa8}{get\-Size} ()
+\item 
+int \hyperlink{class_squad_a1bfdf801793c5e843ff1a9adfba61b3a}{get\-Total\-Units} ()
+\item 
+int \hyperlink{class_squad_a6b590cfa00087f286192ff655530e2d3}{get\-Strength} ()
+\item 
+virtual void \hyperlink{class_squad_a02e1bb7b5d5579df71cc94ce372ae13c}{print\-Info} ()
+\item 
+bool \hyperlink{class_squad_a4235306fd34de49f920af0f5f7d6df00}{has\-Units} (Unit\-Type type, int no)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \hyperlink{class_squad_ac629d438d6297bb1fe40f33e90741553}{O\-F\-F\-E\-N\-S\-I\-V\-E} = 0
+\item 
+static const int \hyperlink{class_squad_a1c3ca5859f0f3738d609a5f95ba04a6f}{D\-E\-F\-E\-N\-S\-I\-V\-E} = 1
+\item 
+static const int \hyperlink{class_squad_a0840d63949a8301743d9b21cbb99abc7}{E\-X\-P\-L\-O\-R\-E\-R} = 2
+\item 
+static const int \hyperlink{class_squad_a76a852c62242a800efe90ea38aa1fb5e}{S\-U\-P\-P\-O\-R\-T} = 3
+\item 
+static const int \hyperlink{class_squad_acbf1c634b1d198828b8badb96039c1a0}{B\-U\-N\-K\-E\-R} = 4
+\item 
+static const int \hyperlink{class_squad_a54980204b8f391319378a8090639e897}{S\-H\-U\-T\-T\-L\-E} = 5
+\item 
+static const int \hyperlink{class_squad_af6cce24e22d96f4aa9d59e71083b7ace}{K\-I\-T\-E} = 6
+\item 
+static const int \hyperlink{class_squad_a866b266f0f5b4fb8099d7ea83b2163b3}{R\-U\-S\-H} = 7
+\item 
+static const int \hyperlink{class_squad_a296c744bac8fae201bb3f1e9c222907f}{C\-H\-O\-K\-E\-H\-A\-R\-A\-S\-S} = 8
+\item 
+static const int \hyperlink{class_squad_a01e00ec7576957ee38d4b5af61144ef6}{G\-R\-O\-U\-N\-D} = 0
+\item 
+static const int \hyperlink{class_squad_ad33fd78a46d5a68af5d9b36c2faf2620}{A\-I\-R} = 1
+\item 
+static const int \hyperlink{class_squad_a649cd577ebc44798880b81df7b28d189}{S\-T\-A\-T\-E\-\_\-\-A\-T\-T\-A\-C\-K} = 1
+\item 
+static const int \hyperlink{class_squad_aafe6f8e836a02ede7e9a88bc335c6644}{S\-T\-A\-T\-E\-\_\-\-D\-E\-F\-E\-N\-D} = 2
+\item 
+static const int \hyperlink{class_squad_ace3e1c2898e4e91a1bd5ea8f748cd904}{S\-T\-A\-T\-E\-\_\-\-A\-S\-S\-I\-S\-T} = 3
+\item 
+static const int \hyperlink{class_squad_a045ef512b08228c6a03b92258f957e45}{S\-T\-A\-T\-E\-\_\-\-N\-O\-T\-\_\-\-S\-E\-T} = 4
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_squad_a6aa45393c71f47d593c77dd49e62424a}{void {\bfseries set\-Member\-Goals} (Tile\-Position c\-Goal)}\label{class_squad_a6aa45393c71f47d593c77dd49e62424a}
+
+\item 
+\hypertarget{class_squad_a2a0a2877febb058e12d5124b5077583a}{Unit $\ast$ {\bfseries find\-Target} ()}\label{class_squad_a2a0a2877febb058e12d5124b5077583a}
+
+\item 
+\hypertarget{class_squad_abf6dc86d8a7c2a39a8d29b090bea9f3c}{void {\bfseries check\-Attack} ()}\label{class_squad_abf6dc86d8a7c2a39a8d29b090bea9f3c}
+
+\item 
+\hypertarget{class_squad_a4ec28ce427f24a65b0a349a87dc7ecae}{bool {\bfseries is\-Visible} (Tile\-Position pos)}\label{class_squad_a4ec28ce427f24a65b0a349a87dc7ecae}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_squad_a2c48f28477afce64363abcf6fdd16267}{vector$<$ \hyperlink{class_base_agent}{Base\-Agent} $\ast$ $>$ {\bfseries agents}}\label{class_squad_a2c48f28477afce64363abcf6fdd16267}
+
+\item 
+\hypertarget{class_squad_a1279839458e968bf9199e06c1ea25a5b}{vector$<$ \hyperlink{class_unit_setup}{Unit\-Setup} $>$ {\bfseries setup}}\label{class_squad_a1279839458e968bf9199e06c1ea25a5b}
+
+\item 
+\hypertarget{class_squad_aecd30d9008a50c452476451bfe17d698}{Unit\-Type {\bfseries morphs}}\label{class_squad_aecd30d9008a50c452476451bfe17d698}
+
+\item 
+\hypertarget{class_squad_a389f7858c6eb3efc3aeca51686feda22}{Tile\-Position {\bfseries goal}}\label{class_squad_a389f7858c6eb3efc3aeca51686feda22}
+
+\item 
+\hypertarget{class_squad_a1ba210ba4ac596890f844aceef2ee9ed}{vector$<$ Tile\-Position $>$ {\bfseries path}}\label{class_squad_a1ba210ba4ac596890f844aceef2ee9ed}
+
+\item 
+\hypertarget{class_squad_a430cbe8e490d363ea6cee839bd1e115b}{int {\bfseries path\-Index}}\label{class_squad_a430cbe8e490d363ea6cee839bd1e115b}
+
+\item 
+\hypertarget{class_squad_aa5b09834c9fec2d519d76126125c6f3a}{int {\bfseries arrived\-Frame}}\label{class_squad_aa5b09834c9fec2d519d76126125c6f3a}
+
+\item 
+\hypertarget{class_squad_a155be0cd97fe85c4fd732fe3e42e0756}{int {\bfseries id}}\label{class_squad_a155be0cd97fe85c4fd732fe3e42e0756}
+
+\item 
+\hypertarget{class_squad_a9bb4b01308b969ce1401879b2dd98060}{bool {\bfseries active}}\label{class_squad_a9bb4b01308b969ce1401879b2dd98060}
+
+\item 
+\hypertarget{class_squad_a1bd6f2a865e3ca951900fa09a239e952}{int {\bfseries type}}\label{class_squad_a1bd6f2a865e3ca951900fa09a239e952}
+
+\item 
+\hypertarget{class_squad_a15463a14e1cfdc9fccf66fcce5cc2ab5}{int {\bfseries priority}}\label{class_squad_a15463a14e1cfdc9fccf66fcce5cc2ab5}
+
+\item 
+\hypertarget{class_squad_afa6fea799704afd5711471f270ab0eca}{int {\bfseries active\-Priority}}\label{class_squad_afa6fea799704afd5711471f270ab0eca}
+
+\item 
+\hypertarget{class_squad_a70dd0084e84cf622259419938e082949}{int {\bfseries move\-Type}}\label{class_squad_a70dd0084e84cf622259419938e082949}
+
+\item 
+\hypertarget{class_squad_aa6fdf236dda86d6bd92adfb7abeb255d}{bool {\bfseries required}}\label{class_squad_aa6fdf236dda86d6bd92adfb7abeb255d}
+
+\item 
+\hypertarget{class_squad_ae3d5b276575fecd105377e423a7a7d62}{string {\bfseries name}}\label{class_squad_ae3d5b276575fecd105377e423a7a7d62}
+
+\item 
+\hypertarget{class_squad_aab4c1cafc7148c4b4b5b4ad456f1bebf}{int {\bfseries goal\-Set\-Frame}}\label{class_squad_aab4c1cafc7148c4b4b5b4ad456f1bebf}
+
+\item 
+\hypertarget{class_squad_a463f62b902f0a9f02f6928b58d70dc78}{int {\bfseries current\-State}}\label{class_squad_a463f62b902f0a9f02f6928b58d70dc78}
+
+\item 
+\hypertarget{class_squad_acad67ae0940d5d450516f5974cb3c18d}{bool {\bfseries buildup}}\label{class_squad_acad67ae0940d5d450516f5974cb3c18d}
+
+\item 
+\hypertarget{class_squad_a5b880c5860899902db2643c3771aabe7}{vector$<$ Tile\-Position $>$ {\bfseries has\-Visited}}\label{class_squad_a5b880c5860899902db2643c3771aabe7}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_squad}{Squad} class represents a squad of units with a shared goal, for example attacking the enemy or defending the base. The \hyperlink{class_squad}{Squad} can be built up from different combinations and numbers of Unit\-Types.
+
+Author\-: Johan Hagelback (\href{mailto:johan.hagelback@gmail.com}{\tt johan.\-hagelback@gmail.\-com}) 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_squad_a0e37f7593f55bff89220ec031d19f5f0}{\index{Squad@{Squad}!Squad@{Squad}}
+\index{Squad@{Squad}!Squad@{Squad}}
+\subsubsection[{Squad}]{\setlength{\rightskip}{0pt plus 5cm}Squad\-::\-Squad (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_squad_a0e37f7593f55bff89220ec031d19f5f0}
+Default constructor. \hypertarget{class_squad_a38968fb394d3629c844c8f313346ffb7}{\index{Squad@{Squad}!Squad@{Squad}}
+\index{Squad@{Squad}!Squad@{Squad}}
+\subsubsection[{Squad}]{\setlength{\rightskip}{0pt plus 5cm}Squad\-::\-Squad (
+\begin{DoxyParamCaption}
+\item[{int}]{m\-Id, }
+\item[{int}]{m\-Type, }
+\item[{string}]{m\-Name, }
+\item[{int}]{m\-Priority}
+\end{DoxyParamCaption}
+)}}\label{class_squad_a38968fb394d3629c844c8f313346ffb7}
+Creates a squad with a unique id, a type (Offensive, Defensive, Exploration, Support), a name (for example Air\-Attack\-Squad, Main\-Ground\-Squad). Higher priority squads gets filled before lower prio squads. Lower prio value is considered higher priority. A squad with priority of 1000 or more will not be built. This can be used to create one-\/time squads that are only filled once. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_squad_afd258866efe43f6c768513c46af71130}{\index{Squad@{Squad}!add\-Member@{add\-Member}}
+\index{add\-Member@{add\-Member}!Squad@{Squad}}
+\subsubsection[{add\-Member}]{\setlength{\rightskip}{0pt plus 5cm}bool Squad\-::add\-Member (
+\begin{DoxyParamCaption}
+\item[{{\bf Base\-Agent} $\ast$}]{agent}
+\end{DoxyParamCaption}
+)}}\label{class_squad_afd258866efe43f6c768513c46af71130}
+Adds an agent to this \hyperlink{class_squad}{Squad}. \hypertarget{class_squad_a9419fdf05db5daf2ed38c3987b7f7739}{\index{Squad@{Squad}!add\-Setup@{add\-Setup}}
+\index{add\-Setup@{add\-Setup}!Squad@{Squad}}
+\subsubsection[{add\-Setup}]{\setlength{\rightskip}{0pt plus 5cm}void Squad\-::add\-Setup (
+\begin{DoxyParamCaption}
+\item[{Unit\-Type}]{type, }
+\item[{int}]{no}
+\end{DoxyParamCaption}
+)}}\label{class_squad_a9419fdf05db5daf2ed38c3987b7f7739}
+Adds a setup for this \hyperlink{class_squad}{Squad}. Setup is a type and amount of units that shall be in this \hyperlink{class_squad}{Squad}. \hypertarget{class_squad_aefeccd46eb2bf673e1bb7e4d7b913a49}{\index{Squad@{Squad}!assist@{assist}}
+\index{assist@{assist}!Squad@{Squad}}
+\subsubsection[{assist}]{\setlength{\rightskip}{0pt plus 5cm}void Squad\-::assist (
+\begin{DoxyParamCaption}
+\item[{Tile\-Position}]{m\-Goal}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_squad_aefeccd46eb2bf673e1bb7e4d7b913a49}
+Orders this squad to assist units at a position. 
+
+Reimplemented in \hyperlink{class_exploration_squad_a472ae48b827a94bad7caa49d2ab6dcdc}{Exploration\-Squad}, and \hyperlink{class_rush_squad_a5f19b2252ebe72769d11d79fe0de6646}{Rush\-Squad}.
+
+\hypertarget{class_squad_a4e405c83103c69dda302a367e2dfed3f}{\index{Squad@{Squad}!attack@{attack}}
+\index{attack@{attack}!Squad@{Squad}}
+\subsubsection[{attack}]{\setlength{\rightskip}{0pt plus 5cm}void Squad\-::attack (
+\begin{DoxyParamCaption}
+\item[{Tile\-Position}]{m\-Goal}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_squad_a4e405c83103c69dda302a367e2dfed3f}
+Orders this squad to launch an attack at a position. 
+
+Reimplemented in \hyperlink{class_exploration_squad_a99a16a1b2c08deb17563da4091998817}{Exploration\-Squad}, and \hyperlink{class_rush_squad_ad2f77ce2e4af380cb66492a340fa535c}{Rush\-Squad}.
+
+\hypertarget{class_squad_a54380c521be6f5b3be723c24e2bd9ab7}{\index{Squad@{Squad}!clear\-Goal@{clear\-Goal}}
+\index{clear\-Goal@{clear\-Goal}!Squad@{Squad}}
+\subsubsection[{clear\-Goal}]{\setlength{\rightskip}{0pt plus 5cm}void Squad\-::clear\-Goal (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_squad_a54380c521be6f5b3be723c24e2bd9ab7}
+Clears the goal for this \hyperlink{class_squad}{Squad}, i.\-e. sets the goal to Tile\-Position(-\/1,-\/1). 
+
+Reimplemented in \hyperlink{class_exploration_squad_a39e8e4ec023d86497016cc8091cd4005}{Exploration\-Squad}, and \hyperlink{class_rush_squad_a11d8bb67344e053598ae072234394811}{Rush\-Squad}.
+
+\hypertarget{class_squad_ac338d389b81cbec76cb8d240f0833e43}{\index{Squad@{Squad}!compute\-Actions@{compute\-Actions}}
+\index{compute\-Actions@{compute\-Actions}!Squad@{Squad}}
+\subsubsection[{compute\-Actions}]{\setlength{\rightskip}{0pt plus 5cm}void Squad\-::compute\-Actions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_squad_ac338d389b81cbec76cb8d240f0833e43}
+Called each update to issue orders. 
+
+Reimplemented in \hyperlink{class_exploration_squad_a92828cacd3f8cb0264adec349a79c5ed}{Exploration\-Squad}, and \hyperlink{class_rush_squad_a075afcb471c368c2315a42cedb58e84f}{Rush\-Squad}.
+
+\hypertarget{class_squad_a2888079eb1c4e57c8563c61010c3ef48}{\index{Squad@{Squad}!debug\-\_\-show\-Goal@{debug\-\_\-show\-Goal}}
+\index{debug\-\_\-show\-Goal@{debug\-\_\-show\-Goal}!Squad@{Squad}}
+\subsubsection[{debug\-\_\-show\-Goal}]{\setlength{\rightskip}{0pt plus 5cm}void Squad\-::debug\-\_\-show\-Goal (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_squad_a2888079eb1c4e57c8563c61010c3ef48}
+Used in debug modes to show goal of squads. \hypertarget{class_squad_aca337f45691b4e6ea361f3f8de06c536}{\index{Squad@{Squad}!defend@{defend}}
+\index{defend@{defend}!Squad@{Squad}}
+\subsubsection[{defend}]{\setlength{\rightskip}{0pt plus 5cm}void Squad\-::defend (
+\begin{DoxyParamCaption}
+\item[{Tile\-Position}]{m\-Goal}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_squad_aca337f45691b4e6ea361f3f8de06c536}
+Orders this squad to defend a position. 
+
+Reimplemented in \hyperlink{class_exploration_squad_a2be2429079224683d1ec0d79df52183b}{Exploration\-Squad}, and \hyperlink{class_rush_squad_abd54cdfc77e3b32551fd27770313cfe7}{Rush\-Squad}.
+
+\hypertarget{class_squad_a555aa7861a2fbea3394892866ed5464c}{\index{Squad@{Squad}!disband@{disband}}
+\index{disband@{disband}!Squad@{Squad}}
+\subsubsection[{disband}]{\setlength{\rightskip}{0pt plus 5cm}void Squad\-::disband (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_squad_a555aa7861a2fbea3394892866ed5464c}
+Disbands this squad. \hypertarget{class_squad_a3da88322ad60c25c2f45e37d097366af}{\index{Squad@{Squad}!force\-Active@{force\-Active}}
+\index{force\-Active@{force\-Active}!Squad@{Squad}}
+\subsubsection[{force\-Active}]{\setlength{\rightskip}{0pt plus 5cm}void Squad\-::force\-Active (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_squad_a3da88322ad60c25c2f45e37d097366af}
+Forces an offensive squad to be active, even if it's not full. \hypertarget{class_squad_a89c5a600f312920314ef0f30dc1e582b}{\index{Squad@{Squad}!get\-Center@{get\-Center}}
+\index{get\-Center@{get\-Center}!Squad@{Squad}}
+\subsubsection[{get\-Center}]{\setlength{\rightskip}{0pt plus 5cm}Tile\-Position Squad\-::get\-Center (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_squad_a89c5a600f312920314ef0f30dc1e582b}
+Returns the center position of this \hyperlink{class_squad}{Squad}, i.\-e. the average x and y position of its members. \hypertarget{class_squad_ae9278dcf91e317c4316ce19e4c7c3b9e}{\index{Squad@{Squad}!get\-Goal@{get\-Goal}}
+\index{get\-Goal@{get\-Goal}!Squad@{Squad}}
+\subsubsection[{get\-Goal}]{\setlength{\rightskip}{0pt plus 5cm}Tile\-Position Squad\-::get\-Goal (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_squad_ae9278dcf91e317c4316ce19e4c7c3b9e}
+Returns the current goal of this \hyperlink{class_squad}{Squad}. 
+
+Reimplemented in \hyperlink{class_exploration_squad_acfaa545346de257ac70fdcd7b2bb188f}{Exploration\-Squad}, and \hyperlink{class_rush_squad_afab5f8f1bdfad56a5d39ce257fc74753}{Rush\-Squad}.
+
+\hypertarget{class_squad_a9c639ad5119ecedbf84896b0bb8ef5d7}{\index{Squad@{Squad}!get\-I\-D@{get\-I\-D}}
+\index{get\-I\-D@{get\-I\-D}!Squad@{Squad}}
+\subsubsection[{get\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}int Squad\-::get\-I\-D (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_squad_a9c639ad5119ecedbf84896b0bb8ef5d7}
+Returns the id for this \hyperlink{class_squad}{Squad}. \hypertarget{class_squad_a2b9b7f1feb60210ede502726fc920f89}{\index{Squad@{Squad}!get\-Members@{get\-Members}}
+\index{get\-Members@{get\-Members}!Squad@{Squad}}
+\subsubsection[{get\-Members}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ {\bf Base\-Agent} $\ast$ $>$ Squad\-::get\-Members (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_squad_a2b9b7f1feb60210ede502726fc920f89}
+Returns the members of this \hyperlink{class_squad}{Squad}. \hypertarget{class_squad_a96feacac86a121f967513eb27efef937}{\index{Squad@{Squad}!get\-Name@{get\-Name}}
+\index{get\-Name@{get\-Name}!Squad@{Squad}}
+\subsubsection[{get\-Name}]{\setlength{\rightskip}{0pt plus 5cm}string Squad\-::get\-Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_squad_a96feacac86a121f967513eb27efef937}
+Returns the name of this \hyperlink{class_squad}{Squad}. \hypertarget{class_squad_ad5ef043e5499101a8d8d4502f0001a5f}{\index{Squad@{Squad}!get\-Next\-Start\-Location@{get\-Next\-Start\-Location}}
+\index{get\-Next\-Start\-Location@{get\-Next\-Start\-Location}!Squad@{Squad}}
+\subsubsection[{get\-Next\-Start\-Location}]{\setlength{\rightskip}{0pt plus 5cm}Tile\-Position Squad\-::get\-Next\-Start\-Location (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_squad_ad5ef043e5499101a8d8d4502f0001a5f}
+Returns the next starting area to visit, if opponent has not been spotted. \hypertarget{class_squad_a86d964bb1983b17b12855bb47585f258}{\index{Squad@{Squad}!get\-Priority@{get\-Priority}}
+\index{get\-Priority@{get\-Priority}!Squad@{Squad}}
+\subsubsection[{get\-Priority}]{\setlength{\rightskip}{0pt plus 5cm}int Squad\-::get\-Priority (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_squad_a86d964bb1983b17b12855bb47585f258}
+Returns the priority for this \hyperlink{class_squad}{Squad}. Prio 1 is the highest. \hypertarget{class_squad_aa65e364147adb15d93f82ce57f9b6fa8}{\index{Squad@{Squad}!get\-Size@{get\-Size}}
+\index{get\-Size@{get\-Size}!Squad@{Squad}}
+\subsubsection[{get\-Size}]{\setlength{\rightskip}{0pt plus 5cm}int Squad\-::get\-Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_squad_aa65e364147adb15d93f82ce57f9b6fa8}
+Returns the size of the \hyperlink{class_squad}{Squad}, i.\-e. the number if agents currently in it. \hypertarget{class_squad_a6b590cfa00087f286192ff655530e2d3}{\index{Squad@{Squad}!get\-Strength@{get\-Strength}}
+\index{get\-Strength@{get\-Strength}!Squad@{Squad}}
+\subsubsection[{get\-Strength}]{\setlength{\rightskip}{0pt plus 5cm}int Squad\-::get\-Strength (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_squad_a6b590cfa00087f286192ff655530e2d3}
+Returns the current strength of the \hyperlink{class_squad}{Squad}, i.\-e. the sum of the destroy\-Score() for all \hyperlink{class_squad}{Squad} members. \hypertarget{class_squad_a1bfdf801793c5e843ff1a9adfba61b3a}{\index{Squad@{Squad}!get\-Total\-Units@{get\-Total\-Units}}
+\index{get\-Total\-Units@{get\-Total\-Units}!Squad@{Squad}}
+\subsubsection[{get\-Total\-Units}]{\setlength{\rightskip}{0pt plus 5cm}int Squad\-::get\-Total\-Units (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_squad_a1bfdf801793c5e843ff1a9adfba61b3a}
+Returns the total number of units in the squad when it is full. \hypertarget{class_squad_a5ad7231b7644be74b42318ff97d6f5e3}{\index{Squad@{Squad}!has\-Goal@{has\-Goal}}
+\index{has\-Goal@{has\-Goal}!Squad@{Squad}}
+\subsubsection[{has\-Goal}]{\setlength{\rightskip}{0pt plus 5cm}bool Squad\-::has\-Goal (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_squad_a5ad7231b7644be74b42318ff97d6f5e3}
+Returns true if this squad has an assigned goal. 
+
+Reimplemented in \hyperlink{class_exploration_squad_a0ad5867fc889921fb849d5e33849a681}{Exploration\-Squad}, and \hyperlink{class_rush_squad_a889e5b7adcb6621e5d3d97fc3136b94d}{Rush\-Squad}.
+
+\hypertarget{class_squad_a4235306fd34de49f920af0f5f7d6df00}{\index{Squad@{Squad}!has\-Units@{has\-Units}}
+\index{has\-Units@{has\-Units}!Squad@{Squad}}
+\subsubsection[{has\-Units}]{\setlength{\rightskip}{0pt plus 5cm}bool Squad\-::has\-Units (
+\begin{DoxyParamCaption}
+\item[{Unit\-Type}]{type, }
+\item[{int}]{no}
+\end{DoxyParamCaption}
+)}}\label{class_squad_a4235306fd34de49f920af0f5f7d6df00}
+Returns true if this \hyperlink{class_squad}{Squad} has the number of the specified unit types in it. \hypertarget{class_squad_a20f3ca360518b8908b405c44a858ccbd}{\index{Squad@{Squad}!is\-Active@{is\-Active}}
+\index{is\-Active@{is\-Active}!Squad@{Squad}}
+\subsubsection[{is\-Active}]{\setlength{\rightskip}{0pt plus 5cm}bool Squad\-::is\-Active (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_squad_a20f3ca360518b8908b405c44a858ccbd}
+Returns true if this \hyperlink{class_squad}{Squad} is active, or false if not. A \hyperlink{class_squad}{Squad} is active when it first has been filled with agents. A \hyperlink{class_squad}{Squad} with destroyed units are still considered Active. 
+
+Reimplemented in \hyperlink{class_exploration_squad_adb1005691867354e7b7e2cfdf3ebf8e0}{Exploration\-Squad}, and \hyperlink{class_rush_squad_a5cc0121df4c3948c189de4a1ef40401d}{Rush\-Squad}.
+
+\hypertarget{class_squad_a6ad1be5c9231c15652ae347a34c465dd}{\index{Squad@{Squad}!is\-Air@{is\-Air}}
+\index{is\-Air@{is\-Air}!Squad@{Squad}}
+\subsubsection[{is\-Air}]{\setlength{\rightskip}{0pt plus 5cm}bool Squad\-::is\-Air (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_squad_a6ad1be5c9231c15652ae347a34c465dd}
+Returns true if this squad travels by air. \hypertarget{class_squad_a0d3ed017d970bbce7889b6cb3a4ffb18}{\index{Squad@{Squad}!is\-Attacking@{is\-Attacking}}
+\index{is\-Attacking@{is\-Attacking}!Squad@{Squad}}
+\subsubsection[{is\-Attacking}]{\setlength{\rightskip}{0pt plus 5cm}bool Squad\-::is\-Attacking (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_squad_a0d3ed017d970bbce7889b6cb3a4ffb18}
+Checks if the squad is attacking, i.\-e. if any member of the squad has targets within range. \hypertarget{class_squad_a128b16fd4757537a296f6f21519af7cd}{\index{Squad@{Squad}!is\-Bunker\-Defend@{is\-Bunker\-Defend}}
+\index{is\-Bunker\-Defend@{is\-Bunker\-Defend}!Squad@{Squad}}
+\subsubsection[{is\-Bunker\-Defend}]{\setlength{\rightskip}{0pt plus 5cm}bool Squad\-::is\-Bunker\-Defend (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_squad_a128b16fd4757537a296f6f21519af7cd}
+Returns true if this is a Bunker Defense \hyperlink{class_squad}{Squad}. \hypertarget{class_squad_a16a7474f9227ffe52999681032faa2b5}{\index{Squad@{Squad}!is\-Defensive@{is\-Defensive}}
+\index{is\-Defensive@{is\-Defensive}!Squad@{Squad}}
+\subsubsection[{is\-Defensive}]{\setlength{\rightskip}{0pt plus 5cm}bool Squad\-::is\-Defensive (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_squad_a16a7474f9227ffe52999681032faa2b5}
+Returns true if this is a Defensive \hyperlink{class_squad}{Squad}. \hypertarget{class_squad_af8c45064b410c6902f614d3fea381d24}{\index{Squad@{Squad}!is\-Explorer@{is\-Explorer}}
+\index{is\-Explorer@{is\-Explorer}!Squad@{Squad}}
+\subsubsection[{is\-Explorer}]{\setlength{\rightskip}{0pt plus 5cm}bool Squad\-::is\-Explorer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_squad_af8c45064b410c6902f614d3fea381d24}
+Returns true if this is an Explorer \hyperlink{class_squad}{Squad}. \hypertarget{class_squad_aca71297e519ade079733e9a64871a0fe}{\index{Squad@{Squad}!is\-Full@{is\-Full}}
+\index{is\-Full@{is\-Full}!Squad@{Squad}}
+\subsubsection[{is\-Full}]{\setlength{\rightskip}{0pt plus 5cm}bool Squad\-::is\-Full (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_squad_aca71297e519ade079733e9a64871a0fe}
+Returns true if this \hyperlink{class_squad}{Squad} is full, i.\-e. it has all the units it shall have. \hypertarget{class_squad_aef91fd8a4d905615c3c15248e64d8607}{\index{Squad@{Squad}!is\-Ground@{is\-Ground}}
+\index{is\-Ground@{is\-Ground}!Squad@{Squad}}
+\subsubsection[{is\-Ground}]{\setlength{\rightskip}{0pt plus 5cm}bool Squad\-::is\-Ground (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_squad_aef91fd8a4d905615c3c15248e64d8607}
+Returns true if this squad travels by ground. \hypertarget{class_squad_aeddc272cbe51f123f90caa278e359055}{\index{Squad@{Squad}!is\-Kite@{is\-Kite}}
+\index{is\-Kite@{is\-Kite}!Squad@{Squad}}
+\subsubsection[{is\-Kite}]{\setlength{\rightskip}{0pt plus 5cm}bool Squad\-::is\-Kite (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_squad_aeddc272cbe51f123f90caa278e359055}
+Returns true if this is a Kite \hyperlink{class_squad}{Squad}. \hypertarget{class_squad_af9d5a2b70babb50dbbe3ae0d3645a871}{\index{Squad@{Squad}!is\-Offensive@{is\-Offensive}}
+\index{is\-Offensive@{is\-Offensive}!Squad@{Squad}}
+\subsubsection[{is\-Offensive}]{\setlength{\rightskip}{0pt plus 5cm}bool Squad\-::is\-Offensive (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_squad_af9d5a2b70babb50dbbe3ae0d3645a871}
+Returns true if this is an Offensive \hyperlink{class_squad}{Squad}. \hypertarget{class_squad_abe4c10a489f4556685b67499cdaa76bd}{\index{Squad@{Squad}!is\-Required@{is\-Required}}
+\index{is\-Required@{is\-Required}!Squad@{Squad}}
+\subsubsection[{is\-Required}]{\setlength{\rightskip}{0pt plus 5cm}bool Squad\-::is\-Required (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_squad_abe4c10a489f4556685b67499cdaa76bd}
+Checks if this \hyperlink{class_squad}{Squad} is required to be active before an attack is launched. \hypertarget{class_squad_ac50b13fa28d74e46f8c0ca467eaea423}{\index{Squad@{Squad}!is\-Rush@{is\-Rush}}
+\index{is\-Rush@{is\-Rush}!Squad@{Squad}}
+\subsubsection[{is\-Rush}]{\setlength{\rightskip}{0pt plus 5cm}bool Squad\-::is\-Rush (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_squad_ac50b13fa28d74e46f8c0ca467eaea423}
+Returns true if this is a Rush \hyperlink{class_squad}{Squad}. \hypertarget{class_squad_a879c20e23f8089678e4b49943e4b2bdc}{\index{Squad@{Squad}!is\-Shuttle@{is\-Shuttle}}
+\index{is\-Shuttle@{is\-Shuttle}!Squad@{Squad}}
+\subsubsection[{is\-Shuttle}]{\setlength{\rightskip}{0pt plus 5cm}bool Squad\-::is\-Shuttle (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_squad_a879c20e23f8089678e4b49943e4b2bdc}
+Returns true if this is a Shuttle \hyperlink{class_squad}{Squad}. \hypertarget{class_squad_a2d027738d083b50abeb077cf8658ff78}{\index{Squad@{Squad}!is\-Support@{is\-Support}}
+\index{is\-Support@{is\-Support}!Squad@{Squad}}
+\subsubsection[{is\-Support}]{\setlength{\rightskip}{0pt plus 5cm}bool Squad\-::is\-Support (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_squad_a2d027738d083b50abeb077cf8658ff78}
+Returns true if this is a Support \hyperlink{class_squad}{Squad} (for example Transports). \hypertarget{class_squad_a625a91f67527f53e31fb6aba53a91517}{\index{Squad@{Squad}!is\-Under\-Attack@{is\-Under\-Attack}}
+\index{is\-Under\-Attack@{is\-Under\-Attack}!Squad@{Squad}}
+\subsubsection[{is\-Under\-Attack}]{\setlength{\rightskip}{0pt plus 5cm}bool Squad\-::is\-Under\-Attack (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_squad_a625a91f67527f53e31fb6aba53a91517}
+Returns true if this \hyperlink{class_squad}{Squad} is under attack. \hypertarget{class_squad_afe7b79c6ae91d3cf8e97f415ab656b33}{\index{Squad@{Squad}!max\-Size@{max\-Size}}
+\index{max\-Size@{max\-Size}!Squad@{Squad}}
+\subsubsection[{max\-Size}]{\setlength{\rightskip}{0pt plus 5cm}int Squad\-::max\-Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_squad_afe7b79c6ae91d3cf8e97f415ab656b33}
+Returns the maximum size of this squad (i.\-e. size of a full squad). \hypertarget{class_squad_af0f25df0c07c6c55a84ff9acefe2c8cf}{\index{Squad@{Squad}!morphs\-To@{morphs\-To}}
+\index{morphs\-To@{morphs\-To}!Squad@{Squad}}
+\subsubsection[{morphs\-To}]{\setlength{\rightskip}{0pt plus 5cm}Unit\-Type Squad\-::morphs\-To (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_squad_af0f25df0c07c6c55a84ff9acefe2c8cf}
+Returns the unit squad members shall morph to (for example Archons or Lurkers) Unit\-Type\-::\-Unknown if no morph is set. \hypertarget{class_squad_a675706674e51d5092ceacaa703c582ad}{\index{Squad@{Squad}!need\-Unit@{need\-Unit}}
+\index{need\-Unit@{need\-Unit}!Squad@{Squad}}
+\subsubsection[{need\-Unit}]{\setlength{\rightskip}{0pt plus 5cm}bool Squad\-::need\-Unit (
+\begin{DoxyParamCaption}
+\item[{Unit\-Type}]{type}
+\end{DoxyParamCaption}
+)}}\label{class_squad_a675706674e51d5092ceacaa703c582ad}
+Check if this \hyperlink{class_squad}{Squad} need units of the specified type. \hypertarget{class_squad_a2295fb723176ad50ca7b56b5117c348f}{\index{Squad@{Squad}!next\-Follow\-Move\-Position@{next\-Follow\-Move\-Position}}
+\index{next\-Follow\-Move\-Position@{next\-Follow\-Move\-Position}!Squad@{Squad}}
+\subsubsection[{next\-Follow\-Move\-Position}]{\setlength{\rightskip}{0pt plus 5cm}Tile\-Position Squad\-::next\-Follow\-Move\-Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_squad_a2295fb723176ad50ca7b56b5117c348f}
+Returns the position to be moved to for units following a squad. \hypertarget{class_squad_a9acb3a00ec6d40b5bf01f1bc7e377661}{\index{Squad@{Squad}!next\-Move\-Position@{next\-Move\-Position}}
+\index{next\-Move\-Position@{next\-Move\-Position}!Squad@{Squad}}
+\subsubsection[{next\-Move\-Position}]{\setlength{\rightskip}{0pt plus 5cm}Tile\-Position Squad\-::next\-Move\-Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_squad_a9acb3a00ec6d40b5bf01f1bc7e377661}
+Returns the next Tile\-Position to move to. \hypertarget{class_squad_a02e1bb7b5d5579df71cc94ce372ae13c}{\index{Squad@{Squad}!print\-Info@{print\-Info}}
+\index{print\-Info@{print\-Info}!Squad@{Squad}}
+\subsubsection[{print\-Info}]{\setlength{\rightskip}{0pt plus 5cm}void Squad\-::print\-Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_squad_a02e1bb7b5d5579df71cc94ce372ae13c}
+Used to print some info to the screen. \hypertarget{class_squad_a37634e58c385b0afd9576a6a67f01141}{\index{Squad@{Squad}!remove\-Member@{remove\-Member}}
+\index{remove\-Member@{remove\-Member}!Squad@{Squad}}
+\subsubsection[{remove\-Member}]{\setlength{\rightskip}{0pt plus 5cm}void Squad\-::remove\-Member (
+\begin{DoxyParamCaption}
+\item[{{\bf Base\-Agent} $\ast$}]{agent}
+\end{DoxyParamCaption}
+)}}\label{class_squad_a37634e58c385b0afd9576a6a67f01141}
+Removes an agent from this \hyperlink{class_squad}{Squad}. \hypertarget{class_squad_a541ce562208ceddead65b49bda6601de}{\index{Squad@{Squad}!remove\-Member@{remove\-Member}}
+\index{remove\-Member@{remove\-Member}!Squad@{Squad}}
+\subsubsection[{remove\-Member}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Base\-Agent} $\ast$ Squad\-::remove\-Member (
+\begin{DoxyParamCaption}
+\item[{Unit\-Type}]{type}
+\end{DoxyParamCaption}
+)}}\label{class_squad_a541ce562208ceddead65b49bda6601de}
+Removes an agent of the specified type from this \hyperlink{class_squad}{Squad}, and returns the reference to the removed agent. \hypertarget{class_squad_a0b312394675f8fdae5ac2cf846d9a8d2}{\index{Squad@{Squad}!remove\-Setup@{remove\-Setup}}
+\index{remove\-Setup@{remove\-Setup}!Squad@{Squad}}
+\subsubsection[{remove\-Setup}]{\setlength{\rightskip}{0pt plus 5cm}void Squad\-::remove\-Setup (
+\begin{DoxyParamCaption}
+\item[{Unit\-Type}]{type, }
+\item[{int}]{no}
+\end{DoxyParamCaption}
+)}}\label{class_squad_a0b312394675f8fdae5ac2cf846d9a8d2}
+Removes a setup for this squad. \hypertarget{class_squad_a5c92d1a28a101bcc258791c90d1edd75}{\index{Squad@{Squad}!set\-Active\-Priority@{set\-Active\-Priority}}
+\index{set\-Active\-Priority@{set\-Active\-Priority}!Squad@{Squad}}
+\subsubsection[{set\-Active\-Priority}]{\setlength{\rightskip}{0pt plus 5cm}void Squad\-::set\-Active\-Priority (
+\begin{DoxyParamCaption}
+\item[{int}]{m\-Priority}
+\end{DoxyParamCaption}
+)}}\label{class_squad_a5c92d1a28a101bcc258791c90d1edd75}
+Sets the priority this \hyperlink{class_squad}{Squad} has once it has been active. Prio 1 is the highest. \hypertarget{class_squad_aa4d4efc27308bd79aa200d915bc97fa2}{\index{Squad@{Squad}!set\-Buildup@{set\-Buildup}}
+\index{set\-Buildup@{set\-Buildup}!Squad@{Squad}}
+\subsubsection[{set\-Buildup}]{\setlength{\rightskip}{0pt plus 5cm}void Squad\-::set\-Buildup (
+\begin{DoxyParamCaption}
+\item[{bool}]{m\-Buildup}
+\end{DoxyParamCaption}
+)}}\label{class_squad_aa4d4efc27308bd79aa200d915bc97fa2}
+Sets if the squad is during buildup. Buildup means it wont be set to Active. \hypertarget{class_squad_a578378fe2e823b1d5448865167d9909f}{\index{Squad@{Squad}!set\-Goal@{set\-Goal}}
+\index{set\-Goal@{set\-Goal}!Squad@{Squad}}
+\subsubsection[{set\-Goal}]{\setlength{\rightskip}{0pt plus 5cm}void Squad\-::set\-Goal (
+\begin{DoxyParamCaption}
+\item[{Tile\-Position}]{m\-Goal}
+\end{DoxyParamCaption}
+)}}\label{class_squad_a578378fe2e823b1d5448865167d9909f}
+Sets the goal for this \hyperlink{class_squad}{Squad}. \hypertarget{class_squad_a34bcb0819d58c91fb5c7d04928381251}{\index{Squad@{Squad}!set\-Morphs\-To@{set\-Morphs\-To}}
+\index{set\-Morphs\-To@{set\-Morphs\-To}!Squad@{Squad}}
+\subsubsection[{set\-Morphs\-To}]{\setlength{\rightskip}{0pt plus 5cm}void Squad\-::set\-Morphs\-To (
+\begin{DoxyParamCaption}
+\item[{Unit\-Type}]{type}
+\end{DoxyParamCaption}
+)}}\label{class_squad_a34bcb0819d58c91fb5c7d04928381251}
+Sets the unit squad members shall morph to (for example Archons or Lurkers) \hypertarget{class_squad_ae7ae6cd3d82507d00ba440608563eb55}{\index{Squad@{Squad}!set\-Priority@{set\-Priority}}
+\index{set\-Priority@{set\-Priority}!Squad@{Squad}}
+\subsubsection[{set\-Priority}]{\setlength{\rightskip}{0pt plus 5cm}void Squad\-::set\-Priority (
+\begin{DoxyParamCaption}
+\item[{int}]{m\-Priority}
+\end{DoxyParamCaption}
+)}}\label{class_squad_ae7ae6cd3d82507d00ba440608563eb55}
+Sets the priority for this \hyperlink{class_squad}{Squad}. Prio 1 is the highest. \hypertarget{class_squad_a747a0f006135a5badf2c75ac23d62662}{\index{Squad@{Squad}!set\-Required@{set\-Required}}
+\index{set\-Required@{set\-Required}!Squad@{Squad}}
+\subsubsection[{set\-Required}]{\setlength{\rightskip}{0pt plus 5cm}void Squad\-::set\-Required (
+\begin{DoxyParamCaption}
+\item[{bool}]{m\-Required}
+\end{DoxyParamCaption}
+)}}\label{class_squad_a747a0f006135a5badf2c75ac23d62662}
+Sets if this \hyperlink{class_squad}{Squad} is required or not. \hypertarget{class_squad_a37f8bfb71799fb9892b47afa15cf0244}{\index{Squad@{Squad}!size@{size}}
+\index{size@{size}!Squad@{Squad}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}int Squad\-::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_squad_a37f8bfb71799fb9892b47afa15cf0244}
+Returns the current size (i.\-e. number of alive agents in the squad). 
+
+\subsection{Member Data Documentation}
+\hypertarget{class_squad_ad33fd78a46d5a68af5d9b36c2faf2620}{\index{Squad@{Squad}!A\-I\-R@{A\-I\-R}}
+\index{A\-I\-R@{A\-I\-R}!Squad@{Squad}}
+\subsubsection[{A\-I\-R}]{\setlength{\rightskip}{0pt plus 5cm}const int Squad\-::\-A\-I\-R = 1\hspace{0.3cm}{\ttfamily [static]}}}\label{class_squad_ad33fd78a46d5a68af5d9b36c2faf2620}
+Air \hyperlink{class_squad}{Squad} \hypertarget{class_squad_acbf1c634b1d198828b8badb96039c1a0}{\index{Squad@{Squad}!B\-U\-N\-K\-E\-R@{B\-U\-N\-K\-E\-R}}
+\index{B\-U\-N\-K\-E\-R@{B\-U\-N\-K\-E\-R}!Squad@{Squad}}
+\subsubsection[{B\-U\-N\-K\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}const int Squad\-::\-B\-U\-N\-K\-E\-R = 4\hspace{0.3cm}{\ttfamily [static]}}}\label{class_squad_acbf1c634b1d198828b8badb96039c1a0}
+Bunker Defense \hyperlink{class_squad}{Squad} \hypertarget{class_squad_a296c744bac8fae201bb3f1e9c222907f}{\index{Squad@{Squad}!C\-H\-O\-K\-E\-H\-A\-R\-A\-S\-S@{C\-H\-O\-K\-E\-H\-A\-R\-A\-S\-S}}
+\index{C\-H\-O\-K\-E\-H\-A\-R\-A\-S\-S@{C\-H\-O\-K\-E\-H\-A\-R\-A\-S\-S}!Squad@{Squad}}
+\subsubsection[{C\-H\-O\-K\-E\-H\-A\-R\-A\-S\-S}]{\setlength{\rightskip}{0pt plus 5cm}const int Squad\-::\-C\-H\-O\-K\-E\-H\-A\-R\-A\-S\-S = 8\hspace{0.3cm}{\ttfamily [static]}}}\label{class_squad_a296c744bac8fae201bb3f1e9c222907f}
+Choke\-Harass \hyperlink{class_squad}{Squad} \hypertarget{class_squad_a1c3ca5859f0f3738d609a5f95ba04a6f}{\index{Squad@{Squad}!D\-E\-F\-E\-N\-S\-I\-V\-E@{D\-E\-F\-E\-N\-S\-I\-V\-E}}
+\index{D\-E\-F\-E\-N\-S\-I\-V\-E@{D\-E\-F\-E\-N\-S\-I\-V\-E}!Squad@{Squad}}
+\subsubsection[{D\-E\-F\-E\-N\-S\-I\-V\-E}]{\setlength{\rightskip}{0pt plus 5cm}const int Squad\-::\-D\-E\-F\-E\-N\-S\-I\-V\-E = 1\hspace{0.3cm}{\ttfamily [static]}}}\label{class_squad_a1c3ca5859f0f3738d609a5f95ba04a6f}
+Defensive \hyperlink{class_squad}{Squad} \hypertarget{class_squad_a0840d63949a8301743d9b21cbb99abc7}{\index{Squad@{Squad}!E\-X\-P\-L\-O\-R\-E\-R@{E\-X\-P\-L\-O\-R\-E\-R}}
+\index{E\-X\-P\-L\-O\-R\-E\-R@{E\-X\-P\-L\-O\-R\-E\-R}!Squad@{Squad}}
+\subsubsection[{E\-X\-P\-L\-O\-R\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}const int Squad\-::\-E\-X\-P\-L\-O\-R\-E\-R = 2\hspace{0.3cm}{\ttfamily [static]}}}\label{class_squad_a0840d63949a8301743d9b21cbb99abc7}
+Explorer \hyperlink{class_squad}{Squad} \hypertarget{class_squad_a01e00ec7576957ee38d4b5af61144ef6}{\index{Squad@{Squad}!G\-R\-O\-U\-N\-D@{G\-R\-O\-U\-N\-D}}
+\index{G\-R\-O\-U\-N\-D@{G\-R\-O\-U\-N\-D}!Squad@{Squad}}
+\subsubsection[{G\-R\-O\-U\-N\-D}]{\setlength{\rightskip}{0pt plus 5cm}const int Squad\-::\-G\-R\-O\-U\-N\-D = 0\hspace{0.3cm}{\ttfamily [static]}}}\label{class_squad_a01e00ec7576957ee38d4b5af61144ef6}
+Ground \hyperlink{class_squad}{Squad} \hypertarget{class_squad_af6cce24e22d96f4aa9d59e71083b7ace}{\index{Squad@{Squad}!K\-I\-T\-E@{K\-I\-T\-E}}
+\index{K\-I\-T\-E@{K\-I\-T\-E}!Squad@{Squad}}
+\subsubsection[{K\-I\-T\-E}]{\setlength{\rightskip}{0pt plus 5cm}const int Squad\-::\-K\-I\-T\-E = 6\hspace{0.3cm}{\ttfamily [static]}}}\label{class_squad_af6cce24e22d96f4aa9d59e71083b7ace}
+Kite \hyperlink{class_squad}{Squad} \hypertarget{class_squad_ac629d438d6297bb1fe40f33e90741553}{\index{Squad@{Squad}!O\-F\-F\-E\-N\-S\-I\-V\-E@{O\-F\-F\-E\-N\-S\-I\-V\-E}}
+\index{O\-F\-F\-E\-N\-S\-I\-V\-E@{O\-F\-F\-E\-N\-S\-I\-V\-E}!Squad@{Squad}}
+\subsubsection[{O\-F\-F\-E\-N\-S\-I\-V\-E}]{\setlength{\rightskip}{0pt plus 5cm}const int Squad\-::\-O\-F\-F\-E\-N\-S\-I\-V\-E = 0\hspace{0.3cm}{\ttfamily [static]}}}\label{class_squad_ac629d438d6297bb1fe40f33e90741553}
+Offensive \hyperlink{class_squad}{Squad} \hypertarget{class_squad_a866b266f0f5b4fb8099d7ea83b2163b3}{\index{Squad@{Squad}!R\-U\-S\-H@{R\-U\-S\-H}}
+\index{R\-U\-S\-H@{R\-U\-S\-H}!Squad@{Squad}}
+\subsubsection[{R\-U\-S\-H}]{\setlength{\rightskip}{0pt plus 5cm}const int Squad\-::\-R\-U\-S\-H = 7\hspace{0.3cm}{\ttfamily [static]}}}\label{class_squad_a866b266f0f5b4fb8099d7ea83b2163b3}
+Rush \hyperlink{class_squad}{Squad} \hypertarget{class_squad_a54980204b8f391319378a8090639e897}{\index{Squad@{Squad}!S\-H\-U\-T\-T\-L\-E@{S\-H\-U\-T\-T\-L\-E}}
+\index{S\-H\-U\-T\-T\-L\-E@{S\-H\-U\-T\-T\-L\-E}!Squad@{Squad}}
+\subsubsection[{S\-H\-U\-T\-T\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}const int Squad\-::\-S\-H\-U\-T\-T\-L\-E = 5\hspace{0.3cm}{\ttfamily [static]}}}\label{class_squad_a54980204b8f391319378a8090639e897}
+Shuttle \hyperlink{class_squad}{Squad} \hypertarget{class_squad_ace3e1c2898e4e91a1bd5ea8f748cd904}{\index{Squad@{Squad}!S\-T\-A\-T\-E\-\_\-\-A\-S\-S\-I\-S\-T@{S\-T\-A\-T\-E\-\_\-\-A\-S\-S\-I\-S\-T}}
+\index{S\-T\-A\-T\-E\-\_\-\-A\-S\-S\-I\-S\-T@{S\-T\-A\-T\-E\-\_\-\-A\-S\-S\-I\-S\-T}!Squad@{Squad}}
+\subsubsection[{S\-T\-A\-T\-E\-\_\-\-A\-S\-S\-I\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}const int Squad\-::\-S\-T\-A\-T\-E\-\_\-\-A\-S\-S\-I\-S\-T = 3\hspace{0.3cm}{\ttfamily [static]}}}\label{class_squad_ace3e1c2898e4e91a1bd5ea8f748cd904}
+\hyperlink{class_squad}{Squad} is assisting \hypertarget{class_squad_a649cd577ebc44798880b81df7b28d189}{\index{Squad@{Squad}!S\-T\-A\-T\-E\-\_\-\-A\-T\-T\-A\-C\-K@{S\-T\-A\-T\-E\-\_\-\-A\-T\-T\-A\-C\-K}}
+\index{S\-T\-A\-T\-E\-\_\-\-A\-T\-T\-A\-C\-K@{S\-T\-A\-T\-E\-\_\-\-A\-T\-T\-A\-C\-K}!Squad@{Squad}}
+\subsubsection[{S\-T\-A\-T\-E\-\_\-\-A\-T\-T\-A\-C\-K}]{\setlength{\rightskip}{0pt plus 5cm}const int Squad\-::\-S\-T\-A\-T\-E\-\_\-\-A\-T\-T\-A\-C\-K = 1\hspace{0.3cm}{\ttfamily [static]}}}\label{class_squad_a649cd577ebc44798880b81df7b28d189}
+\hyperlink{class_squad}{Squad} is attacking \hypertarget{class_squad_aafe6f8e836a02ede7e9a88bc335c6644}{\index{Squad@{Squad}!S\-T\-A\-T\-E\-\_\-\-D\-E\-F\-E\-N\-D@{S\-T\-A\-T\-E\-\_\-\-D\-E\-F\-E\-N\-D}}
+\index{S\-T\-A\-T\-E\-\_\-\-D\-E\-F\-E\-N\-D@{S\-T\-A\-T\-E\-\_\-\-D\-E\-F\-E\-N\-D}!Squad@{Squad}}
+\subsubsection[{S\-T\-A\-T\-E\-\_\-\-D\-E\-F\-E\-N\-D}]{\setlength{\rightskip}{0pt plus 5cm}const int Squad\-::\-S\-T\-A\-T\-E\-\_\-\-D\-E\-F\-E\-N\-D = 2\hspace{0.3cm}{\ttfamily [static]}}}\label{class_squad_aafe6f8e836a02ede7e9a88bc335c6644}
+\hyperlink{class_squad}{Squad} is defending \hypertarget{class_squad_a045ef512b08228c6a03b92258f957e45}{\index{Squad@{Squad}!S\-T\-A\-T\-E\-\_\-\-N\-O\-T\-\_\-\-S\-E\-T@{S\-T\-A\-T\-E\-\_\-\-N\-O\-T\-\_\-\-S\-E\-T}}
+\index{S\-T\-A\-T\-E\-\_\-\-N\-O\-T\-\_\-\-S\-E\-T@{S\-T\-A\-T\-E\-\_\-\-N\-O\-T\-\_\-\-S\-E\-T}!Squad@{Squad}}
+\subsubsection[{S\-T\-A\-T\-E\-\_\-\-N\-O\-T\-\_\-\-S\-E\-T}]{\setlength{\rightskip}{0pt plus 5cm}const int Squad\-::\-S\-T\-A\-T\-E\-\_\-\-N\-O\-T\-\_\-\-S\-E\-T = 4\hspace{0.3cm}{\ttfamily [static]}}}\label{class_squad_a045ef512b08228c6a03b92258f957e45}
+No state is set \hypertarget{class_squad_a76a852c62242a800efe90ea38aa1fb5e}{\index{Squad@{Squad}!S\-U\-P\-P\-O\-R\-T@{S\-U\-P\-P\-O\-R\-T}}
+\index{S\-U\-P\-P\-O\-R\-T@{S\-U\-P\-P\-O\-R\-T}!Squad@{Squad}}
+\subsubsection[{S\-U\-P\-P\-O\-R\-T}]{\setlength{\rightskip}{0pt plus 5cm}const int Squad\-::\-S\-U\-P\-P\-O\-R\-T = 3\hspace{0.3cm}{\ttfamily [static]}}}\label{class_squad_a76a852c62242a800efe90ea38aa1fb5e}
+Support \hyperlink{class_squad}{Squad} 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+B\-T\-H\-A\-I\-Module/\-Source/Squad.\-h\item 
+B\-T\-H\-A\-I\-Module/\-Source/Squad.\-cpp\end{DoxyCompactItemize}

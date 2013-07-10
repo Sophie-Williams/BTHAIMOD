@@ -1,0 +1,57 @@
+\hypertarget{class_agent_factory}{\section{Agent\-Factory Class Reference}
+\label{class_agent_factory}\index{Agent\-Factory@{Agent\-Factory}}
+}
+
+
+{\ttfamily \#include $<$Agent\-Factory.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_base_agent}{Base\-Agent} $\ast$ \hyperlink{class_agent_factory_a2fbdcc02dc4c539a072b1796b76a2dcf}{create\-Agent} (Unit $\ast$unit)
+\item 
+bool \hyperlink{class_agent_factory_a2b580aee6965ac454284077872ce36a9}{is\-Of\-Type} (Unit $\ast$unit, Unit\-Type type)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_agent_factory}{Agent\-Factory} $\ast$ \hyperlink{class_agent_factory_a4fb0ddfd94d0462eb0c369f8376f82a7}{get\-Instance} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The agent system is built from a single base agent where all specific agents extends the base agent indirectly or directly. The \hyperlink{class_agent_factory}{Agent\-Factory} class is a factory that creates the correct \hyperlink{class_base_agent}{Base\-Agent} instance for a specific unit. This class shall always be used when a new agent is requested.
+
+The \hyperlink{class_agent_factory}{Agent\-Factory} is implemented as a singleton class. Each class that needs to access \hyperlink{class_agent_factory}{Agent\-Factory} can request an instance, and all classes shares the same \hyperlink{class_agent_factory}{Agent\-Factory} instance.
+
+Author\-: Johan Hagelback (\href{mailto:johan.hagelback@gmail.com}{\tt johan.\-hagelback@gmail.\-com}) 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_agent_factory_a2fbdcc02dc4c539a072b1796b76a2dcf}{\index{Agent\-Factory@{Agent\-Factory}!create\-Agent@{create\-Agent}}
+\index{create\-Agent@{create\-Agent}!AgentFactory@{Agent\-Factory}}
+\subsubsection[{create\-Agent}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Base\-Agent} $\ast$ Agent\-Factory\-::create\-Agent (
+\begin{DoxyParamCaption}
+\item[{Unit $\ast$}]{unit}
+\end{DoxyParamCaption}
+)}}\label{class_agent_factory_a2fbdcc02dc4c539a072b1796b76a2dcf}
+Creates the \hyperlink{class_base_agent}{Base\-Agent} \hypertarget{class_agent_factory_a4fb0ddfd94d0462eb0c369f8376f82a7}{\index{Agent\-Factory@{Agent\-Factory}!get\-Instance@{get\-Instance}}
+\index{get\-Instance@{get\-Instance}!AgentFactory@{Agent\-Factory}}
+\subsubsection[{get\-Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Agent\-Factory} $\ast$ Agent\-Factory\-::get\-Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_agent_factory_a4fb0ddfd94d0462eb0c369f8376f82a7}
+Returns the instance to the class. \hypertarget{class_agent_factory_a2b580aee6965ac454284077872ce36a9}{\index{Agent\-Factory@{Agent\-Factory}!is\-Of\-Type@{is\-Of\-Type}}
+\index{is\-Of\-Type@{is\-Of\-Type}!AgentFactory@{Agent\-Factory}}
+\subsubsection[{is\-Of\-Type}]{\setlength{\rightskip}{0pt plus 5cm}bool Agent\-Factory\-::is\-Of\-Type (
+\begin{DoxyParamCaption}
+\item[{Unit $\ast$}]{unit, }
+\item[{Unit\-Type}]{type}
+\end{DoxyParamCaption}
+)}}\label{class_agent_factory_a2b580aee6965ac454284077872ce36a9}
+Returns true if the unit is of the specified type. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+B\-T\-H\-A\-I\-Module/\-Source/Agent\-Factory.\-h\item 
+B\-T\-H\-A\-I\-Module/\-Source/Agent\-Factory.\-cpp\end{DoxyCompactItemize}

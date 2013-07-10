@@ -1,0 +1,111 @@
+\hypertarget{class_profiler}{\section{Profiler Class Reference}
+\label{class_profiler}\index{Profiler@{Profiler}}
+}
+
+
+{\ttfamily \#include $<$Profiler.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_profiler_a1e6dd8f6cfb15cd5237b971d8f49c749}{$\sim$\-Profiler} ()
+\item 
+void \hyperlink{class_profiler_a1ce83214365a585ed3f153ed866ee82c}{start} (string m\-Id)
+\item 
+void \hyperlink{class_profiler_a4e472f005b263f31c48347a5ffe2be1c}{end} (string m\-Id)
+\item 
+int \hyperlink{class_profiler_adce9cbeb54ff79cf84591c9615e846f6}{get\-Elapsed} (string m\-Id)
+\item 
+void \hyperlink{class_profiler_ac0ea0fb4ff66e52550346325715158ca}{show} (string m\-Id)
+\item 
+void \hyperlink{class_profiler_a7db0d96159f7fc6bf4eafed1937e372f}{show\-All} ()
+\item 
+void \hyperlink{class_profiler_a2d4ae87fd9e73e10d9b5661c8993fc45}{dump\-To\-File} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_profiler}{Profiler} $\ast$ \hyperlink{class_profiler_a76416c548328c4e83c25bcc68a93f139}{get\-Instance} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class is used to measure the time (in milliseconds) it takes to execute a codeblock. It also counts timeouts according to the rules from the A\-I\-I\-D\-E 2011 bot competition. If one of the following three conditions are true, a bot is disqualified due to timeout\-:
+\begin{DoxyItemize}
+\item 1 frame over 1 minute execution time.
+\item 10 frames over 1 second execution time.
+\item 320 frames over 55 ms execution time.
+\end{DoxyItemize}
+
+The profiler can measure multiple parallell codeblocks. It uses an identifier string to differ between different blocks.
+
+After a game is ended all profiling data is stored in a html file in the B\-T\-H\-A\-I-\/data folder.
+
+Author\-: Johan Hagelback (\href{mailto:johan.hagelback@gmail.com}{\tt johan.\-hagelback@gmail.\-com}) 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_profiler_a1e6dd8f6cfb15cd5237b971d8f49c749}{\index{Profiler@{Profiler}!$\sim$\-Profiler@{$\sim$\-Profiler}}
+\index{$\sim$\-Profiler@{$\sim$\-Profiler}!Profiler@{Profiler}}
+\subsubsection[{$\sim$\-Profiler}]{\setlength{\rightskip}{0pt plus 5cm}Profiler\-::$\sim$\-Profiler (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_profiler_a1e6dd8f6cfb15cd5237b971d8f49c749}
+Destructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_profiler_a2d4ae87fd9e73e10d9b5661c8993fc45}{\index{Profiler@{Profiler}!dump\-To\-File@{dump\-To\-File}}
+\index{dump\-To\-File@{dump\-To\-File}!Profiler@{Profiler}}
+\subsubsection[{dump\-To\-File}]{\setlength{\rightskip}{0pt plus 5cm}void Profiler\-::dump\-To\-File (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_profiler_a2d4ae87fd9e73e10d9b5661c8993fc45}
+Stores all profiling data to file. \hypertarget{class_profiler_a4e472f005b263f31c48347a5ffe2be1c}{\index{Profiler@{Profiler}!end@{end}}
+\index{end@{end}!Profiler@{Profiler}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}void Profiler\-::end (
+\begin{DoxyParamCaption}
+\item[{string}]{m\-Id}
+\end{DoxyParamCaption}
+)}}\label{class_profiler_a4e472f005b263f31c48347a5ffe2be1c}
+Stops measuring. Put at the end of a codeblock. Make sure the starti\-Id is the same as the end id. \hypertarget{class_profiler_adce9cbeb54ff79cf84591c9615e846f6}{\index{Profiler@{Profiler}!get\-Elapsed@{get\-Elapsed}}
+\index{get\-Elapsed@{get\-Elapsed}!Profiler@{Profiler}}
+\subsubsection[{get\-Elapsed}]{\setlength{\rightskip}{0pt plus 5cm}int Profiler\-::get\-Elapsed (
+\begin{DoxyParamCaption}
+\item[{string}]{m\-Id}
+\end{DoxyParamCaption}
+)}}\label{class_profiler_adce9cbeb54ff79cf84591c9615e846f6}
+Returns the time elapsed between start and end. \hypertarget{class_profiler_a76416c548328c4e83c25bcc68a93f139}{\index{Profiler@{Profiler}!get\-Instance@{get\-Instance}}
+\index{get\-Instance@{get\-Instance}!Profiler@{Profiler}}
+\subsubsection[{get\-Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Profiler} $\ast$ Profiler\-::get\-Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_profiler_a76416c548328c4e83c25bcc68a93f139}
+Returns the instance of the class. \hypertarget{class_profiler_ac0ea0fb4ff66e52550346325715158ca}{\index{Profiler@{Profiler}!show@{show}}
+\index{show@{show}!Profiler@{Profiler}}
+\subsubsection[{show}]{\setlength{\rightskip}{0pt plus 5cm}void Profiler\-::show (
+\begin{DoxyParamCaption}
+\item[{string}]{m\-Id}
+\end{DoxyParamCaption}
+)}}\label{class_profiler_ac0ea0fb4ff66e52550346325715158ca}
+Outputs result to the in-\/game chat window. \hypertarget{class_profiler_a7db0d96159f7fc6bf4eafed1937e372f}{\index{Profiler@{Profiler}!show\-All@{show\-All}}
+\index{show\-All@{show\-All}!Profiler@{Profiler}}
+\subsubsection[{show\-All}]{\setlength{\rightskip}{0pt plus 5cm}void Profiler\-::show\-All (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_profiler_a7db0d96159f7fc6bf4eafed1937e372f}
+Outputs result from all profiles to the in-\/game chat window. \hypertarget{class_profiler_a1ce83214365a585ed3f153ed866ee82c}{\index{Profiler@{Profiler}!start@{start}}
+\index{start@{start}!Profiler@{Profiler}}
+\subsubsection[{start}]{\setlength{\rightskip}{0pt plus 5cm}void Profiler\-::start (
+\begin{DoxyParamCaption}
+\item[{string}]{m\-Id}
+\end{DoxyParamCaption}
+)}}\label{class_profiler_a1ce83214365a585ed3f153ed866ee82c}
+Starts measuring. Put at beginning of a codeblock. Make sure the starti\-Id is the same as the end id. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+B\-T\-H\-A\-I\-Module/\-Source/Profiler.\-h\item 
+B\-T\-H\-A\-I\-Module/\-Source/Profiler.\-cpp\end{DoxyCompactItemize}

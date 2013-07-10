@@ -1,0 +1,182 @@
+\hypertarget{class_harass_squad}{
+\section{HarassSquad Class Reference}
+\label{class_harass_squad}\index{HarassSquad@{HarassSquad}}
+}
+
+
+{\ttfamily \#include $<$HarassSquad.h$>$}
+
+Inheritance diagram for HarassSquad:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_harass_squad}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_harass_squad_a9704b2165d838caa755813c4e91471ca}{HarassSquad} (int mId, string mName, int mPriority)
+\item 
+bool \hyperlink{class_harass_squad_a3cd7f4900e147db9e78fb3509032dfb3}{isActive} ()
+\item 
+void \hyperlink{class_harass_squad_ad1cb0d9361b394b90ecf8d52adaac216}{computeActions} ()
+\item 
+void \hyperlink{class_harass_squad_a84294bbf1a64413e5c69d61a287e20e3}{defend} (TilePosition mGoal)
+\item 
+void \hyperlink{class_harass_squad_a40e90077490c35bc49f9c761d75c9925}{attack} (TilePosition mGoal)
+\item 
+void \hyperlink{class_harass_squad_a6419cb1b53d7997c42d41e0ef805d2dc}{assist} (TilePosition mGoal)
+\item 
+void \hyperlink{class_harass_squad_a04a289635a3f3c7e345a5cb424b2a603}{clearGoal} ()
+\item 
+TilePosition \hyperlink{class_harass_squad_a0013e56c21bc2bea1a55f7c5efb4171e}{getGoal} ()
+\item 
+bool \hyperlink{class_harass_squad_a72fe91a440b7df1e09d4e85479c9c3ab}{hasGoal} ()
+\item 
+void \hyperlink{class_harass_squad_a796e444b36f2ef102fe08ca459b0dcc1}{printInfo} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This squad locates vulnerable bases and attacks them. A base is considered vulnerable if it is not protected by towers. The squad is most effective if it contists of cloaking units.
+
+Author: Johan Hagelback (\href{mailto:johan.hagelback@gmail.com}{\tt johan.hagelback@gmail.com}) 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_harass_squad_a9704b2165d838caa755813c4e91471ca}{
+\index{HarassSquad@{HarassSquad}!HarassSquad@{HarassSquad}}
+\index{HarassSquad@{HarassSquad}!HarassSquad@{HarassSquad}}
+\subsubsection[{HarassSquad}]{\setlength{\rightskip}{0pt plus 5cm}HarassSquad::HarassSquad (
+\begin{DoxyParamCaption}
+\item[{int}]{mId, }
+\item[{string}]{mName, }
+\item[{int}]{mPriority}
+\end{DoxyParamCaption}
+)}}
+\label{class_harass_squad_a9704b2165d838caa755813c4e91471ca}
+Creates a Shuttle squad with a unique id and a name (for example AirAttackSquad, MainGroundSquad). 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_harass_squad_a6419cb1b53d7997c42d41e0ef805d2dc}{
+\index{HarassSquad@{HarassSquad}!assist@{assist}}
+\index{assist@{assist}!HarassSquad@{HarassSquad}}
+\subsubsection[{assist}]{\setlength{\rightskip}{0pt plus 5cm}void HarassSquad::assist (
+\begin{DoxyParamCaption}
+\item[{TilePosition}]{mGoal}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_harass_squad_a6419cb1b53d7997c42d41e0ef805d2dc}
+Orders this squad to assist units at a position. 
+
+Reimplemented from \hyperlink{class_squad_aefeccd46eb2bf673e1bb7e4d7b913a49}{Squad}.
+
+\hypertarget{class_harass_squad_a40e90077490c35bc49f9c761d75c9925}{
+\index{HarassSquad@{HarassSquad}!attack@{attack}}
+\index{attack@{attack}!HarassSquad@{HarassSquad}}
+\subsubsection[{attack}]{\setlength{\rightskip}{0pt plus 5cm}void HarassSquad::attack (
+\begin{DoxyParamCaption}
+\item[{TilePosition}]{mGoal}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_harass_squad_a40e90077490c35bc49f9c761d75c9925}
+Orders this squad to launch an attack at a position. 
+
+Reimplemented from \hyperlink{class_squad_a4e405c83103c69dda302a367e2dfed3f}{Squad}.
+
+\hypertarget{class_harass_squad_a04a289635a3f3c7e345a5cb424b2a603}{
+\index{HarassSquad@{HarassSquad}!clearGoal@{clearGoal}}
+\index{clearGoal@{clearGoal}!HarassSquad@{HarassSquad}}
+\subsubsection[{clearGoal}]{\setlength{\rightskip}{0pt plus 5cm}void HarassSquad::clearGoal (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_harass_squad_a04a289635a3f3c7e345a5cb424b2a603}
+Clears the goal for this \hyperlink{class_squad}{Squad}, i.e. sets the goal to TilePosition(-\/1,-\/1). 
+
+Reimplemented from \hyperlink{class_squad_a54380c521be6f5b3be723c24e2bd9ab7}{Squad}.
+
+\hypertarget{class_harass_squad_ad1cb0d9361b394b90ecf8d52adaac216}{
+\index{HarassSquad@{HarassSquad}!computeActions@{computeActions}}
+\index{computeActions@{computeActions}!HarassSquad@{HarassSquad}}
+\subsubsection[{computeActions}]{\setlength{\rightskip}{0pt plus 5cm}void HarassSquad::computeActions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_harass_squad_ad1cb0d9361b394b90ecf8d52adaac216}
+Called each update to issue orders. 
+
+Reimplemented from \hyperlink{class_squad_ac338d389b81cbec76cb8d240f0833e43}{Squad}.
+
+\hypertarget{class_harass_squad_a84294bbf1a64413e5c69d61a287e20e3}{
+\index{HarassSquad@{HarassSquad}!defend@{defend}}
+\index{defend@{defend}!HarassSquad@{HarassSquad}}
+\subsubsection[{defend}]{\setlength{\rightskip}{0pt plus 5cm}void HarassSquad::defend (
+\begin{DoxyParamCaption}
+\item[{TilePosition}]{mGoal}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_harass_squad_a84294bbf1a64413e5c69d61a287e20e3}
+Orders this squad to defend a position. 
+
+Reimplemented from \hyperlink{class_squad_aca337f45691b4e6ea361f3f8de06c536}{Squad}.
+
+\hypertarget{class_harass_squad_a0013e56c21bc2bea1a55f7c5efb4171e}{
+\index{HarassSquad@{HarassSquad}!getGoal@{getGoal}}
+\index{getGoal@{getGoal}!HarassSquad@{HarassSquad}}
+\subsubsection[{getGoal}]{\setlength{\rightskip}{0pt plus 5cm}TilePosition HarassSquad::getGoal (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_harass_squad_a0013e56c21bc2bea1a55f7c5efb4171e}
+Returns the current goal of this \hyperlink{class_squad}{Squad}. 
+
+Reimplemented from \hyperlink{class_squad_ae9278dcf91e317c4316ce19e4c7c3b9e}{Squad}.
+
+\hypertarget{class_harass_squad_a72fe91a440b7df1e09d4e85479c9c3ab}{
+\index{HarassSquad@{HarassSquad}!hasGoal@{hasGoal}}
+\index{hasGoal@{hasGoal}!HarassSquad@{HarassSquad}}
+\subsubsection[{hasGoal}]{\setlength{\rightskip}{0pt plus 5cm}bool HarassSquad::hasGoal (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_harass_squad_a72fe91a440b7df1e09d4e85479c9c3ab}
+Returns true if this squad has an assigned goal. 
+
+Reimplemented from \hyperlink{class_squad_a5ad7231b7644be74b42318ff97d6f5e3}{Squad}.
+
+\hypertarget{class_harass_squad_a3cd7f4900e147db9e78fb3509032dfb3}{
+\index{HarassSquad@{HarassSquad}!isActive@{isActive}}
+\index{isActive@{isActive}!HarassSquad@{HarassSquad}}
+\subsubsection[{isActive}]{\setlength{\rightskip}{0pt plus 5cm}bool HarassSquad::isActive (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_harass_squad_a3cd7f4900e147db9e78fb3509032dfb3}
+Returns true if this \hyperlink{class_squad}{Squad} is active, or false if not. A \hyperlink{class_squad}{Squad} is active when it first has been filled with agents. A \hyperlink{class_squad}{Squad} with destroyed units are still considered Active. 
+
+Reimplemented from \hyperlink{class_squad_a20f3ca360518b8908b405c44a858ccbd}{Squad}.
+
+\hypertarget{class_harass_squad_a796e444b36f2ef102fe08ca459b0dcc1}{
+\index{HarassSquad@{HarassSquad}!printInfo@{printInfo}}
+\index{printInfo@{printInfo}!HarassSquad@{HarassSquad}}
+\subsubsection[{printInfo}]{\setlength{\rightskip}{0pt plus 5cm}void HarassSquad::printInfo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_harass_squad_a796e444b36f2ef102fe08ca459b0dcc1}
+Prints some info about the squad. 
+
+Reimplemented from \hyperlink{class_squad_a02e1bb7b5d5579df71cc94ce372ae13c}{Squad}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+BTHAIModule/Source/HarassSquad.h\item 
+BTHAIModule/Source/HarassSquad.cpp\end{DoxyCompactItemize}

@@ -1,0 +1,115 @@
+\hypertarget{class_bunker_agent}{
+\section{BunkerAgent Class Reference}
+\label{class_bunker_agent}\index{BunkerAgent@{BunkerAgent}}
+}
+
+
+{\ttfamily \#include $<$BunkerAgent.h$>$}
+
+Inheritance diagram for BunkerAgent:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_bunker_agent}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_bunker_agent_ad9f1ee25f043a1f9a17e1742300660c0}{BunkerAgent} (Unit $\ast$mUnit)
+\item 
+\hyperlink{class_bunker_agent_aab7208e8b978348691cf10acb86d60e0}{$\sim$BunkerAgent} ()
+\item 
+void \hyperlink{class_bunker_agent_afa86a236a39240840524f01593a9975b}{computeActions} ()
+\item 
+string \hyperlink{class_bunker_agent_af3bf79a646dc7c52f3d6869c1a3a15f6}{getTypeName} ()
+\item 
+void \hyperlink{class_bunker_agent_a3e3a29e965d036a9011f5669d60acac1}{printInfo} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_bunker_agent_a8e5de909619ef2e36083028e99682a14}{
+vector$<$ \hyperlink{class_base_agent}{BaseAgent} $\ast$ $>$ {\bfseries loadedUnits}}
+\label{class_bunker_agent_a8e5de909619ef2e36083028e99682a14}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_bunker_agent}{BunkerAgent} handles Terran Bunker buildings.
+
+Implemented abilities:
+\begin{DoxyItemize}
+\item Keeps track of the units inside the bunker.
+\item Which units to use in the Bunker depends on the enemy race(s).
+\end{DoxyItemize}
+
+Author: Johan Hagelback (\href{mailto:johan.hagelback@gmail.com}{\tt johan.hagelback@gmail.com}) 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_bunker_agent_ad9f1ee25f043a1f9a17e1742300660c0}{
+\index{BunkerAgent@{BunkerAgent}!BunkerAgent@{BunkerAgent}}
+\index{BunkerAgent@{BunkerAgent}!BunkerAgent@{BunkerAgent}}
+\subsubsection[{BunkerAgent}]{\setlength{\rightskip}{0pt plus 5cm}BunkerAgent::BunkerAgent (
+\begin{DoxyParamCaption}
+\item[{Unit $\ast$}]{mUnit}
+\end{DoxyParamCaption}
+)}}
+\label{class_bunker_agent_ad9f1ee25f043a1f9a17e1742300660c0}
+Constructor. \hypertarget{class_bunker_agent_aab7208e8b978348691cf10acb86d60e0}{
+\index{BunkerAgent@{BunkerAgent}!$\sim$BunkerAgent@{$\sim$BunkerAgent}}
+\index{$\sim$BunkerAgent@{$\sim$BunkerAgent}!BunkerAgent@{BunkerAgent}}
+\subsubsection[{$\sim$BunkerAgent}]{\setlength{\rightskip}{0pt plus 5cm}BunkerAgent::$\sim$BunkerAgent (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_bunker_agent_aab7208e8b978348691cf10acb86d60e0}
+Destructor. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_bunker_agent_afa86a236a39240840524f01593a9975b}{
+\index{BunkerAgent@{BunkerAgent}!computeActions@{computeActions}}
+\index{computeActions@{computeActions}!BunkerAgent@{BunkerAgent}}
+\subsubsection[{computeActions}]{\setlength{\rightskip}{0pt plus 5cm}void BunkerAgent::computeActions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_bunker_agent_afa86a236a39240840524f01593a9975b}
+Called each update to issue orders. 
+
+Reimplemented from \hyperlink{class_structure_agent_abaf0a18b1a60aa15af603b3470823a07}{StructureAgent}.
+
+\hypertarget{class_bunker_agent_af3bf79a646dc7c52f3d6869c1a3a15f6}{
+\index{BunkerAgent@{BunkerAgent}!getTypeName@{getTypeName}}
+\index{getTypeName@{getTypeName}!BunkerAgent@{BunkerAgent}}
+\subsubsection[{getTypeName}]{\setlength{\rightskip}{0pt plus 5cm}string BunkerAgent::getTypeName (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_bunker_agent_af3bf79a646dc7c52f3d6869c1a3a15f6}
+Returns the unique type name for structure agents. 
+
+Reimplemented from \hyperlink{class_structure_agent_acbeb3232c3c9c647ba526defa22264cd}{StructureAgent}.
+
+\hypertarget{class_bunker_agent_a3e3a29e965d036a9011f5669d60acac1}{
+\index{BunkerAgent@{BunkerAgent}!printInfo@{printInfo}}
+\index{printInfo@{printInfo}!BunkerAgent@{BunkerAgent}}
+\subsubsection[{printInfo}]{\setlength{\rightskip}{0pt plus 5cm}void BunkerAgent::printInfo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_bunker_agent_a3e3a29e965d036a9011f5669d60acac1}
+Used to print info about this agent to the screen. 
+
+Reimplemented from \hyperlink{class_structure_agent_adac3c70b613e6d10ac921e11bb89b633}{StructureAgent}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+BTHAIModule/Source/BunkerAgent.h\item 
+BTHAIModule/Source/BunkerAgent.cpp\end{DoxyCompactItemize}

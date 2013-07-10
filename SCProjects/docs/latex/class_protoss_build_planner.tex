@@ -1,0 +1,108 @@
+\hypertarget{class_protoss_build_planner}{
+\section{ProtossBuildPlanner Class Reference}
+\label{class_protoss_build_planner}\index{ProtossBuildPlanner@{ProtossBuildPlanner}}
+}
+
+
+{\ttfamily \#include $<$ProtossBuildPlanner.h$>$}
+
+Inheritance diagram for ProtossBuildPlanner:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_protoss_build_planner}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_protoss_build_planner_a4862d3dafa7e8f55a9d3959e7f9f6861}{init} ()
+\item 
+void \hyperlink{class_protoss_build_planner_ac5792fb34192f3ec418812fd70b4ceed}{computeActions} ()
+\item 
+void \hyperlink{class_protoss_build_planner_a89987c0724dc05b1aaf353c5b6ca518d}{buildingDestroyed} (Unit $\ast$building)
+\item 
+void \hyperlink{class_protoss_build_planner_af97d0ee0524f97c4bdde06bc02b5d6ef}{handleNoBuildspotFound} (UnitType toBuild)
+\item 
+void \hyperlink{class_protoss_build_planner_a966ba32be3d24f93476e42861fbf79fa}{printInfo} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is the Protoss implementation of the \hyperlink{class_build_planner}{BuildPlanner} class. See \hyperlink{class_build_planner}{BuildPlanner} for more details.
+
+This is where you need to modify the code to use different buildorders.
+
+Author: Johan Hagelback (\href{mailto:johan.hagelback@gmail.com}{\tt johan.hagelback@gmail.com}) 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_protoss_build_planner_a89987c0724dc05b1aaf353c5b6ca518d}{
+\index{ProtossBuildPlanner@{ProtossBuildPlanner}!buildingDestroyed@{buildingDestroyed}}
+\index{buildingDestroyed@{buildingDestroyed}!ProtossBuildPlanner@{ProtossBuildPlanner}}
+\subsubsection[{buildingDestroyed}]{\setlength{\rightskip}{0pt plus 5cm}void ProtossBuildPlanner::buildingDestroyed (
+\begin{DoxyParamCaption}
+\item[{Unit $\ast$}]{building}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_protoss_build_planner_a89987c0724dc05b1aaf353c5b6ca518d}
+Notifies that an own building has been destroyed. 
+
+Reimplemented from \hyperlink{class_build_planner_aa6c4d6878c9bcca305d2f6c015a4b7b8}{BuildPlanner}.
+
+\hypertarget{class_protoss_build_planner_ac5792fb34192f3ec418812fd70b4ceed}{
+\index{ProtossBuildPlanner@{ProtossBuildPlanner}!computeActions@{computeActions}}
+\index{computeActions@{computeActions}!ProtossBuildPlanner@{ProtossBuildPlanner}}
+\subsubsection[{computeActions}]{\setlength{\rightskip}{0pt plus 5cm}void ProtossBuildPlanner::computeActions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_protoss_build_planner_ac5792fb34192f3ec418812fd70b4ceed}
+Called each update to issue orders. 
+
+Reimplemented from \hyperlink{class_build_planner_ac5ede96fbc4532cd631776911c672527}{BuildPlanner}.
+
+\hypertarget{class_protoss_build_planner_af97d0ee0524f97c4bdde06bc02b5d6ef}{
+\index{ProtossBuildPlanner@{ProtossBuildPlanner}!handleNoBuildspotFound@{handleNoBuildspotFound}}
+\index{handleNoBuildspotFound@{handleNoBuildspotFound}!ProtossBuildPlanner@{ProtossBuildPlanner}}
+\subsubsection[{handleNoBuildspotFound}]{\setlength{\rightskip}{0pt plus 5cm}void ProtossBuildPlanner::handleNoBuildspotFound (
+\begin{DoxyParamCaption}
+\item[{UnitType}]{toBuild}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_protoss_build_planner_af97d0ee0524f97c4bdde06bc02b5d6ef}
+Is called when no buildspot has been found for the specified type. 
+
+Reimplemented from \hyperlink{class_build_planner_acc4103d9ec70c2a7a7c659230841dce7}{BuildPlanner}.
+
+\hypertarget{class_protoss_build_planner_a4862d3dafa7e8f55a9d3959e7f9f6861}{
+\index{ProtossBuildPlanner@{ProtossBuildPlanner}!init@{init}}
+\index{init@{init}!ProtossBuildPlanner@{ProtossBuildPlanner}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void ProtossBuildPlanner::init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_protoss_build_planner_a4862d3dafa7e8f55a9d3959e7f9f6861}
+Initial setup of the build order. 
+
+Reimplemented from \hyperlink{class_build_planner_a038f427797ac83a516012654844359d5}{BuildPlanner}.
+
+\hypertarget{class_protoss_build_planner_a966ba32be3d24f93476e42861fbf79fa}{
+\index{ProtossBuildPlanner@{ProtossBuildPlanner}!printInfo@{printInfo}}
+\index{printInfo@{printInfo}!ProtossBuildPlanner@{ProtossBuildPlanner}}
+\subsubsection[{printInfo}]{\setlength{\rightskip}{0pt plus 5cm}void ProtossBuildPlanner::printInfo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_protoss_build_planner_a966ba32be3d24f93476e42861fbf79fa}
+Used to print some info to the screen. 
+
+Reimplemented from \hyperlink{class_build_planner_a06b0db27196c7e1ecc0181f2d3865a88}{BuildPlanner}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+BTHAIModule/Source/ProtossBuildPlanner.h\item 
+BTHAIModule/Source/ProtossBuildPlanner.cpp\end{DoxyCompactItemize}

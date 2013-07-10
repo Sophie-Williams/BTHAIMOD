@@ -1,0 +1,149 @@
+\hypertarget{class_exploration_squad}{\section{Exploration\-Squad Class Reference}
+\label{class_exploration_squad}\index{Exploration\-Squad@{Exploration\-Squad}}
+}
+
+
+{\ttfamily \#include $<$Exploration\-Squad.\-h$>$}
+
+Inheritance diagram for Exploration\-Squad\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_exploration_squad}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_exploration_squad_a1a8ab50930f73ead01cf6d140702a3e6}{Exploration\-Squad} (int m\-Id, string m\-Name, int m\-Priority)
+\item 
+bool \hyperlink{class_exploration_squad_adb1005691867354e7b7e2cfdf3ebf8e0}{is\-Active} ()
+\item 
+void \hyperlink{class_exploration_squad_a92828cacd3f8cb0264adec349a79c5ed}{compute\-Actions} ()
+\item 
+void \hyperlink{class_exploration_squad_a2be2429079224683d1ec0d79df52183b}{defend} (Tile\-Position m\-Goal)
+\item 
+void \hyperlink{class_exploration_squad_a99a16a1b2c08deb17563da4091998817}{attack} (Tile\-Position m\-Goal)
+\item 
+void \hyperlink{class_exploration_squad_a472ae48b827a94bad7caa49d2ab6dcdc}{assist} (Tile\-Position m\-Goal)
+\item 
+void \hyperlink{class_exploration_squad_a39e8e4ec023d86497016cc8091cd4005}{clear\-Goal} ()
+\item 
+Tile\-Position \hyperlink{class_exploration_squad_acfaa545346de257ac70fdcd7b2bb188f}{get\-Goal} ()
+\item 
+bool \hyperlink{class_exploration_squad_a0ad5867fc889921fb849d5e33849a681}{has\-Goal} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This class handle squads used to explore the game world. Any unit type can be used as explorer.
+
+Author\-: Johan Hagelback (\href{mailto:johan.hagelback@gmail.com}{\tt johan.\-hagelback@gmail.\-com}) 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_exploration_squad_a1a8ab50930f73ead01cf6d140702a3e6}{\index{Exploration\-Squad@{Exploration\-Squad}!Exploration\-Squad@{Exploration\-Squad}}
+\index{Exploration\-Squad@{Exploration\-Squad}!ExplorationSquad@{Exploration\-Squad}}
+\subsubsection[{Exploration\-Squad}]{\setlength{\rightskip}{0pt plus 5cm}Exploration\-Squad\-::\-Exploration\-Squad (
+\begin{DoxyParamCaption}
+\item[{int}]{m\-Id, }
+\item[{string}]{m\-Name, }
+\item[{int}]{m\-Priority}
+\end{DoxyParamCaption}
+)}}\label{class_exploration_squad_a1a8ab50930f73ead01cf6d140702a3e6}
+\hyperlink{class_constructor}{Constructor}. See \hyperlink{_squad_8h_source}{Squad.\-h} for more details. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_exploration_squad_a472ae48b827a94bad7caa49d2ab6dcdc}{\index{Exploration\-Squad@{Exploration\-Squad}!assist@{assist}}
+\index{assist@{assist}!ExplorationSquad@{Exploration\-Squad}}
+\subsubsection[{assist}]{\setlength{\rightskip}{0pt plus 5cm}void Exploration\-Squad\-::assist (
+\begin{DoxyParamCaption}
+\item[{Tile\-Position}]{m\-Goal}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_exploration_squad_a472ae48b827a94bad7caa49d2ab6dcdc}
+Orders this squad to assist units at a position. 
+
+Reimplemented from \hyperlink{class_squad_aefeccd46eb2bf673e1bb7e4d7b913a49}{Squad}.
+
+\hypertarget{class_exploration_squad_a99a16a1b2c08deb17563da4091998817}{\index{Exploration\-Squad@{Exploration\-Squad}!attack@{attack}}
+\index{attack@{attack}!ExplorationSquad@{Exploration\-Squad}}
+\subsubsection[{attack}]{\setlength{\rightskip}{0pt plus 5cm}void Exploration\-Squad\-::attack (
+\begin{DoxyParamCaption}
+\item[{Tile\-Position}]{m\-Goal}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_exploration_squad_a99a16a1b2c08deb17563da4091998817}
+Orders this squad to launch an attack at a position. 
+
+Reimplemented from \hyperlink{class_squad_a4e405c83103c69dda302a367e2dfed3f}{Squad}.
+
+\hypertarget{class_exploration_squad_a39e8e4ec023d86497016cc8091cd4005}{\index{Exploration\-Squad@{Exploration\-Squad}!clear\-Goal@{clear\-Goal}}
+\index{clear\-Goal@{clear\-Goal}!ExplorationSquad@{Exploration\-Squad}}
+\subsubsection[{clear\-Goal}]{\setlength{\rightskip}{0pt plus 5cm}void Exploration\-Squad\-::clear\-Goal (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_exploration_squad_a39e8e4ec023d86497016cc8091cd4005}
+Clears the goal for this \hyperlink{class_squad}{Squad}, i.\-e. sets the goal to Tile\-Position(-\/1,-\/1). 
+
+Reimplemented from \hyperlink{class_squad_a54380c521be6f5b3be723c24e2bd9ab7}{Squad}.
+
+\hypertarget{class_exploration_squad_a92828cacd3f8cb0264adec349a79c5ed}{\index{Exploration\-Squad@{Exploration\-Squad}!compute\-Actions@{compute\-Actions}}
+\index{compute\-Actions@{compute\-Actions}!ExplorationSquad@{Exploration\-Squad}}
+\subsubsection[{compute\-Actions}]{\setlength{\rightskip}{0pt plus 5cm}void Exploration\-Squad\-::compute\-Actions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_exploration_squad_a92828cacd3f8cb0264adec349a79c5ed}
+Called each update to issue orders. 
+
+Reimplemented from \hyperlink{class_squad_ac338d389b81cbec76cb8d240f0833e43}{Squad}.
+
+\hypertarget{class_exploration_squad_a2be2429079224683d1ec0d79df52183b}{\index{Exploration\-Squad@{Exploration\-Squad}!defend@{defend}}
+\index{defend@{defend}!ExplorationSquad@{Exploration\-Squad}}
+\subsubsection[{defend}]{\setlength{\rightskip}{0pt plus 5cm}void Exploration\-Squad\-::defend (
+\begin{DoxyParamCaption}
+\item[{Tile\-Position}]{m\-Goal}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_exploration_squad_a2be2429079224683d1ec0d79df52183b}
+Orders this squad to defend a position. 
+
+Reimplemented from \hyperlink{class_squad_aca337f45691b4e6ea361f3f8de06c536}{Squad}.
+
+\hypertarget{class_exploration_squad_acfaa545346de257ac70fdcd7b2bb188f}{\index{Exploration\-Squad@{Exploration\-Squad}!get\-Goal@{get\-Goal}}
+\index{get\-Goal@{get\-Goal}!ExplorationSquad@{Exploration\-Squad}}
+\subsubsection[{get\-Goal}]{\setlength{\rightskip}{0pt plus 5cm}Tile\-Position Exploration\-Squad\-::get\-Goal (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_exploration_squad_acfaa545346de257ac70fdcd7b2bb188f}
+Returns the current goal of this \hyperlink{class_squad}{Squad}. 
+
+Reimplemented from \hyperlink{class_squad_ae9278dcf91e317c4316ce19e4c7c3b9e}{Squad}.
+
+\hypertarget{class_exploration_squad_a0ad5867fc889921fb849d5e33849a681}{\index{Exploration\-Squad@{Exploration\-Squad}!has\-Goal@{has\-Goal}}
+\index{has\-Goal@{has\-Goal}!ExplorationSquad@{Exploration\-Squad}}
+\subsubsection[{has\-Goal}]{\setlength{\rightskip}{0pt plus 5cm}bool Exploration\-Squad\-::has\-Goal (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_exploration_squad_a0ad5867fc889921fb849d5e33849a681}
+Returns true if this squad has an assigned goal. 
+
+Reimplemented from \hyperlink{class_squad_a5ad7231b7644be74b42318ff97d6f5e3}{Squad}.
+
+\hypertarget{class_exploration_squad_adb1005691867354e7b7e2cfdf3ebf8e0}{\index{Exploration\-Squad@{Exploration\-Squad}!is\-Active@{is\-Active}}
+\index{is\-Active@{is\-Active}!ExplorationSquad@{Exploration\-Squad}}
+\subsubsection[{is\-Active}]{\setlength{\rightskip}{0pt plus 5cm}bool Exploration\-Squad\-::is\-Active (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_exploration_squad_adb1005691867354e7b7e2cfdf3ebf8e0}
+Returns true if this \hyperlink{class_squad}{Squad} is active, or false if not. A \hyperlink{class_squad}{Squad} is active when it first has been filled with agents. A \hyperlink{class_squad}{Squad} with destroyed units are still considered Active. 
+
+Reimplemented from \hyperlink{class_squad_a20f3ca360518b8908b405c44a858ccbd}{Squad}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+B\-T\-H\-A\-I\-Module/\-Source/Exploration\-Squad.\-h\item 
+B\-T\-H\-A\-I\-Module/\-Source/Exploration\-Squad.\-cpp\end{DoxyCompactItemize}

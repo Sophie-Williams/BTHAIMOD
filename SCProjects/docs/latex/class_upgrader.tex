@@ -1,0 +1,95 @@
+\hypertarget{class_upgrader}{\section{Upgrader Class Reference}
+\label{class_upgrader}\index{Upgrader@{Upgrader}}
+}
+
+
+{\ttfamily \#include $<$Upgrader.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_upgrader_a31e43b9401ab4758c6a65d67bf727cff}{$\sim$\-Upgrader} ()
+\item 
+bool \hyperlink{class_upgrader_a63eb45a52f7efdfd434bc7853e0c55ea}{check\-Upgrade} (\hyperlink{class_base_agent}{Base\-Agent} $\ast$agent)
+\item 
+void \hyperlink{class_upgrader_ab5f18a1178c313ff7512a57499a3a891}{toggle\-Debug} ()
+\item 
+void \hyperlink{class_upgrader_a87f516bf9d509bf55ed9414351b7c1b6}{print\-Info} ()
+\item 
+void \hyperlink{class_upgrader_ad88f06daaeae32356e8265c07c17991c}{add\-Upgrade} (Upgrade\-Type type)
+\item 
+void \hyperlink{class_upgrader_a51bea1be8841797e45c16736f172fa66}{add\-Tech} (Tech\-Type tech)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_upgrader}{Upgrader} $\ast$ \hyperlink{class_upgrader_ae0fac4149996571abf8b62d915fcabda}{get\-Instance} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_upgrader}{Upgrader} handles upgrades and techs. Add the requested upgrade and/or tech to the upgrader and the bot executes it when enough resources are available.
+
+The \hyperlink{class_upgrader}{Upgrader} is implemented as a singleton class. Each class that needs to access \hyperlink{class_upgrader}{Upgrader} can request an instance, and all classes shares the same \hyperlink{class_upgrader}{Upgrader} instance.
+
+Author\-: Johan Hagelback (\href{mailto:johan.hagelback@gmail.com}{\tt johan.\-hagelback@gmail.\-com}) 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_upgrader_a31e43b9401ab4758c6a65d67bf727cff}{\index{Upgrader@{Upgrader}!$\sim$\-Upgrader@{$\sim$\-Upgrader}}
+\index{$\sim$\-Upgrader@{$\sim$\-Upgrader}!Upgrader@{Upgrader}}
+\subsubsection[{$\sim$\-Upgrader}]{\setlength{\rightskip}{0pt plus 5cm}Upgrader\-::$\sim$\-Upgrader (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_upgrader_a31e43b9401ab4758c6a65d67bf727cff}
+Destructor. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_upgrader_a51bea1be8841797e45c16736f172fa66}{\index{Upgrader@{Upgrader}!add\-Tech@{add\-Tech}}
+\index{add\-Tech@{add\-Tech}!Upgrader@{Upgrader}}
+\subsubsection[{add\-Tech}]{\setlength{\rightskip}{0pt plus 5cm}void Upgrader\-::add\-Tech (
+\begin{DoxyParamCaption}
+\item[{Tech\-Type}]{tech}
+\end{DoxyParamCaption}
+)}}\label{class_upgrader_a51bea1be8841797e45c16736f172fa66}
+Adds a tech to the tech queue. \hypertarget{class_upgrader_ad88f06daaeae32356e8265c07c17991c}{\index{Upgrader@{Upgrader}!add\-Upgrade@{add\-Upgrade}}
+\index{add\-Upgrade@{add\-Upgrade}!Upgrader@{Upgrader}}
+\subsubsection[{add\-Upgrade}]{\setlength{\rightskip}{0pt plus 5cm}void Upgrader\-::add\-Upgrade (
+\begin{DoxyParamCaption}
+\item[{Upgrade\-Type}]{type}
+\end{DoxyParamCaption}
+)}}\label{class_upgrader_ad88f06daaeae32356e8265c07c17991c}
+Adds an upgrade to the upgrade queue. \hypertarget{class_upgrader_a63eb45a52f7efdfd434bc7853e0c55ea}{\index{Upgrader@{Upgrader}!check\-Upgrade@{check\-Upgrade}}
+\index{check\-Upgrade@{check\-Upgrade}!Upgrader@{Upgrader}}
+\subsubsection[{check\-Upgrade}]{\setlength{\rightskip}{0pt plus 5cm}bool Upgrader\-::check\-Upgrade (
+\begin{DoxyParamCaption}
+\item[{{\bf Base\-Agent} $\ast$}]{agent}
+\end{DoxyParamCaption}
+)}}\label{class_upgrader_a63eb45a52f7efdfd434bc7853e0c55ea}
+Checks if there is an upgrade the specified agent need to upgrade/research. \hypertarget{class_upgrader_ae0fac4149996571abf8b62d915fcabda}{\index{Upgrader@{Upgrader}!get\-Instance@{get\-Instance}}
+\index{get\-Instance@{get\-Instance}!Upgrader@{Upgrader}}
+\subsubsection[{get\-Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Upgrader} $\ast$ Upgrader\-::get\-Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_upgrader_ae0fac4149996571abf8b62d915fcabda}
+Returns the instance to the \hyperlink{class_upgrader}{Upgrader} that is currently used. \hypertarget{class_upgrader_a87f516bf9d509bf55ed9414351b7c1b6}{\index{Upgrader@{Upgrader}!print\-Info@{print\-Info}}
+\index{print\-Info@{print\-Info}!Upgrader@{Upgrader}}
+\subsubsection[{print\-Info}]{\setlength{\rightskip}{0pt plus 5cm}void Upgrader\-::print\-Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_upgrader_a87f516bf9d509bf55ed9414351b7c1b6}
+Prints debug info to screen. \hypertarget{class_upgrader_ab5f18a1178c313ff7512a57499a3a891}{\index{Upgrader@{Upgrader}!toggle\-Debug@{toggle\-Debug}}
+\index{toggle\-Debug@{toggle\-Debug}!Upgrader@{Upgrader}}
+\subsubsection[{toggle\-Debug}]{\setlength{\rightskip}{0pt plus 5cm}void Upgrader\-::toggle\-Debug (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_upgrader_ab5f18a1178c313ff7512a57499a3a891}
+Switch on/off debug info printing to screen. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+B\-T\-H\-A\-I\-Module/\-Source/Upgrader.\-h\item 
+B\-T\-H\-A\-I\-Module/\-Source/Upgrader.\-cpp\end{DoxyCompactItemize}
