@@ -44,6 +44,8 @@ double MetaLearning::calculateLearningRate(MatchState* state, double reward){
 
 	saveLearningRate(rate);
 
+	//double rate = 0.2;
+
 	Logger::getInstance()->Log(rate, "LearningRate");
 
 	return rate;

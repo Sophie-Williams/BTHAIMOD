@@ -22,14 +22,15 @@ QGreedy::~QGreedy()
 MatchState * QGreedy::select(vector<MatchState> * states){
 	MatchState * max = &states->front();
 	for(int i = 1; i < states->size(); i++){
-		MatchState * s = &states->at(1);
+		MatchState * s = &states->at(i);
 		if(s->qValue > max->qValue)
 			max = s;
 	}
 
 	double r = (double)rand() / RAND_MAX;
 
-	if(r > MetaLearning::getInstance()->getLearningRate()){
+	double explorationRate = MetaLearning::getInstance()->getLearningRate() / 2.0;
+	if(r > explorationRate){
 		return max;
 	}
 	else{

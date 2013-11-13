@@ -26,6 +26,7 @@ QLearning::~QLearning()
 
 void QLearning::updateQvalue(MatchState* state, double reward){
 	_learningRate = MetaLearning::getInstance()->calculateLearningRate(state, reward);
+
 	state->qValue = state->qValue + _learningRate * reward;
 
 	Logger::getInstance()->Log(state->qValue, Logger::getInstance()->Count("LearningRate"), state->strategyId);
